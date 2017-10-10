@@ -11,8 +11,17 @@ $result=Articles::join('users',function($user){
 #指定orderby,limit的方法
 $result=Articles::where('user_id','=',$id)->orderByid('id','desc')->skip($page)->take(10)->get();
 
+$at=new Articles;
+$at->title=Input::get('title');
+$at->save();#添加
+
+$at=Articles::find($id);
+$at->title=Input::get('title');
+$at->save();#修改,保存
+$at->delete();#删除
+
 use DB: #DB数据库操作类
-$obj=new Articles;
+$obj=DB::table('articles');
 $obj->find($id) #功能同上Models::find($id)
 
 
@@ -48,6 +57,7 @@ pubilc function index(Request $request){
 use Redirect #重定向
 Redirect::to('admin/article'); #重定向到admin/article下
 Redirect::to('admin/article')->withPage('OK') #将'ok'存在session key page中
+Redirect::back()->withInput()->withErrors($error); #返回上个页面,并带Input内容,将$error放session key Errors中
 session('page') #返回session值
 session('page','ok')#设定session值
 
@@ -57,3 +67,14 @@ function index($id){
 	return view('adminlte');#调用视图文件adminlte
 	return view('adminlte',compact('result','page))->withError($error);#将result,page,error三个变量传递给视图
 }
+
+
+routes/web.php #路由
+Route::resource('fb','ArticleController')#指定资源管理控制器
+访问方法:
+_DIR_/fb/1/edit 
+	访问edit方法,编辑表单
+_DIR_/fb 
+	_method ->DELETE  删除    访问destory 方法
+	_method ->PUT	修改	访问update方法
+	无_method 		添加	访问store方法
