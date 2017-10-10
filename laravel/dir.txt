@@ -1,0 +1,122 @@
+//Laravel 目录结构及创建过程	by wooght 2017
+
+====>app 核心目录,包括模型/控制器
+	
+====>app/Http/Controllers #控制器文件夹
+	php artisan make:controller WAdmin/WAdminHomeController #创建控制器
+	#得到app/Http/Controllers/WAdmin/WAdminHomeController.php
+--------------------------------------------------------------------------
+//WAdminHomeController.php
+namespace App\Http\Controllers\WAdmin;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\User;//引入数据模型
+class WAdminHomeController extends Controller
+{
+	public function index()
+	{
+		return view('WAdminHome')->withUsers(User::all());
+		//view("视图文件")
+		//withUsers(User:all())获取User表下的所有行数据赋值给视图变量Users
+	}
+}
+-------------------------------------
+
+====>artisan php脚本,用于配置/创建各种文件/框架操作等 
+	php artisan make:model xx #创建模型xx在/laravel/app下
+		php artisan make:model xx -m #创建数据模型的同时,生产数据表文件
+	php artisan cache:clear #清除缓存
+
+
+====>database 数据库文件
+	migrations 创建数据表的文件
+		php artisan make:model Article
+		app/下得到如..*create_articles_table.php这样的文件
+-----------------------------------------------------------------------------
+//.*create_articles_table.php
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+class CreateArticlesTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('articles', function (Blueprint $table) {
+            $table->increments('id');//创建auto_increment primary key熟悉的ID
+            $table->string('title');
+            $table->string('slug')->nulltable();//nulltable 可以非空
+            $table->text('body')->nulltable();
+            $table->string('image')->nulltable();
+            $table->integer('user_id');
+            $table->timestamps();//timetamps时间格式的数据
+        });
+    }
+    public function down()
+    {
+        Schema::dropIfExists('articles');
+    }
+}
+-------------------------------------
+		php artisan migrate #根据migrations下的文件操作数据库
+		如:php artisan migrate
+			Migrating: 2017_09_29_055311_create_articles_table
+			Migrated:  2017_09_29_055311_create_articles_table
+			Migrating: 2017_09_29_055337_create_pages_table
+			Migrated:  2017_09_29_055337_create_pages_table
+	seeds 发送/填充数据表
+		seeds下添加如PageTableSeeder.php这样的文件,指填充Page数据表
+--------------------------------------------------------------------------
+//PageTableSeeder.php
+use Illuminate\Database\Seeder;
+use App\Page;
+class PageTableSeeder extends Seeder {
+
+  public function run()
+  {
+    DB::table('pages')->delete();
+    for ($i=0; $i < 10; $i++) {
+      Page::create([
+        'title'   => 'Title '.$i,
+        'slug'    => 'first-page',
+        'body'    => 'Body '.$i,
+        'user_id' => 1,
+      ]);
+    }
+  }
+
+}
+-------------------------------------
+		在同级目录DatabaseSeeder.php文件加上:
+		$this->call("PageTableSeeder");
+		然后运行:composer dump-autoload #告知自动加载
+		php artisan db:seed #执行填充
+
+
+====>resources 前端/视图模板文件
+
+
+====>routes 路由文件
+	laravel会自动加载此目录下的文件
+	web.php 网站一般修改这个路由文件
+--------------------------------------------------------------------------
+//web.php
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('wooght/{id}',function($id="empty"){
+	echo "Hello wooght is set id=".$id;
+});
+//创建一个路由组
+Route::group(['prefix'=>'wadmin','namespace'=>'WAdmin'],function(){
+	Route::get('/','WAdminHomeController@index');//定义默认访问WAdminHomeController控制器
+}
+);
+//prefix 定义url前缀 如http://laravel/admin中的admin
+//namespace 定义新的命名空间前缀,及另起路由
+//及没有定义namespace时,调用默认控制器,定义后就有了新组,会新建一个文件夹,然后控制器文件放在此文件夹下.
+-------------------------------------
+
+====>storage 运行日志文件
+
+
+====>vendor 扩展/Laravel核心包

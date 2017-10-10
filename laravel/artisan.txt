@@ -1,0 +1,14 @@
+//artisan by wooght 
+//以下省略php
+php artisan make:model Model/Admin #创建App/Model/Admin.php数据模型
+
+php artisan make:model Model/Admin -m #同时创建migrations文件下的文件
+
+php artisan migrate #进行数据库迁移
+
+php artisan cache:clear #清除缓存
+
+php artisan make:migration alter_articles_table #创建修改数据库模型文件
+
+php artisan make:controller Admin/AdminHomeController #创建控制器
+	名词必须与文件夹名词相同,无文件夹则创建

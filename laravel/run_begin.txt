@@ -1,0 +1,124 @@
+//Laravel 运行机制  by wooght
+
+A======>添加路由
+	/routes/web.php 添加自己的路由
+	如:
+------------------------------------------------------------------------
+Route::get('wooght/{id}',function($id="empty"){
+	echo "Hello wooght is set id=".$id;
+});
+------------------------------------
+	如果是要添加自己的控制器,则要指定控制器
+	如:Route::get('/','WAdminHomeController@index') index为访问控制器的方法
+
+
+B======>生成控制器
+	如:php artisan make:controller WAdmin/WAdminHomeController #创建控制器
+	得到app/Http/Controllers/WAdmin/WAdminHomeController.php
+
+
+C======>创建数据模型
+	php artisan make:model Article
+	app/下得到如Article.php这样的文件
+	databases/migrations/下会得到*_create_articles_table.php这样的文件
+	打开模型文件,修改为自己的表如:
+------------------------------------------------------------------------
+public function up()
+    {
+        Schema::create('articles', function (Blueprint $table) {
+            $table->increments('id');//创建auto_increment primary key熟悉的ID
+            $table->string('title');
+            $table->string('slug')->nulltable();//nulltable 可以非空
+            $table->text('body')->nulltable();
+            $table->string('image')->nulltable();
+            $table->integer('user_id');
+            $table->timestamps();//timetamps时间格式的数据
+        });
+    }
+------------------------------------
+	然后迁移数据->添加表
+	php artisan migrate 
+	表添加成功提示:
+		Migrating: 2017_09_29_055311_create_articles_table
+		Migrated:  2017_09_29_055311_create_articles_table
+	如果发现表结构需要修改,可执行
+	php artisan make:migration alter_replies_table --table=replies#添加修改replies表的文件
+	结果:Created Migration: 2017_09_30_141345_alter_replies_table
+	然后去修改该文件
+	如:$table->integer('user_id')->unique()->change();#修改user_id为这样
+	再运行命令:php artisan migrate 数据表修改完毕
+	
+	数据填充:
+	databases/seeds/下添加如PageTableSeeder.php这样的文件,指填充Page数据表
+--------------------------------------------------------------------------
+//PageTableSeeder.php
+use Illuminate\Database\Seeder;
+use App\Page;
+class PageTableSeeder extends Seeder {
+
+  public function run()
+  {
+    DB::table('pages')->delete();
+    for ($i=0; $i < 10; $i++) {
+      Page::create([
+        'title'   => 'Title '.$i,
+        'slug'    => 'first-page',
+        'body'    => 'Body '.$i,
+        'user_id' => 1,
+      ]);
+    }
+  }
+
+}
+-------------------------------------
+		在同级目录DatabaseSeeder.php文件加上:
+		$this->call("PageTableSeeder");
+		然后运行:composer dump-autoload #告知自动加载
+		php artisan db:seed #执行填充	
+	
+
+
+D======>控制器中引入数据模型
+	在控制器中添加: use App\User;  //引入User数据模型
+
+
+E======>控制器写逻辑,然后调用视图
+	在resources/views/下创建对于级别的视图文件  
+		如:WAdminHome.blade.php
+	在模板中添加内容
+	然后控制器调用模板
+	public function index()
+	{
+		return view('WAdminHome')->withPages(Page::all());
+	}
+		
+
+#添加自定义函数库
+在app文件下创建文件或文件夹->文件
+修改composer.json文件 autoload 下添加元素
+"files":[
+	"app/路径"
+],
+运行composer dump-autoload 即可
+
+#配置UEditor
+一、配置composer.json文件，在composer.json文件的require 里面加入　
+"stevenyangecho/laravel-u-editor": "~1.4"
+
+二、在命令卡运行composer update 或者 composer install （这个可以在任意地方运行 需要配置composer 的全局变量）
+
+三、配置config/app.php文件
+在 "providers" 这个key 最后加上
+Stevenyangecho\UEditor\UEditorServiceProvider::class
+
+在"aliases" 这个key最后加上
+  'UEditor'=>Stevenyangecho\UEditor\UEditorServiceProvider::class
+
+四、注册工具接口，在命令行运行
+php artisan vendor:publish
+
+五 在视图里应用
+
+
+#AdminLTE
+composer require "almasaeed2010/adminlte=~2.0"

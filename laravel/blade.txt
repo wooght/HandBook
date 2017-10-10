@@ -1,0 +1,47 @@
+//laravel 模板应用  by wooght 2017
+@extends('layouts.app') 继承父级模板文件
+@section('content')
+	向父级文件发送内容,发送到父级文件 @yield('content')处
+@endsection
+
+{{URL('wadmin/pagelist')}} 生成地址,地址为:localhost/wadmin/pagelist
+{{URL::asset('css/page.css')}} 生成地址,地址为public目录下地址
+
+{{这里的内容会被转义}}
+{!!这里的内容不会被转义!!}
+
+@if(count($a)>1)
+	成立输出内容
+@else
+	不成立输出内容
+@endif
+
+
+@foreach($errors->all() as $error)
+   {{$error}}
+@endforeach
+
+
+引入模板文件
+@include('layouts.admin')
+
+
+传输变量:
+控制器方法1
+view('view').withPage('page') #将控制器变量page传递给模板page变量
+view('view',compact('page')) #将控制器变量page传递给模板,变量名相同
+
+
+@guest
+	auth默认用户登陆
+@else
+	auth默认用户未登陆
+@endguest
+
+
+{{csrf_field()}} #输出csrf支撑标签
+
+控制器方法:
+Redirect::to('/')->withError('失败') 将'失败'存放在session中
+视图:
+session('Error')访问session

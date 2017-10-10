@@ -1,0 +1,59 @@
+//Laravel controller 控制器  by wooght 2017
+use:
+use App\Models\Articles #Articles数据模型
+$result=Articles::find($id) #查询id=$id的用户
+$result=Articles::all() #查询所有
+$result=Articles::where('article_id','=',$id) #查询article_id=$id的行
+$result->count()#得到行数
+$result=Articles::join('users',function($user){
+	$user->on('user_id','=','users.id');
+})->select('Articles.id as atsid','users.id as id')->get();#链表查询 指定链表规则
+#指定orderby,limit的方法
+$result=Articles::where('user_id','=',$id)->orderByid('id','desc')->skip($page)->take(10)->get();
+
+use DB: #DB数据库操作类
+$obj=new Articles;
+$obj->find($id) #功能同上Models::find($id)
+
+
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;	#引入auth 认证
+public function __construct(){
+	$this->middleware('auth');注册中间件auth
+}
+Auth::check() #返回登陆情况
+Auth::logout() #退出登陆
+Auth::user()->name #user name
+
+
+Auth('admin')->check()#指定用户类型的操作
+Auth('admin')->logout()
+
+
+use Illuminate\Support\Facades\Input #Input功能
+	Input::get('name')获取表单传递过来的name字段
+
+
+use Illuminate\Http\Request #request 验证
+pubilc function index(Request $request){
+	$this->validate($request,[
+		'title' => 'required|max:20',
+		'body' => 'required|min:20'
+	],[
+		'title.required' => '必须填写','title.max' => '必须小于20字'
+	]);
+}
+
+
+use Redirect #重定向
+Redirect::to('admin/article'); #重定向到admin/article下
+Redirect::to('admin/article')->withPage('OK') #将'ok'存在session key page中
+session('page') #返回session值
+session('page','ok')#设定session值
+
+function index($id){
+	echo $id;#$id为路由规定的值
+	#如:Route::get('id/{id}','IndexController@index');
+	return view('adminlte');#调用视图文件adminlte
+	return view('adminlte',compact('result','page))->withError($error);#将result,page,error三个变量传递给视图
+}

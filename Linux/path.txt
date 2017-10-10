@@ -1,0 +1,23 @@
+#linux7 设置PATH以及问题处理  by wooght 2017
+
+#bash:xx common not found 处理方法
+#/etc/profile 文件设置问题或者丢掉某些系统环境变量地址
+#/etc/profile 为全局的环境变量，所有用户即可拥有
+
+echo $PATH #查看当前环境变量
+
+export PATH=$PATH:/bin:/usr/bin  等零时设置环境变量
+#PATH主要有四个目录
+#/bin,/usr/bin,/sbin,/usr/sbin
+
+/bin:
+bin为binary的简写主要放置一些系统的必备执行档案。如：cat,cp, chmod df, dmesg, gzip, kill, ls, mkdir, more, mount, rm, su, tar 等。
+
+/usr/bin:
+主要放置一些应用软体工具的必备执行档例。如：c++、g++、gcc、chdrv、diff、dig、du、eject、elm、free、gnome*、 gzip、htpasswd、kfm、ktop、last、less、locale、m4、make、man、mcopy、ncftp、 newaliases、nslookup passwd、quota、smb*、wget等。 
+
+/sbin:
+主要放置一些系统管理的必备程式例。如：cfdisk、dhcpcd、dump、e2fsck、fdisk、halt、ifconfig、ifup、 ifdown、init、insmod、lilo、lsmod、mke2fs、modprobe、quotacheck、reboot、rmmod、 runlevel、shutdown等。
+
+/usr/sbin:
+放置一些网路管理的必备程式例。如:dhcpd、httpd、imap、in.*d、inetd、lpd、named、netconfig、nmbd、samba、sendmail、squid、swap、tcpd、tcpdump等。

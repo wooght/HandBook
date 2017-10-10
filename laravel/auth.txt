@@ -1,0 +1,18 @@
+#laravel 登录验证模块  by wooght 2017
+php artisan make:auth #开启auth功能
+--------------------------------------------------------------------------
+[puwenfeng@localhost laravel]$ php artisan make:auth
+Authentication scaffolding generated successfully.
+-------------------------------------
+
+#成功后 resources/views得到auth,layouts文件夹
+#成功后路由添加如下内容
+--------------------------------------------------------------------------
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+-------------------------------------
+
+auth::user()->id #得到登陆用户的id
+auth('admin')->user()->id #得到自定义auth登陆用户的id
+

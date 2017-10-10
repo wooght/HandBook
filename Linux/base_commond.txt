@@ -1,0 +1,206 @@
+#linux 基本命令  by wooght 2017
+#图形模式和文字模式的切换
+#Linux 预设了6个命令窗口
+Shift+Alt+F1-F6
+
+#关闭系统
+sync #将内存同步到硬盘中
+shutdown -h now#立马关机
+shutdown -h +20#20分钟后关机
+shutdown -h 20:25#今天20:25分关机
+shutdown -r now#立马重启
+reboot #重启
+halt#关闭系统
+
+su root#获取root权限
+
+#文件/目录
+ls -l/ll #查看目录下文件属性
+ll
+#得到:drwxrwxr-x. 2 wooght wooght 19 9月  15 01:28 a
+ll b.txt
+#得到:-rw-r--r--. 1 puwenfeng wooght 0 9月  15 02:42 b.txt
+
+pwd #显示当前目录
+mkdir #创建目录
+mkdir [-mp]
+	-m 配置权限
+	-p 递归创建目录下的目录
+
+/*
+[root@192 wooght]# mkdir -m 777 -p a/b
+[root@192 wooght]# ls
+a  b.txt
+[root@192 wooght]# ls a
+b
+[root@192 wooght]# 
+
+*/
+
+cp  复制文件或目录
+cp [-rp] 来源  目标
+	-r 递归(常用语目录)
+	-p 连同属性复制
+/*
+[root@192 wooght]# ls
+a  b.txt
+[root@192 wooght]# cp b.txt a/b.txt
+[root@192 wooght]# ls a
+b  b.txt
+[root@192 wooght]# 
+
+*/
+
+rm 删除文件
+rmdir 删除目录
+/*
+[root@192 wooght]# ls
+a  b.txt  c
+[root@192 wooght]# rmdir c
+[root@192 wooght]# ls
+a  b.txt
+*/
+
+mv 移动文件目录,重命名
+mv 来源 目标
+/*
+[root@192 wooght]# ls
+a  a.txt
+[root@192 wooght]# mv a.txt c.txt
+[root@192 wooght]# ls
+a  c.txt
+[root@192 wooght]# 
+*/
+
+/*
+d rwx rwx r-x  权限解读:
+d 指目录,-指文件,/指链接文档
+三组rwx分别是指所属者,所属组,其他用户的权限
+r(read) 	可读	4
+w(write) 	科协	2
+x(execute) 	可执行	1
+没有权限则'-'号占位子
+*/
+
+chown #更改文件属主/属组
+chown 属主名 文件名
+chown 属主名:属组名 文件名
+
+/*
+drwxrwxr-x. 2 wooght wooght 19 9月  15 01:28 a
+-rw-r--r--. 1 wooght wooght  0 9月  15 02:42 b.txt
+[root@192 wooght]# chown puwenfeng b.txt
+[root@192 wooght]# ll
+总用量 0
+drwxrwxr-x. 2 wooght    wooght 19 9月  15 01:28 a
+-rw-r--r--. 1 puwenfeng wooght  0 9月  15 02:42 b.txt
+*/
+
+chmod #修改文件权限
+chmod xyz 文件/目录名称
+
+/*
+-r--r--r--. 1 puwenfeng wooght 0 9月  15 02:42 b.txt
+[root@192 wooght]# chmod 777 b.txt
+[root@192 wooght]# ll b.txt
+-rwxrwxrwx. 1 puwenfeng wooght 0 9月  15 02:42 b.txt
+*/
+
+#查看文件
+cat [-bn]
+	-b 列出行号
+	-n 列出行号,包括空白行
+/*
+[root@192 wooght]# cat -n a.txt
+     1	Hello!
+     2	Everybody!
+
+*/
+
+tac #与cat相反,从最后一行开始显示
+
+
+head #取出前面几行
+head [-n]
+/*
+[root@192 wooght]# head -1 a.txt
+Hello!
+[root@192 wooght]# 
+
+*/
+
+tar #压缩
+	-c 建立压缩
+	-x 解压
+	-t 查看内容
+	-r 追加文件进去
+	-u 更新压缩包中的文件
+		------以上为独立命令,不能同时出现
+	-z gzip属性
+	-j bz2属性
+	-v 显示压缩过程
+	-f 档案名称,用到最有一个,后面就跟名字了
+/*
+[root@192 wtar]# ls
+a.txt  b.txt
+[root@192 wtar]# tar -cvf txt.tar *.txt
+a.txt
+b.txt
+[root@192 wtar]# ls
+a.txt  b.txt  txt.tar
+[root@192 wtar]# tar -tf txt.tar
+a.txt
+b.txt
+[root@192 wtar]# 
+[root@192 wtar]# ls
+a.txt  b.txt  c.txt  txt.tar
+[root@192 wtar]# tar -rf txt.tar c.txt
+[root@192 wtar]# tar -tf txt.tar
+a.txt
+b.txt
+c.txt
+[root@192 wtar]# ls
+txt.tar
+[root@192 wtar]# tar -xf txt.tar
+[root@192 wtar]# ls
+a.txt  b.txt  c.txt  txt.tar
+*/
+
+uname查看系统信息
+uname [选项]...
+输出一组系统信息。如果不跟随选项，则视为只附加-s 选项。
+
+  -a, --all			以如下次序输出所有信息。其中若-p 和
+				-i 的探测结果不可知则被省略：
+  -s, --kernel-name		输出内核名称
+  -n, --nodename		输出网络节点上的主机名
+  -r, --kernel-release		输出内核发行号
+  -v, --kernel-version		输出内核版本
+  -m, --machine		输出主机的硬件架构名称
+  -p, --processor		输出处理器类型或"unknown"
+  -i, --hardware-platform	输出硬件平台或"unknown"
+  -o, --operating-system	输出操作系统名称
+      --help		显示此帮助信息并退出
+      --version		显示版本信息并退出
+
+#设置时间/时区
+timedatectl set-timezone Asia/Shanghai
+date #显示当前时间
+
+vi 编辑文件
+vi 文件名
+/*
+退出保存
+esc建进入命令模式
+:q 退出
+:q! 强制退出
+:w 保存
+:wq 保存并退出
+
+:set nu 列出行
+:/abc 查询abc字符
+
+cat /etc/passwd 可以查看所有用户的列表
+w 可以查看当前活跃的用户列表
+cat /etc/group 查看用户组
+

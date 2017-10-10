@@ -1,0 +1,148 @@
+LAMP安装 by wooght 2017
+
+-----------------------------------------------------------
+安装apache
+	yum install httpd
+安装完毕.
+systemctl start httpd.service #启动Apache
+systemctl stop httpd.service #停止Apache
+systemctl restart httpd.service #重启apache
+systemctl enable httpd.service #设置apache开启启动
+/*
+[root@192 html]# systemctl enable httpd.service
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+apache 根目录 /var/www/html
+*/
+
+查看apache状态
+service httpd status
+查看系统信息
+uname -a
+
+#配置apache
+#配置文件位置 /etc/httpd/
+#找到和modules相关配置文件 加载 rewrite重写等模块
+#配置根目录、重定向等
+#etc/hosts IP映射设置
+
+-----------------------------------------------------------
+安装MySQL  --CentOS 7.0中，已经使用MariaDB替代了MySQL数据库
+安装mysql yum 库
+mysql下载相应的yum库
+wget mysql57-community-release-el7-11.noarch.rpm
+#或直接下载,然后安装
+rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
+#安装成功后 etc/yum.repos.d 多了两个mysql相关的文件,表示安装成功
+
+#然后安装mysql
+yum install mysql-community-server
+
+#启动服务
+service mysqld start
+
+#查看mysql默认密码  5.7后有默认密码
+cat /var/log/mysqld.log#查看密码 localhost:后面是默认密码
+#mysql安装并启动完毕.
+
+#版本说明
+	MySQL Enterprise Edition 社区版本,开源免费
+	MySQL Cluster CGE 集群版本,开源免费
+	MySQL Community Edition 商业版本
+
+
+-----------------------------------------------------------
+安装PHP
+
+yum list php* #查看所有php相关的安装包
+/*
+可安装的软件包
+php.x86_64                       5.4.16-42.el7   base
+php-bcmath.x86_64                5.4.16-42.el7   base
+php-cli.x86_64                   5.4.16-42.el7   base
+php-common.x86_64                5.4.16-42.el7   base
+......
+php-gd.x86_64                    5.4.16-42.el7   base
+php-intl.x86_64                  5.4.16-42.el7   base
+php-ldap.x86_64                  5.4.16-42.el7   base
+php-mbstring.x86_64              5.4.16-42.el7   base
+php-mysql.x86_64                 5.4.16-42.el7   base
+*/
+yum install php #安装php
+yum install php-mysql.x86_64 php-mysqlmbstring.x86_64....#安装PHP扩展包
+#php 安装完毕  在根目录编辑phpinfo文件 localhost访问测试
+systemctl restart httpd# 重启apache
+
+#由于linux的yum源中的PHP不是最新版本，更新yum来安装php7
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm    
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm 
+
+yum romove php-common #卸载旧版本php
+#然后安装新版本php
+yum install php70w 
+
+#开启PHP报错功能 php.ini 中 display_errors设置为On
+
+#安装composer
+[root@localhost puwenfeng]# sudo curl -sS https://getcomposer.org/installer | php
+All settings correct for using Composer
+Downloading...
+Composer (version 1.5.2) successfully installed to: /home/puwenfeng/composer.phar
+Use it: php composer.pha
+#不用sudo会报错：
+Failed to decode zlib stream
+
+mv composer.phar /usr/local/bin/composer#移动到path目录中，成全局的
+#修改镜像地址
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
+#安装laravel
+#在网站目录下运行
+composer create-project laravel/laravel --prefer-dist xxxdir
+#laravel部署成功
+
+-----------------------------------------------------------
+静态IP配置/IP配置
+#/etc/sysconfig/network-scripts/ifcfg-xxx文件编辑
+BOOTPROTO=‘static' #默认dhcp协议
+ONBOOT="yes"#开机启动
+IPADDR=192.168.47.128#静态IP
+GATEWAY=192.168.47.1#默认网关
+NETMASK=255.255.255.0#子网掩码
+DNS1=192.168.47.1#DNS配置
+service network status #查看当前网络服务状态
+service network restart#重启网络服务
+
+
+-----------------------------------------------------------
+#无写权限问题
+#修改根目录权限
+#检查SElinux是否关闭
+/usr/sbin/sestatus -v #查看SElinux状态
+setenforce 0 #临时关闭
+修改/etc/selinux/config 文件
+
+将SELINUX=enforcing改为SELINUX=disabled
+-----------------------------------------------------------
+/*
+命令总结:
+yum： Yellow dog Updater, Modified， 解决rpm包依赖的软件安装工具，可以在/etc/yum.config文件中进行yum的配置，yum数据源默认放在/etc/yum.repos.d/文件夹下。可以认为是rpm的加强版。
+rpm： RedHat Package Manager，软件安装包的管理器，可以用来安装或删除软件。
+wget： World Wide Web Get，wget是一个从网络上自动下载文件的自由工具，支持HTTP、HTTPS、FTP常见协议。
+uname： Unix Name，显示主机操作系统名称。
+
+# yum list	
+列出资源库中特定的可以安装或更新以及已经安装的rpm包
+# yum list perl           //列出名为perl  的包
+# yum list perl*         //列出perl 开头的包
+
+列出资源库中所有可以更新的rpm包
+# yum list updates
+
+列出已经安装的所有的rpm包
+# yum list installed
+
+yum -y install 包名（支持*） ：自动选择y，全自动
+yum install 包名（支持*） ：手动选择y or n
+yum localhost 报名 :安装本地rpm
+*/
+	
