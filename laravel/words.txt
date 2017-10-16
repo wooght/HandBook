@@ -1,0 +1,19 @@
+//单词罗列
+
+entrust	:委托
+void		:无效
+role		:角色
+grade		:等级
+provider	:供应商
+boot		:引导
+bootstrap	:引导程序,自举
+register	:注册
+entity	:实体
+logs		:日志
+gender	:性别
+agent		:代理
+repository	:知识库,储藏室
+navigation	:导航
+permission	:许可
+param		:参数
+fillable	:填充

@@ -24,6 +24,8 @@ use DB: #DB数据库操作类
 $obj=DB::table('articles');
 $obj->find($id) #功能同上Models::find($id)
 
+DB::table('users')->truncate();#删除一个表
+
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;	#引入auth 认证

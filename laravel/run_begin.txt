@@ -122,3 +122,11 @@ php artisan vendor:publish
 
 #AdminLTE
 composer require "almasaeed2010/adminlte=~2.0"
+
+#clone
+git clone url  #从url中科隆项目到本地
+composer install #安装项目  ->安装依赖
+#配置.env文件
+php artisan key:generate #创建APP_KEY 并添加到.env中
+php artisan migrate #建立数据库
+php artisan db:seed #填充数据

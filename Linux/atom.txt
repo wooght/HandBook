@@ -1,0 +1,6 @@
+//atom 操作  by  wooght
+
+Ctrl+Shift+A  打开项目
+Ctrl+Shift+P  打开搜索package
+Ctrl+,	 打开设置
+Ctrl+/	 单行注释
