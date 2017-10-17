@@ -243,6 +243,10 @@ Branch master set up to track remote branch master from origin.
 #解除关联
 git remote remove origin
 
+#克隆
+git clone https://github.com/wooght/handbook.git 文件夹 #克隆到指定文件夹
+
+git pull origin next:master #获取远程next的更新到本地master
 
 -----------------------------------------------------------
 #其他常用命令
