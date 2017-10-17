@@ -93,6 +93,7 @@ E======>控制器写逻辑,然后调用视图
 	}
 		
 
+
 #添加自定义函数库
 在app文件下创建文件或文件夹->文件
 修改composer.json文件 autoload 下添加元素
@@ -100,6 +101,8 @@ E======>控制器写逻辑,然后调用视图
 	"app/路径"
 ],
 运行composer dump-autoload 即可
+
+
 
 #配置UEditor
 一、配置composer.json文件，在composer.json文件的require 里面加入　
@@ -120,5 +123,29 @@ php artisan vendor:publish
 五 在视图里应用
 
 
+
 #AdminLTE
 composer require "almasaeed2010/adminlte=~2.0"
+
+
+
+#entrust 权限管理
+一、composer require zizaco/entrust 5.2.x-dev
+二、修改配置文件app.php
+	添加服务提供者providers下
+	Zizaco\Entrust\EntrustServiceProvider::class,
+	设置别名
+	'Entrust' => Zizaco\Entrust\EntrustFacade::class,
+三、注册中间件
+	routeMiddleware数组下添加
+	'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
+	'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
+	'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
+四、发布扩展配置文件
+	php artisan vendor:publish
+
+五、修改fire方法为handle方法  针对laravel 5.5 
+	vendor-> zizaco-> entrust-> src-> commands-> MigrationCommand.php，并将”fire“方法更改为”handle“
+
+六、php artisan entrust:migration #生成迁移文件
+    php artisan entrust:migrate #执行迁移 生成数据表
