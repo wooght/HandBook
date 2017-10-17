@@ -1,0 +1,79 @@
+Windows环境:
+安装VirtualBox 和Vagrant
+
+#开始安装Homestead
+vagrant box add laravel/homestead 
+
+#	等待下载homestead.box  45小时
+#果断放弃此方法,直接下载box,然后
+
+vagrant box add 路径/homestead.box
+#box创建OK
+
+vagrant box list #可以查看
+
+#克隆homestead配置
+git clone https://github.com/laravel/homestead.git Homestead
+
+#运行命令
+init.bat #linux 是init.sh
+
+#配置homestead
+
+Homestead.yaml 是主要配置文件
+
+
+---
+ip: "192.168.10.10" #访问web服务器的IP地址
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: F:\homestead		#本地共享目录
+      to: /home/vagrant/www	#对应的服务器共享目录
+
+sites:
+    - map: homestead		#访问的域名
+      to: /home/vagrant/www/blog_lvl/public	#此域名对应的文件夹地址
+
+databases:
+    - homestead
+
+
+#修改scripts 下homestead.rb文件
+config.vm.box_version = settings["version"] ||= "<= 1.0.0"  #修改这里的版本为自己下载的对应版
+
+
+#配置hosts下对应的域名影视
+
+#homestead 文件下运行命令
+ssh-keygen #生成ssh key
+
+#启动box
+vagrant up
+
+#OK  可以正常运行了
+
+
+vagrant 命令集:
+
+vagrant global-status  各虚拟机运行情况
+vagrant destroy id号	删除虚拟机
+
+vagrant up --provision	启动时,运行配置文件
+vagrant provision 	修改配置文件后重启使用
+vagrant ssh		连接当前目录下的虚拟机
+
+vagrant halt 		关闭虚拟机
+
+vagrant box list 	虚拟机列表
+vagrant box remove 名称	移除虚拟机
+
+
+ 

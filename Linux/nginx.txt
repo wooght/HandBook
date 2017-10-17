@@ -1,0 +1,2 @@
+÷ÿ∆ÙNginx
+sudo nginx -s reload
