@@ -249,7 +249,24 @@ git clone https://github.com/wooght/handbook.git 文件夹 #克隆到指定文件夹
 git pull origin next:master #获取远程next的更新到本地master
 
 git fetch origin #获取远端最新信息
+git fetch origin master #获取远端master的最新信息
 git diff test origin/xxx 本地test 和远端xxx做比较
+
+
+-----------------------------
+git fetch origin dev
+git log -p dev..origin/dev
+git merge origin/dev
+
+git fetch origin dev:tmp
+git diff tmp
+git merte tmp
+-----------------------------
+以上两部分效果一样,三行意思分别为:
+从远端origin的dev分支上下载最新内容
+和本地的dev分支上进行比较
+最后合并
+
 
 -----------------------------------------------------------
 #其他常用命令
