@@ -248,6 +248,9 @@ git clone https://github.com/wooght/handbook.git 文件夹 #克隆到指定文件夹
 
 git pull origin next:master #获取远程next的更新到本地master
 
+git fetch origin #获取远端最新信息
+git diff test origin/xxx 本地test 和远端xxx做比较
+
 -----------------------------------------------------------
 #其他常用命令
 git add -i [<path>]命令查看<path>中被所有修改过或已删除文件但没有提交的文件

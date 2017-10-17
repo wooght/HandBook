@@ -1,6 +1,8 @@
 //Laravel 目录结构及创建过程	by wooght 2017
 
+
 ====>app 核心目录,包括模型/控制器
+
 	
 ====>app/Http/Controllers #控制器文件夹
 	php artisan make:controller WAdmin/WAdminHomeController #创建控制器
@@ -22,10 +24,39 @@ class WAdminHomeController extends Controller
 }
 -------------------------------------
 
+
+
+====》app/Http/Middleware 中间件
+
+
+
+====》app/Http/Kernel.php 注册（加载）middleware及middlewareGroups的设置
+
+
+
+
+====》app/Providers 系统提供商（providers）设置
+	AppServiceProvider.php 系统运行服务
+	AuthServiceProvider.php 认证服务
+	文件下boot（）自动引用，register（） 注册新的供应商
+	
+
+
+
+====>bootstrap
+	app.php运行系统依赖文件 主要运作如下函数$app->singleton(‘接口’，‘实际类位置’);
+	这里可以注册指定命名空间，系统全局的。
+	
+
+
+
+
 ====>artisan php脚本,用于配置/创建各种文件/框架操作等 
 	php artisan make:model xx #创建模型xx在/laravel/app下
 		php artisan make:model xx -m #创建数据模型的同时,生产数据表文件
 	php artisan cache:clear #清除缓存
+
+
 
 
 ====>database 数据库文件
@@ -92,12 +123,26 @@ class PageTableSeeder extends Seeder {
 		php artisan db:seed #执行填充
 
 
+
+
+====>config 配置文件夹
+	
+	====>app.php 默认配置
+	默认语言设置
+	debug设置
+	自动加载系统提供者 providers 和别名 aliases设置
+
+
+
 ====>resources 前端/视图模板文件
+
+
 
 
 ====>routes 路由文件
 	laravel会自动加载此目录下的文件
 	web.php 网站一般修改这个路由文件
+	api.php 接口使用这个路由文件 访问api的方式为：在web格式的基础上加前缀api/
 --------------------------------------------------------------------------
 //web.php
 Route::get('/', function () {
@@ -116,7 +161,20 @@ Route::group(['prefix'=>'wadmin','namespace'=>'WAdmin'],function(){
 //及没有定义namespace时,调用默认控制器,定义后就有了新组,会新建一个文件夹,然后控制器文件放在此文件夹下.
 -------------------------------------
 
+
+
+
 ====>storage 运行日志文件
 
 
+
+
 ====>vendor 扩展/Laravel核心包
+
+
+
+
+====》composer.json composer 配置文件
+	如可以指定全局加载自定义命名空间
+	autoload的key下classmap下添加元素：app/Wooght 
+	然后执行：composer dump-autoload ,及告诉系统自动加载Wooght
