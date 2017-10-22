@@ -15,4 +15,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 auth::user()->id #得到登陆用户的id
 auth('admin')->user()->id #得到自定义auth登陆用户的id
-
+--------------------------------------------------------------------------
+    @foreach($comts_list as $comts)
+    <!--auth('admin')->user()->name 这个是其他用户判断的格式-->
+    <div class="comts_user"
+    @if(Auth::user()->id==$comts->user->id)
+     style="text-align:right;"
+    @endif
+    >{{$comts->user->name}}</div>
+    <div class="comts_body">{{$comts->comment_body}}</div>
+    @endforeach
+-------------------------------------

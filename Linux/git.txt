@@ -260,12 +260,15 @@ git merge origin/dev
 
 git fetch origin dev:tmp
 git diff tmp
-git merte tmp
+git merge tmp
 -----------------------------
 以上两部分效果一样,三行意思分别为:
 从远端origin的dev分支上下载最新内容
 和本地的dev分支上进行比较
 最后合并
+
+git checkout tmp config app/Http/Kernel.php #从tmp分支上合并config文件夹及kernel.php到当前
+
 
 
 -----------------------------------------------------------

@@ -157,5 +157,5 @@ php artisan db:seed #填充数据
 	vendor-> zizaco-> entrust-> src-> commands-> MigrationCommand.php，并将”fire“方法更改为”handle“
 
 六、php artisan entrust:migration #生成迁移文件
-    php artisan entrust:migrate #执行迁移 生成数据表
+    php artisan migrate #执行迁移 生成数据表
 >>>>>>> origin/dev
