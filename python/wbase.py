@@ -2,9 +2,14 @@
 '''
     python 基础 by wooght 2017
 '''
+
 import time
 import math
 import random
+import calendar
+
+#日历
+print(calendar.month(2017,10))
 
 #时间
 now_time=time.time()#time.time()当前微妙
@@ -87,10 +92,13 @@ if(bb in aa):
     echo("bb in  aa")
 else:
     echo ("not in")
+
 a=111.111
 print('%10.1f'%a)#格式化输出
 #str=input('qing shu ru \n') 等待输入内容
 print(random.randint(1,100))#随机数
+arr=['abc','bcd','cde','def']#随机获取数组元素
+print(random.choice(arr))
 
 
 '''循环'''
