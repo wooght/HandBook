@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+# encoding: utf-8
 '''
     socket 测试 客户端
     author wooght
-    date 2017-10-21
+    date 2017-10-25
 
     @module socket
 '''
@@ -20,8 +22,8 @@ if len(sys.argv)>1:
 sockobj=socket(AF_INET,SOCK_STREAM)
 is_connect=True
 try:
-    sockobj.connect(('localhost',8001))
-except ConnectionRefusedError:
+    sockobj.connect(('192.168.10.10',8001))
+except:
     is_connect=False
     print('无法连接')
 if is_connect:

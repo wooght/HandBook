@@ -71,3 +71,19 @@ b.theren('puwenfeng')
 b.thecar()
 print(b.__dict__)
 b.thefactory()#访问父类方法
+
+
+class M():
+    table=''
+    sql=''
+    def __init__(self,table):
+        self.table=table
+
+    def where(self,arr):
+        self.sql+=' where'
+        for key,value in arr.items():
+            self.sql+=' '+key+'='+value
+        return self
+user=M('users')
+user.where({'name':'wooght','age':'18'})
+print(user.sql)

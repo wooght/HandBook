@@ -1,0 +1,6 @@
+#Ubuntu 
+
+安装包:
+sudo apt-get install xxx
+如:
+sudo apt-get install python-pip  #安装python pip工具

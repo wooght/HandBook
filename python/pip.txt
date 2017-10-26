@@ -1,0 +1,13 @@
+#python pip命令
+
+pip -help
+
+pip install packageName
+pip install mysql #安装mysql模块
+
+pip uninstall packageName #卸载
+
+pip search packageName  #搜索
+
+#pip 升级
+sudo python -m pip install –upgrade pip 

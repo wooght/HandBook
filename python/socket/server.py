@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+# encoding: utf-8
 '''
     socket 测试 服务端
     author wooght
-    date    2017-10-21
+    date    2017-10-25
 
     @module socket,threading
 '''
@@ -41,7 +43,8 @@ class socketclass():
             #读取客户端套接字的下一行
             try:
                 data=self.connection.recv(1024).decode()
-            except ConnectionResetError:
+            #except ConnectionResetError: Python 3.5提示ConnectionResetError is not defined
+            except:
                 print('客户:',self.address,'退出')
                 break
             if not data:break
@@ -52,7 +55,7 @@ class socketclass():
             time.sleep(0.5)
             try:
                 self.connection.send(str(data1).encode())
-            except ConnectionResetError:
+            except:
                 print('客户端',self.address,'连接中断')
                 break
         self.connection.close()

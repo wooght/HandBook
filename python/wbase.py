@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 '''
     python 基础 by wooght 2017
