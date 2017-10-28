@@ -1,5 +1,6 @@
-#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
+'''#!/usr/bin/python3定义那个版本运行'''
+
 '''
     python 基础 by wooght 2017
 '''
@@ -138,3 +139,9 @@ def suma(v):
     global_a+=v
 suma(5)
 print(global_a)
+
+#strip 去掉字符串首尾特定字符
+str=' dslfjdsl '
+print(str.strip())      #去掉空额
+str='00jdsfldj00'
+print(str.strip('0'))   #指定去掉什么内容

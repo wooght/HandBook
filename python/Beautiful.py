@@ -65,17 +65,25 @@ for div in soup.div.contents:   #子节点包括 换行,注释等
 
 print('0:',soup.div.contents[1])        #可以获取列表的某一个
 
+print('children---------------------------------')
 #children 子节点,只能获取一个  但可以遍历
 for child in soup.div.children:         #和contents一样 得到所有子标签 包括换行,注释
     print('child:',child)
 
+print('descendants---------------------------------')
 #descendants  所有子孙节点
 for child in soup.table.descendants:    #获取内容同上两者
-    print('descendants:',child)
+    try:
+        print('descendants:',child)
+    except:
+        pass
 
 #stripped_strings 所有内容 需要遍历 string指一个,strings指所有,但包括空格,  stripped_strings不包括空格
 for string in soup.div.stripped_strings:
-    print('string:',string)
+    try:
+        print('string:',string)
+    except:
+        print('编码错误')
 
 #parent 父节点
 print(soup.div.parent.name)             #得到 body

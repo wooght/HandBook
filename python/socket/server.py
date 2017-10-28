@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+'''
+#!/usr/bin/python3 指定python版本运行
+'''
 # encoding: utf-8
 '''
     socket 测试 服务端
@@ -62,6 +64,11 @@ class socketclass():
 
 #开启线程操作
 class ThreadClass(threading.Thread):
+
+    #重写构造函数,可以添加参数以便传递给线程主体调用
+    def __init__(self,args):
+        super(ThreadClass,self).__init__()      #调用父类构造函数
+
     def run(self):
         connect[-1].clientrun()
 
@@ -71,7 +78,7 @@ connect.append(socketclass())
 #等待上一个连接成功后,执行下一个连接
 while connect[-1]:
     #注册一个线程
-    thread.append(ThreadClass())
+    thread.append(ThreadClass(next))
     #开始线程
     thread[-1].start()
     print(next)

@@ -2,6 +2,7 @@
 
 import urllib
 import urllib.request as wurl
+import http.cookiejar
 #import request
 #import urllib3
 
@@ -29,14 +30,24 @@ headers={'User-Agent':user_agent,'Referer':"http://homestead/login"}        #ref
 data=urllib.parse.urlencode(posts).encode(encoding='utf-8')                 #传输内容编码 encode用法 Python3
 url='http://homestead/pythonurllib.php?from=http://homestead'               #指明了来源地址
 request=wurl.Request(url,data,headers)
-#读取登录页面
+response=wurl.urlopen(request)
+print(response.read().decode('utf-8'))
+
+#读取登录页面cookie
 url='http://homestead/login'
-request=wurl.Request(url)
-try:
-    response=wurl.urlopen(request)
-    resulthtml=response.read()
-    print(resulthtml.decode('utf-8'))                                       #编码需要输出的内容 默认不是与前置设定不同
-except urllib.error.HTTPError as e:
-    print('ERROR',e)
-except urllib.error.URLError as e:                                          #http异常
-    print(e)
+cookie = http.cookiejar.CookieJar()  # 声明一个CookieJar对象实例来保存cookie
+handler = wurl.HTTPCookieProcessor(cookie)  # 利用urllib2库的HTTPCookieProcessor对象来创建cookie处理器
+opener = wurl.build_opener(handler)  # 通过handler来构建opener
+request = wurl.Request(url)
+response = opener.open(request)  # 此处的open方法同urllib2的urlopen方法，也可以传入request
+for item in cookie:
+    print(item.name,':',item.value)
+# request=wurl.Request(url)
+# try:
+#     response=wurl.urlopen(request)
+#     resulthtml=response.read()
+#     print(resulthtml.decode('utf-8'))                                       #编码需要输出的内容 默认不是与前置设定不同
+# except urllib.error.HTTPError as e:
+#     print('ERROR',e)
+# except urllib.error.URLError as e:                                          #http异常
+#     print(e)

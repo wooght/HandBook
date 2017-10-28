@@ -1,0 +1,19 @@
+#scrapy 命令 by wooght 2017
+
+新建工程;
+scrapy startprojcet spider_name
+
+构建爬虫
+scrapy genspider name domain
+
+如:构建dmoz爬虫
+scrapy genspider dmoz dmoz
+提示:
+Created spider 'dmoz' using template 'basic' in module:
+  wooght.spiders.dmoz
+
+罗列爬虫
+scrapy list
+
+运行爬虫
+scrapy crawl dmoz
