@@ -65,6 +65,7 @@ data=urllib.parse.urlencode(posts).encode(encoding='utf-8')     #请求数据编
 request=wurl.Request(url,data,headers)                          #通过数据,header创建请求
 try:
     response=opener.open(request)                               #打开,执行爬取
+    print('now status:',response.getcode())                     #response.getcode() 获取当前爬去链接状态
     data_exit(response.read().decode('utf-8'))
 except urllib.error.HTTPError as e:
     print(e)
