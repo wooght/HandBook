@@ -1,0 +1,3 @@
+[1030/024939.836:ERROR:process_reader_win.cc(114)] NtOpenThread: {无法访问} 过程已请求访问一对象，但未给访问权限。  (0xc0000022)
+[1030/024939.838:ERROR:exception_snapshot_win.cc(87)] thread ID 819360 not found in process
+[1030/024939.838:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
