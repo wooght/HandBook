@@ -1,0 +1,4 @@
+crawl		爬行
+spider		蜘蛛
+pipeline	管道
+process		过程,处理,加工
