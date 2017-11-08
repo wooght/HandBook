@@ -20,7 +20,12 @@ new_time=time.time()
 print(new_time-now_time)
 print('now:'+str(new_time))#类型转换str(),int()等等
 print(time.localtime())#输出:time.struct_time(tm_year=2017, tm_mon=10, tm_mday=23, tm_hour=17, tm_min=9, tm_sec=9, tm_wday=0, tm_yday=296, tm_isdst=0)
-print(time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))#格式化时间 2017-10-23 17:10:54
+gs_time = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) #格式化时间 2017-10-23 17:10:54
+print(gs_time)
+gs_time = "2019-09-09 18:22"
+timeArray = time.strptime(gs_time, "%Y-%m-%d %H:%M")
+timestamp = time.mktime(timeArray)
+print('---->时间戳:',int(timestamp))
 
 '''输出'''
 a='x';b='y'
@@ -33,6 +38,7 @@ b=1.1
 c="aabbcc"
 print(a,b,c)
 print(c[0:2])#输出字符串中的某一部分 不包括后边界
+print(c[3:])
 
 '''列表list,索引数组'''
 arr=[1,'22',3];
