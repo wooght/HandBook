@@ -80,6 +80,20 @@ print(re_str)
 encode_str = str.encode('utf-8')                #str转bytes叫encode，bytes转str叫decode
 print(encode_str)
 
+class E(Exception):
+    pass
+try:
+    raise E('Error')
+except E as e:
+    print(e.args)
+try:
+    str.decode('utf-8')
+except Exception as e:
+    print('Error:',e.args)
+else:
+    #错误保护,如果没有错误执行这里
+    print(str.decode('utf-8'))
+
 #split 分割成列表
 patten=re.compile(r'\d+')                       #re.compile构造匹配模式
 print(re.split(patten,'one1two2three3four'))    #以匹配到的项作为分割点进行分割,并将结果存放列表中
