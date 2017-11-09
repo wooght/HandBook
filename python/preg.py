@@ -5,6 +5,8 @@
 '''
 
 import re
+import sys,io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8') #改变标准输出的默认编码
 
 '''
     match 只匹配字符串开始
@@ -72,6 +74,11 @@ print(result)
 
 print(re.sub(patten,r'\2 \1','11 22 33 44'))    #反向替换
 
+str = "<a href='www.baidu.com'>哈哈</a>"
+re_str = re.sub(r'<[^<]*>','',str)
+print(re_str)
+encode_str = str.encode('utf-8')                #str转bytes叫encode，bytes转str叫decode
+print(encode_str)
 
 #split 分割成列表
 patten=re.compile(r'\d+')                       #re.compile构造匹配模式

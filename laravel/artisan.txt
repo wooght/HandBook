@@ -12,3 +12,5 @@ php artisan make:migration alter_articles_table #创建修改数据库模型文件
 
 php artisan make:controller Admin/AdminHomeController #创建控制器
 	名词必须与文件夹名词相同,无文件夹则创建
+
+php artisan key:generate c#创建.env文件里的APP_KEY值
