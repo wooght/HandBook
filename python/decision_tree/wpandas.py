@@ -38,7 +38,7 @@ for d in dates:
     print(d)
 
 fg('数据贴')
-#创建数据贴 生成日期索引和标记列
+#创建数据贴 生成日期索引和标记列 random.randn/randint
 df = pd.DataFrame(np.random.randn(6,5),index=dates,columns=list(('one','two','three','four','five')))
 print(df)
 print(df.dtypes)    #输出每一行的类型
@@ -95,4 +95,6 @@ print(df2[df2['six'].isin(['a','c'])])
 ts = pd.Series(np.random.randn(100), index=pd.date_range('1/1/2000', periods=100))
 print(ts)
 ts = ts.cumsum()
+print(ts['4/4/2000'])
+print(ts)
 ts.plot()

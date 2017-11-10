@@ -12,6 +12,9 @@ pip search packageName  #搜索
 #pip 升级
 sudo python -m pip install –upgrade pip 
 
+#升级其他的也一样
+pip install -upgrade name
+
 
 #安装python其他环境及依赖
 
