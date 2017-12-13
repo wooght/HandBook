@@ -12,7 +12,7 @@ import calendar
 
 #日历
 print(calendar.month(2017,10))
-
+print(time.time()-90*24*3600,'90天之前的时间')
 #时间
 now_time=time.time()#time.time()当前微妙
 time.sleep(1)#暂停允许 sleep
@@ -151,3 +151,17 @@ str=' dslfjdsl '
 print(str.strip())      #去掉空额
 str='00jdsfldj00'
 print(str.strip('0'))   #指定去掉什么内容
+
+#函数参数
+def aabb(*args,**kargs):
+    print(args[0]*5)
+    print(kargs['b'])
+aabb(1,2,a=1,b=2)
+
+a = {'a':1,'b':2,'c':3,'d':'a'}
+b = list(a)      #得到字典字段名组成的列表 顺序错乱
+print(b)
+print(1 in a)   #判断字典是否错在key值
+print(int(6.111/3))
+
+print(2**32)

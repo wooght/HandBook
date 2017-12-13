@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt     #matplotlib.pyplot 绘图主键
 import seaborn as sns
 import numpy as np
 import pandas as pd
+import json
 
 import time
 import Db as T
@@ -54,15 +55,15 @@ mpl.rcParams['font.sans-serif'] = ['SimHei']    #指定默认字体 解决中文
 
 #查询新闻事件大于2011-09-01的所有数据
 #提到360的加一
-start_time = int(time.time())-24*3600*30*2
+start_time = int(time.time())-24*3600*24
 print(start_time,'---->')
 query = T.session.query(T.news.c.url,T.news.c.put_time)
 s = query.filter(T.news.c.title.like('%360%')).filter(T.news.c.put_time>start_time).all()
 print(s)
 
 #创建数据贴
-dates = pd.date_range('20171103',periods=8)
-df = pd.DataFrame(np.zeros((8,3)),index=dates,columns=('sina','yicai','qq'))
+dates = pd.date_range('20171103',periods=24)
+df = pd.DataFrame(np.zeros((24,3)),index=dates,columns=('sina','yicai','qq'))
 for item in s:
     numindex = time.strftime("%Y-%m-%d",time.localtime(int(item[1])))
     if('yicai' in item[0]):
@@ -164,6 +165,8 @@ def distplot_ys():
     ax = sns.distplot(list_df.loc[:,['num']],rug=True,hist=True) #直方图hist=True，核密度曲线rug=True
     plt.show()
 
+# distplot_ys()
+
 #jointplot 双变量关系图
 sns.jointplot(x='news',y='comments',data=df_mn,kind="kde") #kind='reg' 绘制散点图和线性回归拟合直线,kind='kde'绘制核密度图
 plt.show()
@@ -171,3 +174,41 @@ plt.show()
 #线图
 df_mn.pivot(index='month',columns='from_name',values='news').plot(title='报道量')  #columns 分组的意思
 plt.show()
+
+r = T.select([T.quotes_item.c.quotes]).where(T.quotes_item.c.code_id==2)
+s = T.conn.execute(r)
+for item in s.fetchall():
+    obj = json.loads(item[0])
+
+quotes = pd.DataFrame(obj)
+quotes.index = quotes['datatime']   #将所有改为某列的值
+print(quotes.info())
+quotes = quotes.convert_objects(convert_numeric=True)   #小数有可能是obj类型 要运算就必须类型转换
+print(quotes.info())
+def quotes_ys(df):
+    plt.xlabel('datatime')
+    plt.ylabel('shou')
+    plt.title('行情走势',fontsize=16,color='red')
+    plt.grid(True)                  #是否显示网格
+    plt.plot(df.loc[:,['shou','gao','di']])
+    plt.legend()                    #图例
+    plt.show()
+quotes_ys(quotes.sort_index(axis=1,ascending=True))
+newquotes = quotes.sort_values(by="datatime",ascending=True)
+# quotes.shou = quotes.shou.astype(int)
+# quotes.gao = quotes.gao.astype('int8')
+sns.jointplot(x='shou',y='gao',data=quotes,kind="reg") #kind='reg' 绘制散点图和线性回归拟合直线,kind='kde'绘制核密度图
+plt.show()
+#涨跌幅 分布图
+ax = sns.distplot(quotes.loc[:,['zd_range']],rug=True,hist=True)
+try:
+    plt.savefig("F:\homestead\caijing_lvl\public\seaborn_pic\sns.png")
+    print('save SUCCESS')
+except Exception as e:
+    print('save dailed .....',e)
+plt.show()
+
+gammas = sns.load_dataset("gammas")
+ax = sns.tsplot(time="timepoint", value="BOLD signal",unit="subject", condition="ROI",data=gammas, err_style="ci_bars")
+plt.show()
+print(gammas)

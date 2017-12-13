@@ -4,3 +4,15 @@
 sudo apt-get install xxx
 如:
 sudo apt-get install python-pip  #安装python pip工具
+
+#查看包是否按照
+dpkg -s phantomjs
+
+#查看所有按照的包
+ dpkg --get-selections
+
+#查看包的位置
+ dpkg -L phantomjs
+
+#通过软连接 添加环境变量 ln -sf 目标地址 环境变量目录地址
+sudo ln -sf /usr/local/src/phantomjs/bin/phantomjs /usr/local/bin/phantomjs

@@ -87,3 +87,17 @@ class M():
 user=M('users')
 user.where({'name':'wooght','age':'18'})
 print(user.sql)
+
+#__dict__ 通过字典创建类属性 key是属性名,value是属性值
+class todict(object):
+    totle = 2
+    def __init__(self):
+        self.d = {}
+        self.set_totle(5)
+    def set_totle(self,key):
+        self.totle = key
+tdict = todict()
+tdict.__dict__={'a':1,'b':2}
+print(tdict.a)
+tdict.set_totle(5)
+print(tdict.totle)

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 __author__ = 'wooght'
 from sqlalchemy import create_engine, Table, Column ,MetaData, select ,and_
-from sqlalchemy import VARCHAR as Varchar,TEXT as Text, Integer, String, ForeignKey
+from sqlalchemy import VARCHAR as Varchar,TEXT as Text, Integer, String, ForeignKey,SmallInteger
 from sqlalchemy.orm import sessionmaker
 import re
 
-engine = create_engine("mysql+pymysql://root:wooght565758@localhost:3306/scrapy?charset=utf8",encoding="utf-8", echo=True)
+engine = create_engine("mysql+pymysql://homestead:secret@192.168.10.10:3306/scrapy?charset=utf8",encoding="utf-8", echo=False)
 metadata = MetaData()
 
 #新闻表
@@ -26,7 +26,12 @@ topic = Table('topic',metadata,
     Column('body',Text),                        #新闻内容
     Column('put_time',String(64))               #发布时间
 )
-
+#行情一行表
+quotes_item = Table('quotes_item',metadata,
+    Column('id',Integer,primary_key=True),
+    Column('code_id',SmallInteger,index=True),      #股票代码
+    Column('quotes',Text),                          #60天行情
+)
 
 metadata.create_all(engine)
 conn = engine.connect()

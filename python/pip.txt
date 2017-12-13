@@ -28,3 +28,11 @@ pip install sqlalchemy
 
 #安装Virtualenv 虚拟环境版本管理
 pip install virtualenv
+
+
+#安装语义分析工具
+pip install jieba
+
+#安装科学计算工具
+pip install numpy
+pip install pandas

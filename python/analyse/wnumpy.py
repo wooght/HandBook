@@ -2,6 +2,7 @@
 #
 # numpy python数组扩展用法
 # by wooght 2017-11
+# array的应用
 #
 import numpy as np
 a = [1,2,3,4]

@@ -1,6 +1,16 @@
+# -*- coding: utf-8 -*-
+#
+# jieba 应用
+# by wooght 2017-11
+#
+# 涉及方法:sorted排序用法
+#
 import jieba
 import jieba.posseg
 import jieba.analyse
+import sys,io
+
+# 字典地址:https://raw.githubusercontent.com/fxsjy/jieba/master/extra_dict/dict.txt.small
 
 #cut_all=True 全模式
 seg = jieba.cut("我毕业于攀枝花学院计算机系",cut_all=True)
@@ -17,8 +27,9 @@ print("FullMode:"+"/".join(seg))
 seg = jieba.cut_for_search("我毕业于攀枝花学院计算机系")
 print("Search Mode:"+"/".join(seg))
 
+print(sys.path)
 #引入自定义字典
-jieba.load_userdict("module/jiaba.txt")
+jieba.load_userdict("F:\homestead\handbook\python\decision_tree\jieba_words\words.txt")
 
 seg_list = jieba.cut("蒲文锋是python爬虫砖家也是云计算方面的专驾。")
 print("Origin: " + "/".join(seg_list))
@@ -96,7 +107,8 @@ s = "航城科技与昨日在纳斯达克上市,上市首日大涨11.4%,对于�
 cutstr = jieba.lcut(s,cut_all=False)
 print(cutstr)
 
-tags = jieba.analyse.extract_tags(s, topK = 15, withWeight = False)
+#TEXTRANK 算法提取关键词 短文本实用
+tags = jieba.analyse.textrank(s, topK = 15, withWeight = False)
 print(tags)
 
 #计算关键词词频
@@ -114,7 +126,7 @@ word_freq = str_freq(tags)
 for i,n in word_freq:
     print(i+'-','\t\t',n)
 
-#返回关键词和其权重
+#TF-IDF算法提取关键词 长文本实用
 for x, w in jieba.analyse.extract_tags(s, topK = 15, withWeight = True,allowPOS=('nt','v','n','a')):
     print("%s %s" % (x, w))
 #topK  返回几个TF/IDF权重最大的关键词

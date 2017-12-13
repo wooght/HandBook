@@ -1,9 +1,23 @@
 ﻿//atom 操作  by  wooght
 
 Ctrl+Shift+A  打开项目
-Ctrl+Shift+P  打开搜索package
+Ctrl+Shift+P  打开atom package命令
 Ctrl+,	 打开设置
 Ctrl+/	 单行注释
 
 调试工具: Atom Runner
 调试: ALT+R
+
+注释工具:docblockr
+
+汉化工具:simplified-chinese-menu
+
+git操作相关:
+	git plus  执行git命令
+	git log 查看git日志
+
+python相关:
+	python-tools
+	python-debugger
+	autocomplete-python
+	linter-pep8	编码规范检查

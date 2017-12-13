@@ -21,6 +21,10 @@ print(s)
 #指定索引
 s=pd.Series([1,2,3,4],index=['a','b','c','d'])
 print(s)
+arr = ['one','two','three']
+new_arr = pd.Series(np.zeros(len(arr)),index=arr)
+print(new_arr)
+
 
 dict = {'b':2,'a':1,'c':3}
 s = pd.Series(dict) #给定字典的时候,默认会排序
@@ -98,3 +102,31 @@ ts = ts.cumsum()
 print(ts['4/4/2000'])
 print(ts)
 ts.plot()
+
+dates = pd.date_range('20171111',periods=20)   #如不指定日期,默认当前
+df = pd.DataFrame(np.eye(20,5),index=dates,columns=list(('one','two','three','four','five')))
+print(df)
+print(df.columns)           #查看有哪些列
+print(df.info())            #查看个字段信息
+print(df.shape)             #几行几列
+print(df.describe())        #大体情况 概略统计
+print(df['one'].median())   #中位数
+print(df['two'].mean())     #平均数
+df['two'][1],df['two']['2017-11-18'],df.loc['2017-11-20']['two']= None,None,None
+print(df['two'])
+print(df['two'].fillna(df['two'].mean()))   #填充缺省值
+print('-----')
+df['two'] = np.linspace(1,5,20,dtype=np.int8)
+print(df['two'].value_counts())         #列出某列元素出现的次数
+print(df['two'].skew())                 #偏斜度
+print(df['two'].kurt())                 #峰度
+print(df['one'].corr(df['two']))        #相关度
+new_twocount = df.groupby('two',as_index=False)['five'].agg({'twocount':'count'})
+print(new_twocount)
+df = pd.merge(df,new_twocount,on=['two'],how='left')    #数据合并  分组合并
+print(df)
+df['one'] = np.linspace(1,5,20)
+print(df)
+print(df['one'].astype(int))            #类型转换
+df['one'] = np.log(df['one'])           #对one列进行log运算
+print(df)
