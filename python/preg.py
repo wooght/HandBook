@@ -100,3 +100,15 @@ print(re.split(patten,'one1two2three3four'))    #以匹配到的项作为分割�
 
 #findall 列表返回匹配项
 print(re.findall(patten,'one1two2three3four'))  #将匹配到的项以列表格式返回
+
+preg_str = 'http://jxjump.58.com/service?target=FCADVFdVGJSbUnkeXOrkIYXzkJxLX94M3jVfo7Awk_3UeqgeWIVioRsBqa8f' \
+           '-5NvxKrSq4HgscFYojc_URCMrkcZk0qECF3p7KaAnu9_1sWKj6P7ZWagmQq5gfq_kLogGs8t9tDUeWqaMlx0bZ6bDLvHciI' \
+           '-TC0mci09YWzkWnYWZHG1cGnr8miwYkZilceudLC0O8UTdkeJ5vIgMOnSlnh0mMCXkDpQWNdnYq3M' \
+           '-E7eqOuJGjPE65qoR5b3Y4IdBwcD4&local=102&pubid=25378245&apptype=0&psid=182142276198563518994288059&entinfo' \
+           '=32546267038793_0&cookie=||http%3A%2F%2Fcallback.58.com%2Ffirewall%2Fvalid%2F1857562532.do%3Fnamespace' \
+           '%3Dershoufangphp%26url%3Dcd.58.com%252Fershoufang%252F32334355244099x.shtml|c5/nn1emJLYQkDf/M8QHAg' \
+           '==&fzbref=0&key=&params=esfjxpclranxuanctrAB^desc&cookie=||http%3A%2F%2Fcallback.58.com%2Ffirewall' \
+           '%2Fvalid%2F1857562532.do%3Fnamespace%3Dershoufangphp%26url%3Dcd.58.com%252Fershoufang%252F32334355244099x' \
+           '.shtml|c5/nn1emJLYQkDf/M8QHAg==&fzbref=0&key=&from=1-list-5 '
+x = re.search(r'entinfo=(\d{14})\_',preg_str)
+print(x.group(1))

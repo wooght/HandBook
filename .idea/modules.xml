@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../caijing_lvl/.idea/caijing_lvl.iml" filepath="$PROJECT_DIR$/../caijing_lvl/.idea/caijing_lvl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/.idea/caijing_scrapy.iml" filepath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/.idea/caijing_scrapy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scripy_wooght/get_phone/.idea/get_phone.iml" filepath="$PROJECT_DIR$/../scripy_wooght/get_phone/.idea/get_phone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../get_phone/.idea/get_phone.iml" filepath="$PROJECT_DIR$/../get_phone/.idea/get_phone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/handbook.iml" filepath="$PROJECT_DIR$/.idea/handbook.iml" />
+    </modules>
+  </component>
+</project>

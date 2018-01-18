@@ -2,3 +2,9 @@ crawl		爬行
 spider		蜘蛛
 pipeline	管道
 process		过程,处理,加工
+screen		检查,掩护
+custom		自定义
+rules		规则
+extractor	提取
+desired		渴望,希望得到的 
+capabilities	能力,能量,潜在能力

@@ -36,3 +36,30 @@ pip install jieba
 #安装科学计算工具
 pip install numpy
 pip install pandas
+
+# 安装 pytesseract 图像识别
+pip install pytesseract
+apt-get install tesseract-ocr
+
+##############################################################
+python 扩展包一览:
+
+pypiwin32 	#windows依赖扩展包
+pywin32		#windows依赖扩展包,鼠标键盘事件
+PyMySql		#操作mysql扩展包
+sqlalchemy	#数据库ORM操作扩展包
+numpy		#科学计算/数组 扩展包
+pandas		#科学计算/矩阵 扩展包
+scipy		#高级科学计算库,基于numpy
+scrapy 		#scrapy 爬虫框架
+scrapy-splash	#scrapy无缝结合的js引擎
+twisted		#事件驱动的网络框架
+selenium	#无界面浏览引擎
+phantomjs	#无界面浏览器JS引擎
+beautifulsoup4	#bs爬虫扩展
+matplotlib	#图表扩展包
+seaborn		#基于matplotlib的图表扩展
+scikit-learn	#机器学习扩展包
+pillow		#图像处理库
+cx_freeze	#windows打包exe扩展包
+jieba		#中文分词工具包
