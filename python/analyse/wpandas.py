@@ -139,4 +139,15 @@ for i in df.itertuples():
 print(df.one.count())
 # max 指定范围比较
 print(df.one.max())
-print(df['one'][1:5].max())
+print(df['one'][1:5].max())  # 位置取值,不包括后边界
+print(df.loc[:5, 'one'].max())  # 索引取值,包括后边界
+
+a = [{
+    'a': 1,
+    'b': 2
+},{
+    'a':2,
+    'b':3
+}]
+df = pd.DataFrame(a)
+print(df[df['b'] == 2].index[0])

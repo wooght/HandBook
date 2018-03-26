@@ -1,5 +1,8 @@
 #Ubuntu 
 
+更新库
+sudo apt-get update
+
 安装包:
 sudo apt-get install xxx
 如:

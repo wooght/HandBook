@@ -277,3 +277,8 @@ git add -i [<path>]命令查看<path>中被所有修改过或已删除文件但没有提交的文件
 git add <path> git 修改（不含已删除）的文件，判断出新添的文件，并把它们的信息添加到索引库中。
 git add -A: [<path>]表示把<path>中所有tracked文件中被修改过或已删除文件和所有untracted的文件信息添加到索引库
 
+
+#添加标签
+git tag -a v1.4 -m '说明' # 新建标签
+git tag  #罗列标签
+

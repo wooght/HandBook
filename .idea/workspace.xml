@@ -2,34 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e9967b-24a7-4413-801a-303b0f4ce28c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/python/w_math/base_math.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/python/w_math/echo.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/python/w_math/numpy_a.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/python/w_math/numpy_b.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/python/wpytesseract.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_analyse.py" />
-      <change beforePath="$PROJECT_DIR$/../caijing_lvl/app/Http/Controllers/ArticleControl.php" afterPath="$PROJECT_DIR$/../caijing_lvl/app/Http/Controllers/ArticleControl.php" />
-      <change beforePath="$PROJECT_DIR$/../caijing_lvl/app/Http/Controllers/DateControl.php" afterPath="$PROJECT_DIR$/../caijing_lvl/app/Http/Controllers/DateControl.php" />
-      <change beforePath="$PROJECT_DIR$/../caijing_lvl/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/../caijing_lvl/app/Http/Controllers/HomeController.php" />
-      <change beforePath="$PROJECT_DIR$/../caijing_lvl/public/index.php" afterPath="$PROJECT_DIR$/../caijing_lvl/public/index.php" />
-      <change beforePath="$PROJECT_DIR$/../caijing_lvl/resources/views/companyone.blade.php" afterPath="$PROJECT_DIR$/../caijing_lvl/resources/views/companyone.blade.php" />
-      <change beforePath="$PROJECT_DIR$/php/e.php" afterPath="$PROJECT_DIR$/php/e.php" />
-      <change beforePath="$PROJECT_DIR$/python/SQLAlchemy/crudtest.py" afterPath="$PROJECT_DIR$/python/SQLAlchemy/crudtest.py" />
-      <change beforePath="$PROJECT_DIR$/python/SQLAlchemy/table.py" afterPath="$PROJECT_DIR$/python/SQLAlchemy/table.py" />
+      <change beforePath="$PROJECT_DIR$/../caijing_lvl/resources/views/ddbackprobe.blade.php" afterPath="$PROJECT_DIR$/../caijing_lvl/resources/views/ddbackprobe.blade.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Linux/git.txt" afterPath="$PROJECT_DIR$/Linux/git.txt" />
       <change beforePath="$PROJECT_DIR$/python/analyse/wpandas.py" afterPath="$PROJECT_DIR$/python/analyse/wpandas.py" />
-      <change beforePath="$PROJECT_DIR$/python/phantomjs.py" afterPath="$PROJECT_DIR$/python/phantomjs.py" />
-      <change beforePath="$PROJECT_DIR$/python/pip.txt" afterPath="$PROJECT_DIR$/python/pip.txt" />
-      <change beforePath="$PROJECT_DIR$/python/preg.py" afterPath="$PROJECT_DIR$/python/preg.py" />
-      <change beforePath="$PROJECT_DIR$/python/w_func.py" afterPath="$PROJECT_DIR$/python/w_func.py" />
-      <change beforePath="$PROJECT_DIR$/python/words.txt" afterPath="$PROJECT_DIR$/python/words.txt" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/middlewares/Wmiddlewares.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/middlewares/Wmiddlewares.py" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj.py" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/basedata.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/basedata.py" />
-      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py" />
+      <change beforePath="$PROJECT_DIR$/python/wbase.py" afterPath="$PROJECT_DIR$/python/wbase.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,64 +20,94 @@
     <favorites_list name="handbook" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.27123109">
+    <splitter split-orientation="horizontal" split-proportion="0.3104113">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="numpy_a.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/w_math/numpy_a.py">
+          <file leaf-file-name="dd_math.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_math.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="21">
+                  <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ddtop100.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1008">
+                  <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base_math.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="numpy_b.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/w_math/numpy_b.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="wpandas.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/analyse/wpandas.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1235">
-                  <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="wseaborn.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/analyse/wseaborn.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="basedata.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/basedata.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-425">
-                  <caret line="35" column="67" lean-forward="true" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="zuhe_change.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/zuhe_change.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-392">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ddtj_analyse.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/ddtj_analyse.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3381">
+                  <caret line="161" column="15" lean-forward="false" selection-start-line="161" selection-start-column="15" selection-end-line="161" selection-end-column="15" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dd_position_old.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position_old.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1722">
+                  <caret line="82" column="23" lean-forward="false" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="changeask.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/changeask.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="semantics.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/semantics.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2646">
+                  <caret line="126" column="20" lean-forward="false" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Db.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/common.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="966">
+                  <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -108,32 +116,62 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="ddtj_analyse.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_analyse.py">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="dd_backprobe.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_backprobe.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="451">
-                  <caret line="125" column="90" lean-forward="false" selection-start-line="125" selection-start-column="90" selection-end-line="125" selection-end-column="90" />
+                <state relative-caret-position="1176">
+                  <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="topic_attitude.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py">
+          <file leaf-file-name="ddtj_history.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1341">
+                <state relative-caret-position="1050">
+                  <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dd_pct.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_pct.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1092">
+                  <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dd_backprobe.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/dd_backprobe.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="backprobe_cost.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/backprobe_cost.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="semantics.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/semantics.py">
+          <file leaf-file-name="dd_structure.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/data_structure/dd_structure.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-886">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="525">
+                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -142,8 +180,28 @@
           <file leaf-file-name="ddtj_data.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="20" />
+                <state relative-caret-position="714">
+                  <caret line="34" column="50" lean-forward="false" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="news.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1197">
+                  <caret line="57" column="68" lean-forward="false" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dd_position.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="567">
+                  <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -181,64 +239,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/common/wlogging.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/quotes.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/corpus/key_words.txt" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/common.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/semantics.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/semantics.py" />
-        <option value="$PROJECT_DIR$/../caijing_lvl/resources/views/article_analyes.blade.php" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/tool/make_txt.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/tool/up_companies.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/tool/load_words.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/pipelines/QuotesPipelines.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/middlewares/Newsmiddlewares.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/test.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/items.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/sina_topic_vreport.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/cnstock_notices.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/middlewares/Wmiddlewares.py" />
-        <option value="$PROJECT_DIR$/python/preg.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/pipelines/pipelines.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/test.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/settings.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/common/wlogging.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/common/wfunc.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/wb_gj.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/middlewares/Newsmiddlewares.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/ershoufang_ajk.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/model/__init__.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/model/Db.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/model/repository/proxyip.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/middlewares/Wmiddlewares.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/ershoufang.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/chongwu.py" />
-        <option value="$PROJECT_DIR$/python/wpytesseract.py" />
-        <option value="$PROJECT_DIR$/python/w_func.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/test.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/middlewares/ipproxy.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" />
         <option value="$PROJECT_DIR$/python/w_math/echo.py" />
-        <option value="$PROJECT_DIR$/python/w_math/numpy_a.py" />
         <option value="$PROJECT_DIR$/python/w_math/numpy_b.py" />
         <option value="$PROJECT_DIR$/python/w_math/base_math.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py" />
         <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/settings.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/basedata.py" />
-        <option value="$PROJECT_DIR$/python/analyse/wpandas.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/ddtj.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/data_config.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/zuhe_change.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/attitude_nums.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/quotes_data.py" />
         <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_analyse.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py" />
+        <option value="$PROJECT_DIR$/python/w_math/numpy_a.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/companies.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/dd_pct.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/pipelines/QuotesPipelines.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/common/wfunc.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/marshal_cache.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/sse_notices.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/__init__.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/zuhe_change.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/zuhe_math.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/backprobe_cost.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/basedata.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/ddtj_analyse.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/__init__.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_math.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/cache/data_test.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/data_structure/dd_structure.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/quotes.py" />
+        <option value="$PROJECT_DIR$/python/analyse/wpandas.py" />
+        <option value="$PROJECT_DIR$/python/wbase.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/topic.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_dx_nlp.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_guide_test.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/common.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/pipeline_article_analyse.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/pipelines/pipelines.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/topic_analyse_run.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/semantics.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/semantics.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/middlewares/Newsmiddlewares.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_backprobe.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_pct.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/dd_backprobe.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position_old.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1762" />
-    <option name="y" value="87" />
-    <option name="width" value="1932" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1546" />
+    <option name="y" value="94" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -288,7 +346,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -304,23 +361,26 @@
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
               <item name="factory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
               <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="data_analyse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="data_analyse" type="462c0819:PsiDirectoryNode" />
+              <item name="data_structure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,6 +390,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\homestead\scripy_wooght\caijing_scrapy\factory\data_analyse" />
       <recent name="F:\homestead\scripy_wooght\caijing_scrapy\model\repository" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -352,26 +413,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ddtj_analyse">
-    <configuration name="base_math" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/w_math" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/w_math/base_math.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="ddtj_analyse" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.dd_backprobe">
+    <configuration name="dd_backprobe" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -383,80 +426,117 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="caijing_scrapy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_analyse.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/dd_backprobe.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="numpy_a" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ddtj_analyse" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/w_math" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/w_math/numpy_a.py" />
+      <module name="caijing_scrapy" />
+      <option name="SCRIPT_NAME" value="F:\homestead\scripy_wooght\caijing_scrapy\factory\data_analyse\ddtj_analyse.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="numpy_b" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ddtop100" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/w_math" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/w_math/numpy_b.py" />
+      <module name="caijing_scrapy" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="wpandas" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="result_dx_nlp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/analyse" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/analyse/wpandas.py" />
+      <module name="caijing_scrapy" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_dx_nlp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.numpy_a" />
-      <item index="1" class="java.lang.String" itemvalue="Python.numpy_b" />
-      <item index="2" class="java.lang.String" itemvalue="Python.base_math" />
-      <item index="3" class="java.lang.String" itemvalue="Python.ddtj_analyse" />
-      <item index="4" class="java.lang.String" itemvalue="Python.wpandas" />
+    <configuration name="result_guide_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="caijing_scrapy" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_guide_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="semantics" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="caijing_scrapy" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/semantics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.ddtj_analyse" />
+      <item index="1" class="java.lang.String" itemvalue="Python.result_dx_nlp" />
+      <item index="2" class="java.lang.String" itemvalue="Python.semantics" />
+      <item index="3" class="java.lang.String" itemvalue="Python.result_guide_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dd_backprobe" />
+      <item index="5" class="java.lang.String" itemvalue="Python.ddtop100" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ddtj_analyse" />
-        <item index="1" class="java.lang.String" itemvalue="Python.wpandas" />
-        <item index="2" class="java.lang.String" itemvalue="Python.base_math" />
-        <item index="3" class="java.lang.String" itemvalue="Python.numpy_b" />
-        <item index="4" class="java.lang.String" itemvalue="Python.numpy_a" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dd_backprobe" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ddtop100" />
+        <item index="2" class="java.lang.String" itemvalue="Python.semantics" />
+        <item index="3" class="java.lang.String" itemvalue="Python.result_guide_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.result_dx_nlp" />
       </list>
     </recent_temporary>
   </component>
@@ -476,24 +556,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20010532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18062139" sideWeight="0.49131513" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21475054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19197397" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27223426" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6355748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1563981" sideWeight="0.5086849" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5368764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -528,192 +617,115 @@
           <url>file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py</url>
           <line>7</line>
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_backprobe.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/model/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/model/Db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/topic.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/corpus/positive.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/SQLAlchemy/crudtest.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/ddtj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-734">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="273">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/quotes.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/tool/up_companies.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237">
-          <caret line="189" column="44" lean-forward="false" selection-start-line="189" selection-start-column="44" selection-end-line="189" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/common/werror.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/tool/make_txt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/middlewares/Wmiddlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/middlewares/Newsmiddlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/ershoufang_ajk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/chongwu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/wpytesseract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/spiders/ershoufang.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_urllib.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/tool/load_words.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_urllib2.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/make_jieba_dict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_urllib_xueqiu.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/companies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="17" selection-end-column="56" />
+        <state relative-caret-position="420">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/topics.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="176">
+          <caret line="1071" column="0" lean-forward="false" selection-start-line="1071" selection-start-column="0" selection-end-line="1071" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/814085081/builtins.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/common/wfunc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10481">
-          <caret line="819" column="4" lean-forward="false" selection-start-line="819" selection-start-column="4" selection-end-line="819" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="798">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_func.py">
+    <entry file="file://D:/Python34/Lib/site-packages/sqlalchemy/engine/result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="3570">
+          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/model/repository/proxyip.py">
+    <entry file="file://D:/Python34/Lib/site-packages/pandas/core/ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state relative-caret-position="188">
+          <caret line="817" column="0" lean-forward="false" selection-start-line="817" selection-start-column="0" selection-end-line="817" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/phantomjs.py">
+    <entry file="file://D:/Python34/Lib/site-packages/pandas/core/generic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="63" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="18" selection-end-column="63" />
+        <state relative-caret-position="212">
+          <caret line="957" column="0" lean-forward="true" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/get_phone/middlewares/ipproxy.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/marshal_cache.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/get_phone/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="123" column="36" lean-forward="false" selection-start-line="123" selection-start-column="36" selection-end-line="123" selection-end-column="36" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -724,165 +736,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="1667" column="0" lean-forward="false" selection-start-line="1667" selection-start-column="0" selection-end-line="1667" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/math_function.php">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/corpus/key_words.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/analyse/wnumpy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1320">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_math/numpy_b.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_math/numpy_a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/analyse/wjieba.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2268">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/quotes_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="170" column="37" lean-forward="false" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/wbase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2304">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="168">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_math/echo.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_guide_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="273">
+          <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/zuhe_change.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-392">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/attitude_nums.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/participle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/analyse/wseaborn.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/frequency.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/analyse/wpandas.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/changeask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1235">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/quotes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="92" column="53" lean-forward="false" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1341">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -890,24 +781,234 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/semantics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-886">
+        <state relative-caret-position="84">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/topic_analyse_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/analyse/wpandas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3192">
+          <caret line="152" column="30" lean-forward="false" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/topic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/basedata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="35" column="67" lean-forward="true" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+        <state relative-caret-position="420">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_dx_nlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/cnstock_notices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/pipelines/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1761">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/pipeline_article_analyse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_analyse.py">
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/semantics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="125" column="90" lean-forward="false" selection-start-line="125" selection-start-column="90" selection-end-line="125" selection-end-column="90" />
+        <state relative-caret-position="2646">
+          <caret line="126" column="20" lean-forward="false" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/topics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/sina_topic_vreport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-679">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/middlewares/Newsmiddlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="57" column="68" lean-forward="false" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_pct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/backprobe_cost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/data_structure/dd_structure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtj_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="50" lean-forward="false" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/ddtj_analyse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3381">
+          <caret line="161" column="15" lean-forward="false" selection-start-line="161" selection-start-column="15" selection-end-line="161" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_backprobe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1722">
+          <caret line="82" column="23" lean-forward="false" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pip.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-571">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/dd_backprobe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
