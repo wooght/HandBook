@@ -135,6 +135,7 @@ print(df)
 # 行的迭代
 for i in df.itertuples():
     print(i.Index, i.one)  # Index 在原pandas中索引
+
 # pandas 行的长度
 print(df.one.count())
 # max 指定范围比较
@@ -148,6 +149,18 @@ a = [{
 },{
     'a':2,
     'b':3
+},{
+    'a': 1,
+    'b': 2
 }]
 df = pd.DataFrame(a)
+print(df)
 print(df[df['b'] == 2].index[0])
+df.drop_duplicates(['a'], inplace=True)  # 去重
+print(df)
+df.sort_values(by='b', inplace=True, ascending=False)
+print(df)
+df.reset_index(inplace=True)  # 重建索引,原索引会以列的方式并入
+print(df)
+del df['index']  # 删除莫一列
+print(df)

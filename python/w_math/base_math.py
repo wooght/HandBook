@@ -70,12 +70,15 @@ arr = {
     'a1': 1,
     'a4': -5
 }
+# 字典元素的迭代
+for key, i in arr.items():
+    print(key, i)
 print(arr)
 print(arr['a4'])
 print(sorted(arr))  # 对索引进行排序
 print(sorted(arr.items()))  # items 键值对 键排序
 print(sorted(arr.keys()))  # 对索引进行排序
-print(sorted(arr.items(), key=lambda d: d[1]))  # items 键值对 值排序
+print(sorted(arr.items(), key=lambda d: d[1], reverse=False))  # items 键值对 值排序
 print(list(arr.values()))  # values 组成的列表
 for i in arr.values():
     print(i)
