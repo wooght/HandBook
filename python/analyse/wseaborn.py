@@ -55,15 +55,15 @@ mpl.rcParams['font.sans-serif'] = ['SimHei']    #指定默认字体 解决中文
 
 #查询新闻事件大于2011-09-01的所有数据
 #提到360的加一
-start_time = int(time.time())-24*3600*24
+start_time = int(time.time())-24*3600*44
 print(start_time,'---->')
 query = T.session.query(T.news.c.url,T.news.c.put_time)
 s = query.filter(T.news.c.title.like('%360%')).filter(T.news.c.put_time>start_time).all()
 print(s)
 
 #创建数据贴
-dates = pd.date_range('20171103',periods=24)
-df = pd.DataFrame(np.zeros((24,3)),index=dates,columns=('sina','yicai','qq'))
+dates = pd.date_range('20180220',periods=44)
+df = pd.DataFrame(np.zeros((44,3)),index=dates,columns=('sina','yicai','qq'))
 for item in s:
     numindex = time.strftime("%Y-%m-%d",time.localtime(int(item[1])))
     if('yicai' in item[0]):

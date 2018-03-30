@@ -102,3 +102,12 @@ arr.pop('a2')  # 删除指定的key对应的元素
 print(arr)
 arr['a2'] = 101
 print(arr)
+
+f('循环应用')
+arr = [1, 2, 3, 4]
+for i in arr:
+    print(i)
+
+# enumerate 将列表元素分解成 下标,值
+for i, n in enumerate(arr):
+    print('索引/下标:', i, ',对应值:', n)

@@ -4,9 +4,14 @@
 # @Time     : 2018/3/29
 # @Author   : wooght
 # @File     : kmeans.py
+# 涉及词条:
+#     cluster: 集群,聚类
+#     estimator: 评估,估计
 
 import numpy as np
 from sklearn.cluster import KMeans
+from common.classfy_plt_3d import classfy_plt_3d
+
 
 data = np.random.rand(100, 3)  # 生成一个随机数据，样本大小为100, 特征数为3
 print(data)
@@ -23,6 +28,24 @@ print(inertia)
 print('新样本属于:', estimator.predict([[0.8, 0.8, 0.8]]))  # 对新进样本进行归类
 print(estimator.fit_predict(data))  # 训练并直接输出结果
 
+
+# 2个特征+类别  分类效果展示
+import matplotlib.pyplot as plt
+data = np.random.rand(100, 2)
+estimator = KMeans(n_clusters=3)
+estimator.fit(data)
+plt.figure(figsize=(8,10))  # 设置尺寸
+colors = ['blue', 'yellow', 'red']
+markers = ['o', 's', 'D']  # 点形状
+for i,l in enumerate(estimator.labels_):
+     plt.plot(data[i][0],data[i][1],color=colors[l],marker=markers[l],ls='None')
+plt.show()
+# 3D分类效果展示
+classfy_plt_3d(estimator, data, estimator.labels_)
+
+# 文本应用
+# 文本聚类
+
 import jieba
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -32,6 +55,7 @@ def jieba_tokenize(text):
     return jieba.lcut(text)
 
 
+# scikit-learn 自带的TF-IDF功能 依赖分词工具
 tfidf_vectorizer = TfidfVectorizer(tokenizer=jieba_tokenize, lowercase=False)
 '''
 tokenizer: 指定分词函数
@@ -60,8 +84,22 @@ print("聚类标签:", result)
 
 words_model = km_cluster.fit(tfidf_matrix)
 test_matrix = tfidf_vectorizer.fit_transform(['明天下午/解放路佛恩惊世毒妃建瓯市如我减肥放假了的时间反垄断法二季度晶方科技晚上回家吗'])
-print(words_model.labels_.tolist())  # 分类标签变list
+classfy_laby = words_model.labels_.tolist() # 分类标签变list
+print(classfy_laby)
 print(words_model.predict(test_matrix))  # 对新进样本进行归类
 
 from sklearn.externals import joblib
 joblib.dump(km_cluster, './data/test_km.pkl')  # 存储模型  joblib.load() 加载模型
+
+
+# pandas 进行统计
+new_arr = np.array([text_list])
+new_arr = new_arr.T
+laby = np.array([classfy_laby])
+laby = laby.T
+new_arr = np.column_stack([new_arr, laby])
+print(new_arr)
+print(new_arr.shape)
+import pandas as pd
+df = pd.DataFrame(new_arr, columns=[['body', 'classfy']])
+print('统计结果:\n', df['classfy'].value_counts())
