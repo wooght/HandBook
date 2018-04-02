@@ -4,6 +4,7 @@
 # @Time     : 2018/3/30
 # @Author   : wooght
 # @File     : decisionTree.py
+# 决策树分类,树回归测试预测
 
 from sklearn import tree
 import numpy as np
@@ -65,15 +66,15 @@ def try_different_method(clf):
     return clf
 
 #
-# # 树回归
-# tree_reg = tree.DecisionTreeRegressor()
-# try_different_method(tree_reg)
-#
-# # 线性回归
-# from sklearn import linear_model
-#
-# linear_reg = linear_model.LinearRegression()
-# try_different_method(linear_reg)
+# 树回归
+tree_reg = tree.DecisionTreeRegressor()
+try_different_method(tree_reg)
+
+# 线性回归
+from sklearn import linear_model
+
+linear_reg = linear_model.LinearRegression()
+try_different_method(linear_reg)
 #
 #
 # # SVM回归

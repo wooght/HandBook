@@ -37,7 +37,7 @@ def float_shows(t, w, a):
 
 # 广告效果样本
 def ad_sample():
-    # 自变量: TV,WEB,APP
+    # 自变量: TV,WEB,APP  线性数据
     # 因变量: shows
     tv = float_rand(np.linspace(1, 20, 200), 0.2)
     web = float_rand(np.linspace(1, 50, 200), 0.3)

@@ -67,6 +67,7 @@ text_list = ["今天的天气真好", "小明上了清华大学", "我今天拿�
 tfidf_matrix = tfidf_vectorizer.fit_transform(text_list)
 print(tfidf_matrix)
 
+# 初始化KMeans
 km_cluster = KMeans(n_clusters=3, max_iter=3, n_init=1, init='k-means++', n_jobs=1)
 '''
 n_clusters: 指定K的值

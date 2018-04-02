@@ -164,3 +164,6 @@ df.reset_index(inplace=True)  # 重建索引,原索引会以列的方式并入
 print(df)
 del df['index']  # 删除莫一列
 print(df)
+
+for i, row in df.iterrows(): #逐行遍历dataframe
+    print(i, row)
