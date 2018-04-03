@@ -3,7 +3,8 @@
 # 香农熵(消息熵)算法
 # by wooght 2017-11
 # 依赖: log 对数
-#
+# 表示随机变量不确定性，即混乱程度的量化指标 熵越大，不确定性越大
+# = -（p1*log p1 + p2 * log p2 +　．．．　+pn *log pn)  log底数为2
 from math import log
 
 

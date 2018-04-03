@@ -68,13 +68,17 @@ def try_different_method(clf):
 #
 # 树回归
 tree_reg = tree.DecisionTreeRegressor()
-try_different_method(tree_reg)
+clf = try_different_method(tree_reg)
+# print(clf.coef_)
+# print(clf.intercept_)
 
 # 线性回归
 from sklearn import linear_model
 
 linear_reg = linear_model.LinearRegression()
-try_different_method(linear_reg)
+clf =try_different_method(linear_reg)
+print(clf.coef_)
+print(clf.intercept_) 
 #
 #
 # # SVM回归

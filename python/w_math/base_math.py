@@ -103,7 +103,7 @@ print(arr)
 arr['a2'] = 101
 print(arr)
 
-f('循环应用')
+f('enumerate')
 arr = [1, 2, 3, 4]
 for i in arr:
     print(i)
@@ -111,3 +111,11 @@ for i in arr:
 # enumerate 将列表元素分解成 下标,值
 for i, n in enumerate(arr):
     print('索引/下标:', i, ',对应值:', n)
+
+
+f('zip')
+a = [1, 2, 3]
+b = [2, 3, 4]
+arr = zip(a, b)  # 将对应的元素打包成元祖,并将这些元祖组成列表
+for i, j in arr:
+    print(i, j)
