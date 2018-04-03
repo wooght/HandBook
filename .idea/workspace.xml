@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e9967b-24a7-4413-801a-303b0f4ce28c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py" />
       <change beforePath="$PROJECT_DIR$/../caijing_lvl/public/seaborn_pic/sns.png" afterPath="$PROJECT_DIR$/../caijing_lvl/public/seaborn_pic/sns.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/python/analyse/xn_shang.py" afterPath="$PROJECT_DIR$/python/analyse/xn_shang.py" />
       <change beforePath="$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py" afterPath="$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py" />
-      <change beforePath="$PROJECT_DIR$/python/w_math/base_math.py" afterPath="$PROJECT_DIR$/python/w_math/base_math.py" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" />
@@ -23,7 +20,7 @@
     <favorites_list name="handbook" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.21549031">
+    <splitter split-orientation="horizontal" split-proportion="0.43160525">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="base_math.py" pinned="false" current-in-tab="true">
@@ -70,21 +67,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="w_DecisionTree.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="w_DecisionTree.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="501">
-                  <caret line="80" column="22" lean-forward="false" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+                <state relative-caret-position="1680">
+                  <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="xn_shang.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="xn_shang.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/python/analyse/xn_shang.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="627">
-                  <caret line="44" column="47" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="44" selection-end-column="47" />
+                <state relative-caret-position="693">
+                  <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
@@ -229,10 +226,10 @@
         <option value="$PROJECT_DIR$/python/machine-learn/w_NBC.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/w_KNN.py" />
         <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" />
-        <option value="$PROJECT_DIR$/python/analyse/xn_shang.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py" />
         <option value="$PROJECT_DIR$/python/w_math/base_math.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py" />
+        <option value="$PROJECT_DIR$/python/analyse/xn_shang.py" />
       </list>
     </option>
   </component>
@@ -911,26 +908,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/analyse/xn_shang.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="44" column="47" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="44" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/wbase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-945">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -985,8 +966,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="80" column="22" lean-forward="false" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        <state relative-caret-position="1680">
+          <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/analyse/xn_shang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
           <folding />
         </state>
       </provider>

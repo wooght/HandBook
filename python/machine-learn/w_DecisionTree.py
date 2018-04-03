@@ -78,7 +78,7 @@ from sklearn import linear_model
 linear_reg = linear_model.LinearRegression()
 clf =try_different_method(linear_reg)
 print(clf.coef_)
-print(clf.intercept_) 
+print(clf.intercept_)
 #
 #
 # # SVM回归
