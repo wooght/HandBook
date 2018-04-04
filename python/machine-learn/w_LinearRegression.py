@@ -5,9 +5,9 @@
 # @Author   : wooght
 # @File     : linear.py
 # 线性回归,用于特征线性或偏线性回归测试预测,特征有线性要求
-# 涉及词条 regressor [rɪ'gresə] 回归
 # 回归表达式:多元线性回归可表示为Y=a+b1*X +b2*X2+ e，其中a表示截距，b表示直线的斜率，e是误差项
 # 因变量是连续的，自变量可以是连续的也可以是离散的，回归线的性质是线性的
+# 涉及词条 regressor [rɪ'gresə] 回归
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -104,45 +104,3 @@ result = stock_linreg.predict(test_data)
 plt.plot(np.arange(len(result)), list(last_data.head(100)['zd_money']), lw=3, color="blue")  # 实际值
 plt.plot(np.arange(len(result)), result, linewidth=3, color="black")  # 预测值(较好的回归,是预测值有较好的收敛)
 plt.show()
-
-
-''' 多项式回归 '''
-
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
-
-plt.figure() # 实例化作图变量
-plt.title('single variable') # 图像标题
-plt.xlabel('x') # x轴文本
-plt.ylabel('y') # y轴文本
-plt.axis([30, 400, 100, 400])
-plt.grid(True) # 是否绘制网格线
-
-X = [[50],[100],[150],[200],[250],[300]]
-y = [[150],[200],[250],[280],[310],[330]]
-X_test = [[250],[300]] # 用来做最终效果测试
-y_test = [[310],[330]] # 用来做最终效果测试
-plt.plot(X, y, 'k.')
-
-model = LinearRegression()
-model.fit(X, y)
-X2 = [[30], [200], [400]]
-y2 = model.predict(X2)
-plt.plot(X2, y2, 'g-')
-
-xx = np.linspace(30, 400, 100) # 设计x轴一系列点作为画图的x点集
-quadratic_featurizer = PolynomialFeatures(degree=2) # 实例化一个二次多项式特征实例
-X_train_quadratic = quadratic_featurizer.fit_transform(X) # 用二次多项式对样本X值做变换
-print(X_train_quadratic)
-xx_quadratic = quadratic_featurizer.transform(xx.reshape(xx.shape[0], 1)) # 把训练好X值的多项式特征实例应用到一系列点上,形成矩阵
-print(xx.reshape(xx.shape[0], 1))
-print(xx_quadratic)
-regressor_quadratic = LinearRegression() # 创建一个线性回归实例
-regressor_quadratic.fit(X_train_quadratic, y) # 以多项式变换后的x值为输入，代入线性回归模型做训练
-plt.plot(xx, regressor_quadratic.predict(xx_quadratic), 'r-') # 用训练好的模型作图
-
-print('一元线性回归 r-squared', model.score(X_test, y_test))
-X_test_quadratic = quadratic_featurizer.transform(X_test)
-print('二次回归     r-squared', regressor_quadratic.score(X_test_quadratic, y_test))
-
-plt.show() # 展示图像

@@ -1,122 +1,40 @@
 # -*- coding: utf-8 -*-
 #
-# @method   : python list,tuple,dict
-# @Time     : 2018/1/17
+# @method   : 基础数学函数库
+# @Time     : 2018/4/4
 # @Author   : wooght
 # @File     : base_math.py
-# 词条:reverse [rɪˈvɜ:s] 颠倒
-
-import random
-from math import *
-from echo import f
-
-f('基础方法')
-n = random.randrange(1, 5)
-print(n)
-n = random.random()
-print(n)
-print(floor(10 * n))
-print(ceil(10 * n))
-print(round(10 * n))
-n = random.randint(1, 9)
-print(n)
-
-f('元祖tuple')
-arr = (1, 4, 2, 7)
-print(sorted(arr, reverse=True))  # reverse 颠倒
-print(arr[1])  # tuple不能重新赋值
-
-f('list 列表')
-arr = [5, 3, 8, 9, 1, 4, 2]
-print(arr)
-print(sorted(arr))
-arr[1] = 100
-print(arr)
-print(arr[:2])
-print(arr[:4:2])  # 每隔2个元素取值
-arr2 = arr
-arr2[:4:2] = [88, 99]
-print(arr)
-print('choice:', random.choice(arr))  # 随机取值
-print('100 index:', arr.index(100))  # 值的索引
-arr.append(77)  # 追加新元素
-print(arr)
-print(len(arr))
-arr.insert(1, 1010)  # 插入新元素
-print(arr)
-arr.pop(-1)
-print(arr)
-
-sl = slice(1, 5, 2)
-print(arr[sl])  # 等同于 arr[1:5:2]
-
-arr = [
-    [1, 2, 3],
-    [4, 7, 6]
-]
-print(arr)
-print(arr[1][-1])
-print(sorted(arr[1]))
-for i in arr:
-    print(i)
-print(4 in arr[1])
-
-f('dict 字典')
-arr = {9, 3, 8, 1}
-print(arr)
-print(sorted(arr, reverse=True))  # sorted 排序返回list
-arr = {
-    'a3': 3,
-    'a2': 2,
-    'a1': 1,
-    'a4': -5
-}
-# 字典元素的迭代
-for key, i in arr.items():
-    print(key, i)
-print(arr)
-print(arr['a4'])
-print(sorted(arr))  # 对索引进行排序
-print(sorted(arr.items()))  # items 键值对 键排序
-print(sorted(arr.keys()))  # 对索引进行排序
-print(sorted(arr.items(), key=lambda d: d[1], reverse=False))  # items 键值对 值排序
-print(list(arr.values()))  # values 组成的列表
-for i in arr.values():
-    print(i)
-
-for i in arr.keys():
-    print(i)
-
-for i in arr:
-    print(i)
-
-for i in arr.items():
-    print(i)
-
-print(-5 in arr)
-print(-5 in arr.values())
-print('a2' in arr)
-print(arr.get('a4'))
-del arr['a1']
-print(arr)
-arr.pop('a2')  # 删除指定的key对应的元素
-print(arr)
-arr['a2'] = 101
-print(arr)
-
-f('enumerate')
-arr = [1, 2, 3, 4]
-for i in arr:
-    print(i)
-
-# enumerate 将列表元素分解成 下标,值
-for i, n in enumerate(arr):
-    print('索引/下标:', i, ',对应值:', n)
+import math
+print(dir(math))
 
 
-f('zip')
-a = [1, 2, 3]
-b = [2, 3, 4]
-arr = zip(a, b)  # 将对应的元素打包成元祖,并将这些元祖组成列表
-for i, j in arr:
-    print(i, j)
+def echo(name, num):
+    print('%-10s:%s'%(name, num))
+
+
+def f(str):
+    print('\n', "*" * 20, str, "*" * 20, '\n')
+
+
+f('math常量')
+print(math.pi, math.e)  # π,e
+
+f('math数学函数')
+num = 4
+echo('log', math.log(num, 2))  # 以2为底的对数  默认是e为底
+echo('log2', math.log2(num))  # 以2位底的对数
+echo('sqrt', math.sqrt(num))  # 平方根  与num**0.5 效果一样
+echo('exp', math.exp(num))  # 指数 e**x
+echo('modf', math.modf(math.pi))  # 返回小数部分,整数部分组成的元祖
+echo('ceil', math.ceil(1.2))  # 向上
+echo('floor', math.floor(1.2))  # 向下
+
+f('python 原生数学函数')
+echo('round', round(math.pi, 2))  # python.round(x, n) 返回四舍五入的值,如果指定n,则保留n位小数
+echo('abs', abs(-num))  # 绝对值
+
+f('常用数学公式')
+# 期望  E(X) = x1*p(x1)+x2*p(x2)....xn*p(xn)  每个值*每个值概率的和
+# 方差  s^2=[(x1-x)^2+(x2-x)^2+......(xn-x)^2]/(n) （x为平均数）
+# 标准差 = 方差的算术平方根
+

@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e9967b-24a7-4413-801a-303b0f4ce28c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/python/machine-learn/w_preprocessing.py" />
       <change beforePath="$PROJECT_DIR$/../caijing_lvl/public/seaborn_pic/sns.png" afterPath="$PROJECT_DIR$/../caijing_lvl/public/seaborn_pic/sns.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py" afterPath="$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py" />
-      <change beforePath="$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py" afterPath="$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py" />
-      <change beforePath="$PROJECT_DIR$/python/machine-learn/w_Kmeans.py" afterPath="$PROJECT_DIR$/python/machine-learn/w_Kmeans.py" />
       <change beforePath="$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py" afterPath="$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py" />
-      <change beforePath="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" afterPath="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" />
       <change beforePath="$PROJECT_DIR$/python/w_math/base_math.py" afterPath="$PROJECT_DIR$/python/w_math/base_math.py" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" />
@@ -25,34 +23,64 @@
     <favorites_list name="handbook" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.37851343">
+    <splitter split-orientation="horizontal" split-proportion="0.7701437">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="base_math.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
-                  <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="w_LogisticRegression.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="321">
-                  <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+                <state relative-caret-position="378">
+                  <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="w_LinearRegression.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="base_math.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="386">
+                  <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="w_LinearRegression.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2688">
-                  <caret line="128" column="16" lean-forward="false" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+                <state relative-caret-position="189">
+                  <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="preprocessing_Polynomia.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-106">
+                  <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="numpy_b.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/w_math/numpy_b.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-244">
+                  <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="w_preprocessing.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_preprocessing.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -62,7 +90,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="classfy_plt_3d.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="classfy_plt_3d.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/python/machine-learn/common/classfy_plt_3d.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="462">
@@ -75,7 +103,7 @@
           <file leaf-file-name="w_DecisionTree.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1659">
+                <state relative-caret-position="836">
                   <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
                   <folding />
                 </state>
@@ -86,7 +114,7 @@
             <entry file="file://$PROJECT_DIR$/python/analyse/xn_shang.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="126">
-                  <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="57" />
+                  <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="57" />
                   <folding />
                 </state>
               </provider>
@@ -96,16 +124,16 @@
             <entry file="file://$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="147">
-                  <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+                  <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="w_NBC.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="w_NBC.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/python/machine-learn/w_NBC.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1">
+                <state relative-caret-position="1008">
                   <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
                   <folding />
                 </state>
@@ -116,7 +144,7 @@
             <entry file="file://$PROJECT_DIR$/python/machine-learn/w_Kmeans.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="126">
-                  <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+                  <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -184,9 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/python/wbase.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_dx_nlp.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/make_run/result_guide_test.py" />
         <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/common.py" />
         <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/pipeline_article_analyse.py" />
         <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/pipelines/pipelines.py" />
@@ -229,20 +254,23 @@
         <option value="$PROJECT_DIR$/python/machine-learn/w_KNN.py" />
         <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" />
         <option value="$PROJECT_DIR$/python/analyse/xn_shang.py" />
-        <option value="$PROJECT_DIR$/python/w_math/base_math.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/w_Kmeans.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" />
+        <option value="$PROJECT_DIR$/python/w_math/base_array.py" />
+        <option value="$PROJECT_DIR$/python/machine-learn/w_preprocessing.py" />
+        <option value="$PROJECT_DIR$/python/w_math/base_math.py" />
+        <option value="$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1746" />
-    <option name="y" value="119" />
-    <option name="width" value="1934" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -291,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -371,6 +398,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,7 +433,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.w_LinearRegression">
+  <component name="RunManager" selected="Python.preprocessing_Polynomia">
     <configuration name="base_math" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -442,7 +470,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="pwf_decisiontree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="preprocessing_Polynomia" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -454,7 +482,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -496,7 +524,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="w_LogisticRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="w_preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -508,7 +536,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_preprocessing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -517,18 +545,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.ddtj_analyse" />
       <item index="1" class="java.lang.String" itemvalue="Python.w_DecisionTree" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pwf_decisiontree" />
-      <item index="3" class="java.lang.String" itemvalue="Python.base_math" />
-      <item index="4" class="java.lang.String" itemvalue="Python.w_LogisticRegression" />
-      <item index="5" class="java.lang.String" itemvalue="Python.w_LinearRegression" />
+      <item index="2" class="java.lang.String" itemvalue="Python.base_math" />
+      <item index="3" class="java.lang.String" itemvalue="Python.w_LinearRegression" />
+      <item index="4" class="java.lang.String" itemvalue="Python.w_preprocessing" />
+      <item index="5" class="java.lang.String" itemvalue="Python.preprocessing_Polynomia" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.w_LinearRegression" />
-        <item index="1" class="java.lang.String" itemvalue="Python.w_DecisionTree" />
-        <item index="2" class="java.lang.String" itemvalue="Python.w_LogisticRegression" />
+        <item index="0" class="java.lang.String" itemvalue="Python.preprocessing_Polynomia" />
+        <item index="1" class="java.lang.String" itemvalue="Python.w_LinearRegression" />
+        <item index="2" class="java.lang.String" itemvalue="Python.w_preprocessing" />
         <item index="3" class="java.lang.String" itemvalue="Python.base_math" />
-        <item index="4" class="java.lang.String" itemvalue="Python.pwf_decisiontree" />
+        <item index="4" class="java.lang.String" itemvalue="Python.w_DecisionTree" />
       </list>
     </recent_temporary>
   </component>
@@ -590,15 +618,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1569247" sideWeight="0.49131513" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19325961" sideWeight="0.49131513" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46746203" sideWeight="0.5018431" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20932755" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52603036" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6355748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1563981" sideWeight="0.5086849" order="2" side_tool="true" content_ui="tabs" />
@@ -662,27 +690,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/basedata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/article_nums.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/analyse/wcvs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/wpytesseract.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -862,13 +869,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/machine-learn/test_data.py" />
-    <entry file="file://$PROJECT_DIR$/python/w_math/numpy_b.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="24" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/w_math/numpy_a.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -902,26 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/common/classfy_plt_3d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/machine-learn/Tdata.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -937,7 +921,7 @@
     <entry file="file://$PROJECT_DIR$/python/machine-learn/w_Kmeans.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -945,7 +929,7 @@
     <entry file="file://$PROJECT_DIR$/python/analyse/xn_shang.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="57" />
+          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -953,39 +937,87 @@
     <entry file="file://$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2688">
-          <caret line="128" column="16" lean-forward="false" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1659">
-          <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/machine-learn/w_NBC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
+        <state relative-caret-position="1008">
           <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/w_math/base_array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/w_math/numpy_b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-244">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/machine-learn/common/classfy_plt_3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
