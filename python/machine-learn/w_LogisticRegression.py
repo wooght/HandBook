@@ -4,7 +4,7 @@
 # @Time     : 2018/4/2
 # @Author   : wooght
 # @File     : w_LogisticRegression.py
-# 逻辑回归用于分类,二元分类常用, 特征没有线性要求
+# 逻辑回归用于分类,二元分类常用, 特征没有线性要求,因变量是二元的
 
 from Tdata import gender_sample
 from sklearn.linear_model import LogisticRegression
@@ -23,8 +23,8 @@ print(result)
 classfy_plt_3d(logisticR, x_train, y_train)
 print(logisticR.score(x_train, y_train))
 
-# class_weight 指定特征权重
-logisticR = LogisticRegression(class_weight={0:0.3, 1:0.7})
+# class_weight 指定特征权重(注意这里是特征权重,而不是类别权重)
+logisticR = LogisticRegression(class_weight={0:0.6, 1:0.4})
 logisticR.fit(x_train, y_train)
 result = logisticR.predict(x_test)
 print(logisticR.coef_, logisticR.intercept_)

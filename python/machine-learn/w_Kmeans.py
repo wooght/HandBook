@@ -5,8 +5,8 @@
 # @Author   : wooght
 # @File     : kmeans.py
 # 涉及词条:
-#     cluster: 集群,聚类
-#     estimator: 评估,估计
+#     cluster [ˈklʌstɚ]: 集群,聚类
+#     estimator[estəˌmeɪtə]: 评估,估计
 
 import numpy as np
 from sklearn.cluster import KMeans

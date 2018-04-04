@@ -23,9 +23,11 @@ y = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]
 # criterion: Gini(默认),entropy,entropy采用信息增益来选择特征
 # max_depth:树的最大深度,默认None,及一直扩展到叶子单一或min_samples_split个样本点
 # min_samples_split:一个内部节点最小样本数
+# class_weight->dict，list of dicts，'balanced'，None，optional(default=None)，主要是考虑每个类的权重{class_label: weight}
+
 tree_model = tree.DecisionTreeClassifier(criterion='entropy')
 tree_model = tree_model.fit(X, y)
-result_proba = tree_model.predict_proba([[3, 2]], check_input=True)
+result_proba = tree_model.predict_proba([[3, 1]], check_input=True)
 print('分类概率:', result_proba.tolist())
 print('分类结果:', tree_model.predict([[3, 2]]))
 
@@ -68,17 +70,22 @@ def try_different_method(clf):
 #
 # 树回归
 tree_reg = tree.DecisionTreeRegressor()
-clf = try_different_method(tree_reg)
+tr = try_different_method(tree_reg)
 # print(clf.coef_)
 # print(clf.intercept_)
+
+# 随机森林 回归
+from sklearn import ensemble
+rf = ensemble.RandomForestRegressor(n_estimators=20)  # 使用20个决策树
+try_different_method(rf)
 
 # 线性回归
 from sklearn import linear_model
 
 linear_reg = linear_model.LinearRegression()
-clf =try_different_method(linear_reg)
-print(clf.coef_)
-print(clf.intercept_)
+lr =try_different_method(linear_reg)
+print(lr.coef_)
+print(lr.intercept_)
 #
 #
 # # SVM回归
@@ -92,7 +99,3 @@ print(clf.intercept_)
 # try_different_method(knn)
 #
 #
-# # 随机森林 回归
-# from sklearn import ensemble
-# rf = ensemble.RandomForestRegressor(n_estimators=20)  # 使用20个决策树
-# try_different_method(rf)

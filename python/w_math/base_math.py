@@ -4,6 +4,7 @@
 # @Time     : 2018/1/17
 # @Author   : wooght
 # @File     : base_math.py
+# 词条:reverse [rɪˈvɜ:s] 颠倒
 
 import random
 from math import *
@@ -63,7 +64,7 @@ print(4 in arr[1])
 f('dict 字典')
 arr = {9, 3, 8, 1}
 print(arr)
-print(sorted(arr))  # sorted 排序返回list
+print(sorted(arr, reverse=True))  # sorted 排序返回list
 arr = {
     'a3': 3,
     'a2': 2,
