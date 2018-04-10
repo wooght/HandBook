@@ -22,8 +22,10 @@ y = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]
 # DecisionTreeClassifier 参数说明:
 # criterion: Gini(默认),entropy,entropy采用信息增益来选择特征
 # max_depth:树的最大深度,默认None,及一直扩展到叶子单一或min_samples_split个样本点
-# min_samples_split:一个内部节点最小样本数
+# max_features 考虑最大特征数量
+# min_samples_split:内部节点再划分最小样本数 默认2
 # class_weight->dict，list of dicts，'balanced'，None，optional(default=None)，主要是考虑每个类的权重{class_label: weight}
+# max_leaf_nodes: 最大叶子节点数。通过限制最大叶子节点数，可以防止过拟合，默认是"None”，即不限制最大的叶子节点数。
 
 tree_model = tree.DecisionTreeClassifier(criterion='entropy')
 tree_model = tree_model.fit(X, y)
