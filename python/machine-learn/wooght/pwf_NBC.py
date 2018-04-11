@@ -21,6 +21,13 @@ import numpy as np
 
 
 class ClassifyNB:
+    # 流程
+    # 创建词汇表
+    # 创建各类别向量,默认为1
+    # 依次提取样本,获取样本向量,并入对应类别向量
+    # 类别向量/类别词汇总数得到概率,再求对数-->得到分类器
+    # 预测样本转换为向量,分别和各类别求对数和-->找最大者-->输出预测类别
+
     # 训练入口
     def fit(self, X, y):
         self.vocabList = self.createVocabList(X)  # 训练所需词汇表
