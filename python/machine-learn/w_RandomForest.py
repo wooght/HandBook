@@ -5,6 +5,7 @@
 # @Author   : wooght
 # @File     : w_RandomForest.py
 # 涉及词条: ensemble  [ɑ:nˈsɑ:mbl] 集成
+# forest [ˈfɔ:rɪst] 森林
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import datasets
@@ -37,13 +38,13 @@ print(clf.score(X_test, y_test))
 classfy_plt_3d(clf, X_test, y_test)
 
 
-''' 最佳参数搜索 '''
+''' 最佳参数搜索 并行调参 '''
 # from sklearn.grid_search import GridSearchCV
 from sklearn.model_selection import GridSearchCV
 param_test = {'n_estimators': range(5, 50, 5), 'max_depth': range(5, 30, 5)}
 gsearch = GridSearchCV(estimator=RandomForestClassifier(bootstrap=True), param_grid=param_test, cv=5)
 gsearch.fit(X_train, y_train)
-print(gsearch.best_params_, gsearch.best_score_)
+print('最佳参数:', gsearch.best_params_, gsearch.best_score_)
 
 
 ''' RF 回归 '''
