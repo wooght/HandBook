@@ -89,6 +89,7 @@ sampleList = [['给力', '好样的', '上涨', '恭喜', '旺旺', '赚翻天']
 classVec = ['pos', 'neg', 'pos', 'neg']
 
 
-clf = ClassifyNB()
-clf.fit(sampleList, classVec)
-print(clf.predict(['侮辱', '上涨', '单调']))
+if __name__ == '__main__':
+    clf = ClassifyNB()
+    clf.fit(sampleList, classVec)
+    print(clf.predict(['侮辱', '上涨', '单调']))
