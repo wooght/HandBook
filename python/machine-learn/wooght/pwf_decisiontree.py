@@ -137,7 +137,16 @@ def classify(tree, testdata):
                 return treedict[i]
 
 
-tree = createTree(sampleData)
-print(tree)
-result = classify(tree, [10, 11, 11])
-print(result)
+if __name__ == '__main__':
+    # 流程:
+    # 获取最佳特征(特征分类->分类信息增益->求香农熵)
+    # 获取不重复特征,循环遍历特征
+    # 递归建立特征分支
+    # 递归/分支终止条件:只有一类直接返回类/无特征返回概率大的类->树构建完毕
+    # 遍历树最佳特征对应分支的特征值
+    # 递归判断分支是否结束,分支__name__是否是__dict
+    # 返回分类结果
+    tree = createTree(sampleData)
+    print(tree)
+    result = classify(tree, [1, 0])
+    print(result)
