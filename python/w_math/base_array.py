@@ -61,6 +61,7 @@ for i in arr:
     print(i)
 print(4 in arr[1])
 
+
 f('dict 字典')
 arr = {9, 3, 8, 1}
 print(arr)
@@ -120,3 +121,20 @@ b = [2, 3, 4]
 arr = zip(a, b)  # 将对应的元素打包成元祖,并将这些元祖组成列表
 for i, j in arr:
     print(i, j)
+
+
+f('list set')
+arr = [1, 2, 3, 1, 2]
+print(set(arr))  # set 提取列表不重复元素组成dict(字典)
+
+
+f('dict |(字典合并)')
+arr1 = {1, 2, 3}
+arr2 = {3, 4}
+print(arr1 | arr2)  # 将字典合并,要求字典格式相同
+
+f(' * 创建多元素列表')
+arr = [0] * 10
+print(arr)  # arr为10个元素的列表
+arr = [[0, 0]] * 10
+print(arr)

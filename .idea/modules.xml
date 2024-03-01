@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../DeepLearning/.idea/DeepLearning.iml" filepath="$PROJECT_DIR$/../DeepLearning/.idea/DeepLearning.iml" />
       <module fileurl="file://$PROJECT_DIR$/../caijing_lvl/.idea/caijing_lvl.iml" filepath="$PROJECT_DIR$/../caijing_lvl/.idea/caijing_lvl.iml" />
       <module fileurl="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/.idea/caijing_scrapy.iml" filepath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/.idea/caijing_scrapy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../deep_learning/.idea/deep_tf.iml" filepath="$PROJECT_DIR$/../deep_learning/.idea/deep_tf.iml" />
       <module fileurl="file://$PROJECT_DIR$/../scripy_wooght/get_phone/.idea/get_phone.iml" filepath="$PROJECT_DIR$/../scripy_wooght/get_phone/.idea/get_phone.iml" />
       <module fileurl="file://$PROJECT_DIR$/../get_phone/.idea/get_phone.iml" filepath="$PROJECT_DIR$/../get_phone/.idea/get_phone.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/handbook.iml" filepath="$PROJECT_DIR$/.idea/handbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../web_django/.idea/web_django.iml" filepath="$PROJECT_DIR$/../web_django/.idea/web_django.iml" />
     </modules>
   </component>
 </project>

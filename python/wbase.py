@@ -3,6 +3,10 @@
 
 '''
     python 基础 by wooght 2017
+    python 同时支持面向对象，也支持面向过程
+    python 跨平台
+    python 可以嵌入到c/c++中，充当脚本的功能
+    python 是开源的，有非常丰富的扩展库
 '''
 
 import time
@@ -185,7 +189,7 @@ b = 4.323 * 1.1
 c = {'a': a, 'b': b}
 print(round(c['b'], 2))
 
-a = [1,2,3,4,5]
+a = [1, 2, 3, 4, 5]
 print(a[:2])
 print(a[2:])
 
@@ -204,3 +208,30 @@ for i in a.values():
 
 print(log(130000))
 print(log(90000))
+
+aa = range(24)
+for i in aa:
+    print(i)
+
+print('24一周每天24小时')
+
+
+# 计算一周每天24销售销售情况
+def week_hours_sales_data(all_data):
+    weeks = range(0, 7)
+    hours = range(0, 24)
+    result_dict = []
+    for i in weeks:
+        for h in hours:
+            result_dict.append([i, h, 0])
+    return result_dict
+
+
+week_list = week_hours_sales_data('1')
+print(week_list[0])
+print(week_list[23])
+print(week_list[2 * 24 + 3])
+print(week_list[6 * 24 + 5])
+print(week_list[0 * 24 + 22])
+print(week_list[6 * 24 + 23])
+print(week_list)

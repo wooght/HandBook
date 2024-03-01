@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+    <script type="text/javascript">
+            function add_tr(){
+                table = document.getElementById('del_table')
+                tr = "<tr><td>想</td><td>的</td></tr>"+"<tr><td>想</td><td>的</td></tr>"+
+                    "<tr><td>想</td><td>的</td></tr>";
+                table.appendChild(tr)
+            }
+            function delete_tr()
+            {
+                deltable = document.getElementById('del_table');
+                l = deltable.getElementsByTagName("tr").length;
+                alert(l)
+                for(var i=0;i<l;i++){
+                    if(i>0){
+                        deltable.deleteRow(1);
+                    }
+                }
+            }
+            function copy_text(now)
+            {
+                box = document.getElementById("smailbox")
+                copyTocopy=document.getElementById("copyTocopy")
+                copyTocopy.style.display = 'block'
+                copyTocopy.value = now
+                copyTocopy.select();
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                box.innerText = 'OK'
+                alert_box(box,1000)
+                copyTocopy.style.display = 'none'
+            }
+            function alert_box(box,time){
+                box.style.display = 'block'
+                setTimeout(function(){box.style.display = 'none';},1000)
+            }
+        </script>
+        <div style="height:1800px; width:100%"></div>
+        <div style="" name="123321" ondblclick="copy_text('abccba')">ddddddddd</div>
+        <textarea id="copyTocopy" style="display:none; position:fixed; top:-100px;"></textarea>
+        <div id="smailbox" style="display:none; width:100px; height:50px;border:1px solid red; border-top:10px solid red;
+            position:fixed; left:45%; top:45%; text-align:center; background:#fff; padding-top:10px;"></div>
+        <table border="1" id="del_table">
+            <tr>
+                <td>栏目一</td><td>栏目二</td>
+            </tr>
+            <tr>
+                <td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>1</td><td>2</td>
+            </tr>
+        </table>
+        <button onclick="delete_tr()">delete</button>
+        <button onclick="add_tr()">add</button>
+    </body>
+</html>

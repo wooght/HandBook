@@ -50,13 +50,17 @@ print(arr3)  # [10 19 28 37]
 print(arr ** 2)  # [0 1 4 9]
 print(10 * sin(arr2))  # [-5.44021111  9.12945251 -9.88031624  7.4511316 ]
 
+f('矩阵乘法')
 # 乘法按元素进行
 arr = arange(4).reshape(2, 2)
 arr2 = array([[4, 5], [6, 7]])
 print(arr * arr2)
+print('转轴:', arr.T * arr2)
 # 矩阵乘法 outer
 print(outer(arr, arr2))
 
+
+f('ones快速创建矩阵,linspace等差')
 arr = ones((2, 3), dtype=int)
 arr2 = random.random((2, 3))  # numpy.random 非python自带的random
 print(arr, arr2)

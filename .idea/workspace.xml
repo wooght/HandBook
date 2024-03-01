@@ -2,9 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e9967b-24a7-4413-801a-303b0f4ce28c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DeepLearning/keras_RNN.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/python/base_demo.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/python/django" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/python/machine-learn/machine_learning_base.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/python/machine-learn/wooght/regression_demo.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/django_api/article_nums.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/django_api/topic_attitude.py" />
       <change beforePath="$PROJECT_DIR$/../caijing_lvl/public/seaborn_pic/sns.png" afterPath="$PROJECT_DIR$/../caijing_lvl/public/seaborn_pic/sns.png" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Alienware.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alienware.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/handbook.iml" afterPath="$PROJECT_DIR$/.idea/handbook.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/php/sql_funciton.sql" afterPath="$PROJECT_DIR$/php/sql_funciton.sql" />
+      <change beforePath="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" afterPath="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" />
       <change beforePath="$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py" afterPath="$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py" />
+      <change beforePath="$PROJECT_DIR$/python/pip.txt" afterPath="$PROJECT_DIR$/python/pip.txt" />
+      <change beforePath="$PROJECT_DIR$/python/w_math/base_array.py" afterPath="$PROJECT_DIR$/python/w_math/base_array.py" />
+      <change beforePath="$PROJECT_DIR$/python/w_math/numpy_a.py" afterPath="$PROJECT_DIR$/python/w_math/numpy_a.py" />
+      <change beforePath="$PROJECT_DIR$/python/w_math/numpy_b.py" afterPath="$PROJECT_DIR$/python/w_math/numpy_b.py" />
+      <change beforePath="$PROJECT_DIR$/python/wbase.py" afterPath="$PROJECT_DIR$/python/wbase.py" />
+      <change beforePath="$PROJECT_DIR$/python/wclass.py" afterPath="$PROJECT_DIR$/python/wclass.py" />
+      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/.idea/caijing_scrapy.iml" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/.idea/caijing_scrapy.iml" />
+      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" />
+      <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,84 +41,104 @@
     <favorites_list name="handbook" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7956919">
+    <splitter split-orientation="horizontal" split-proportion="0.8868502">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="w_LogisticRegression.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/login/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+                <state relative-caret-position="1092">
+                  <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pwf_NBC.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="94" column="42" lean-forward="true" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="base_math.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="798">
-                  <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="w_LinearRegression.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="903">
-                  <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="preprocessing_Polynomia.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="w_Kmeans.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_Kmeans.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="numpy_b.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/w_math/numpy_b.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="w_preprocessing.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_preprocessing.py">
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/models.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="126">
-                  <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+                  <caret line="6" column="97" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="97" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/login/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="147">
+                  <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="0001_initial.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../web_django/login/migrations/0001_initial.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="591">
+                  <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="0005_auto_20180518_0122.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0005_auto_20180518_0122.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="0004_auto_20180518_0122.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0004_auto_20180518_0122.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="0001_initial.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0001_initial.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="0002_auto_20180518_0117.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0002_auto_20180518_0117.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/admin.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="756">
+                  <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/web_django/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1467">
+                  <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -104,61 +148,41 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="classfy_plt_3d.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/common/classfy_plt_3d.py">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                <state relative-caret-position="101">
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="w_DecisionTree.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py">
+          <file leaf-file-name="plateslist.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/plateslist.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="567">
-                  <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+                <state relative-caret-position="294">
+                  <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="w_RandomForest.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_RandomForest.py">
+          <file leaf-file-name="code_format.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../web_django/common_func/code_format.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="836">
-                  <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+                <state relative-caret-position="273">
+                  <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="w_SVM.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_SVM.py">
+          <file leaf-file-name="django" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/python/django">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1995">
-                  <caret line="95" column="42" lean-forward="false" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="w_KNN.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/w_KNN.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="819">
-                  <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Tdata.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/machine-learn/Tdata.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="840">
-                  <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+                <state relative-caret-position="584">
+                  <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -173,6 +197,7 @@
       <list>
         <option value="Python File" />
         <option value="Python Unit Test" />
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -188,6 +213,10 @@
       <find>图片</find>
       <find>common</find>
       <find>wfunc</find>
+      <find>溢出</find>
+      <find>{{URL</find>
+      <find>{{</find>
+      <find>}}</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,64 +225,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/semantics.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/semantics.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/middlewares/Newsmiddlewares.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/news.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_backprobe.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_pct.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/dd_backprobe.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position_old.py" />
-        <option value="$PROJECT_DIR$/python/db-redis/index.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/domains.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/news.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/topic.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db_redis.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/__init__.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/article_nums.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/__init__.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/ddtj_analyse.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/build_data.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/NB.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/data/kmeans.py" />
-        <option value="$PROJECT_DIR$/python/analyse/wseaborn.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/test_data.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/NBC.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/common/classfy_plt_3d.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/kmeans.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/Tdata.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/data/w_LogisticRegression.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/linear.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/decisionTree.py" />
-        <option value="$PROJECT_DIR$/python/analyse/wpandas.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_NBC.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_KNN.py" />
-        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py" />
-        <option value="$PROJECT_DIR$/python/analyse/xn_shang.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_Kmeans.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/pwf_decisiontree.py" />
+        <option value="$PROJECT_DIR$/../web_django/tmp_learn/templates/tmp_learn/nav.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/static/js/demo.js" />
+        <option value="$PROJECT_DIR$/../web_django/tmp_learn/static/js/demo.js" />
+        <option value="$PROJECT_DIR$/../web_django/static/js/demo.js" />
+        <option value="$PROJECT_DIR$/../web_django/tmp_learn/templates/tmp_learn/index.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/public_file/js/demo.js" />
+        <option value="$PROJECT_DIR$/../web_django/apis.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/article_data.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/apis.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/boot.html" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/django_api/article_nums.py" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/django_api/topic_attitude.py" />
+        <option value="$PROJECT_DIR$/php/sql_funciton.sql" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/index.html" />
+        <option value="$PROJECT_DIR$/python/machine-learn/wooght/regression_demo.py" />
+        <option value="$PROJECT_DIR$/python/wbase.py" />
+        <option value="$PROJECT_DIR$/python/wclass.py" />
+        <option value="$PROJECT_DIR$/python/base_demo.py" />
+        <option value="$PROJECT_DIR$/python/machine-learn/machine_learning_base.py" />
         <option value="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" />
-        <option value="$PROJECT_DIR$/python/w_math/base_array.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_preprocessing.py" />
-        <option value="$PROJECT_DIR$/python/w_math/base_math.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/wooght/decisiontree.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_SVM.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/w_RandomForest.py" />
-        <option value="$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py" />
+        <option value="$PROJECT_DIR$/../web_django/web_django/__init__.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/migrations/0003_auto_20180515_2209.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/migrations/0002_auto_20180515_2208.py" />
+        <option value="$PROJECT_DIR$/../web_django/wooght/admin.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/__init__.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/apps.py" />
+        <option value="$PROJECT_DIR$/../web_django/login/templates/login.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/header.html" />
+        <option value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/urls.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/base.html" />
+        <option value="$PROJECT_DIR$/../web_django/common/paging.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templatetags/select_plate.py" />
+        <option value="$PROJECT_DIR$/../web_django/common/templatetags/select_plate.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/plate_list.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/companylist.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/plateslist.html" />
+        <option value="$PROJECT_DIR$/../web_django/common/code_format.py" />
+        <option value="$PROJECT_DIR$/../web_django/web_django/urls.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/login.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/register.html" />
+        <option value="$PROJECT_DIR$/../web_django/login/views.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/views.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/templates/nav.html" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/admin.py" />
+        <option value="$PROJECT_DIR$/../web_django/tmp_learn/models.py" />
+        <option value="$PROJECT_DIR$/../web_django/caijing/models.py" />
+        <option value="$PROJECT_DIR$/python/django" />
+        <option value="$PROJECT_DIR$/../web_django/web_django/settings.py" />
+        <option value="$PROJECT_DIR$/../web_django/login/models.py" />
+        <option value="$PROJECT_DIR$/../web_django/login/migrations/0001_initial.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-40" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="553" />
+    <option name="y" value="119" />
+    <option name="width" value="1940" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -303,100 +333,68 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="handbook" type="462c0819:PsiDirectoryNode" />
+              <item name="web_django" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="handbook" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="web_django" type="462c0819:PsiDirectoryNode" />
+              <item name="caijing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="handbook" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="machine-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="web_django" type="462c0819:PsiDirectoryNode" />
+              <item name="caijing" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="handbook" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="machine-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="wooght" type="462c0819:PsiDirectoryNode" />
+              <item name="web_django" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="handbook" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="w_math" type="462c0819:PsiDirectoryNode" />
+              <item name="web_django" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="analyse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="analyse" type="462c0819:PsiDirectoryNode" />
-              <item name="NLP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="handbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caijing_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="web_django" type="462c0819:PsiDirectoryNode" />
+              <item name="web_django" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scripy_wooght/get_phone" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deep_learning/tensorflow_test.py" />
     <property name="last.edited.regexp" value="Sample Text" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="SearchEverywhereHistoryKey" value="   &#9;FILE&#9;file://F:/homestead/scripy_wooght/caijing_scrapy/factory/data/ddtop100.py" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\homestead\scripy_wooght\get_phone\get_phone\spiders" />
-      <recent name="F:\homestead\scripy_wooght\get_phone\get_phone\pipelines" />
-      <recent name="F:\homestead\scripy_wooght\get_phone\get_phone\middlewares" />
-      <recent name="F:\homestead\scripy_wooght\caijing_scrapy\providers" />
-      <recent name="F:\homestead\scripy_wooght\caijing_scrapy" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\homestead\web_django\caijing" />
+      <recent name="F:\homestead\web_django\common\templatetag" />
+      <recent name="F:\homestead\web_django\login\templates" />
+      <recent name="F:\homestead\DeepLearning\wooght" />
       <recent name="F:\homestead\handbook\python\machine-learn\wooght" />
-      <recent name="F:\homestead\handbook\python\machine-learn" />
-      <recent name="F:\homestead\scripy_wooght\caijing_scrapy\factory\data_analyse" />
-      <recent name="F:\homestead\scripy_wooght\caijing_scrapy\model\repository" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\homestead\web_django\common" />
+      <recent name="F:\homestead\web_django\caijing\templatetags" />
+      <recent name="F:\homestead\web_django\caijing\templates" />
+      <recent name="F:\homestead\web_django\login\templates" />
+      <recent name="F:\homestead\web_django\caijing" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -411,7 +409,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pwf_NBC">
+  <component name="RunManager" selected="Python.topic_attitude">
+    <configuration name="base_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="handbook" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/base_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="ddtj_analyse" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -430,25 +446,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="pwf_NBC" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/machine-learn/wooght" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="w_KNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="preprocessing_Polynomia" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -460,7 +458,43 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_KNN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="topic_attitude" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="caijing_scrapy" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="w_LinearRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/machine-learn" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="handbook" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -484,53 +518,21 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="w_RandomForest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/machine-learn" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="handbook" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_RandomForest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Twisted Trial in pwf_NBC.py" type="tests" factoryName="Twisted Trial" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/machine-learn/wooght" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="handbook" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.ddtj_analyse" />
-      <item index="1" class="java.lang.String" itemvalue="Python.w_RandomForest" />
-      <item index="2" class="java.lang.String" itemvalue="Python.w_LogisticRegression" />
-      <item index="3" class="java.lang.String" itemvalue="Python.w_KNN" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Twisted Trial in pwf_NBC.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python.pwf_NBC" />
+      <item index="1" class="java.lang.String" itemvalue="Python.base_demo" />
+      <item index="2" class="java.lang.String" itemvalue="Python.preprocessing_Polynomia" />
+      <item index="3" class="java.lang.String" itemvalue="Python.w_LinearRegression" />
+      <item index="4" class="java.lang.String" itemvalue="Python.w_LogisticRegression" />
+      <item index="5" class="java.lang.String" itemvalue="Python.topic_attitude" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pwf_NBC" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Twisted Trial in pwf_NBC.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.w_RandomForest" />
-        <item index="3" class="java.lang.String" itemvalue="Python.w_KNN" />
-        <item index="4" class="java.lang.String" itemvalue="Python.w_LogisticRegression" />
+        <item index="0" class="java.lang.String" itemvalue="Python.topic_attitude" />
+        <item index="1" class="java.lang.String" itemvalue="Python.w_LogisticRegression" />
+        <item index="2" class="java.lang.String" itemvalue="Python.w_LinearRegression" />
+        <item index="3" class="java.lang.String" itemvalue="Python.preprocessing_Polynomia" />
+        <item index="4" class="java.lang.String" itemvalue="Python.base_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -595,43 +597,24 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19325961" sideWeight="0.49131513" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13902053" sideWeight="0.49131513" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46746203" sideWeight="0.5018431" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32104123" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14425163" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6355748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32746956" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1563981" sideWeight="0.5086849" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32212582" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253796" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25813448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46963122" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14564644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -658,6 +641,11 @@
           <line>64</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../DeepLearning/keras_CNN.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -666,337 +654,366 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="65" />
+      <option name="time" value="77" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/ddtj.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/__init__.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0002_auto_20180515_2208.py" />
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/ddtop100.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/wooght/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_position_old.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/apis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1722">
-          <caret line="82" column="23" lean-forward="false" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+        <state relative-caret-position="420">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/__init__.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/wooght/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$2/mnist.pkl" />
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_pct.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="147">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/build_data.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/login/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="80" lean-forward="false" selection-start-line="35" selection-start-column="80" selection-end-line="35" selection-end-column="80" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/analyse/NLP/semantics.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/login/templates/login.html" />
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2646">
-          <caret line="126" column="20" lean-forward="false" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/dd_backprobe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/ddtj_analyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python34/Lib/site-packages/sklearn/metrics/regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1314">
-          <caret line="182" column="4" lean-forward="false" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/repository/domains.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35007">
-          <caret line="1667" column="0" lean-forward="false" selection-start-line="1667" selection-start-column="0" selection-end-line="1667" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db_redis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        <state relative-caret-position="-953">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2367">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="185">
+          <caret line="153" column="45" lean-forward="false" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data_analyse/dd_math.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/article_data.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python34/Lib/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="577" column="0" lean-forward="false" selection-start-line="577" selection-start-column="0" selection-end-line="577" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/test_km.pkl" />
-    <entry file="file://$PROJECT_DIR$/python/analyse/wseaborn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/test_data.py" />
-    <entry file="file://$PROJECT_DIR$/python/w_math/numpy_a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/NBC.py" />
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/kmeans.py" />
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/decisionTree.py" />
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/linear.py" />
-    <entry file="file://$PROJECT_DIR$/python/analyse/wpandas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3528">
-          <caret line="168" column="17" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/xq_zuhe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2667">
-          <caret line="127" column="82" lean-forward="false" selection-start-line="127" selection-start-column="82" selection-end-line="127" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/wbase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/spiders/ddtj_history.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/urls.py" />
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="69" column="14" lean-forward="false" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/common_func/paging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0006_remove_listed_plate_plateid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/w_math/base_array.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_math/numpy_b.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/w_math/base_math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/wooght/decisiontree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/wooght/pwf_decisiontree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1880">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/analyse/xn_shang.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_NBC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_Kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/common/classfy_plt_3d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_DecisionTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_SVM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="95" column="42" lean-forward="false" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_KNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/Tdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_RandomForest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templatetags/select_plate.py" />
+    <entry file="file://$PROJECT_DIR$/../web_django/common/templatetag/select_plate.py" />
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/companylist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/common_func/code_format.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py">
+    <entry file="file://$PROJECT_DIR$/../web_django/tmp_learn/templates/tmp_learn/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="94" column="42" lean-forward="true" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
+        <state relative-caret-position="315">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/web_django/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templatetags/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/plateslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="41" lean-forward="false" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templatetags/select_plate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/web_django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/login/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/tmp_learn/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/tmp_learn/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/tmp_learn/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/wooght/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/wooght/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/django">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="97" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/web_django/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1467">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/login/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0005_auto_20180518_0122.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0004_auto_20180518_0122.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0002_auto_20180518_0117.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web_django/login/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding />
         </state>
       </provider>

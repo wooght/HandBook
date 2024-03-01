@@ -1,0 +1,43 @@
+错误1：django报链接错误：django.db.utils.OperationalError: (1698, "Access denied for user 'root'@'localhost'")
+错误2：只有root,或者sudo才能登录mysql5.7的情况解决方案：
+解决方法：
+	mysql使用了auth_socket plugin进行认证
+	解决方法是使用mysql自带密码认证功能：
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码/可以为空';
+错误3：
+ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+可能是因为初始密码为空；按空格回车后还是报一样的错
+那只能使用进入MySQL，这时你需要mysql提供给你的密码
+输入 sudo vim /etc/mysql/debian.cnf
+password就是密码
+然后通过mysql -udebian-sys-maint -p进入mysql
+
+
+
+修改数据表字符集编码：
+	alter table tablename convert to character set utf8;
+
+导出数据库：
+mysqldump -u用户名 -p密码 数据库名 > 导出的文件名
+导出某个表：
+mysqldump -u用户名 -p 密码 数据库名 表名> 导出的文件名
+导入整个数据库：
+mysql -uroot databasefoo < foo.sql
+
+
+pip install mysqlclient 报错  ...with error code 1...
+是缺少包 libmysqlclient-dev
+sudo apt-get install libmysqlclient-dev
+
+whl 文件名也是有要求的：
+root@linkmart:/home/LinkMart# pip3 install mysqlclient-1.4.6-cp36-win-amd64.whl
+mysqlclient-1.4.6-cp36-win-amd64.whl is not a supported wheel on this platform.
+root@linkmart:/home/LinkMart# cp mysqlclient-1.4.6-cp36-win-amd64.whl mysqlclient-1.4.6-cp36-cp36m-linux_x86_64.whl
+root@linkmart:/home/LinkMart# ls
+businessdata  LinkMart   mysqlclient-1.4.6-cp36-cp36m-linux_x86_64.whl  static
+common_func   login      mysqlclient-1.4.6-cp36-cp36m-win_amd64.whl
+db.sqlite3    manage.py  mysqlclient-1.4.6-cp36-win-amd64.whl
+root@linkmart:/home/LinkMart# pip3 install mysqlclient-1.4.6-cp36-cp36m-linux_x86_64.whl
+Processing ./mysqlclient-1.4.6-cp36-cp36m-linux_x86_64.whl
+Installing collected packages: mysqlclient
+Successfully installed mysqlclient-1.4.6

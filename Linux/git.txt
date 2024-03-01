@@ -1,23 +1,23 @@
-GITÊ¹ÓÃ by wooght 2017
+GITä½¿ç”¨ by wooght 2017
 
 -----------------------------------------------------------
-°²×°git 
+å®‰è£…git
 	yum install git
 
-ÒÑ°²×°:
-  git.x86_64 0:1.8.3.1-12.el7_4                                                        
+å·²å®‰è£…:
+  git.x86_64 0:1.8.3.1-12.el7_4
 
-×÷ÎªÒÀÀµ±»°²×°:
-  perl-Error.noarch 1:0.17020-2.el7           perl-Git.noarch 0:1.8.3.1-12.el7_4      
-  perl-TermReadKey.x86_64 0:2.30-20.el7      
-#°²×°Íê±Ï
+ä½œä¸ºä¾èµ–è¢«å®‰è£…:
+  perl-Error.noarch 1:0.17020-2.el7           perl-Git.noarch 0:1.8.3.1-12.el7_4
+  perl-TermReadKey.x86_64 0:2.30-20.el7
+#å®‰è£…å®Œæ¯•
 
 -----------------------------------------------------------
-#½øÈëÎÄ¼ş¼Ğ£¬´´½¨°æ±¾¿â
+#è¿›å…¥æ–‡ä»¶å¤¹ï¼Œåˆ›å»ºç‰ˆæœ¬åº“
 git init
 
 [root@localhost wooght]# git init
-³õÊ¼»¯¿ÕµÄ Git °æ±¾¿âÓÚ /var/www/wooght/.git/
+åˆå§‹åŒ–ç©ºçš„ Git ç‰ˆæœ¬åº“äº /var/www/wooght/.git/
 
 [root@localhost wooght]# vi test.txt
 [root@localhost wooght]# ls
@@ -25,32 +25,32 @@ test.txt
 
 
 -----------------------------------------------------------
-#Ìí¼ÓÔİ´æÇø
+#æ·»åŠ æš‚å­˜åŒº
 [root@localhost wooght]# git add test.txt
-#git add --all Õû¸öÎÄ¼ş¼ĞÌí¼Óµ½¿â
-#Ìá½»µ½²Ö¿â·ÖÖ§ -m "±¾´ÎÌá½»ËµÃ÷"
+#git add --all æ•´ä¸ªæ–‡ä»¶å¤¹æ·»åŠ åˆ°åº“
+#æäº¤åˆ°ä»“åº“åˆ†æ”¯ -m "æœ¬æ¬¡æäº¤è¯´æ˜"
 [root@localhost wooght]# git commit -m "create test.txt"
-[master£¨¸ùÌá½»£© acf3d8d] create test.txt
+[masterï¼ˆæ ¹æäº¤ï¼‰ acf3d8d] create test.txt
  Committer: root <root@localhost.localdomain>
-ÄúµÄĞÕÃûºÍÓÊ¼şµØÖ·»ùÓÚµÇÂ¼ÃûºÍÖ÷»úÃû½øĞĞÁË×Ô¶¯ÉèÖÃ¡£Çë¼ì²éËüÃÇÕıÈ·
-Óë·ñ¡£Äú¿ÉÒÔÍ¨¹ıÏÂÃæµÄÃüÁî¶ÔÆä½øĞĞÃ÷È·µØÉèÖÃÒÔÃâÔÙ³öÏÖ±¾ÌáÊ¾ĞÅÏ¢£º
+æ‚¨çš„å§“åå’Œé‚®ä»¶åœ°å€åŸºäºç™»å½•åå’Œä¸»æœºåè¿›è¡Œäº†è‡ªåŠ¨è®¾ç½®ã€‚è¯·æ£€æŸ¥å®ƒä»¬æ­£ç¡®
+ä¸å¦ã€‚æ‚¨å¯ä»¥é€šè¿‡ä¸‹é¢çš„å‘½ä»¤å¯¹å…¶è¿›è¡Œæ˜ç¡®åœ°è®¾ç½®ä»¥å…å†å‡ºç°æœ¬æç¤ºä¿¡æ¯ï¼š
 
     git config --global user.name "Your Name"
     git config --global user.email you@example.com
 
-ÉèÖÃÍê±Ïºó£¬Äú¿ÉÒÔÓÃÏÂÃæµÄÃüÁîÀ´ĞŞÕı±¾´ÎÌá½»ËùÊ¹ÓÃµÄÓÃ»§Éí·İ£º
+è®¾ç½®å®Œæ¯•åï¼Œæ‚¨å¯ä»¥ç”¨ä¸‹é¢çš„å‘½ä»¤æ¥ä¿®æ­£æœ¬æ¬¡æäº¤æ‰€ä½¿ç”¨çš„ç”¨æˆ·èº«ä»½ï¼š
 
     git commit --amend --reset-author
 
  1 file changed, 4 insertions(+)
  create mode 100644 test.txt
-#4 insertions ËµÃ÷ÓĞ4ĞĞ¸Ä¶¯
+#4 insertions è¯´æ˜æœ‰4è¡Œæ”¹åŠ¨
 
 -----------------------------------------------------------
-#²é¿´µ±Ç°²Ö¿â×´Ì¬
+#æŸ¥çœ‹å½“å‰ä»“åº“çŠ¶æ€
 [root@localhost wooght]# git status
 # On branch master
-# Changes not staged for commit: -¸æËßÎÒÃÇ±»ĞŞ¸Ä¹ı£¬µ«Ã»ÓĞÌá½»
+# Changes not staged for commit: -å‘Šè¯‰æˆ‘ä»¬è¢«ä¿®æ”¹è¿‡ï¼Œä½†æ²¡æœ‰æäº¤
 #   (use "git add <file>..." to update what will be committed)
 #   (use "git checkout -- <file>..." to discard changes in working directory)
 #
@@ -59,7 +59,7 @@ test.txt
 no changes added to commit (use "git add" and/or "git commit -a")
 
 -----------------------------------------------------------
-#²é¿´¾ßÌå±ä¶¯
+#æŸ¥çœ‹å…·ä½“å˜åŠ¨
 [root@localhost wooght]# git diff
 diff --git a/test.txt b/test.txt
 index 0a2561e..eb76abd 100644
@@ -74,20 +74,20 @@ index 0a2561e..eb76abd 100644
 
 
 -----------------------------------------------------------
-#git log ²é¿´Ìá½»ÈÕÖÁ
+#git log æŸ¥çœ‹æäº¤æ—¥è‡³
 [root@localhost wooght]# git log
-#git log Ìí¼Ó²ÎÊı --pretty=oneline ÏÔÊ¾¼òÒªÈÕÖ¾
+#git log æ·»åŠ å‚æ•° --pretty=oneline æ˜¾ç¤ºç®€è¦æ—¥å¿—
 [root@localhost wooght]# git log --pretty=oneline
 
 -----------------------------------------------------------
-#»ØÍË£¬²Ö¿âºÍ¹¤×÷Çø¶¼»á»ØÍË HEADÖ¸µ±Ç°°æ±¾£¬HEAD^ÉÏÒ»¸ö°æ±¾£¬HEAD~N ÉÏN¸ö°æ±¾
+#å›é€€ï¼Œä»“åº“å’Œå·¥ä½œåŒºéƒ½ä¼šå›é€€ HEADæŒ‡å½“å‰ç‰ˆæœ¬ï¼ŒHEAD^ä¸Šä¸€ä¸ªç‰ˆæœ¬ï¼ŒHEAD~N ä¸ŠNä¸ªç‰ˆæœ¬
 [root@localhost wooght]# git reset --hard HEAD^
 HEAD is now at bdccc29 add right?
 
-#»Øµ½Î´À´µÄÄ³¸ö°æ±¾£¬--hard °æ±¾ºÅ£¨²»ĞèÒªĞ©È«£¬Î¨Ò»»òÕß²»³åÍ»¾ÍĞĞ£©
+#å›åˆ°æœªæ¥çš„æŸä¸ªç‰ˆæœ¬ï¼Œ--hard ç‰ˆæœ¬å·ï¼ˆä¸éœ€è¦äº›å…¨ï¼Œå”¯ä¸€æˆ–è€…ä¸å†²çªå°±è¡Œï¼‰
 [root@localhost wooght]# git reset --hard 361a
 
-#git reflog ²é¿´²Ù×÷ÀúÊ·
+#git reflog æŸ¥çœ‹æ“ä½œå†å²
 [root@localhost wooght]# git reflog
 361a3fe HEAD@{0}: reset: moving to 361a
 bdccc29 HEAD@{1}: reset: moving to HEAD^
@@ -96,9 +96,9 @@ bdccc29 HEAD@{3}: commit: add right?
 acf3d8d HEAD@{4}: commit (initial): create test.txt
 
 -----------------------------------------------------------
-#Ôİ´æÇøµÄÓ¦ÓÃ
-#git add Ìí¼Óµ½Ôİ´æÇø£¬¼°ÔİÊ±ĞŞ¸ÄµÄÄÚÈİ¡£µÈĞŞ¸ÄÍê±Ïºó£¬ÔÙgit commitÌá½»µ½·ÖÖ§ÉÏ¡£
-#¹¤×÷Çø--¡·Ôİ´æÇø--¡·°æ±¾¿â·ÖÖ§
+#æš‚å­˜åŒºçš„åº”ç”¨
+#git add æ·»åŠ åˆ°æš‚å­˜åŒºï¼ŒåŠæš‚æ—¶ä¿®æ”¹çš„å†…å®¹ã€‚ç­‰ä¿®æ”¹å®Œæ¯•åï¼Œå†git commitæäº¤åˆ°åˆ†æ”¯ä¸Šã€‚
+#å·¥ä½œåŒº--ã€‹æš‚å­˜åŒº--ã€‹ç‰ˆæœ¬åº“åˆ†æ”¯
 [root@localhost wooght]# git status
 # On branch master
 # Changes not staged for commit:
@@ -129,15 +129,15 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [root@localhost wooght]# git status
 # On branch master
 nothing to commit, working directory clean
-[root@localhost wooght]# 
+[root@localhost wooght]#
 
 
 -----------------------------------------------------------
-#¶ªÆú¹¤×÷ÇøµÄĞŞ¸Ä£¬ÊÇ¹¤×÷Çø£¬²»»á¸Ä±äÔİ´æÇøºÍ°æ±¾¿â
+#ä¸¢å¼ƒå·¥ä½œåŒºçš„ä¿®æ”¹ï¼Œæ˜¯å·¥ä½œåŒºï¼Œä¸ä¼šæ”¹å˜æš‚å­˜åŒºå’Œç‰ˆæœ¬åº“
 [root@localhost wooght]# git checkout -- test.txt
 
 -----------------------------------------------------------
-#É¾³ıÎÄ¼ş
+#åˆ é™¤æ–‡ä»¶
 [root@localhost wooght]# git rm b.txt
 rm 'b.txt'
 [root@localhost wooght]# git status
@@ -153,12 +153,12 @@ rm 'b.txt'
  delete mode 100644 b.txt
 
 -----------------------------------------------------------
-#·ÖÖ§
-#git branch ²é¿´µ±Ç°·ÖÖ§
-#git branch name ´´½¨name·ÖÖ§
-#git checkout name ÇĞ»»µ½name·ÖÖ§
+#åˆ†æ”¯
+#git branch æŸ¥çœ‹å½“å‰åˆ†æ”¯
+#git branch name åˆ›å»ºnameåˆ†æ”¯
+#git checkout name åˆ‡æ¢åˆ°nameåˆ†æ”¯
 #git checkout -b dev
-	¡£¡£´´½¨dev·ÖÖ§²¢ÇĞ»»µ½dev·ÖÖ§
+	ã€‚ã€‚åˆ›å»ºdevåˆ†æ”¯å¹¶åˆ‡æ¢åˆ°devåˆ†æ”¯
 [root@localhost wooght]# git branch dev
 [root@localhost wooght]# git branch
   dev
@@ -174,14 +174,14 @@ Switched to branch 'master'
 [root@localhost wooght]# git branch
   dev
 * master
-#ºÏ²¢·ÖÖ§ git merge name ÔÚµ±Ç°·ÖÖ§ÉÏºÏ²¢name·ÖÖ§ÉÏµÄÄÚÈİ
+#åˆå¹¶åˆ†æ”¯ git merge name åœ¨å½“å‰åˆ†æ”¯ä¸Šåˆå¹¶nameåˆ†æ”¯ä¸Šçš„å†…å®¹
 [root@localhost wooght]# git merge dev
 Updating b72fcd7..cceba32
-Fast-forward --Ö»ºÏ²¢Ä£Ê½
+Fast-forward --åªåˆå¹¶æ¨¡å¼
  c.txt | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 c.txt
-#É¾³ı·ÖÖ§
+#åˆ é™¤åˆ†æ”¯
 [root@localhost wooght]# git branch -d dev
 Deleted branch dev (was cceba32).
 [root@localhost wooght]# git branch
@@ -189,7 +189,7 @@ Deleted branch dev (was cceba32).
 
 
 -----------------------------------------------------------
-#½â¾ö·ÖÖ§³åÍ»
+#è§£å†³åˆ†æ”¯å†²çª
 [root@localhost wooght]# git status
 # On branch master
 # You have unmerged paths.
@@ -218,16 +218,16 @@ no changes added to commit (use "git add" and/or "git commit -a")
 =======
 100djlfj
 >>>>>>> dev
-#<<<<<<< ======= >>>>> ±ê×¢·ÖÖ§ÉÏÓĞ³åÍ»µÄµØ·½
+#<<<<<<< ======= >>>>> æ ‡æ³¨åˆ†æ”¯ä¸Šæœ‰å†²çªçš„åœ°æ–¹
 
 -----------------------------------------------------------
-#°Ñ±¾µØ¿âÍÆËÍµ½Ô¶³Ì¿â
-#Òª¹ØÁªÒ»¸öÔ¶³Ì¿â£¬Ê¹ÓÃÃüÁîgit remote add origin git@server-name:path/repo-name.git£»
+#æŠŠæœ¬åœ°åº“æ¨é€åˆ°è¿œç¨‹åº“
+#è¦å…³è”ä¸€ä¸ªè¿œç¨‹åº“ï¼Œä½¿ç”¨å‘½ä»¤git remote add origin git@server-name:path/repo-name.gitï¼›
 
-#ÓÉÓÚÔ¶³Ì¿âÊÇ¿ÕµÄ£¬ÎÒÃÇµÚÒ»´ÎÍÆËÍmaster·ÖÖ§Ê±£¬¼ÓÉÏÁË-u²ÎÊı£¬Git²»µ«»á°Ñ±¾µØµÄmaster·ÖÖ§ÄÚÈİÍÆËÍµÄÔ¶³ÌĞÂµÄmaster·ÖÖ§£¬»¹»á°Ñ±¾µØµÄmaster·ÖÖ§ºÍÔ¶³ÌµÄmaster·ÖÖ§¹ØÁªÆğÀ´£¬ÔÚÒÔºóµÄÍÆËÍ»òÕßÀ­È¡Ê±¾Í¿ÉÒÔ¼ò»¯ÃüÁî¡£
+#ç”±äºè¿œç¨‹åº“æ˜¯ç©ºçš„ï¼Œæˆ‘ä»¬ç¬¬ä¸€æ¬¡æ¨é€masteråˆ†æ”¯æ—¶ï¼ŒåŠ ä¸Šäº†-uå‚æ•°ï¼ŒGitä¸ä½†ä¼šæŠŠæœ¬åœ°çš„masteråˆ†æ”¯å†…å®¹æ¨é€çš„è¿œç¨‹æ–°çš„masteråˆ†æ”¯ï¼Œè¿˜ä¼šæŠŠæœ¬åœ°çš„masteråˆ†æ”¯å’Œè¿œç¨‹çš„masteråˆ†æ”¯å…³è”èµ·æ¥ï¼Œåœ¨ä»¥åçš„æ¨é€æˆ–è€…æ‹‰å–æ—¶å°±å¯ä»¥ç®€åŒ–å‘½ä»¤ã€‚
 [root@localhost wooght]# git push -u origin master
 Username for 'https://github.com': wooght
-Password for 'https://wooght@github.com': 
+Password for 'https://wooght@github.com':
 Counting objects: 42, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (32/32), done.
@@ -238,19 +238,27 @@ To https://github.com/wooght/laravel_wooght.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 
-¹ØÁªºó£¬Ê¹ÓÃÃüÁîgit push -u origin masterµÚÒ»´ÎÍÆËÍmaster·ÖÖ§µÄËùÓĞÄÚÈİ£»
-´Ëºó£¬Ã¿´Î±¾µØÌá½»ºó£¬Ö»ÒªÓĞ±ØÒª£¬¾Í¿ÉÒÔÊ¹ÓÃÃüÁîgit push origin masterÍÆËÍ×îĞÂĞŞ¸Ä£»
-#½â³ı¹ØÁª
+å…³è”åï¼Œä½¿ç”¨å‘½ä»¤git push -u origin masterç¬¬ä¸€æ¬¡æ¨é€masteråˆ†æ”¯çš„æ‰€æœ‰å†…å®¹ï¼›
+æ­¤åï¼Œæ¯æ¬¡æœ¬åœ°æäº¤åï¼Œåªè¦æœ‰å¿…è¦ï¼Œå°±å¯ä»¥ä½¿ç”¨å‘½ä»¤git push origin masteræ¨é€æœ€æ–°ä¿®æ”¹ï¼›
+#è§£é™¤å…³è”
 git remote remove origin
 
-#¿ËÂ¡
-git clone https://github.com/wooght/handbook.git ÎÄ¼ş¼Ğ #¿ËÂ¡µ½Ö¸¶¨ÎÄ¼ş¼Ğ
+#å…‹éš†
+git clone https://github.com/wooght/handbook.git æ–‡ä»¶å¤¹ #å…‹éš†åˆ°æŒ‡å®šæ–‡ä»¶å¤¹
 
-git pull origin next:master #»ñÈ¡Ô¶³ÌnextµÄ¸üĞÂµ½±¾µØmaster
+git pull origin next:master #è·å–è¿œç¨‹nextçš„æ›´æ–°åˆ°æœ¬åœ°master
 
-git fetch origin #»ñÈ¡Ô¶¶Ë×îĞÂĞÅÏ¢
-git fetch origin master #»ñÈ¡Ô¶¶ËmasterµÄ×îĞÂĞÅÏ¢
-git diff test origin/xxx ±¾µØtest ºÍÔ¶¶Ëxxx×ö±È½Ï
+git fetch origin #è·å–è¿œç«¯æœ€æ–°ä¿¡æ¯
+git fetch origin master #è·å–è¿œç«¯masterçš„æœ€æ–°ä¿¡æ¯
+git diff test origin/xxx æœ¬åœ°test å’Œè¿œç«¯xxxåšæ¯”è¾ƒ
+
+æš´åŠ›å…¨è¦†ç›–æœ¬åœ°ä»£ç 
+git fetch --all
+git reset --hard origin/master
+git pull
+
+å¼ºåˆ¶æäº¤æœ¬åœ°ä»£ç 
+git push -u origin +master
 
 
 -----------------------------
@@ -262,23 +270,22 @@ git fetch origin dev:tmp
 git diff tmp
 git merge tmp
 -----------------------------
-ÒÔÉÏÁ½²¿·ÖĞ§¹ûÒ»Ñù,ÈıĞĞÒâË¼·Ö±ğÎª:
-´ÓÔ¶¶ËoriginµÄdev·ÖÖ§ÉÏÏÂÔØ×îĞÂÄÚÈİ
-ºÍ±¾µØµÄdev·ÖÖ§ÉÏ½øĞĞ±È½Ï
-×îºóºÏ²¢
+ä»¥ä¸Šä¸¤éƒ¨åˆ†æ•ˆæœä¸€æ ·,ä¸‰è¡Œæ„æ€åˆ†åˆ«ä¸º:
+ä»è¿œç«¯originçš„devåˆ†æ”¯ä¸Šä¸‹è½½æœ€æ–°å†…å®¹
+å’Œæœ¬åœ°çš„devåˆ†æ”¯ä¸Šè¿›è¡Œæ¯”è¾ƒ
+æœ€ååˆå¹¶
 
-git checkout tmp config app/Http/Kernel.php #´Ótmp·ÖÖ§ÉÏºÏ²¢configÎÄ¼ş¼Ğ¼°kernel.phpµ½µ±Ç°
+git checkout tmp config app/Http/Kernel.php #ä»tmpåˆ†æ”¯ä¸Šåˆå¹¶configæ–‡ä»¶å¤¹åŠkernel.phpåˆ°å½“å‰
 
 
 
 -----------------------------------------------------------
-#ÆäËû³£ÓÃÃüÁî
-git add -i [<path>]ÃüÁî²é¿´<path>ÖĞ±»ËùÓĞĞŞ¸Ä¹ı»òÒÑÉ¾³ıÎÄ¼şµ«Ã»ÓĞÌá½»µÄÎÄ¼ş
-git add <path> git ĞŞ¸Ä£¨²»º¬ÒÑÉ¾³ı£©µÄÎÄ¼ş£¬ÅĞ¶Ï³öĞÂÌíµÄÎÄ¼ş£¬²¢°ÑËüÃÇµÄĞÅÏ¢Ìí¼Óµ½Ë÷Òı¿âÖĞ¡£
-git add -A: [<path>]±íÊ¾°Ñ<path>ÖĞËùÓĞtrackedÎÄ¼şÖĞ±»ĞŞ¸Ä¹ı»òÒÑÉ¾³ıÎÄ¼şºÍËùÓĞuntractedµÄÎÄ¼şĞÅÏ¢Ìí¼Óµ½Ë÷Òı¿â
+#å…¶ä»–å¸¸ç”¨å‘½ä»¤
+git add -i [<path>]å‘½ä»¤æŸ¥çœ‹<path>ä¸­è¢«æ‰€æœ‰ä¿®æ”¹è¿‡æˆ–å·²åˆ é™¤æ–‡ä»¶ä½†æ²¡æœ‰æäº¤çš„æ–‡ä»¶
+git add <path> git ä¿®æ”¹ï¼ˆä¸å«å·²åˆ é™¤ï¼‰çš„æ–‡ä»¶ï¼Œåˆ¤æ–­å‡ºæ–°æ·»çš„æ–‡ä»¶ï¼Œå¹¶æŠŠå®ƒä»¬çš„ä¿¡æ¯æ·»åŠ åˆ°ç´¢å¼•åº“ä¸­ã€‚
+git add -A: [<path>]è¡¨ç¤ºæŠŠ<path>ä¸­æ‰€æœ‰trackedæ–‡ä»¶ä¸­è¢«ä¿®æ”¹è¿‡æˆ–å·²åˆ é™¤æ–‡ä»¶å’Œæ‰€æœ‰untractedçš„æ–‡ä»¶ä¿¡æ¯æ·»åŠ åˆ°ç´¢å¼•åº“
 
 
-#Ìí¼Ó±êÇ©
-git tag -a v1.4 -m 'ËµÃ÷' # ĞÂ½¨±êÇ©
-git tag  #ÂŞÁĞ±êÇ©
-
+#æ·»åŠ æ ‡ç­¾
+git tag -a v1.4 -m 'è¯´æ˜' # æ–°å»ºæ ‡ç­¾
+git tag  #ç½—åˆ—æ ‡ç­¾

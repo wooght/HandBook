@@ -49,6 +49,16 @@ cat /var/log/mysqld.log#查看密码 localhost:后面是默认密码
 	MySQL Cluster CGE 集群版本,开源免费
 	MySQL Community Edition 商业版本
 
+mysql5.7默认密码修改
+修改mysql配置文件 /etc/mysl/mysql.conf.d/mysqld.cnf
+		添加：skip-grant-tables
+然后mysql免密码登录
+执行：update mysql.user set authentication_string=password('') where user='root' and Host ='localhost';
+update user set plugin='mysql_native_password';
+flush privileges;
+然后再将配置文件该回来，就可以了。
+
+
 
 -----------------------------------------------------------
 安装PHP

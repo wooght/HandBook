@@ -1,0 +1,16 @@
+<html>
+<body>
+	<script>
+		var old_a={2:['c',1],1:['a',3],0:['b',2]}
+
+		for(key in old_a){
+			console.log(old_a[key][0]+' '+old_a[key][1])
+		}
+		var new_a = Object.keys(old_a).sort(function(a,b){return old_a[a][1]-old_a[b][1]})
+		for(key in new_a){
+			console.log(key+' '+old_a[new_a[key]])
+		}
+		alert(new_a)
+	</script>
+</body>
+</html>

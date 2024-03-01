@@ -1,65 +1,80 @@
-#python pipÃüÁî
+#python pipå‘½ä»¤
 
 pip -help
 
 pip install packageName
-pip install mysql #°²×°mysqlÄ£¿é
+pip install mysql #å®‰è£…mysqlæ¨¡å—
 
-pip uninstall packageName #Ğ¶ÔØ
+pip uninstall packageName #å¸è½½
 
-pip search packageName  #ËÑË÷
+pip search packageName  #æœç´¢
 
-#pip Éı¼¶
-sudo python -m pip install ¨Cupgrade pip 
+pip3 install django==2.0.5   # å®‰è£…åˆ¶å®šç‰ˆæœ¬
 
-#Éı¼¶ÆäËûµÄÒ²Ò»Ñù
+#pip å‡çº§
+sudo python -m pip install â€“upgrade pip
+
+#å‡çº§å…¶ä»–çš„ä¹Ÿä¸€æ ·
 pip install -upgrade name
 
 
-#°²×°pythonÆäËû»·¾³¼°ÒÀÀµ
+#å®‰è£…pythonå…¶ä»–ç¯å¢ƒåŠä¾èµ–
 
-#°²×°win32
+#å®‰è£…win32
 pip install pypiwin32
 
-#°²×°sql²Ù×÷¿â
+#å®‰è£…sqlæ“ä½œåº“
 pip install sqlalchemy
-	Èç¹û³öÏÖÏÂÔØÊ§°ÜµÄÔ­Òò£¬¿ÉÒÔÊÖ¶¯ÏÂÔØÈ»ºó°²×°
+	å¦‚æœå‡ºç°ä¸‹è½½å¤±è´¥çš„åŸå› ï¼Œå¯ä»¥æ‰‹åŠ¨ä¸‹è½½ç„¶åå®‰è£…
 	$ pip install SQLAlchemy-1.1.14.tar.gz
 
-#°²×°Virtualenv ĞéÄâ»·¾³°æ±¾¹ÜÀí
+#å®‰è£…Virtualenv pythonè™šæ‹Ÿç¯å¢ƒç‰ˆæœ¬ç®¡ç†(æ”¯æŒå¤šç‰ˆæœ¬python)
 pip install virtualenv
 
 
-#°²×°ÓïÒå·ÖÎö¹¤¾ß
+#å®‰è£…è¯­ä¹‰åˆ†æå·¥å…·
 pip install jieba
 
-#°²×°¿ÆÑ§¼ÆËã¹¤¾ß
+#å®‰è£…ç§‘å­¦è®¡ç®—å·¥å…·
 pip install numpy
 pip install pandas
 
-# °²×° pytesseract Í¼ÏñÊ¶±ğ
+# å®‰è£… pytesseract å›¾åƒè¯†åˆ«
 pip install pytesseract
 apt-get install tesseract-ocr
 
 ##############################################################
-python À©Õ¹°üÒ»ÀÀ:
+python æ‰©å±•åŒ…ä¸€è§ˆ:
 
-pypiwin32 	#windowsÒÀÀµÀ©Õ¹°ü
-pywin32		#windowsÒÀÀµÀ©Õ¹°ü,Êó±ê¼üÅÌÊÂ¼ş
-PyMySql		#²Ù×÷mysqlÀ©Õ¹°ü
-sqlalchemy	#Êı¾İ¿âORM²Ù×÷À©Õ¹°ü
-numpy		#¿ÆÑ§¼ÆËã/Êı×é À©Õ¹°ü
-pandas		#¿ÆÑ§¼ÆËã/¾ØÕó À©Õ¹°ü
-scipy		#¸ß¼¶¿ÆÑ§¼ÆËã¿â,»ùÓÚnumpy
-scrapy 		#scrapy ÅÀ³æ¿ò¼Ü
-scrapy-splash	#scrapyÎŞ·ì½áºÏµÄjsÒıÇæ
-twisted		#ÊÂ¼şÇı¶¯µÄÍøÂç¿ò¼Ü
-selenium	#ÎŞ½çÃæä¯ÀÀÒıÇæ
-phantomjs	#ÎŞ½çÃæä¯ÀÀÆ÷JSÒıÇæ
-beautifulsoup4	#bsÅÀ³æÀ©Õ¹
-matplotlib	#Í¼±íÀ©Õ¹°ü
-seaborn		#»ùÓÚmatplotlibµÄÍ¼±íÀ©Õ¹
-scikit-learn	#»úÆ÷Ñ§Ï°À©Õ¹°ü
-pillow		#Í¼Ïñ´¦Àí¿â
-cx_freeze	#windows´ò°üexeÀ©Õ¹°ü
-jieba		#ÖĞÎÄ·Ö´Ê¹¤¾ß°ü
+pypiwin32 	    #windowsä¾èµ–æ‰©å±•åŒ…
+pywin32		    #windowsä¾èµ–æ‰©å±•åŒ…,é¼ æ ‡é”®ç›˜äº‹ä»¶
+PyMySql		    #æ“ä½œmysqlæ‰©å±•åŒ…
+sqlalchemy	    #æ•°æ®åº“ORMæ“ä½œæ‰©å±•åŒ…
+numpy		    #ç§‘å­¦è®¡ç®—/æ•°ç»„ æ‰©å±•åŒ…
+pandas		    #ç§‘å­¦è®¡ç®—/çŸ©é˜µ æ‰©å±•åŒ…
+scipy		    #é«˜çº§ç§‘å­¦è®¡ç®—åº“,åŸºäºnumpy
+scrapy 		    #scrapy çˆ¬è™«æ¡†æ¶
+scrapy-splash	#scrapyæ— ç¼ç»“åˆçš„jså¼•æ“
+twisted		    #äº‹ä»¶é©±åŠ¨çš„ç½‘ç»œæ¡†æ¶
+selenium	    #æ— ç•Œé¢æµè§ˆå¼•æ“
+phantomjs	    #æ— ç•Œé¢æµè§ˆå™¨JSå¼•æ“
+beautifulsoup4	#bsçˆ¬è™«æ‰©å±•
+redis           #å†…å­˜å­˜å‚¨
+matplotlib	    #å›¾è¡¨æ‰©å±•åŒ…
+seaborn		    #åŸºäºmatplotlibçš„å›¾è¡¨æ‰©å±•
+scikit-learn	#æœºå™¨å­¦ä¹ æ‰©å±•åŒ…
+pillow		    #å›¾åƒå¤„ç†åº“
+cx_freeze	    #windowsæ‰“åŒ…exeæ‰©å±•åŒ…
+jieba		    #ä¸­æ–‡åˆ†è¯å·¥å…·åŒ…
+Celery          #åˆ†å¸ƒå¼ä»»åŠ¡é˜Ÿåˆ—
+Django-Celery   # djangoæ‰©å±•celery
+uwsgi           # webæœåŠ¡å™¨æ¥å£
+
+
+##############################################################
+pipå®‰è£…é—®é¢˜ï¼›
+
+å®‰è£…pythonåŒ…æ—¶ï¼ŒæŠ¥ç±»ä¼¼ï¼šerror: command 'x86_64-linux-gnu-gcc' failed with exit status 1çš„é”™è¯¯ï¼Œä¸€èˆ¬æ˜¯pythonä¾èµ–åŒ…å®‰è£…ä¸å…¨ï¼Œæ“ä½œå¦‚ä¸‹ï¼š
+sudo apt-get install build-essential python3-dev libssl-dev libffi-dev libxml2 libxml2-dev libxslt1-dev zlib1g-dev
+
+

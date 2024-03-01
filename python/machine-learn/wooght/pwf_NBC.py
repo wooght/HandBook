@@ -36,6 +36,7 @@ class ClassifyNB:
 
 
     # 创建词汇表
+    # 根据训练样本,提取不重复词汇
     def createVocabList(self, dataSet):
         vocabSet = set([])
         for document in dataSet:
@@ -44,7 +45,8 @@ class ClassifyNB:
         return list(vocabSet)
 
 
-    # 创建文档词向量,和词汇表长度一一对应,出现此则为1 ,未出现则为0
+    # 创建文档词向量
+    # 和词汇表长度一一对应,出现此则为1 ,未出现则为0
     def createDocumentVector(self, inputSet):
         docVec = [0] * len(self.vocabList)
         for words in inputSet:
@@ -54,13 +56,15 @@ class ClassifyNB:
         return docVec
 
     # 创建分类器
+    # 获取训练样本词向量
+    # 创建各类概率对数向量
     def createNbclassifier(self, dataSet):
         docNums = len(self.classVec)  # 总样本数
         vocabNums = len(self.vocabList)  # 词汇总数
         pPosArr = np.ones(vocabNums)  # 积极面训练向量 默认为1而不是0(平滑处理,防止出现0则全盘为0)
         pNegArr = np.ones(vocabNums)  # 消极面训练向量
-        posWords = 0.0  # pos词总数, 单个词/词总数=词概率及条件概率之一P(词|类)
-        negWords = 0.0
+        posWords = 2.0  # pos词总数, 单个词/词总数=词概率及条件概率之一P(词|类)
+        negWords = 2.0  # 将所有词的初始出现次数设为1,分母默认2  拉普拉斯平滑
         negClassNums = 0  # neg样本数
         for i in range(docNums):
             tmpVec = self.createDocumentVector(dataSet[i])  # 词向量
@@ -78,6 +82,7 @@ class ClassifyNB:
 
 
     # 分类预测
+    # 求各类概率对数  返回最大者
     def predict(self, X):
         documentVec = self.createDocumentVector(X)
         pdPos = sum(documentVec * self.pPosVec) + np.log(1-self.pNeg)  # log(AB) = logA + logB

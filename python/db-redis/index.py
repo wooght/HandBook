@@ -7,13 +7,16 @@
 
 import redis, random
 
+print('11111')
 # 连接方式
-pool = redis.ConnectionPool(host='192.168.10.10', port=6379, db=0)  # 连接池
+pool = redis.ConnectionPool(host='localhost', port=6379, db=0, socket_connect_timeout=2)  # 连接池
 r = redis.Redis(connection_pool=pool)  #连接,指定连接池
 allname = ['puwenfeng', 'wooght', 'PWF']
+print(allname)
 
 # String操作
-r.set('wooght', random.choice(allname))  # 默认不存在则创建,存在则修改
+r.set('wooght', random.choice(allname),ex=10)  # 默认不存在则创建,存在则修改
+print('set ok')
 # set(name, value, ex=None, px=None, nx=False, xx=False)
 #      ex，过期时间（秒）
 #      px，过期时间（毫秒）

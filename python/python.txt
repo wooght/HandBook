@@ -1,0 +1,16 @@
+以下两步将python指向python3:
+echo alias python=python3 >> ~/.bashrc
+source ~/.bashrc
+python --version    # 查看python版本信息
+
+
+# 查看python安装目录
+whereis python
+# 或者进入终端
+python
+>>> import sys
+>>> sys.path    # 可以查看具体目录结构
+
+# Python运行系统命令
+result = os.popen('python3 /home/wooght/www/web/spider/email_spider.py').read()
+

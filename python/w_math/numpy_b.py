@@ -69,3 +69,8 @@ print(arr, arr2)
 print(exp(arr))  # exp e为底的指数函数
 print(sqrt(arr))  # sqrt 平方根
 print(add(arr, arr2))  # add 求和
+
+arr = array([[1, 1, 1],
+             [1, 1, 0],
+             [1, 0, 0]])
+print('average:\n',average(arr, 1))

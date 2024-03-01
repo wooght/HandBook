@@ -1,4 +1,5 @@
 #Ubuntu 
+Linux U盘启动工具：UltraISO
 
 更新库
 sudo apt-get update
@@ -19,3 +20,24 @@ dpkg -s phantomjs
 
 #通过软连接 添加环境变量 ln -sf 目标地址 环境变量目录地址
 sudo ln -sf /usr/local/src/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
+
+#VI编辑器
+sudo nano caijing  # 编辑caijing文档
+
+sudo gedit caijing # 编辑器编辑caijing文档
+
+
+#hostsDNS映射文档地址 /etc/hosts
+
+输入”uname -a “，显示电脑以及操作系统的相关信息；
+输入”cat /etc/issue”, 显示系统发行版本信息；
+输入”cat /proc/version”，显示正在运行的内核版本；
+
+
+安装python包时，报类似：error: command 'x86_64-linux-gnu-gcc' failed with exit status 1的错误，一般是python依赖包安装不全，操作如下：
+sudo apt-get install build-essential python3-dev libssl-dev libffi-dev libxml2 libxml2-dev libxslt1-dev zlib1g-dev
+
+下载： wget 链接地址
+wget http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
+
+

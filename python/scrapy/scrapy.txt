@@ -33,3 +33,12 @@ pip install twisted...
 
 继续安装selenium
 pip install selenium
+
+# chromedriver 安装和调试
+chrome地址输入：chrome://version/ 查看chrome版本
+
+http://chromedriver.storage.googleapis.com/index.html地址下载对应的chromedriver
+chrome://version/ 浏览器输入查看浏览器版本
+unzip chromedriver_linux64.zip  # 解压文件，然后将解压出来的文件复制进/usr/bin/下
+chromedirver 安装成功
+sudo apt-get install xvfb  # 安装无头打开浏览器插件

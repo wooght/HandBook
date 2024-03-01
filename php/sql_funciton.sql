@@ -75,3 +75,30 @@ select * from vip;
 +----+--------+-----+-------------+---------------------+
 2 rows in set (0.03 sec)
 */
+
+
+mysqldump -u homestead -p scrapy > caijing.sql  # 导出scrapy数据库到caijing.sql文件
+create table if not exists vip(
+id int(4) not null primary key auto_increment,
+name varchar(16) not null default 'youke',
+age int(3) not null default 18,
+phone varchar(16),
+mk_time timestamp default current_timestamp);
+create table if not exists operate(
+    id int(4) not null primary key auto_increment,
+    store_id int(2) not null,
+    y_month varchar(8) not null,
+    profit float(8) not null default 0.0,
+    income float(8) not null default 0.0,
+    wages float(8) not null default 0.0,
+    insurance float(8) not null default 0.0,
+    meituan float(8) not null default 0.0,
+    rent float(8) not null default 0.0,
+    hydropower float(8) not null default 0.0,
+    expenditure float(8) not null default 0.0,
+    stock float(8) not null default 0.0,
+    assets float(8) not null default 0.0,
+    loss float(8) not null default 0.0,
+    mk_time timestamp default current_timestamp
+);
+

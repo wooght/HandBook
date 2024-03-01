@@ -1,0 +1,16 @@
+chromedriver下载地址：
+    http://npm.taobao.org/mirrors/chromedriver/
+    需对应本地chrome版本号
+    下载解压 然后移动 到/usr/local/share/文件下
+
+    sudo mv -f chromedriver /usr/local/share/chromedriver
+    然后建立软连接：
+    sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+    sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+
+
+运行chromedriver报错：
+    selenium.common.exceptions.WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 127
+    查看 chromedriver --version
+        提示缺少依赖包
+        执行：sudo apt-get install libgconf-2-4 即可

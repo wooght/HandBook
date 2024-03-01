@@ -1,0 +1,163 @@
+projectname : python django
+order by    : wooght
+datetime    : 2017-9-21
+*********************************************
+* 安装django,uwsgi
+* pip 安装即可
+* MVC/MVT架构联系区别
+*********************************************
+MVC:
+
+M：model，模型
+V：view，视图
+C：controller，控制器，接收请求，进行处理，与M和V进行交互，返回应答
+
+MVT:
+
+M：model，模型 与T相同，与数据库交互
+V：view，视图 与C相同，接收与处理
+T：template，模板，与V相同，产生HTML
+
+
+
+*********************************************
+* 基本环境配置
+* uwsgi配置及使用
+* nginx 配置
+*********************************************
+配置uwsgi:
+在项目文件夹下创建projectname_uwsgi.ini,内容大概如下：
+[uwsgi]
+socket = :8080  # uwsgi 端口
+chdir           = /home/vagrant/www/web_django  # web目录
+module          = web_django.wsgi
+master          = true  # 主进程
+processes       = 4
+vacuum          = true  # 退出，重启时清理文件
+
+运行配置文件查看是否成功：
+uwsgi --ini projectname_uwsgi.ini
+统一终端ctrl+c停止uwsgi
+如窗口关闭，就强制关闭uwsgi
+sudo pkill -f uwsgi -9
+
+
+配置nginx:
+添加python站点配置文件
+server {
+    listen         80;
+    server_name    webdjango;
+    charset UTF-8;
+    access_log      /var/log/nginx/myweb_access.log;
+    error_log       /var/log/nginx/myweb_error.log;
+
+    client_max_body_size 75M;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass 127.0.0.1:8080;  # 与uwsgi.ini端口一致
+        uwsgi_read_timeout 2;
+    }
+    location /static {
+        expires 30d;
+        autoindex on;
+        add_header Cache-Control private;
+        alias /home/vagrant/www/web_django/web_django/;  # 网站目录
+     }
+ }
+
+ 先后启动uwsgi,nginx即可
+
+ 配置静态文件：
+ python manage.py collectstatic  # 发布时，收集静态文件到更目录 static
+ nginx 需要的配置：
+ location /static {
+    alias /home/vagrant/www/web_django/static/;  # 静态文件夹
+ }
+
+
+
+*********************************************
+* django 命令
+* manage.py文件使用
+*********************************************
+创建项目：
+django-admin.py startproject ProjectName
+运行项目：
+python manage.py runserver 0.0.0.0:8000 将项目运行在127.0.0.1:8000上，浏览器可直接访问这个地址
+django命令：
+django-admin.py startproject projectname  创建项目
+python manage.py runserver 0.0.0.0:8000   启动项目在端口8000
+python manage.py startapp app_name  在项目创建一个APP
+python manage.py createsuperuser  创建超级管理员
+
+
+
+*********************************************
+* session
+* settings.py 关于session的配置
+*********************************************
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'   # 引擎（默认）
+
+    SESSION_COOKIE_NAME ＝ "sessionid"                       # Session的cookie保存在浏览器上时的key，即：sessionid＝随机字符串（默认）
+    SESSION_COOKIE_PATH ＝ "/"                               # Session的cookie保存的路径（默认）
+    SESSION_COOKIE_DOMAIN = None                             # Session的cookie保存的域名（默认）
+    SESSION_COOKIE_SECURE = False                            # 是否Https传输cookie（默认）
+    SESSION_COOKIE_HTTPONLY = True                           # 是否Session的cookie只支持http传输（默认）
+    SESSION_COOKIE_AGE = 1209600                             # Session的cookie失效日期（2周）（默认）
+    SESSION_EXPIRE_AT_BROWSER_CLOSE = False                  # 是否关闭浏览器使得Session过期（默认）
+    SESSION_SAVE_EVERY_REQUEST = False                       # 是否每次请求都保存Session，默认修改之后才保存（默认）
+
+
+
+*********************************************
+* 模型
+* 数据
+*********************************************
+python manage.py makemigrations  生成迁移文件
+python manage.py migrate  执行SQL迁移
+python3 manage.py migrate caijing --fake  当数据表已经存在，不需要创建时用
+
+当删除所有数据表后
+python manage.py makemigrations --empty yourappname 生成一个空的initial.py
+在执行新的迁移，导入所有表
+
+当数据库已经存在表结果时候
+python manage.py migrate --fake-initial 忽略已经存在的表
+
+
+    操作数据库：
+    python manage.py shell 进入django shell工具
+    >>>from tmp_learn.models import vip
+    >>>vip.objects.create(name='tmpname', age=18)
+    <vip: vip object (1)>
+
+
+
+*********************************************
+* 模板标签
+* 模板应用
+*********************************************
+{{day_average|floatformat:2}}   floatformat 保留几位小数
+{% widthratio day_average 1 30 as day%}     widthratio one two three 除法：(one/two)*three
+                                            as  赋值给后面参数
+
+
+
+*********************************************
+* 试图
+* 控制
+*********************************************
+all_data = goods_list.objects.filter(bar_code__contains=goods_code)     __contains 模糊查询  前面是双下划线
+            __contains  模糊查询（包含）  前面是双下划线
+            __gt        大于
+            __gte       大于等于
+            __lt        小于
+            __lte       小于等于
+            __in        其中之一
+
+
+
+安装node.js
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
