@@ -1,0 +1,16 @@
+/*
+pycharm 编辑器使用
+*/
+
+1：汉化
+File->Setings->Plugins(插件)  找到Chinese language Pack ，点击安装，重启IDE即可
+
+2：自动生成版本/文件信息
+设置->编辑器->文件和代码模版
+如python script 可以如下设置
+'''
+@project    :${PROJECT_NAME}
+@file       :${NAME}.py
+@Author     :wooght
+@Date       :${DATE} ${TIME}
+'''
