@@ -23,6 +23,8 @@ mysqldump -u用户名 -p密码 数据库名 > 导出的文件名
 mysqldump -u用户名 -p 密码 数据库名 表名> 导出的文件名
 导入整个数据库：
 mysql -uroot databasefoo < foo.sql
+或者
+source foo.sql
 
 
 pip install mysqlclient 报错  ...with error code 1...

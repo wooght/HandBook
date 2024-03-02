@@ -295,10 +295,7 @@ git add -A: [<path>]表示把<path>中所有tracked文件中被修改过或已�
 git tag -a v1.4 -m '说明' # 新建标签
 git tag  #罗列标签
 
-<<<<<<< HEAD
-ghp_Waokjg7IWOruoKsIOMwfHsR78GF7PA0sjpsx
-=======
+
 github tokens:  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
 把tokens加载到连接地址中，以后就不用输入密码
 git remote set-url origin https://(tokens)@github.com/(用户名仓库名)
->>>>>>> wooght

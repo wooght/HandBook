@@ -1,19 +1,43 @@
 git 命令汇总
 
-remote
-git remote add origin 项目git地址   本地关联远程仓库
-git remote remove origin
+git init 初始化git
 
+
+remote
+git remote add origin git-url   本地关联远程地址为git-url的仓库
+git remote remove origin 本地取消关联
+
+add
+git add file 将file添加到缓存区
+git add --all 将所有改动添加到缓存区
+
+diff
+git diff 查看具体变动
+
+reflog
+git reflog 查看操作历史
 
 commit
-
 git commit 提交到库
 git commit -m 'message'
 git commit -am 'message' 等价于 git add 加上git commit -m 'message'，不适合初次提交
+git commit -amend 对新的提交追加提交，不改变commit的ID
+
+push
+git push 推送当前分支到远程
+git push origin --all   所有分支推送到远程
+git push origin branch:branch    对应branch推送到远程库
+git push origin master 推送master分支到远程master,:省略，就表示推送到相同或者关联的分支上去
+git push -u origin master 推送master分支到远程master，并关联远程的master分支。下次git push就可以了
+git push origin --delete branch-name 删除远程branch-name分支
+
+pull
+git pull    拉取所有远程分支合并到本地
+git pull origin branch:branch 远程分支branch拉取到本地branch分支
+git pull origin master 拉取远程master分支到本地当前分支合并 没有： ，就表示和当前分支
 
 
 log
-
 git log 显示所有的commit记录，最近的在最上面
 git log --oneline   显示简介的commit记录，一个一条
 git log --author=<author> 显示制定作者的记录
@@ -22,13 +46,30 @@ git log --since=<date> 显示指定日期之前的记录
 git log --graph 图形化显示
 
 
-reset
+tag
+git tag     列出所有本地标签
+git tag v1.0    创建v1.0标签
+git tag -a v1.0 -m 'release'    创建有注释信息的标签
+git tag -f v1.0 [new-commit-hash] 将v1.0标签移动到新提交
+git push origin v1.0 将v1.0标签推送到远程
+git push --tags 推送所有标签到远程
+git push --delete origin v1.0 删除远程v1.0标签
 
+reset
 git reset --HEAD^   回退到上一个版本 多少个^就回退几个版本
 git reset --hard commit_id 回退到commit_id版本
 
 branch
 git branch  显示本地所有分支
-git branch branchname 在当前HEAD创建新分支
+git branch branch-name 在当前HEAD创建新分支
+git branch -b branch_name 创建分支并切换到该分支
 git branch -a 查看本地和远端的所有分支
 git branch -vv 查看本地和远端分支的追踪关系
+git branch -d branch-name 删除分支
+
+
+merge
+git merge branch-name  当前分支和branch-name分支合并
+
+checkout
+git checkout branch-name 切换到branch-name分支
