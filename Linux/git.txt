@@ -247,8 +247,8 @@ git remote remove origin
 #å…‹éš†
 git clone https://github.com/wooght/handbook.git æ–‡ä»¶å¤¹ #å…‹éš†åˆ°æŒ‡å®šæ–‡ä»¶å¤¹
 =======
-#¿ËÂ¡
-git clone https://github.com/wooght/handbook.git ÎÄ¼þ¼Ð #¿ËÂ¡µ½Ö¸¶¨ÎÄ¼þ¼Ð
+#ï¿½ï¿½Â¡
+git clone https://github.com/wooght/handbook.git ï¿½Ä¼ï¿½ï¿½ï¿½ #ï¿½ï¿½Â¡ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 >>>>>>> wooght
 
 git pull origin next:master #èŽ·å–è¿œç¨‹nextçš„æ›´æ–°åˆ°æœ¬åœ°master
@@ -299,6 +299,6 @@ git tag  #ç½—åˆ—æ ‡ç­¾
 ghp_Waokjg7IWOruoKsIOMwfHsR78GF7PA0sjpsx
 =======
 github tokens:  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
-°ÑtokensÌí¼Óµ½Ô¶³ÌÁ¬½ÓÖÐ£º
-git remote set-url origin https://(tokens)@github.com/(githubÓÃ»§Ãû)/(²Ö¿âÃû³Æ)
+æŠŠtokensåŠ è½½åˆ°è¿žæŽ¥åœ°å€ä¸­ï¼Œä»¥åŽå°±ä¸ç”¨è¾“å…¥å¯†ç 
+git remote set-url origin https://(tokens)@github.com/(ç”¨æˆ·åä»“åº“å)
 >>>>>>> wooght
