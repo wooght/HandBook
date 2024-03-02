@@ -289,3 +289,5 @@ git add -A: [<path>]表示把<path>中所有tracked文件中被修改过或已�
 #添加标签
 git tag -a v1.4 -m '说明' # 新建标签
 git tag  #罗列标签
+
+ghp_Waokjg7IWOruoKsIOMwfHsR78GF7PA0sjpsx
