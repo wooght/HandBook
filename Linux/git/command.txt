@@ -1,0 +1,28 @@
+git 命令汇总
+
+remote
+git remote add origin 项目git地址   本地关联远程仓库
+git remote remove origin
+
+
+commit
+
+git commit 提交到库
+git commit -m 'message'
+git commit -am 'message' 等价于 git add 加上git commit -m 'message'，不适合初次提交
+
+
+log
+
+git log 显示所有的commit记录，最近的在最上面
+git log --oneline   显示简介的commit记录，一个一条
+git log --author=<author> 显示制定作者的记录
+git log --since=<date> 显示制定日期之后的记录
+git log --since=<date> 显示指定日期之前的记录
+git log --graph 图形化显示
+
+
+reset
+
+git reset --HEAD^   回退到上一个版本 多少个^就回退几个版本
+git reset --hard commit_id 回退到commit_id版本

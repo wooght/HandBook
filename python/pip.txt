@@ -63,3 +63,4 @@ scikit-learn	#机器学习扩展包
 pillow		#图像处理库
 cx_freeze	#windows打包exe扩展包
 jieba		#中文分词工具包
+xlrd        #读取Excel

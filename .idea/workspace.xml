@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c3e9967b-24a7-4413-801a-303b0f4ce28c" name="Default" comment="2024回归">
       <changelist_data name="wooght" email="wooght@126.com" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Linux/pychrom.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linux/git/command.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Linux/git.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/git.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Linux/ubuntu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/ubuntu.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,12 +198,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "wooght"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wooght&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -410,7 +410,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/wooght-server/HandBook",
+    "last_opened_file_path": "E:/wooght-server/LinkMart",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
@@ -429,7 +429,7 @@
       <recent name="F:\homestead\scripy_wooght\caijing_scrapy\model\repository" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.ddtj_analyse">
     <configuration name="ddtj_analyse" type="PythonConfigurationType" factoryName="Python">
       <module name="caijing_scrapy" />
       <option name="ENV_FILES" value="" />

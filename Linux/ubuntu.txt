@@ -8,6 +8,13 @@ sudo apt-get install xxx
 如:
 sudo apt-get install python-pip  #安装python pip工具
 
+SSH局域网连接ubuntu
+telnet 127.0.0.1 22来查看是否有ssh
+sudo apt-get install openssh-server 安装SSH
+ifconfig查看ip地址
+windows端cmd连接ubuntu
+ssh ubuntu用户名@ip地址
+
 #查看包是否按照
 dpkg -s phantomjs
 
