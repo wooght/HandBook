@@ -242,9 +242,14 @@ Branch master set up to track remote branch master from origin.
 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
 #解除关联
 git remote remove origin
+<<<<<<< HEAD
 
 #克隆
 git clone https://github.com/wooght/handbook.git 文件夹 #克隆到指定文件夹
+=======
+#��¡
+git clone https://github.com/wooght/handbook.git �ļ��� #��¡��ָ���ļ���
+>>>>>>> wooght
 
 git pull origin next:master #获取远程next的更新到本地master
 
@@ -290,4 +295,10 @@ git add -A: [<path>]表示把<path>中所有tracked文件中被修改过或已�
 git tag -a v1.4 -m '说明' # 新建标签
 git tag  #罗列标签
 
+<<<<<<< HEAD
 ghp_Waokjg7IWOruoKsIOMwfHsR78GF7PA0sjpsx
+=======
+github tokens:  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
+��tokens���ӵ�Զ�������У�
+git remote set-url origin https://(tokens)@github.com/(github�û���)/(�ֿ�����)
+>>>>>>> wooght

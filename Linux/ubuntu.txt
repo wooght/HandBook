@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Ubuntu 
 Linux U盘启动工具：UltraISO
 
@@ -41,3 +42,33 @@ sudo apt-get install build-essential python3-dev libssl-dev libffi-dev libxml2 l
 wget http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
 
 
+=======
+#Ubuntu 
+
+更新库
+sudo apt-get update
+
+安装包:
+sudo apt-get install xxx
+如:
+sudo apt-get install python-pip  #安装python pip工具
+
+SSH局域网连接ubuntu
+telnet 127.0.0.1 22来查看是否有ssh
+sudo apt-get install openssh-server 安装SSH
+ifconfig查看ip地址
+windows端cmd连接ubuntu
+ssh ubuntu用户名@ip地址
+
+#查看包是否按照
+dpkg -s phantomjs
+
+#查看所有按照的包
+ dpkg --get-selections
+
+#查看包的位置
+ dpkg -L phantomjs
+
+#通过软连接 添加环境变量 ln -sf 目标地址 环境变量目录地址
+sudo ln -sf /usr/local/src/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
+>>>>>>> wooght

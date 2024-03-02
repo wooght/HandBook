@@ -78,3 +78,26 @@ pipå®‰è£…é—®é¢˜ï¼›
 sudo apt-get install build-essential python3-dev libssl-dev libffi-dev libxml2 libxml2-dev libxslt1-dev zlib1g-dev
 
 
+<<<<<<< HEAD
+=======
+pypiwin32 	#windowsÒÀÀµÀ©Õ¹°ü
+pywin32		#windowsÒÀÀµÀ©Õ¹°ü,Êó±ê¼üÅÌÊÂ¼þ
+PyMySql		#²Ù×÷mysqlÀ©Õ¹°ü
+sqlalchemy	#Êý¾Ý¿âORM²Ù×÷À©Õ¹°ü
+numpy		#¿ÆÑ§¼ÆËã/Êý×é À©Õ¹°ü
+pandas		#¿ÆÑ§¼ÆËã/¾ØÕó À©Õ¹°ü
+scipy		#¸ß¼¶¿ÆÑ§¼ÆËã¿â,»ùÓÚnumpy
+scrapy 		#scrapy ÅÀ³æ¿ò¼Ü
+scrapy-splash	#scrapyÎÞ·ì½áºÏµÄjsÒýÇæ
+twisted		#ÊÂ¼þÇý¶¯µÄÍøÂç¿ò¼Ü
+selenium	#ÎÞ½çÃæä¯ÀÀÒýÇæ
+phantomjs	#ÎÞ½çÃæä¯ÀÀÆ÷JSÒýÇæ
+beautifulsoup4	#bsÅÀ³æÀ©Õ¹
+matplotlib	#Í¼±íÀ©Õ¹°ü
+seaborn		#»ùÓÚmatplotlibµÄÍ¼±íÀ©Õ¹
+scikit-learn	#»úÆ÷Ñ§Ï°À©Õ¹°ü
+pillow		#Í¼Ïñ´¦Àí¿â
+cx_freeze	#windows´ò°üexeÀ©Õ¹°ü
+jieba		#ÖÐÎÄ·Ö´Ê¹¤¾ß°ü
+xlrd        #¶ÁÈ¡Excel
+>>>>>>> wooght
