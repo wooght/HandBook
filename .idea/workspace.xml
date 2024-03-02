@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c3e9967b-24a7-4413-801a-303b0f4ce28c" name="Default" comment="">
       <change beforePath="" afterPath="$PROJECT_DIR$/../DeepLearning/keras_RNN.py" />
       <change beforePath="" afterPath="$PROJECT_DIR$/python/base_demo.py" />
@@ -29,16 +33,19 @@
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/ghostdriver.log" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/caijing_scrapy/run/ghostdriver.log" />
       <change beforePath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py" afterPath="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/model/Db.py" />
+=======
+    <list default="true" id="c3e9967b-24a7-4413-801a-303b0f4ce28c" name="Default" comment="2024回归">
+      <changelist_data name="wooght" email="wooght@126.com" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linux/pychrom.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="handbook" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.8868502">
@@ -220,7 +227,26 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="wooght &lt;wooght@126.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "wooght"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d4e7890a-7c73-42ad-af26-00b8a9480c8e" />
+        <option name="url" value="https://github.com/wooght/HandBook.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -279,12 +305,16 @@
       </list>
     </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="553" />
     <option name="y" value="119" />
     <option name="width" value="1940" />
     <option name="height" value="873" />
   </component>
+  <component name="ProjectId" id="2d56SlLrLVdcKTcLKfheBYO5yZG" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -374,13 +404,28 @@
       <pane id="Scope" />
     </panes>
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../deep_learning/tensorflow_test.py" />
     <property name="last.edited.regexp" value="Sample Text" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="SearchEverywhereHistoryKey" value="   &#9;FILE&#9;file://F:/homestead/scripy_wooght/caijing_scrapy/factory/data/ddtop100.py" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+=======
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/wooght-server/HandBook",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\homestead\web_django\caijing" />
@@ -397,6 +442,7 @@
       <recent name="F:\homestead\web_django\caijing" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -411,6 +457,12 @@
   </component>
   <component name="RunManager" selected="Python.topic_attitude">
     <configuration name="base_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+  <component name="RunManager">
+    <configuration name="ddtj_analyse" type="PythonConfigurationType" factoryName="Python">
+      <module name="caijing_scrapy" />
+      <option name="ENV_FILES" value="" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -421,14 +473,27 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="handbook" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/base_demo.py" />
+=======
+      <option name="SCRIPT_NAME" value="F:\homestead\scripy_wooght\caijing_scrapy\factory\data_analyse\ddtj_analyse.py" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="ddtj_analyse" type="PythonConfigurationType" factoryName="Python">
+=======
+    <configuration name="pwf_NBC" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="handbook" />
+      <option name="ENV_FILES" value="" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -439,14 +504,27 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="caijing_scrapy" />
       <option name="SCRIPT_NAME" value="F:\homestead\scripy_wooght\caijing_scrapy\factory\data_analyse\ddtj_analyse.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="preprocessing_Polynomia" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="w_KNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="handbook" />
+      <option name="ENV_FILES" value="" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -457,14 +535,27 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="handbook" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/preprocessing_Polynomia.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_KNN.py" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="topic_attitude" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="w_LogisticRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="handbook" />
+      <option name="ENV_FILES" value="" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -475,14 +566,27 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="caijing_scrapy" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../scripy_wooght/caijing_scrapy/factory/data/topic_attitude.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="w_LinearRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="w_RandomForest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="handbook" />
+      <option name="ENV_FILES" value="" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -493,24 +597,40 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="handbook" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_LinearRegression.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_RandomForest.py" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="w_LogisticRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+=======
+    <configuration name="Twisted Trial in pwf_NBC.py" type="tests" factoryName="Twisted Trial" temporary="true" nameIsGenerated="true">
+      <module name="handbook" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/machine-learn" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="handbook" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/machine-learn/w_LogisticRegression.py" />
       <option name="PARAMETERS" value="" />
@@ -533,12 +653,38 @@
         <item index="2" class="java.lang.String" itemvalue="Python.w_LinearRegression" />
         <item index="3" class="java.lang.String" itemvalue="Python.preprocessing_Polynomia" />
         <item index="4" class="java.lang.String" itemvalue="Python.base_demo" />
+=======
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/python/machine-learn/wooght/pwf_NBC.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.ddtj_analyse" />
+      <item itemvalue="Python.w_RandomForest" />
+      <item itemvalue="Python.w_LogisticRegression" />
+      <item itemvalue="Python.w_KNN" />
+      <item itemvalue="Python.pwf_NBC" />
+      <item itemvalue="Python 测试.Twisted Trial in pwf_NBC.py" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.pwf_NBC" />
+        <item itemvalue="Python.w_RandomForest" />
+        <item itemvalue="Python.w_KNN" />
+        <item itemvalue="Python.w_LogisticRegression" />
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -616,8 +762,21 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="原生实现回归" />
+    <MESSAGE value="2024回归" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024回归" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -654,9 +813,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
+<<<<<<< HEAD
       <option name="time" value="77" />
+=======
+>>>>>>> 5ac229e5b5d923448fee094ec08c073849f62cb3
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../web_django/caijing/migrations/0002_auto_20180515_2208.py" />
