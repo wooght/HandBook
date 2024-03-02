@@ -26,3 +26,9 @@ reset
 
 git reset --HEAD^   回退到上一个版本 多少个^就回退几个版本
 git reset --hard commit_id 回退到commit_id版本
+
+branch
+git branch  显示本地所有分支
+git branch branchname 在当前HEAD创建新分支
+git branch -a 查看本地和远端的所有分支
+git branch -vv 查看本地和远端分支的追踪关系
