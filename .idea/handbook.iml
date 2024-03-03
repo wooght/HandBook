@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.4" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (HandBook)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="caijing_scrapy" />
     <orderEntry type="module" module-name="caijing_lvl" />
@@ -13,8 +13,14 @@
     <orderEntry type="module" module-name="DeepLearning" />
     <orderEntry type="module" module-name="web_django" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="format" value="NUMPY" />
+    <option name="myDocStringFormat" value="NumPy" />
+  </component>
   <component name="TestRunnerService">
-    <option name="projectConfiguration" value="Twisted Trial" />
-    <option name="PROJECT_TEST_RUNNER" value="Twisted Trial" />
+    <option name="PROJECT_TEST_RUNNER" value="py.test" />
   </component>
 </module>
