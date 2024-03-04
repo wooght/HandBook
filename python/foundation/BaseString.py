@@ -141,6 +141,18 @@ print(message)  # 我们有20个人,现在有25个苹果,没人可以吃1.2500�
 message = "现在是%(week)s下午%(hour)d点" % {"week": "星期天", "hour": 5}
 print(message)  # 现在是星期天下午5点
 
+
+"""
+    字符串编码
+    str.encode(encoding=, errors=) encoding默认是 bytes,及字节码
+"""
+str_1 = "中文字"
+print(str_1.encode())       # b'\xe4\xb8\xad\xe6\x96\x87\xe5\xad\x97'
+str_2 = str_1.encode('utf-8')
+print(str_2)                # b'\xe4\xb8\xad\xe6\x96\x87\xe5\xad\x97'
+print(str_2.decode())       # 中文字
+
+
 """
     字符串函数应用
     len(str) 返回str长度
@@ -179,21 +191,3 @@ if target_string.find("*") == len(target_string) - 1:
         every_words = ",".join(no_symbol_string)
         print("有这些字:", every_words)
         print("有这些字:", every_words.split(","))
-
-
-def get_num(bstr, fstr):
-    """
-
-    Parameters
-    ----------
-    bstr
-    fstr
-
-    Returns
-    -------
-
-    """
-    return bstr.find(fstr)
-
-
-print(get_num(bst, cst))
