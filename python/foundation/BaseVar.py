@@ -39,9 +39,13 @@ print(var_1, var_2)
 str_1 = "123"
 num_1 = 1
 num_2 = 1.8
+bool_1 = False
 print(type(str_1))      # <class 'str'>
 print(type(num_1))      # <class 'int'>
 print(type(num_2))      # <class 'float'>
+print(type(bool_1))     # <class 'bool'>
+if "float" == type(num_2).__name__:
+    print(f"{num_2} 是浮点数")
 """类型转换"""
 new_num_2 = str(num_2)
 print(type(new_num_2))  # <class 'str'>

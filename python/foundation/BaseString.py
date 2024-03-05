@@ -112,18 +112,17 @@ print(len(str))  # 3
     {}和format(*列表) 列表一一对应赋值,注意* 
     
     {name}和format(name=name) 指定赋值,可以多次引用
-    字符串前面加f,字符串{}中可以直接使用变量
+    f'string{var}string' 字符串前面加f,字符串{}中可以直接使用变量
 """
 num1, num2 = 10, 20
 message = "我们有{}个人,现在有{}个苹果,没人可以吃{}个".format(num1, num2, num2 / num1)
 print(message)  # 我们有10个人,现在有20个苹果,没人可以吃2.0个
 fruit = ["苹果", "香蕉", "桃子"]
-message = "{},{}和{}都是水果".format(*fruit)
+message = "{},{}和{}都是水果".format(*fruit)     # * 意思是将列表中的元素展开作为单独的参数传递给函数,及不定长函数参数的应用
 print(message)  # 苹果,香蕉和桃子都是水果
-my_name = "张三"
-my_age = 18
-message = "我叫{my_name},今年{my_age}岁了,她今年也{my_age}岁了".format(my_name=my_name, my_age=my_age)
-print(message)  # 我叫张三,今年18岁了,她今年也18岁了
+my_name, my_age = "张三", 18
+string_module = "我叫{my_name},今年{my_age}岁了,她今年也{my_age}岁了"
+print(string_module.format(my_name=my_name, my_age=my_age))     # # 我叫张三,今年18岁了,她今年也18岁了
 message = f"我叫{my_name},今年{my_age}岁了,她今年也{my_age}岁了"
 print(message)  # 我叫张三,今年18岁了,她今年也18岁了
 

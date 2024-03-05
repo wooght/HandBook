@@ -19,6 +19,8 @@ File->Setings->Plugins(插件)  找到Chinese language Pack ，点击安装，重启IDE即可
 设置->工具->python集成工具->Docstring项选择numpy
 
 快捷键
-ctrl+alt+S 设置快捷键
-ctrl+tab    集体回缩进
-ctrl+/      集体注释
+ctrl+alt+S          进入设置
+ctrl+tab            集体回缩进
+ctrl+/              集体注释
+ctrl+shift+alt+J    选中全部相同内容
+ctrl+alt+L          自动对齐代码
