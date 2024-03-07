@@ -62,8 +62,9 @@ print(math.pow(num_1, num_2))  # 16.0
 print(math.fmod(9, 5))  # 4.0
 print(math.modf(3.338))
 
+
 """
-    range(start, stop, step)
+    range(start, stop, step)    返回整数序列
     生成可迭代的整数列表 从start开始,默认是0, 到stop结束,不包括stop,按step递增,step默认是1
 """
 for i in range(1, 12):
@@ -75,120 +76,72 @@ str_1 = "1,2,3,4,5,6,7,8,9,10"
 str_list_1 = str_1.split(",")
 # 输出偶数
 for i in range(1, len(str_list_1), 2):
-    print(str_list_1[i], end=" ")
+    print(str_list_1[i], end=" ")                           # 2 4 6 8 10
+print([str_list_1[i] for i in range(1, len(str_list_1), 2)])                                # ['2', '4', '6', '8', '10']
+print([str_list_1[i] for i in range(1, len(str_list_1)) if int(str_list_1[i]) % 2 ==0])     # ['2', '4', '6', '8', '10']
 
+
+""" 
+    random 随机数
+    random.random() 生成一个随机浮点数(精度16),在0到1之间
+    random.uniform(a,b) 生成一个随机浮点数,基于a,b之间
+    random.randint(a,b) 生成一个随机整数,基于a,b之间
+    random.choice(list) 从一个序列中随机获取一个元素
+    random.sample(list,k)  从序列中随机获取k个元素,这k个元素是无序的
 """
-    zip,map,filter,reversed,enumerate
-"""
-
-"""
-    iter 迭代器,不用遍历,可以用next依次取出元素的对象叫迭代器
-    next(iter, 0) 让迭代器迭代一次,获取下一个项目, 如果是字典,就返回key
-    当迭代到最后一项继续迭代时,或处罚异常,0表示触发异常后返回0而不是报错
-    迭代器只能往前不能后退,迭代完后无法再次迭代
-    for循环是将数据全部放在内存中,而迭代器只将指针放内存中,内容是用的时候才用
-"""
-date_list = [27, 28, 1, 2]
-it = iter(date_list)  # 创建迭代器
-next(it)  # 在for循环开始之前要提前迭代一次
-for i in date_list:
-    # 这里next(it) 就是for循环的下一次
-    if next(it, 0) == 1:
-        print("这个月有%d天" % i)        # 这个月有28天
-        break
-print(list(it))  # [2]
-test_list = iter(range(10))
-for item in test_list:
-    print(item, end=" ")        # 0 1 2 3 4 5
-    if item == 5:
-        break
-print("是否可以继续遍历")
-for item in test_list:
-    print(item, end=" ")        # 6 7 8 9
-
-"""
-    map(function, *iterable) 迭代执行函数的迭代器
-    把可迭代对象iterable的每一个元素在function的运行结果组成一个列表
-    function有几个参数,就有几个iterable
-    Return [result,result,...]的迭代器
-"""
+print(random.random())      # 0.5174316816074847
+print(random.uniform(1, 10))        # 5.029117095203566
+print(random.randint(1, 100))       # 60
+test_list = [1, 3, 5, 7, 9]
+print(random.choice(test_list))     # 7
+print(random.sample(test_list, 2))      # [9 ,7]
 
 
-def square(x):
-    return x ** 3
+def random_100_100():
+    for i in range(100):
+        yield [random.randint(1, 100) for a in range(100)]
 
 
-def add_xy(x, y):
-    return x + y
-
-
-result_list = map(square, [1, 2, 3, 4])
-# 迭代器可以直接用next获取下一项,或者for遍历,或者list转换为列表
-print(next(result_list))  # 1
-print(list(result_list))  # [8, 27, 64]
-result_list = map(add_xy, [1, 2, 3], [4, 5, 6])
-print(list(result_list))  # [5, 7, 9]
-result_list = list(map(lambda x, y: x + y, [1, 3, 5, 7], [2, 4, 6, 8]))
-print(result_list)  # [3, 7, 11, 15]
-
-"""
-    zip(*iterable)
-    将多个可迭代对象的元素打包成一个元祖列表的迭代器
-    Return [tuple,tuple,..]的迭代器
-"""
-fruits = ['苹果', '橘子', '桃子']
-prices = [5, 3, 4]
-goods_zip = zip(fruits, prices)
-print(goods_zip.__next__())     # ('苹果', 5)
-print(list(goods_zip))  # [('橘子', 3), ('桃子', 4)]
-"""zip应用:矩阵点乘"""
-m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-n = [[1, 1, 1], [2, 2, 3], [3, 3, 3]]
-print([x*y for a, b in zip(m, n) for x, y in zip(a, b)])        # [1, 2, 3, 8, 10, 18, 21, 24, 27]
+random_1 = random_100_100()
+print(next(random_1))
+print(list(random_1))
 
 
 """
-    generator 生成器
-    迭代运行的函数,yield依次取出函数的返回值
-    yield 类似于普通函数的return,返回结果
-    普通函数Return后就不能在执行,而生成器可以用next可以继续调用,继续从上次yield的位置继续运行,直到下一次yield
-    生成器相对于需要遍历长列表的函数更节约内存,因为他不会将返回结果全部给内存,而是需要的时候在提取
+    排序 list.sort(),sorted()
+    sort()时列表对象的一个方法,会直接改变对象的顺序
+    sorted()可以作用于元祖,字典,不改变原对象,而是产生一个新对象
+    有key,reverse两个参数,key是排序已经得函数,reverse指是否倒序,默认是False及升序
 """
-test_list = [item for item in range(10)]
-test_tuple = (item for item in range(10))
-print(test_list, test_tuple)        # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <generator object <genexpr> at 0x000002158ECD5D80>
-print(test_tuple.__next__())        # 0
-print(next(test_tuple))             # 1
-for i in test_tuple:
-    print(i, end=" ")               # 2 3 4 5 6 7 8 9
-test_tuple = (item for item in range(10))
-print(list(test_tuple))
+test_list = [2,1,3,5,9,0]
+test_list.sort()
+print(test_list)        # [0, 1, 2, 3, 5, 9]
+test_list = [2,1,3,5,9,0]
+print(sorted(test_list))        # [0, 1, 2, 3, 5, 9]
+print(test_list)                # [2, 1, 3, 5, 9, 0]
 
-def fib(n):
-    """
-    生成器 有yield的函数就变成一个generator(生成器)
-    斐波拉契数列 1、1、2、3、5、8、13、21、34...
-    """
-    i, a, b = 0, 0, 1
-    while i < n:
-        # 返回本次结果
-        yield b
-        # 计算下一次
-        b, a = a+b, b       # 先计算等式右边的,等右边的计算完了,在分别赋值给左边的变量
-        i += 1
+test_list = [
+    [1, 2, 3],
+    [0, 2, 4],
+    [2, 4, 8]
+]
+test_list.sort(key=lambda x: x[2], reverse=True)    # 按元素列表的第2个元素大小进行排序, 倒序
+print(test_list)        # [[2, 4, 8], [0, 2, 4], [1, 2, 3]]
 
 
-fib_list = fib(10)
-print(fib_list)     # <generator object fib at 0x000001CA84105EE0>
-print(next(fib_list), end=" ")      # 1
-print([item for item in fib_list])  # [1, 2, 3, 5, 8, 13, 21, 34, 55]
+def get_len(str):
+    return len(str)
 
-"""list.reverse() 列表原地翻转"""
-list_1 = [1, 2, 3]
-list_1.reverse()
-print(list_1)  # [3, 2, 1]
 
-"""all(list) 全真判断,及判断列表中是否有0,空,None,False等非真的元素,如果都为真,则返回True"""
-print(all([1, 2, '3', True]))  # True
-print(all([1, 0, 3]))  # False
-print(all([1, '', 3]))  # False
+"""调用外部函数作为排序依据"""
+test_list = ['217342918734', '394', '56761', '14645157']
+new_list = sorted(test_list, key=get_len)       # 调用函数,函数返回排序依据,注意这里的函数没有()
+print(new_list)     # ['394', '56761', '14645157', '217342918734']
+"""将字典的某个字段作为排序依据"""
+test_dict = [
+    {'name': 'wooght', 'edu': '本科', "age": 1986},
+    {'name': 'pwf', "edu": '小学', "age": 1988},
+    {'name': 'zhangsan', "edu": '博士', "age": 1990}
+]
+new_dict = sorted(test_dict, key=lambda x: x["age"])    # 列表里面的字典的某个字段进行排序
+print(new_dict)

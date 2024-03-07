@@ -44,12 +44,27 @@ list_1.extend(list_2)       # extend 直接追加,会改变原来的列表而不
 print(list_1)               # [1, 2, 3, 4, 2, 3, 4]
 """list.append() 向列表追加元素,末尾追加"""
 test_list.append(5)
-print(test_list)                        # [5]
+print(test_list)                        # [1, 'a', 'b', 4, 5, 5]
 test_list.append([1, 2])
-print(test_list)                        # [5, [1, 2]]
+print(test_list)                        # [1, 'a', 'b', 4, 5, 5, [1, 2]]
 """list.insert(index,var) 在列表下标index后面插入var元素"""
 test_list.insert(1, 'hello')
-print(test_list)                        # [5, 'hello', [1, 2]]
+print(test_list)                        # [1, 'hello', 'a', 'b', 4, 5, 5, [1, 2]]
+"""list.remove(x) 删除列表中元素值为x的项目,如果没有则报ValueError错"""
+test_list.remove('a')
+print(test_list)                        # [1, 'hello', 'b', 4, 5, 5, [1, 2]]
+"""list.pop(key) 删除列表中的元素,无key则删除最后一项"""
+test_list = [1, 2, 3, 4]
+print(test_list.pop())      # 4
+print(test_list)            # [1, 2, 3]
+"""all(list) 全真判断,及判断列表中是否有0,空,None,False等非真的元素,如果都为真,则返回True"""
+print(all([1, 2, '3', True]))  # True
+print(all([1, 0, 3]))  # False
+print(all([1, '', 3]))  # False
+print('' in [1, '', 3])  # True
+"""any(list) 有一个是True,就返回True"""
+print(any(['', 2, None]))       # True
+
 
 
 """
@@ -194,8 +209,18 @@ print(test_list)                # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print([item for item in range(10) if item % 2 == 0])  # 输出偶数 [0, 2, 4, 6, 8]
 # 分别求出1,2,3的2,3次方   for嵌套推导式
 print([(a, a**b) for a in range(1, 4) for b in range(2, 4)])        # [(1, 1), (1, 1), (2, 4), (2, 8), (3, 9), (3, 27)]
-cfb = [f"{a}*{b}=" + str(a * b) for a in range(1, 10) for b in range(1, 10) if b >= a]
-print(cfb)
+cfb = [[f"{a}*{b}=" + str(a * b).rjust(2) for a in range(1, 10) if b >= a] for b in range(1, 10)]
+for item in cfb:
+    print(item)
+# ['1*1= 1']
+# ['1*2= 2', '2*2= 4']
+# ['1*3= 3', '2*3= 6', '3*3= 9']
+# ['1*4= 4', '2*4= 8', '3*4=12', '4*4=16']
+# ['1*5= 5', '2*5=10', '3*5=15', '4*5=20', '5*5=25']
+# ['1*6= 6', '2*6=12', '3*6=18', '4*6=24', '5*6=30', '6*6=36']
+# ['1*7= 7', '2*7=14', '3*7=21', '4*7=28', '5*7=35', '6*7=42', '7*7=49']
+# ['1*8= 8', '2*8=16', '3*8=24', '4*8=32', '5*8=40', '6*8=48', '7*8=56', '8*8=64']
+# ['1*9= 9', '2*9=18', '3*9=27', '4*9=36', '5*9=45', '6*9=54', '7*9=63', '8*9=72', '9*9=81']
 """ 字典推导式创建字典 """
 person_list = [("张三", 33), ("李四", 30), ("王麻子", 28)]
 print({key: value for key, value in person_list})       # {'张三': 33, '李四': 30, '王麻子': 28}

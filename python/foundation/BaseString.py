@@ -104,6 +104,8 @@ seq = "-"
 print(seq.join(str))  # 你-好-吗
 # len(string)   返回字符串的长度
 print(len(str))  # 3
+print("-" * 100)
+
 
 """
     string.format()
@@ -142,6 +144,29 @@ print(message)  # 现在是星期天下午5点
 
 
 """
+    终端输出美化
+    str()返回用户易读的表达形式
+    repr()返回解释器易读的表达形式
+    str.rjust(num,fillchar) 右对齐字符串,num是对齐后的总宽度,fillchar时填充的字符,默认是空格
+    format中,:表示格式符,:num表示站位num,不足空格填充,默认居左
+"""
+test_list = [[repr(x).rjust(2), repr(x*x).rjust(3), repr(x*x*x).rjust(4)] for x in range(3,8)]
+for item in test_list:
+    print(item)
+# [' 3', '  9', '  27']
+# [' 4', ' 16', '  64']
+# [' 5', ' 25', ' 125']
+# [' 6', ' 36', ' 216']
+# [' 7', ' 49', ' 343']
+test_list = ['{:1d},{:2d},{:3d}'.format(x, x*x, x*x*x)for x in range(3,8)]
+for item in test_list:
+    print(item)
+# 3, 9, 27
+# 4,16, 64
+# 5,25,125
+# 6,36,216
+# 7,49,343
+"""
     字符串编码
     str.encode(encoding=, errors=) encoding默认是 bytes,及字节码
 """
@@ -150,7 +175,7 @@ print(str_1.encode())       # b'\xe4\xb8\xad\xe6\x96\x87\xe5\xad\x97'
 str_2 = str_1.encode('utf-8')
 print(str_2)                # b'\xe4\xb8\xad\xe6\x96\x87\xe5\xad\x97'
 print(str_2.decode())       # 中文字
-
+print("-" * 100)
 
 """
     字符串函数应用

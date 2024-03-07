@@ -7,3 +7,4 @@
 
 SyntaxError     语法异常，指编码格式错误
 ValueError      参数异常,指参类型不对,或者参数未找到
+StopIteration   迭代器超出迭代范围
