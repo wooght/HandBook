@@ -30,6 +30,8 @@ try:
 except StopIteration:
     print("触发异常")           # 触发异常,迭代器迭代结束后不能再迭代
 print(next(test_list, 0))      # 0 next()函数解决异常的方法,第二个参数给定异常返回值
+test_list = iter(range(10))
+print(*test_list)               # 0 1 2 3 4 5 6 7 8 9   * 一次性去除迭代器中的所有元素
 
 
 """
