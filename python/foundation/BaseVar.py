@@ -119,11 +119,20 @@ def abc():
 def bcd():
     try:
         var_1 += 1
-    except:
+    except UnboundLocalError:
         pass
 
 
+print(var_1)
 abc()
 print(var_1)    # 13
 bcd()
 print(var_1)    # 13
+
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, '整除', x, '商为:', n // x)
+            break
+    else:
+        print(n, '是质数')

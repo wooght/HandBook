@@ -7,6 +7,29 @@
 """
 
 
+
+var_1 = 10
+def get_global():
+    """
+        global 全局变量
+    """
+    global var_1
+    var_1 += 1
+    print('var_1通过global引进变为全局变量', var_1)
+def get_var():
+    print('未声明的变量,函数内部可以调用', var_1)
+def update_var():
+    try:
+        var_1 += 1
+        print(var_1)
+    except UnboundLocalError:
+        print('函数内部没有用global引入的变量,只可访问,不可修改')
+
+get_global()
+get_var()
+update_var()
+
+
 class A(object):
     def __init__(self):
         print('默认运行')

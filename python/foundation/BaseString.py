@@ -104,7 +104,7 @@ seq = "-"
 print(seq.join(str))  # 你-好-吗
 # len(string)   返回字符串的长度
 print(len(str))  # 3
-print("-" * 100)
+print("-" * 10)  # ----------
 
 
 """

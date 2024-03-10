@@ -87,13 +87,13 @@ print([x*y for a, b in zip(m, n) for x, y in zip(a, b)])        # [1, 2, 3, 8, 1
 """
     filter() 过滤器 lamda
     filter(function, iterable) function 筛选函数,iterable可迭代对象
-    自动把iterable中的元素传递给function,然后更加function返回的bool值判断是否保留
+    自动把iterable中的元素传递给function,然后根据function返回的bool值判断是否保留
     返回迭代器
 """
 random_int = [random.randint(1, 100) for a in range(100)]
 
 
-def fiter_func(num)::q
+def fiter_func(num):
     return random_int.count(num) > 1
 
 
@@ -173,6 +173,7 @@ for value in cfb:
 """
     itertools.islice(iterable, start, stop, step) 迭代器切片
     iterable 可迭代对象/迭代器,start 开始位置,stop结束位置,末尾是None,step步长
+    Return 迭代器
 """
 from itertools import islice
 test_list = iter(range(10))
