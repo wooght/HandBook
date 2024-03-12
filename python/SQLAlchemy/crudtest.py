@@ -1,5 +1,6 @@
-import table as T
 import random
+
+import table as T
 
 #建立插入对象
 i = T.sns_sseinfo.insert()

@@ -7,6 +7,18 @@
 """
 
 """
+    字符串切片
+    [start:end:步长]  步长为-时,表示从后往前
+"""
+test_str = 'abcdef'
+print(test_str[2:])     # cdef
+print(test_str[:-1])    # abcde
+print(test_str[1:3])    # bc
+print(test_str[:-2:2])  # ac
+print(test_str[::-1])   # fedcba    字符串快速倒序的方法
+
+
+"""
     string.find(str,__start,__end)
     查找子字符串第一次出现的位置
     找到则返回位置,未找到返回-1

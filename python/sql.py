@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-import pymysql as my
 import random
+
+import pymysql as my
 
 mysqlconfig = {
     'host': 'localhost',

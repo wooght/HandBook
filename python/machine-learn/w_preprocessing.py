@@ -6,9 +6,9 @@
 # @File     : w_preprocessing.py
 # 涉及词条: preprocessing [prep'roʊsesɪŋ] 预处理
 
-from sklearn import preprocessing
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import preprocessing
 
 dataSet = np.linspace(1, 2, 10)
 print(dataSet)

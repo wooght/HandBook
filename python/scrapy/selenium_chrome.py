@@ -4,9 +4,10 @@
 # @File     : honc_live selenium_chrome
 # @Time     : 18-5-28 下午8:17
 
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import time
 
 chrome_options = Options()  # 启动设置项
 # chrome_options.add_argument('--headless')  # 设置无头

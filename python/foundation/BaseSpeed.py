@@ -6,13 +6,16 @@
 @Date       :2024/3/7 17:35
 """
 from time import time
+
 import pymysql as my
+
+from python.wooght_tools.SecretCode import Wst
 
 mysqlconfig = {
     'host': 'localhost',
     'port': 3306,
     'user': 'root',
-    'password': 'wooght565758',
+    'password': Wst.decryption("}a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{P$>x"),
     'db': 'linkmart',
     'charset': 'utf8'
 }

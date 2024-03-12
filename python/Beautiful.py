@@ -1,9 +1,9 @@
 # -*- coding: UTF-8 -*-
 
-from bs4 import BeautifulSoup
-import urllib
-import urllib.request as wurl
 import re
+import urllib.request as wurl
+
+from bs4 import BeautifulSoup
 
 #读取页面内容 保存到html中
 url='http://homestead'

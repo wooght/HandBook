@@ -9,10 +9,9 @@
 
     @module socket,threading
 '''
-from socket import *
-import time
 import threading
-from threading import Timer
+import time
+from socket import *
 
 #设置TCP socket对象
 #socket(family,type)

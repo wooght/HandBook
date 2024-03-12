@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 __author__ = 'wooght'
-from sqlalchemy import create_engine, Table, Column ,MetaData, select ,and_
-from sqlalchemy import VARCHAR as Varchar,TEXT as Text, Integer, String, ForeignKey,SmallInteger
+from sqlalchemy import TEXT as Text, Integer, String, SmallInteger
+from sqlalchemy import create_engine, Table, Column, MetaData
 from sqlalchemy.orm import sessionmaker
-import re
 
 engine = create_engine("mysql+pymysql://homestead:secret@192.168.10.10:3306/scrapy?charset=utf8",encoding="utf-8", echo=False)
 metadata = MetaData()

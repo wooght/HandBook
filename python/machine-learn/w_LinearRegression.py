@@ -9,10 +9,11 @@
 # 因变量是连续的，自变量可以是连续的也可以是离散的，回归线的性质是线性的
 # 涉及词条 regressor [rɪ'gresə] 回归
 
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-import numpy as np
-import matplotlib.pyplot as plt
+
 from Tdata import ad_sample
 
 data = pd.read_csv('./data/Folds5x2_pp.csv')

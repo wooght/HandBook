@@ -1,6 +1,8 @@
-from threading import Thread, activeCount
-import socket
 import os
+import socket
+from threading import Thread, activeCount
+
+
 def test_port(dst,port):
     os.system('title '+str(port))
 

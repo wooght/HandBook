@@ -1,6 +1,5 @@
 # -*- coding: UTF-8 -*-
 from selenium import webdriver
-import json
 
 #headers 内容
 cap = webdriver.DesiredCapabilities.PHANTOMJS

@@ -10,8 +10,6 @@ import random
 """
     函数变量
     global 函数访问全局变量
-    *args 不定长度变量
-    **args[] 不定长度关键词变量
 """
 var_1 = 10
 def get_global():
@@ -36,6 +34,14 @@ get_var()
 update_var()
 
 
+"""
+    *args 不定长度变量
+    **args[] 不定长度关键词变量
+    * 在函数定义处,为打包,将无键参数打包为一个列表
+    * 在函数调用处,为解报,将列表罗列为一个一个的元素
+    ** 在函数定义处,为打包,将有键值对的参数打包为一个字典
+    ** 在函数调用处,为解包,将字典以键值的方式罗列成一对一对的元素
+"""
 class A:
     def __init__(self):
         print('默认运行')
@@ -63,6 +69,11 @@ class A:
         else:
             return kwargs['c'] * kwargs['g']
 
+    def get_address(self, *floor, **builds):
+        for key,value in builds.items():
+            for unit in range(1,value+1):
+                print(f'{key}栋{unit}单元有{floor[0]}层{floor[1]}户')
+
     def get_keywords(self, is_print=True):
         """参数的默认值 argument default"""
         print(self.keywords) if is_print else print('请下查看指令')
@@ -73,16 +84,31 @@ class A:
 
 new_a = A()
 print(new_a)
-"""不定长参数"""
+
+"""不定长参数 * 的逆应用"""
 print(new_a.get_sum(1, 2, 3))                      # 6
 print(new_a.get_sum(1, 3, 5, 7))                   # 16
-"""不定长关键词参数"""
+"""不定长关键词参数 ** 的逆应用"""
 print(new_a.get_area(d=11, g=12))                        # 66.0
 print(new_a.get_area(sd=10, xd=5, g=2))                  # 15.0
-"""多个参数传递方式"""
+new_a.get_address(6, 5, one=2, two=4)
+# one栋1单元有6层5户
+# one栋2单元有6层5户
+# two栋1单元有6层5户
+# two栋2单元有6层5户
+# two栋3单元有6层5户
+# two栋4单元有6层5户
+"""
+    多个参数传递方式
+    一:  对应位置一一传递
+    二:  *列表对应位置一一传递
+    三:  **字典传递
+"""
 zs_data = {'name': "张三", "city": "成都", "age": 32}
-print(new_a.get_print_word(**zs_data))                   # she name's 张三 come from  成都 32 old
-print(new_a.get_print_word("李四","上海", 32))  # she name's 李四 come from  上海 32 old
+new_a.get_print_word(**zs_data)                         # she name's 张三 come from  成都 32 old
+new_a.get_print_word("李四","上海", 32)   # she name's 李四 come from  上海 32 old
+wmz_data = ('王麻子', '上海', 33)                         # she name's 王麻子 come from  上海 33 old
+new_a.get_print_word(*wmz_data)
 new_a.get_keywords(is_print=False)                       # 请下查看指令
 new_a.get_keywords()                                     # A
 
@@ -96,8 +122,6 @@ new_a.get_keywords()                                     # A
     实例:列表求和
         进制转换
 """
-
-
 
 def sum_list(nums):
     """

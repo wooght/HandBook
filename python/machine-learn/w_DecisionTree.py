@@ -6,11 +6,12 @@
 # @File     : decisionTree.py
 # 决策树分类,树回归测试预测
 
-from sklearn import tree
-import numpy as np
 import matplotlib.pyplot as plt
-from Tdata import sin_data
+import numpy as np
 from sklearn import datasets
+from sklearn import tree
+
+from Tdata import sin_data
 from common.classfy_plt_3d import classfy_plt_3d
 
 # 决策树分类

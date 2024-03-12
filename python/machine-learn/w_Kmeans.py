@@ -10,8 +10,8 @@
 
 import numpy as np
 from sklearn.cluster import KMeans
-from common.classfy_plt_3d import classfy_plt_3d
 
+from common.classfy_plt_3d import classfy_plt_3d
 
 data = np.random.rand(100, 3)  # 生成一个随机数据，样本大小为100, 特征数为3
 print(data)

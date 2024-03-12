@@ -10,14 +10,15 @@
 # pandas 重点是统计分析 表格容器 基于numpy
 # Scipy 重点是抽象模型 计算函数库 基于numpy
 
+import json
+import time
+
 import matplotlib as mpl
-import matplotlib.pyplot as plt     #matplotlib.pyplot 绘图主键
-import seaborn as sns
+import matplotlib.pyplot as plt  # matplotlib.pyplot 绘图主键
 import numpy as np
 import pandas as pd
-import json
+import seaborn as sns
 
-import time
 import Db as T
 
 mpl.rcParams['font.sans-serif'] = ['SimHei']    #指定默认字体 解决中文问题

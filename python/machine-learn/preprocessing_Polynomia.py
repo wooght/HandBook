@@ -7,10 +7,10 @@
 # 多项式意义: 当线性回归打分不高,但各样本见系数也是偏线性时,可以用多项式回归
 # 涉及词条: polynomia [ˌpɒlɪ'noʊmɪrl] 多项式
 
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
 
 # 房价数据集 面积越大,对应房价单价越低
 X = [[40], [70], [90], [110], [150], [200]]

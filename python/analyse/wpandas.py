@@ -3,10 +3,11 @@
 # pandas
 # by wooght 2017-11
 #
-import pandas as pd
-import numpy as np
+import io
+import sys
 
-import sys, io
+import numpy as np
+import pandas as pd
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')  # 改变标准输出的默认编码
 

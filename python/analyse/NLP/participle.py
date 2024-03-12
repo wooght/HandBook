@@ -4,10 +4,12 @@
 # by wooght
 # 2017-11
 #
-import os,re
+import os
+import re
+
 import jieba
-import jieba.posseg
 import jieba.analyse
+import jieba.posseg
 
 data_path = os.path.dirname(__file__)+"/corpus/"
 jieba.load_userdict(data_path+"dict.txt")

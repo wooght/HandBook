@@ -1,7 +1,7 @@
 #coding: utf-8
 import socket
-import sys
-encoding = 'utf-8'  
+
+encoding = 'utf-8'
 BUFSIZE = 65536
 s = socket.socket(socket.AF_INET,socket.SOCK_RAW,socket.IPPROTO_IP)
 #绑定

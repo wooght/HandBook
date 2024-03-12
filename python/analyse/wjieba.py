@@ -5,10 +5,9 @@
 #
 # 涉及方法:sorted排序用法
 #
-import jieba
-import jieba.posseg
+import sys
+
 import jieba.analyse
-import sys,io
 
 # 字典地址:https://raw.githubusercontent.com/fxsjy/jieba/master/extra_dict/dict.txt.small
 

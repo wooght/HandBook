@@ -4,10 +4,11 @@
 # by wooght 2017-11
 #
 
-import jieba
-import jieba.posseg
+import io
+import sys
+
 import jieba.analyse
-import sys,io,re
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8') #改变标准输出的默认编码
 jieba.load_userdict("F:\homestead\handbook\python/analyse/NLP/corpus/dict.txt")
 

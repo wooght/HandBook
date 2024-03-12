@@ -14,6 +14,7 @@
 # 支持向量：坐落在数据边际的两边超平面上的点被称为支持向量
 
 from sklearn.svm import SVC
+
 from Tdata import gender_sample
 from common.classfy_plt_3d import classfy_plt_3d
 

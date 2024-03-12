@@ -6,11 +6,11 @@
 # @File     : w_LogisticRegression.py
 # 逻辑回归用于分类,二元分类常用, 特征没有线性要求,因变量是二元的
 
-from Tdata import gender_sample
-from sklearn.linear_model import LogisticRegression
 import numpy as np
-from common.classfy_plt_3d import classfy_plt_3d
+from sklearn.linear_model import LogisticRegression
 
+from Tdata import gender_sample
+from common.classfy_plt_3d import classfy_plt_3d
 
 # 性别分类数据 为了3D展示,只取了体重和身高作为特征 特征数据离散
 x, y = gender_sample()

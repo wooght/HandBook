@@ -9,10 +9,10 @@
     python 是开源的，有非常丰富的扩展库
 '''
 
+import calendar
+import random
 import time
 from math import log
-import random
-import calendar
 
 # 日历
 print(calendar.month(2017, 10))

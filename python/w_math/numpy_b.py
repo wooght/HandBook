@@ -6,6 +6,7 @@
 # @File     : numpy_b.py
 
 from numpy import *
+
 from echo import *
 
 f('形状操作')

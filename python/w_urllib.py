@@ -1,8 +1,9 @@
 # -*- coding: UTF-8 -*-
 
+import http.cookiejar
 import urllib
 import urllib.request as wurl
-import http.cookiejar
+
 #import request
 #import urllib3
 

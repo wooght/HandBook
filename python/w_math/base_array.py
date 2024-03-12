@@ -8,6 +8,7 @@
 
 import random
 from math import *
+
 from echo import f
 
 f('基础方法')

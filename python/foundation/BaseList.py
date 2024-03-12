@@ -132,6 +132,11 @@ print(test_list)                        # [2]
 """dict.clear() 清空列表/字典"""
 test_list.clear()
 print(test_list)                        # []
+"""dict.update(dict) 融合字典"""
+dict_one = {"one": 1, "two": 2, "three": 3}
+dict_two = {"four": 3, "five": 5}
+dict_one.update(dict_two)
+print(dict_one)                         # # {'one': 1, 'two': 2, 'three': 3, 'four': 3, 'five': 5}
 """
     字典 键,值的操作
     dict.keys(),dict.values(),dict.items()

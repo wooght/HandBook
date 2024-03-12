@@ -5,7 +5,8 @@
 # @Author   : wooght
 # @File     : index.py
 
-import redis, random
+import random
+import redis
 
 print('11111')
 # 连接方式

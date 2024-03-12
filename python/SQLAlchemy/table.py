@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 __author__ = 'wooght'
-from sqlalchemy import create_engine, Table, Column ,MetaData, select
-from sqlalchemy import VARCHAR as Varchar,TEXT as Text, Integer, String, ForeignKey
+from sqlalchemy import TEXT as Text, Integer, String
+from sqlalchemy import create_engine, Table, Column, MetaData
+
 # 连接数据库
 #mysql+pymysql  表示数据库为mysql,通过pymysql为基础链接操作数据库
 engine = create_engine("mysql+pymysql://homestead:secret@192.168.10.10:3306/scrapy?charset=utf8",encoding="utf-8", echo=False)

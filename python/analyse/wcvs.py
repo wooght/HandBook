@@ -1,10 +1,6 @@
 import matplotlib as mpl
 import matplotlib.pyplot as plt     #matplotlib.pyplot 绘图主键
 import seaborn as sns
-import numpy as np
-import pandas as pd
-
-import time
 
 mpl.rcParams['font.sans-serif'] = ['SimHei']    #指定默认字体 解决中文问题
 

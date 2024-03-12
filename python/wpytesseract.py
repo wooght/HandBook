@@ -5,10 +5,9 @@
 # @Author   : wooght
 # @File     : wpytesseract.py
 
-from pytesseract import *
 from PIL import Image
 from PIL import ImageEnhance
-
+from pytesseract import *
 
 im = Image.open('image/5.png')
 # 使用ImageEnhance可以增强图片的识别率

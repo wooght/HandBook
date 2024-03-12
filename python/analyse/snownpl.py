@@ -4,11 +4,11 @@
 # by wooght 2017-11
 # 扩展包 SnowNLP
 #
+import io
+import sys
+
 from snownlp import SnowNLP
 
-import sys,io
-from snownlp import sentiment
-from snownlp import seg
 sentiment_path = 'D:\Python34\Lib\site-packages\snownlp\sentiment'
 seg_path = 'D:\Python34\Lib\site-packages\snownlp/seg'
 #sentiment.train(sentiment_path+'/neg.txt', sentiment_path+'\pos.txt')

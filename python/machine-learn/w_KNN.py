@@ -7,14 +7,15 @@
 # 涉及词条: neighbors: 领居
 # KNN分类,KNN回归
 
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neighbors import KNeighborsRegressor
-from sklearn.datasets import load_iris
-import matplotlib.pyplot as plt
-from common.classfy_plt_3d import classfy_plt_3d
-from sklearn.model_selection import train_test_split
+
 from Tdata import ad_sample
-import numpy as np
+from common.classfy_plt_3d import classfy_plt_3d
 
 # iris 原始数据
 iris = load_iris()

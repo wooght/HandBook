@@ -2,9 +2,9 @@
 # @author: RobinTang  
 # Created on 2012-9-5 1:42:05  
   
-import threading  
-import socket  
-  
+import socket
+import threading
+
 encoding = 'utf-8'  
 BUFSIZE = 1024  
   

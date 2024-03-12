@@ -7,10 +7,11 @@
 # 涉及词条: ensemble  [ɑ:nˈsɑ:mbl] 集成
 # forest [ˈfɔ:rɪst] 森林
 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn import datasets
-from sklearn.model_selection import train_test_split
 import numpy as np
+from sklearn import datasets
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+
 from common.classfy_plt_3d import classfy_plt_3d
 
 data = datasets.load_iris()

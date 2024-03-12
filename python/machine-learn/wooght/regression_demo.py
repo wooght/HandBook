@@ -10,8 +10,8 @@
 # w= [sum(xi*yi)-nx^y^]/[sum(xi**2)-nx^**2]
 # b = y^-wx^
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 class regression:

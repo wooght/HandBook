@@ -1,8 +1,5 @@
 import urllib
 import urllib.request as wurl
-from bs4 import BeautifulSoup
-import re
-import http.cookiejar
 
 url='https://xueqiu.com/ask/square'
 # url='http://homestead'

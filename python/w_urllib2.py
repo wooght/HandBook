@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
 
+import http.cookiejar
 import urllib
 import urllib.request as wurl
+
 from bs4 import BeautifulSoup
-import re
-import http.cookiejar
 
 url='http://homestead/admin/login'
 

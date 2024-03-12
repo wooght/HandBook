@@ -4,12 +4,12 @@
 # by wooght
 # 2017-11
 #
-from participle import pp
-from frequency import freq
-import pickle
 import marshal
 import os
-from math import log,exp
+from math import log, exp
+
+from frequency import freq
+from participle import pp
 
 data_path = os.path.dirname(__file__)+"/corpus/"
 

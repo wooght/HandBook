@@ -25,9 +25,11 @@ print(var_1)
 # 多个赋值
 var_1, var_2 = 1, 2
 print(var_1, var_2)
-# 元祖/列表赋值
+# 元祖/列表赋值 元素个数和前面变量个数一一对应即可
 tuple_test = (3, 4)
 var_1, var_2 = tuple_test
+print(var_1, var_2)
+var_1, var_2 = [1, 2]
 print(var_1, var_2)
 
 """
