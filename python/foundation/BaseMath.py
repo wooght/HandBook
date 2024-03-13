@@ -47,14 +47,36 @@ def fib(n):
 print(list(fib(10)))
 
 
-def maopao(list_nums):
-    list_length = len(list_nums)
+def maopao(nums_list):
+    """
+        快速排序法
+    """
+    list_length = len(nums_list)
     for i in range(list_length):
-        max = list_nums[i]
+        max = nums_list[i]
         for j in range(i, list_length):
-            if list_nums[j] > max:
-                list_nums[i] = list_nums[j]
-                list_nums[j] = max
-                max = list_nums[i]
-    return list_nums
-print(maopao([3, 6, 1, 7, 2, 9, 8, 4, 5]))
+            if nums_list[j] > max:
+                nums_list[i] = nums_list[j]
+                nums_list[j] = max
+                max = nums_list[i]
+    return nums_list
+test_list = [3, 6, 1, 7, 2, 9, 8, 4, 5]
+print(maopao(test_list))
+print(test_list[::-1])
+
+
+def w_maopo(nums_list):
+    """
+        冒泡排序法
+    """
+    nums_length = len(nums_list)
+    for i in range(nums_length - 1):
+        for j in range(nums_length - i - 1):
+            if nums_list[j] > nums_list[j + 1]:
+                nums_list[j], nums_list[j + 1] = nums_list[j + 1], nums_list[j]
+    return None
+
+
+test_nums = [55, 88, 99, 1, 33, 77]
+w_maopo(test_nums)
+print(test_nums)

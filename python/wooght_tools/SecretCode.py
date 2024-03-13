@@ -33,7 +33,7 @@ class SecretCode:
 
     def build_key(self):
         """
-        秘钥生成
+        创建秘钥
         Returns
         -------
         key_str     秘钥
@@ -76,6 +76,7 @@ class SecretCode:
 
 
 Wst = SecretCode()
-# secret_code = Wst.encryption("wooght565758")     # 6d$+4Mu6n85B/8j     }a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{P$>x
-# print(secret_code)
-# print(Wst.decryption(secret_code))
+if __name__ == '__main__':
+    secret_code = Wst.encryption("wooght")     # 6d$+4Mu6n85B/8j     }a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{P$>x
+    print('secret code:',secret_code)
+    print("plain:",Wst.decryption(secret_code))
