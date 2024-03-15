@@ -22,16 +22,20 @@ print(test_list[2])  # three
 test_list[1] = [3, 2, 1]
 print(test_list[1][1])  # 2
 test_list = [1, 2, 3, 4, 5]
-"""列表切片"""
+"""列表切片 [start,end,step]"""
 print(test_list[:2])  # [1, 2]
 print(test_list[-2:])  # [4, 5]
 print(test_list[1:3])  # [2, 3]
+sl = slice(1,4,2)
+print(test_list[sl])    # [2, 4]
+print(test_list[1:4:2]) # [2, 4]
+print(test_list[::-1])  # [5, 4, 3, 2, 1]   倒序
 """切片赋值"""
 test_list[1:3] = ['a', 'b']
 print(test_list)  # [1, 'a', 'b', 4, 5]
 """list.reverse() 翻转列表"""
 list_1 = [1, 2, 3]
-list_1.reverse()
+list_1.reverse()            # [::-1] 相同
 print(list_1)               # [3, 2, 1]
 """list(var) 将var转变为列表对象"""
 str_1 = "你好吗"

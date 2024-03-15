@@ -6,8 +6,7 @@
 # @File     : numpy_a.py
 
 from numpy import *
-
-from python.w_math.echo import f
+from echo import f
 
 f('定义ndarray')
 arr = arange(15)  # 定义一个列表 1D

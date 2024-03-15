@@ -19,6 +19,7 @@ class DateTimeMath:
         self.now_date = time.strftime(self.date_model, self.time_struct)
         self.now_time = time.strftime(self.time_model, self.time_struct)
 
+
     def __str__(self):
         """ 实例化后默认得到当前日期时间 """
         return str(self.time_tpl)
@@ -61,7 +62,7 @@ class DateTimeMath:
         start_stamp = self.str_to_stamp(start_date)
         pass_days = self.pass_day(start_date, end_state)
         for day in range(pass_days+1):
-            yield self.stamp_to_str(start_stamp+day*3600*24)[0:11]
+            yield time.strftime(self.date_model,time.localtime(start_stamp+day*3600*24))
 
     def get_day(self, target_date):
         """
@@ -69,8 +70,7 @@ class DateTimeMath:
             RETURN:{Y:num,m:num,d:num,wk:num}
         """
         if not target_date: target_date = self.now_date
-        struct = self.str_to_struct(target_date)
-        return {"Y": struct.tm_year, "m": struct.tm_mon, "d": struct.tm_mday, "wk": struct.tm_wday + 1}
+        return self.str_to_struct(target_date)
 
     def str_to_struct(self,str_date):
         t_model = self.datetime_model if len(str_date) >10 else self.date_model
@@ -108,5 +108,7 @@ if __name__ == "__main__":
     print("2018年2月有多少天:",WDate.month_days(2018, 2))
     date_list = WDate.date_list('2022-10-28')
     print(list(date_list))
-    print('2022-10-7是星期几:',WDate.get_day('2022-10-10')['wk'])
+    date_list = WDate.date_list('2024-3-10')
+    print("下一天是:",date_list.__next__())
+    print('2022-10-7是星期几:',WDate.get_day('2022-10-10').tm_wday)
     print("共运行时间:", WDate.run_time())
