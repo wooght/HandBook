@@ -49,7 +49,7 @@ print(list(fib(10)))
 
 def maopao(nums_list):
     """
-        快速排序法
+        改良冒泡排序
     """
     list_length = len(nums_list)
     for i in range(list_length):
@@ -80,3 +80,53 @@ def w_maopo(nums_list):
 test_nums = [55, 88, 99, 1, 33, 77]
 w_maopo(test_nums)
 print(test_nums)
+
+new_list = []
+def dg_maopao(nums_list):
+    length = len(nums_list)
+    if length <= 1:
+        new_list.append(nums_list[0])
+    else:
+        for i in range(length-1):
+            if nums_list[i] > nums_list[i+1]:
+                nums_list[i], nums_list[i+1] = nums_list[i+1], nums_list[i]
+        new_list.append(nums_list[length-1])
+        dg_maopao(nums_list[:length-1])
+
+test_nums = [9,3,8,1,5,4,7]
+dg_maopao(test_nums)
+print(new_list)
+
+"""
+    快速排序法
+"""
+
+
+def variance(nums_list):
+    """
+    返回数列的方差
+    公式  Var = ∑(x-x平均值) / N
+    Return Nums
+    """
+    average = sum(nums_list)/len(nums_list)        # 数列平均值
+    sgm = 0
+    for i in nums_list:
+        sgm += (i - average)**2
+    return sgm/len(nums_list)
+variance_nums = variance([1,2,3,4,5,6])
+print("数列方差为:%.2f" % variance_nums)             # 2.92
+
+def expect(nums_list):
+    """
+    数学期望
+    E(x) = ∑(Xi*P(xi))      及期望等于每个值*出现的概率的和
+    Returns Nums
+    """
+    length = len(nums_list)
+    odds = 1/length                                 # 每一个出现的概率  列表中概率固定
+    expect_nums = 0
+    for i in nums_list:
+        expect_nums += i * odds
+    return expect_nums
+print('列表的期望为:%.2f' % expect([1,3,5,7,9]))      # 4.00
+

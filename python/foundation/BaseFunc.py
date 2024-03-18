@@ -112,6 +112,26 @@ new_a.get_print_word(*wmz_data)
 new_a.get_keywords(is_print=False)                       # 请下查看指令
 new_a.get_keywords()                                     # A
 
+"""
+    lampda表达式  匿名函数
+    lambda 参数:返回值
+"""
+func = lambda x: x ** 2
+print('函数运行结果:', func(2))                               # 函数运行结果: 4
+test_list = range(10)
+# filter 过滤器,返回一个迭代器
+print(list(filter(lambda x: x % 2 == 0, test_list)))        # [0, 2, 4, 6, 8]
+arr = [x for x in range(10) if x % 2 == 0]
+print(arr)                                                  # [0, 2, 4, 6, 8]
+new_arr = arr[::-1]
+print(new_arr)                                              # [8, 6, 4, 2, 0]
+arr = [
+    [1, 2, 3],
+    [1, 2, 0],
+    [3, 2, 1]
+]
+arr.sort(key=lambda x:x[2], reverse=False)                  # 以每一行的第二列进行排序
+print(arr)                                                  # [[1, 2, 0], [3, 2, 1], [1, 2, 3]]
 
 """
     递归函数
