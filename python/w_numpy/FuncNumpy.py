@@ -1,7 +1,7 @@
 # -- coding: utf-8 -
 """
 @project    :HandBook
-@file       :MathNumpy.py
+@file       :FuncNumpy.py
 @Author     :wooght
 @Date       :2024/3/16 13:04
 @Content    :Numpy 数组操作运算
@@ -91,6 +91,7 @@ print(arr + arr_2)          # [ 4  6  8 10]
 
 arr = arange(1,4)           # [1 2 3]
 print(arr**2)               # [1 4 9]       每个位置进行2次幂运算
+print(square(arr))          # [1 4 9]       矩阵平方
 """
     sin(arr)    对numpy数组每个元素进行正弦运算
     cos(arr)    余弦运算
@@ -122,7 +123,7 @@ print(arr * arr_2)
 echo("普通乘法")
 """
     dot(arr1,arr2)
-    普通乘法,要求一个矩阵的行数要等于另一个矩阵的列数
+    普通乘法,要求第一个矩阵的列数要等于另一个矩阵的行数
 """
 arr = arange(6).reshape(2,3)
 # [[0 1 2]
@@ -140,6 +141,10 @@ assert arr.shape[1] == arr_2.shape[0]       # assert 当套件成立才继续执
 print(dot(arr, arr_2))
 # [[ 28  31]
 #  [100 112]]
+print(dot(arr_2, arr))                      # 矩阵乘法不能交换位置,交换位置后结果也变了
+# [[21 34 47]
+#  [27 44 61]
+#  [33 54 75]]
 
 echo('矩阵运算常用公式')
 """

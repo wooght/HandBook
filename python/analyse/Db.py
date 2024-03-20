@@ -63,12 +63,12 @@ session = DB_Session()
 # s = select([news.c.url,news.c.only_id,news.c.title,news.c.body,news.c.put_time]).where(news.c.put_time>10000000000)
 # r = conn.execute(s)
 # items = r.fetchall()
-# new_arr = []
+# delete_x = []
 # for item in items:
-#     new_arr.append({'url':item[0],'only_id':item[1],'title':item[2],'body':item[3],'put_time':item[4]})
+#     delete_x.append({'url':item[0],'only_id':item[1],'title':item[2],'body':item[3],'put_time':item[4]})
 #
 # i = topic.insert()
-# r = conn.execute(i,new_arr)
+# r = conn.execute(i,delete_x)
 # if(r):
 #     print(r.rowcount)
 

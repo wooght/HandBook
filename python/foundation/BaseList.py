@@ -69,6 +69,22 @@ print('' in [1, '', 3])  # True
 """any(list) 有一个是True,就返回True"""
 print(any(['', 2, None]))       # True
 
+""" 
+    浅copy 
+    只是地址的引用
+    一个改变值,另一个也会改变值 
+    copy 创建一个完整的副本,会重新分配内存
+"""
+arr = [1,2,3,4]
+arr2 = arr
+arr[1] = 5
+print(arr2)         # [1, 5, 3, 4]
+print('两者内存地址相同' if id(arr) == id(arr2) else "两者地址不同")
+""" 深copy """
+arr_3 = arr.copy()
+arr[0] = 100
+print(arr_3)        # [1, 5, 3, 4]
+print('两者内存地址相同' if id(arr) == id(arr_3) else "两者地址分别是:{},{}".format(id(arr), id(arr_3)))
 
 
 """

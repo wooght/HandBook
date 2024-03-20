@@ -105,7 +105,7 @@ print(new_list)
 def variance(nums_list):
     """
     返回数列的方差
-    公式  Var = ∑(x-x平均值) / N
+    公式  Var = ∑(x-x平均值)**2 / N
     Return Nums
     """
     average = sum(nums_list)/len(nums_list)        # 数列平均值

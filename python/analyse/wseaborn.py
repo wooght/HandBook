@@ -44,8 +44,8 @@ mpl.rcParams['font.sans-serif'] = ['SimHei']    #指定默认字体 解决中文
 #
 # arr = np.ones((2,2))
 # arr2 = np.eye(2)
-# new_arr = (arr*2)*arr2**2
-# plt.plot(new_arr)
+# delete_x = (arr*2)*arr2**2
+# plt.plot(delete_x)
 # plt.show()
 #
 # dates = pd.date_range('20171101',periods=6)

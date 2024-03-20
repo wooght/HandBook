@@ -52,7 +52,10 @@ print(ones((2,3,4)))
 #  [[1. 1. 1. 1.]
 #   [1. 1. 1. 1.]
 #   [1. 1. 1. 1.]]]
-print(eye(3))                       # 单位矩阵
+"""
+对角矩阵 这里是3阶单位矩阵(行列数相同,主对角线全为1的对角矩阵)
+"""
+print(eye(3))
 # [[1. 0. 0.]
 #  [0. 1. 0.]
 #  [0. 0. 1.]]
@@ -79,8 +82,8 @@ arr_2 = arr.T
 #  [2 5]
 #  [3 6]]
 print(arr_2.ndim)               # 2
-new_arr = transpose(arr_2)
-print(new_arr)
+delete_x = transpose(arr_2)
+print(delete_x)
 # [[1 2 3]
 #  [4 5 6]]
 
@@ -98,8 +101,10 @@ print(arr>arr_2)
 #  [False False]]
 arr = arange(15).reshape(3,5)
 print(arr)
-new_arr = arr[arr>5]            # 取出大于5的元素,返回一个一维数组
-print(new_arr)                  # [ 6  7  8  9 10 11 12 13 14]
+delete_x = arr[arr > 5]            # 取出大于5的元素,返回一个一维数组
+print(delete_x)                  # [ 6  7  8  9 10 11 12 13 14]
+print(where(arr > -1))          # 获取大于-1的所有元素的索引 (x索引列表,y索引列表)
+# (array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2], dtype=int64), array([0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], dtype=int64))
 
 echo("索引,切片,赋值")
 """切片与原生相同"""
@@ -135,6 +140,22 @@ print(arr)
 #  [4 0]
 #  [6 0]
 #  [8 0]]
+"""
+    delete(ndarray,obj,axis)删除行或列,并返回新的矩阵
+    ndarray 要操作的数组,obj要删除的位置,axis 维度 
+"""
+delete_x = delete(arr, 0, 0)
+# [[2 0]
+#  [4 0]
+#  [6 0]
+#  [8 0]]
+delete_y = delete(arr, 0, 1)
+print(delete_y)
+# [[0]
+#  [0]
+#  [0]
+#  [0]
+#  [0]]
 def get_nums(x, y):
     """x为Numpy中的行,y为列"""
     return x**8+y
@@ -161,3 +182,28 @@ print(arr)
 # [[0 0 0]
 #  [0 1 2]
 #  [0 2 4]]
+
+"""
+    数组copy
+    = 和原生的list一样,浅复制只是引用,他们拥有同一个地址,一个改动,另一个也改动
+    view 创建一个视图,不共享内存, 但统一改动一个,另一个也改动了
+    copy 创建完整的副本
+"""
+echo("数组copy")
+arr1 = array([[1, 2, 3], [4, 5, 6]])
+arr2 = arr1
+arr1[0] = [100, 100, 100]
+print(arr2)
+# [[100 100 100]
+#  [  4   5   6]]
+print(arr1)
+print(id(arr1), id(arr2))  # 相同内存
+arr3 = arr1.view()
+arr3[0] = [1, 2, 3]
+print(arr1)
+print(id(arr1), id(arr3))
+arr4 = arr1.copy()
+arr1[0] = [100, 100, 100]
+print(arr4)
+# [[1 2 3]
+#  [4 5 6]]
