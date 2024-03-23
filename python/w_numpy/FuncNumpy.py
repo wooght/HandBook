@@ -8,9 +8,12 @@
 """
 import random
 
+import numpy.linalg
+
 from wooght_tools.echo import echo
 from numpy import *
 
+numpy.set_printoptions(suppress=True)       # set_printoptions() 设置打印选项 取消科学计数法
 echo('array 合并')
 """
     hstack((arr..))             # x轴合并  行合并 水平      合并的元素有相同的行
@@ -115,8 +118,8 @@ print(arr * arr_2)          # 对位相乘
 print(arr.T * arr_2)        # 转换后,按照新的位置进行对位相乘
 # [[ 0 10]
 #  [ 6 21]]
-arr = arange(6).reshape(2,3)
-arr_2 = arange(6,12).reshape(2,3)
+arr = arange(6).reshape(2, 3)
+arr_2 = arange(6, 12).reshape(2, 3)
 print(arr * arr_2)
 # [[ 0  7 16]
 #  [27 40 55]]
@@ -146,7 +149,7 @@ print(dot(arr_2, arr))                      # 矩阵乘法不能交换位置,交
 #  [27 44 61]
 #  [33 54 75]]
 
-echo('矩阵运算常用公式')
+echo('矩阵常规数学运算')
 """
     axis=0  指垂直方向,及列
     axis=1  指水平方向,及行
@@ -179,23 +182,23 @@ print(random.randn(10))                             # 随机正态分布数组 �
 print(random.rand(10).reshape(2, 5))                # 随机0-1的数据数组, 具有均匀分布
 # [[0.37132652 0.5589355  0.12176712 0.92824329 0.88278714]
 #  [0.36963314 0.13043997 0.03338992 0.59251962 0.29262469]]
-print(random.randint(1, 5, (3,3)))                  # 给定范围的随机整数
+print(random.randint(1, 5, (3, 3)))                  # 给定范围的随机整数
 # [[3 3 2]
 #  [1 3 2]
 #  [2 1 4]]
-print(random.random((2,3)))                         # 0到1的随机数 random((维度))
+print(random.random((2, 3)))                         # 0到1的随机数 random((维度))
 # [[0.70050286 0.65787913 0.02066382]
 #  [0.46570063 0.43273537 0.41394429]]
 random.seed(1)                                      # 随机一次数据,然后以后每次运行的时候,都和第一次是相同的随机数
 print(random.rand(2, 2))
 # [[4.17022005e-01 7.20324493e-01]
 #  [1.14374817e-04 3.02332573e-01]]
-arr = random.randint(1,10, 20)
+arr = random.randint(1, 10, 20)
 print(arr)                          # [1 1 2 8 7 3 5 6 3 5 3 5 8 8 2 8 1 7 8 7]
 print(random.choice(arr, 4))   # [1 1 7 3]  choice 只能是一维
 random.shuffle(arr)                 # 随机排序  ,当时二维时,只对行进行随机排序
 print(arr)                          # [5 8 2 8 1 7 1 7 7 5 1 3 5 8 6 2 3 3 8 8]
-arr = random.randint(1,10,(5,3))
+arr = random.randint(1, 10, (5, 3))
 # [[1 4 3]
 #  [1 5 3]
 #  [8 8 9]
@@ -209,3 +212,17 @@ print(arr)
 #  [7 4 8]
 #  [1 5 3]]
 print(random.normal(0, 1, (2, 3)))  # 正态分布, normal(平均值,方差,size)
+
+echo("numpy对矩阵的应用")
+vec_arr = array([
+    [1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]
+])
+matrix_arr = vec_arr[0:3, :]
+echo(vec_arr, matrix_arr, '行列式的值:', linalg.det(matrix_arr))
+echo("方阵的秩:", linalg.matrix_rank(matrix_arr))
+b_arr = vec_arr[3, :]
+matrix_arr[2][2] = 10
+echo('齐次方程组系数:', matrix_arr, '常数:', b_arr, "方程组的解:", linalg.solve(matrix_arr, b_arr))
+echo("矩阵的逆矩阵", linalg.inv(matrix_arr))
+matrix_inv = linalg.inv(matrix_arr)
+echo("A和A逆相乘等于E", dot(matrix_arr, matrix_inv))

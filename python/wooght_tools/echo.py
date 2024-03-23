@@ -12,6 +12,6 @@ def echo(*ss):
     if len(ss) == 1:
         print("\r\n", ss[0].center(60, "*"), end='\r\n')
     else:
-        print("-" * 50)
+        print("_" * 50)
         for str in ss: print(str)
-        print("-" * 50)
+        print("-" * 30)

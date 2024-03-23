@@ -6,8 +6,21 @@
 @Date       :2024/3/15 18:26
 @Content    :Numpy 基础
 """
+import numpy
 from numpy import *
 from wooght_tools.echo import echo
+
+"""
+    numpy 基础操作
+    numpy.info()    查看函数说明
+    size 数组元素个数
+    itemsize 每个元素所占空间大小,以字节为单位
+"""
+echo("numpy基础操作")
+info(add)
+arr = numpy.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+echo(arr.size, arr.itemsize, nbytes)
+
 
 """
     numpy数组中的元素必须是同数据类型

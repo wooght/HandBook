@@ -23,7 +23,7 @@ def mcl_nums(matrix, num):
     return matrix
 
 echo('矩阵数乘')
-arr = numpy.arange(0,10).reshape(5,2)
+arr = numpy.arange(0, 10).reshape(5, 2)
 echo(arr, mcl_nums(arr.copy(), 2))
 # [[ 0  2]
 #  [ 4  6]
@@ -31,7 +31,6 @@ echo(arr, mcl_nums(arr.copy(), 2))
 #  [12 14]
 #  [16 18]]
 print(arr*2)        # 与上方相同
-
 
 echo("矩阵乘法")
 def mcl_matrix(m1, m2):
@@ -42,7 +41,8 @@ def mcl_matrix(m1, m2):
     |A21 A22|   *   |B21 B22|   =   |A21*B11+A22*B21  A21*B12+A22*B22|
     |A31 A32|                       |A31*B11+A32*B21  A31*B12+A32*B22|
     新矩阵C的阶数为:(A的行M,B的列N)
-    C矩阵ij位置的元素值为: ∑Ai0*B0j+Ai1*B1j...AiL*BLj    及A的i行元素与B的j列元素对应乘积之和
+    C矩阵ij位置的元素值为: ∑Ai0
+    *B0j+Ai1*B1j...AiL*BLj    及A的i行元素与B的j列元素对应乘积之和
     """
     m1_shape = m1.shape
     m2_shape = m2.shape
@@ -66,7 +66,7 @@ print(mcl_matrix(arr2, arr))        # 矩阵乘法交换位置后结果会随之
 #  [320. 390.]]
 arr = numpy.array([[-1, -2], [-2, -4]])
 print(mcl_matrix(arr, arr))
-print(numpy.dot(arr,arr))
+print(numpy.dot(arr, arr))
 
 
 echo("矩阵转置")
@@ -74,15 +74,15 @@ def transposition(matrix):
     shape = matrix.shape
     result_m = numpy.zeros((shape[1], shape[0]))
     for i in range(shape[1]):
-        result_m[i,:] = matrix[:,i]
+        result_m[i, :] = matrix[:, i]
     return result_m
 arr = numpy.linspace(1, 10, 15).reshape(3, 5)
 echo(arr, transposition(arr))
 """T(AB) = T(B)*T(A)"""
-arr = numpy.arange(6).reshape(2,3)
-arr_2 = numpy.random.randint(1,10,(3,2))
+arr = numpy.arange(6).reshape(2, 3)
+arr_2 = numpy.random.randint(1, 10, (3, 2))
 print(arr, '\r\n', arr_2)
-Tab = transposition(mcl_matrix(arr,arr_2))
+Tab = transposition(mcl_matrix(arr, arr_2))
 TbTa = mcl_matrix(transposition(arr_2), transposition(arr))
 echo(Tab, TbTa)             # 两者相同
 
@@ -101,7 +101,7 @@ def adjoint_matrix(matrix):
 
 arr = numpy.random.randint(10, 30, (3, 3))
 arr_adjoint = adjoint_matrix(arr)
-echo('原矩阵:',arr,'伴随矩阵:', arr_adjoint)
+echo('原矩阵:', arr, '伴随矩阵:', arr_adjoint)
 """ A*A伴==|A|En """
 eye_3 = numpy.eye(3)
 print(determinant(arr))
@@ -117,7 +117,7 @@ echo("逆矩阵")
 def inverse_matrix(matrix):
     """返回矩阵的逆矩阵"""
     return (1 / determinant(matrix)) * adjoint_matrix(matrix)
-echo("A逆:", inverse_matrix(arr), "A*A逆=E:", mcl_matrix(arr, inverse_matrix(arr)))
+echo("A逆:", inverse_matrix(arr), "A*A逆=A逆*A=E:", mcl_matrix(arr, inverse_matrix(arr)))
 print(numpy.linalg.inv(arr))        # numpy.linalg.inv()    numpy的逆矩阵函数
 
 """实例"""
@@ -149,11 +149,41 @@ def Sole(matrix):
     B = matrix[:,shape[1]-1]
     A_inverse = inverse_matrix(A)
     return numpy.dot(A_inverse, B)
-
-
 arr = numpy.array(
     [[0, 1, 2, -1],
      [1, 1, 4, 0],
      [2, -1, 0, 2]]
 )
 echo('方程组矩阵为:', arr, "X的值分别为:", Sole(arr))
+A_arr = arr[:, 0:3]
+B_arr = arr[:, -1]
+echo("numpy自带函数求解线性方程组:", numpy.linalg.solve(A_arr, B_arr))
+
+arr = numpy.array(
+    [[0, 1, 1, 2],
+     [1, 1, 0, 3],
+     [0, 0, 2, 4]]
+)
+# echo('方程组矩阵为:', arr, "X的值分别为:", Sole(arr))
+A_arr = arr[:, 0:3]
+B_arr = arr[:, -1]
+echo("numpy自带函数求解线性方程组:", numpy.linalg.solve(A_arr, B_arr))
+
+"""
+    归一化
+    Min-Max Scaling 最大最小归一化
+    Z-Score Normalization 均值方差归一化
+"""
+data = numpy.random.randint(1,15, 15).reshape(3,5)
+echo("最大最小归一化")
+min_val = data.min()
+max_val = data.max()
+echo(data, min_val, max_val)
+normalized_data = (data-min_val) / (max_val - min_val)
+print(normalized_data)
+
+echo("均值方差归一化")
+mean_val = data.mean()
+std_val = data.std()
+normalized_data = (data - mean_val) / std_val
+print(normalized_data)

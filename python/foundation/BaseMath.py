@@ -130,3 +130,19 @@ def expect(nums_list):
     return expect_nums
 print('列表的期望为:%.2f' % expect([1,3,5,7,9]))      # 4.00
 
+
+result_list = []
+def indexcomb(temp_list):
+    """
+        说明: 求列表的所有组合
+        返回值: None,调用全局变量
+    """
+    for i in range(len(temp_list)):
+        temp = temp_list.copy()
+        temp.pop(i)
+        if temp not in result_list: result_list.append(temp)
+        if len(temp) > 2: indexcomb(temp)
+
+indexcomb([0, 1, 2, 3])
+print(result_list)
+print(len(result_list))
