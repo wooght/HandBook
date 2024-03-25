@@ -50,7 +50,21 @@ arr = array([[1.1, 2.2], [3.3, 4.4]])
 print(arr.ndim, arr.shape[0], arr.size, arr.dtype)       # 2 2 4 float64
 arr = array([[1,2],[3,4]], dtype=int16)           # 定义数据类型 dtype
 print(arr)
-print(arr.dtype)                                    # int16
+print(arr.dtype)                                        # int16
+"""
+    numpy 数据类型
+    数据类型    内置码     意义
+    int8        i1     字节(-128 to 127)
+    int16       i2      整数 16字节
+    int32       i4      整数 32字节
+    int64       i8      整数 64字节
+    float16     f2      浮点数 16字节
+    float32     f4      浮点数 32字节
+    float64     f8      浮点数 63字节
+    bool_       b       布尔类型
+    Unicode     U       Unicode编码
+    String      S       字符串
+"""
 
 echo("快速定义矩阵")
 print(zeros(5))                     # [0. 0. 0. 0. 0.]
@@ -262,3 +276,10 @@ tomorrow = numpy.datetime64('today', 'D') + numpy.timedelta64(1, 'D')
 print("明天是:", tomorrow)
 days = numpy.arange("2020-01", "2020-02", dtype='datetime64[D]')
 print(days)
+
+"""
+    numpy 结构化数组
+"""
+position_type = numpy.dtype([('x', 'f4'), ('y', 'f4')])
+print(position_type)
+print(numpy.eye(3, dtype=position_type))
