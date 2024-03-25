@@ -65,7 +65,7 @@ print(maopao(test_list))
 print(test_list[::-1])
 
 
-def w_maopo(nums_list):
+def w_maopao(nums_list):
     """
         冒泡排序法
     """
@@ -78,7 +78,7 @@ def w_maopo(nums_list):
 
 
 test_nums = [55, 88, 99, 1, 33, 77]
-w_maopo(test_nums)
+w_maopao(test_nums)
 print(test_nums)
 
 new_list = []
@@ -128,7 +128,7 @@ def expect(nums_list):
     for i in nums_list:
         expect_nums += i * odds
     return expect_nums
-print('列表的期望为:%.2f' % expect([1,3,5,7,9]))      # 4.00
+print('列表的期望为:%.2f' % expect([1,3,5,7,9]))      # 5.00
 
 
 result_list = []

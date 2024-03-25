@@ -1,10 +1,31 @@
-crawl		爬行
-spider		蜘蛛
-pipeline	管道
-process		过程,处理,加工
-screen		检查,掩护
-custom		自定义
-rules		规则
-extractor	提取
-desired		渴望,希望得到的 
-capabilities	能力,能量,潜在能力
+常用单词记忆:
+combination         联合,组合,混合        如: 索引组合 index_combination
+Transposition       换位,转换,转置        如:矩阵转置 A.T
+cofactor            辅助因子,余因子        如:行列式的余子式
+median              中间的,中位的,中位数     如:中位数
+matrix              矩阵,道路网
+dtype               数据类型
+shape               形状,结构,特征,轮廓
+lambda              符号拉姆达           如:自定义函数
+execute             执行,实施            如:函数内部的执行函数名,pymysql的执行sql语句
+struct              机构,结构体
+math                数学
+shift               转移,转换,变换
+decryption          解密
+encryption          加密
+secret              密码,秘密
+contrast            对照,比较,对比
+foundation          地基,基础,根据
+reverse             颠倒,逆向,反转        如: reverse函数可以直接反转列表,字符串
+inverse             相反的,反向的         如: 逆矩阵函数 inv
+
+crawl		        爬行
+spider		        蜘蛛
+pipeline	        管道
+process		        过程,处理,加工
+screen		        检查,掩护
+custom		        自定义
+rules		        规则
+extractor	        提取
+desired		        渴望,希望得到的
+capabilities	    能力,能量,潜在能力
