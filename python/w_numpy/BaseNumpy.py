@@ -6,6 +6,8 @@
 @Date       :2024/3/15 18:26
 @Content    :Numpy 基础
 """
+import datetime
+
 import numpy
 from numpy import *
 from wooght_tools.echo import echo
@@ -269,17 +271,66 @@ print(arr4)
 
 """
     numpy与日期
+    数据类型:datetime64[Y/M/D/h/m/s]
 """
 echo("numpy日期")
-print("今天是:", numpy.datetime64('today', 'D'))
-tomorrow = numpy.datetime64('today', 'D') + numpy.timedelta64(1, 'D')
-print("明天是:", tomorrow)
+d = numpy.datetime64('2020-09-01')  # datetime64[D]
+print(d.dtype)
+print(numpy.datetime64('2020-09-01 10:00:01').dtype)    # datetime64[s]
+"""强制指定单位"""
+print(numpy.datetime64('2020-08', 'D'))     # 2020-08-01
+days = numpy.arange('2020-01', '2020-02', dtype='datetime64[D]')
+print(days)
 days = numpy.arange("2020-01", "2020-02", dtype='datetime64[D]')
 print(days)
+month = numpy.arange('2020-01', '2020-12', dtype='datetime64[M]')
+print(month)        # ['2020-01' '2020-02' '2020-03' '2020-04' '2020-05' '2020-06' '2020-07' '2020-08' '2020-09' '2020-10' '2020-11']
+"""timedelta64 时间差"""
+cha_days = numpy.datetime64('2019-09-20') - numpy.datetime64('2019-09-15')
+echo(cha_days.dtype, cha_days)      # timedelta64[D] 5 days
+cha_minth = numpy.datetime64('2020-08-09 20:00') - numpy.datetime64('2020-08-08', 'm')
+print(cha_minth.dtype, cha_minth)       # timedelta64[m] 2640 minutes
+tomorrow = numpy.datetime64('today', 'D') + numpy.timedelta64(1, 'D')
+print("明天是:", tomorrow)
+one_weeks = numpy.timedelta64(1, 'W')
+one_day = numpy.timedelta64(1, 'D')
+print(one_weeks/one_day)                # 7.0
+"""工作日"""
+the_day = numpy.datetime64('2020-08-08', 'D').astype(datetime.date)
+print(numpy.is_busday(the_day))    # False
+print(the_day.weekday())            # 5
+days = numpy.arange('2020-09-09', '2020-10-10', dtype='datetime64[D]')
+print(days)
+new_day_list = numpy.where(numpy.is_busday(days),'上班','周末')
+days_type = numpy.dtype([('datetime','datetime64[D]'),('is_busday','S2')])
+out_days = zip(days,new_day_list).astype(days_type)
+
+
 
 """
     numpy 结构化数组
 """
+echo("结构化数组")
 position_type = numpy.dtype([('x', 'f4'), ('y', 'f4')])
 print(position_type)
 print(numpy.eye(3, dtype=position_type))
+
+turnover_list = numpy.array([('2018-08-08', 11788, 3245), ("2018-10-10", 12568, 3654)],
+                            dtype=[('date', 'datetime64[D]'), ('turnover', float), ('maoli', float)])
+print(turnover_list)
+
+turnover_type = numpy.dtype([('datetime', 'datetime64[D]'), ('turnover', numpy.float16), ('maoli', float)])
+turnover_list = numpy.ones(31, dtype=turnover_type)
+"""ndenumerate numpy的枚举功能"""
+for i,day in numpy.ndenumerate(numpy.arange('2020-01-01', '2020-02-01', dtype='datetime64[D]')):
+    turnover_list[i[0]]['datetime'] = day
+print(turnover_list)
+turnover_rec = numpy.rec.array(turnover_list)       # numpy.rec.array() 将结构化数组转化为对象
+print(turnover_rec.datetime)
+zero_arr = numpy.zeros((3,3), dtype=turnover_type)
+for index, value in numpy.ndenumerate(zero_arr):
+    print(index, value)
+print(zero_arr.shape)
+print(zero_arr[0, 2])
+for index in numpy.ndindex(zero_arr.shape):
+    print(index, zero_arr[index])
