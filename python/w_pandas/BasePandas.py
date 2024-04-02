@@ -206,33 +206,64 @@ print(area_A['turnover'].value_counts())            # 所有值和重复次数�
 print(area_A['turnover'].value_counts().values)     # 重复次数组成的列表
 print(area_A['turnover'].value_counts().loc[12004]) # 获取某个重复值的次数
 
-"""apply 自定义函数"""
-def square(num):
-    return num*1.2
-echo("apply 自定义函数处理数据")
-print(area_A['turnover'].apply(square).head())             # 对数据进行自定义函数运算
-print(area_A['turnover'].apply(lambda x: x*1.2).head())
-print(area_A['maolilv'].apply(lambda x: '%.2f' % x).head())
+
+"""分列"""
+data_a = pd.DataFrame({
+    'datetime': np.arange('2020-09', '2022-09', dtype='datetime64[M]'),
+    'turnover': np.random.randint(1000, 1200, 24),
+    'maolilv': np.random.uniform(0.25, 0.28, 24)
+})
+data_b = pd.DataFrame((x.__str__().split("-") for x in data_a['datetime']), index=data_a['datetime'], columns=['year', 'month', 'day'])
+data_c = pd.DataFrame(data_b['year'].str[2:])
+echo('分列', data_b, data_c)
+
 
 """
     数据筛选
+    &   |   !=
 """
+echo('数据筛选')
+echo(data_a.head(), data_a.loc[(data_a['turnover'] > 1100) & (data_a['maolilv'] > 0.26), ['datetime','turnover']])
+echo('筛选并计数', data_a.loc[(data_a['turnover'] < 1100), ['datetime', 'maolilv']].maolilv.count())
+echo('query筛选,并求平均值', data_a.query('datetime > "2021-09"').turnover.mean())
 
 """
     数据汇总
 """
 echo("数据汇总")
-
-df = pd.DataFrame(get_area(30))
-print(df)
-print(df.groupby('area_name').mean())
+def get_turnover(area_name):
+    df_turnover = pd.DataFrame({
+        'area_name': [area_name] * 20,
+        'datetime': np.arange('2018-10-10', '2018-10-30', dtype='datetime64[D]'),
+        'turnover': np.random.randint(12000, 16000, 20),
+        'maolilv': np.random.uniform(0.25, 0.29, 20)
+    })
+    df_turnover.set_index('datetime', inplace=True)
+    df_maolilv = pd.DataFrame((df_turnover['turnover'] * df_turnover['maolilv']), columns=['maolie'])
+    df = pd.merge(df_turnover, df_maolilv, how='inner', on="datetime")
+    return df
+hy_df = get_turnover('huayu')
+ddl_df = get_turnover('ddl')
+df = hy_df._append(ddl_df)
+echo('分组计数:',df.groupby('area_name').turnover.count())
+echo('平均值:',df.groupby('area_name').mean())
+echo("求和:",df.groupby('datetime').sum())
+echo("中位数:", df.groupby('area_name').median())
 print(df.groupby('area_name').describe())                       # 数据描述  单词:describe 描述
 describe_T = df.groupby('area_name').describe().transpose()     # 转置数据
-print(describe_T)
-echo(describe_T['area_A'], describe_T['area_A'].loc['turnover', 'mean'])
+print(describe_T.round(2))
+echo(describe_T['huayu'], describe_T['huayu'].loc['turnover', 'mean'])
+
+
 """
     数据统计/分析
 """
+echo("数据分析")
+echo('数据采样',df.sample(n=8).round(2))
+print('毛利额与毛利率的协方差:', df['maolie'].cov(df['maolilv']).round(2))
+print("营业额与毛利额的相关性:", df['turnover'].corr(df['maolie']).round(2))
+echo("遍历pandas")
+for index,values in df.iterrows():
+    print('星期',index.weekday()+1,':', values['turnover'])
 
-
-print(WDate.run_time())
+print('运行耗时:',WDate.run_time())

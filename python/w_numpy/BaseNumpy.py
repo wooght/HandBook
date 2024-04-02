@@ -285,6 +285,8 @@ days = numpy.arange("2020-01", "2020-02", dtype='datetime64[D]')
 print(days)
 month = numpy.arange('2020-01', '2020-12', dtype='datetime64[M]')
 print(month)        # ['2020-01' '2020-02' '2020-03' '2020-04' '2020-05' '2020-06' '2020-07' '2020-08' '2020-09' '2020-10' '2020-11']
+for m in month:
+    print(m.__str__())
 """timedelta64 时间差"""
 cha_days = numpy.datetime64('2019-09-20') - numpy.datetime64('2019-09-15')
 echo(cha_days.dtype, cha_days)      # timedelta64[D] 5 days
@@ -302,8 +304,9 @@ print(the_day.weekday())            # 5
 days = numpy.arange('2020-09-09', '2020-10-10', dtype='datetime64[D]')
 print(days)
 new_day_list = numpy.where(numpy.is_busday(days),'上班','周末')
-days_type = numpy.dtype([('datetime','datetime64[D]'),('is_busday','S2')])
-out_days = zip(days,new_day_list).astype(days_type)
+days_type = numpy.dtype([('datetime','datetime64[D]'),('is_busday','U2')])
+arr = list(zip(days,new_day_list))
+echo('格式化输出:',numpy.array(arr, dtype=days_type))
 
 
 
