@@ -1,50 +1,21 @@
 # -- coding: utf-8 -
 """
 @project    :HandBook
-@file       :BasePandas.py
+@file       :BaseDataFrame.py
 @Author     :wooght
 @Date       :2024/3/28 14:26
-@Content    :pandas 基础
+@Content    :DataFrame 基础
 """
 import numpy
 import numpy as np
 import pandas as pd
 from wooght_tools.echo import echo
 from wooght_tools.DateTimeMath import WDate
-"""
-    创建->清洗->预处理->提取->筛选->汇总->统计
-"""
-"""
-    series 一维数组     单词:series 系列
-    pandas.Series(data,index)
-"""
-echo('series')
-countries = ['中国', '英国', '俄罗斯', '法国', '美国']
-history = [5000, 3000, 3000, 3000, 300]
-pd_data = pd.Series(history, countries)
-echo(pd_data, pd_data['中国'])
-
-history_dict = {'中国': 5000, '美国': 300}
-pd_data = pd.Series(history_dict)
-print(pd_data)
-pd_data = pd.Series(history_dict, ['中国', '美国', '英国'])
-print(pd_data)      # 英国对应NaN,表示缺失
-
-countries_type = np.dtype([('name', 'U10'), ('history', 'U10')])
-np_data = np.array([('中国', 5000), ('美国', 300)], dtype=countries_type)
-try:
-    pd_data = pd.Series(np_data)
-    echo(np_data, pd_data)  # ValueError: Cannot construct a Series from an ndarray with compound dtype.  Use DataFrame instead.
-except ValueError:
-    echo("ValueError:", '不能从结构化numpy中series创建')
-
-pd_data['日本'] = 1
-pd_data2 = pd.Series(history, countries)
-echo(pd_data * 2, pd_data + pd_data2)  # 加法是相应index进行加减,如果相应位置没有及为NaN
 
 
 """
     Dataframe   数据表        单词: frame 框架
+    pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)
 """
 echo("Dataframe创建数据表")
 original_data = {
@@ -59,7 +30,7 @@ print(df)
 # 2     US      300    白
 # 3     En     3000    白
 
-echo("查询数据")
+echo("基础信息")
 
 print(df.shape)                 # 获取维度元祖
 print(df.columns)               # 获取列坐标object
@@ -67,13 +38,25 @@ print(df.columns.values)        # 获取列坐标列表
 print(df.index)                 # 获取索引
 print(df['name'].isnull)        # 是否空值
 
-echo("数据提取")
-print(df.loc[1])                # 获取行数据 按给定的索引
-echo('多行:',df.iloc[0:2])  # 获取行数据 按默认的索引 从0开始
-print(df['name'])               # 获取列数据
-print(df[['name', 'history']])  # 获取多列数据
-print(df['name'].loc[1])        # China
-print(df['history'].iloc[0])    # 5000
+echo("数据提取->列操作")
+print(df.history)                       # 获取一列数据
+history_data = df['history']            # 获取一别数据
+echo(history_data, history_data[1])
+history_data += 1
+history_data *= 2                       # 整列值数学运算
+print(history_data)
+print(history_data > 100)               # 得到新的DataFrame,是判断语句的结果
+print(history_data.eq(100))             # ?==
+print(history_data.astype(int).mod(5))  # 取模    %
+print(history_data.floordiv(5))         # 整除    //
+print(df['name'].str.split(''))         # 整列字符串操作
+print(df[['name', 'history']])          # 获取多列数据
+
+echo("数据提取->行操作")
+print(df.loc[1])                        # 获取行数据 按给定的索引
+echo('多行:', df.iloc[0:2])         # 获取行数据 按默认的索引 从0开始
+print(df['name'].loc[1])                # China
+print(df['history'].iloc[0])            # 5000
 original_data = {
     'name': ['China', 'U S ', "En"],
     'history': [5000, 300, 3000],
@@ -82,12 +65,13 @@ original_data = {
 df = pd.DataFrame(original_data, index=['中', '美', '英'])
 print(df)
 print(df.loc['中']['name'])              # 指定某行某列
-print(df.loc['中', 'name'])
+print(df.loc['中', 'name'])              # 两者效果相同 [行,列]
 print(df.iloc[0, 1])                     # 指定某行某列
 print(df.loc[['中', '英']])               # 获取指定的多行
 print(df.loc[['中', '英'], ['name']])     # 获取指定多行的多列
 print(df[df['history'] > 1000])          # 条件筛选
-print(df['name'].isin(['China', 'En']))
+print(df[df['name'].isin(['China', 'En'])])
+print(df.filter(items=['name']))
 
 """
     数据清洗

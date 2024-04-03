@@ -10,7 +10,7 @@
 
 def echo(*ss):
     if len(ss) == 1:
-        print("\r\n", ss[0].center(60, "*"), end='\r\n')
+        print("=" * 80, '\r\n', ss[0].center(80, " "), '\r\n', "=" * 79, end='\r\n')
     else:
         print("_" * 50)
         for str in ss: print(str)

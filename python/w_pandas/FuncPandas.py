@@ -11,7 +11,9 @@ import numpy as np
 from wooght_tools.echo import echo
 from wooght_tools.DateTimeMath import WDate
 import matplotlib
-
+"""
+    创建->清洗->预处理->提取->筛选->汇总->统计
+"""
 def get_turnover(area_name, start_date, end_date):
     cha_date = np.datetime64(end_date) - np.datetime64(start_date)
     df_turnover = pd.DataFrame({
@@ -41,7 +43,9 @@ print("本年第",  hy_df.loc['2020-10-10']['date'].dayofyear, '天')
 hy_dict = hy_df.head().to_dict()
 for values in hy_dict.values():
     print(values)
-
-hy_df['turnover'].hist()
-
+#
+# hy_df['turnover'].hist()
+turnover_list = hy_df['turnover'].to_list()
+maolilv_list = hy_df['maolilv'].round(2).to_list()
+echo(turnover_list, maolilv_list)
 print(WDate.run_time())
