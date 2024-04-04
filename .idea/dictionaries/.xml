@@ -3,7 +3,12 @@
     <words>
       <w>adjoint</w>
       <w>arange</w>
+      <w>axlist</w>
+      <w>edgecolor</w>
+      <w>facecolor</w>
+      <w>figsize</w>
       <w>gmtime</w>
+      <w>linewidth</w>
       <w>linspace</w>
       <w>maopao</w>
       <w>ndenumerate</w>

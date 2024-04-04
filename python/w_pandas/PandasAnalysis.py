@@ -45,45 +45,74 @@ print(all_data[all_data['order_date'].isnull()].iloc[0, :])     # 输出第一�
 print(all_data['date'].unique())                                # 唯一项
 
 echo("数据汇总")
-
 date_code_nb = all_data['date'].value_counts().sort_index()     # 计数,并对索引进行排序
 result_df = pd.DataFrame(date_code_nb.values, index=date_code_nb.index, columns=['orders'])
 echo('日期-订单序列:', date_code_nb)
 by_date_df = all_data.groupby('date')                           # 分组
 print(by_date_df.describe().transpose())                        # 整体汇总
-
 print('每日平均单价:', by_date_df['order_money'].mean())
-
 print("每日销售额:", by_date_df['order_money'].sum())
-
 print("每日销售商品数量:", by_date_df['good_nums'].sum())
 print("未计算到的商品:", all_data[all_data['date'].isnull()]['good_nums'].sum())
 result_df['order_mean'] = by_date_df['order_money'].mean().values
 
-all_data['date'] = pd.to_datetime(all_data['date'])
-
-all_data.ffill(inplace=True)            # 向前填充
+echo("ffill向前填充")
+all_data.ffill(inplace=True)            # 向前填充 单词:fill 填满, 单词:front 前面  ffill 向前面填满
 day_goods = all_data.groupby('date').good_nums.sum().astype(int)
 echo('每日销售数量(所有商品):', day_goods)
 day_order_good_nums = pd.DataFrame(day_goods.values/by_date_df['good_nums'].count().values, index=day_goods.index)
 echo("每日订单平均商品数量:",day_order_good_nums)
 echo('平均订单商品数量:', all_data.groupby('code_nb').good_nums.sum().mean())
 
+echo("rolling求移动平均值")
 result_df['good_nums'] = day_goods
 result_df['good_mean'] = day_order_good_nums
 result_df['orders_mean_5'] = result_df['orders'].rolling(window=5, min_periods=1).mean()       # 滚动窗口求移动平均值
 print(result_df)
 
-result_df['date'] = result_df.index
-ymd = pd.DataFrame((x.split('-') for x in result_df['date']), index=result_df.index, columns=['year', 'month', 'day'])
-result_df = pd.merge(result_df, ymd, how='left', on=result_df.index)
-result_df.drop('key_0', axis=1, inplace=True)
-result_df['month'] = result_df['year'] + result_df['month']
-result_df['orders_month_mean'] = 0
-orders_month_mean = result_df.groupby('month').orders.mean()
+echo("apply自定义函数算月平均值序列")
+result_df['date'] = pd.to_datetime(result_df.index)
+result_df['month'] = pd.Series((str(x.year)+'-'+str(x.month) for x in result_df['date']), index=result_df['date'])
+orders_month_mean = result_df.groupby('month').orders.mean().astype(int)
 print(orders_month_mean)
-
 result_df['orders_month_mean'] = result_df['month'].apply(lambda x:orders_month_mean.loc[x])
 print(result_df)
 
-echo(str(WDate.run_time()))
+echo("diff净差,shift转移求涨跌幅")
+diff_orders = result_df['orders'].diff()                # diff(periods, axis) 净差:和前值的差异 单词: diff 差异
+diff_orders_week = result_df['orders'].diff(7)
+front_orders = result_df['orders'].shift(periods=1)     # shift(periods, freq, axis, fill_value)   移动填值 persiods移动的步数,负数向上, 单词:shift 转移
+front_orders_week = result_df['orders'].shift(7)
+result_df['front_ratio'] = (diff_orders/front_orders).round(2) * 100
+result_df['week_ratio'] = (diff_orders_week/front_orders_week).round(2) * 100
+print(result_df)
+echo('运行时间:'+str(WDate.run_time()))
+
+from matplotlib import pyplot as plt
+plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']   # 设定中文字体
+
+
+fig = plt.figure(figsize=(10,8))
+ax = fig.add_axes((0.1, 0.1, 0.8, 0.8))
+ax.bar(x=result_df.index, height=result_df['good_nums'])
+ax.set_xlabel(xlabel='date')
+plt.show()
+
+echo("商品分组")
+by_good_df = all_data[all_data['good_nums'] < 10].groupby('good_money')  # 排除一次性购买10个以上的
+sales_good_p = pd.DataFrame()
+sales_good_p['good_nums'] = by_good_df['good_nums'].sum()
+sales_good_p['good_price'] = by_good_df['good_money'].mean()
+sales_good_p = sales_good_p[sales_good_p['good_price'] < 100]   # 排除单价大于100的
+print(sales_good_p)
+
+color_mean = sales_good_p['good_price'].mean()                  # 归一化,为颜色做准备
+color_std = sales_good_p['good_price'].std()
+
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_axes((0.1, 0.1, 0.8, 0.8))
+ax.scatter(x=sales_good_p['good_price'], y=sales_good_p['good_nums'],
+           s=sales_good_p['good_nums'], c=sales_good_p['good_price'].apply(lambda x: (x - color_mean) / color_std),
+           alpha=0.5)
+ax.set_title('商品价格-销量')
+plt.show()
