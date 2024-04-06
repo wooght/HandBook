@@ -16,6 +16,12 @@ from wooght_tools.echo import echo
     pandas.Series(data,index)
 """
 echo('series')
+base_series = pd.Series({
+    'w': 1,
+    'o': 0
+})
+print(base_series)
+
 countries = ['中国', '英国', '俄罗斯', '法国', '美国']
 history = [5000, 3000, 3000, 3000, 300]
 pd_data = pd.Series(history, countries)

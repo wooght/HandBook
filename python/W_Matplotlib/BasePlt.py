@@ -6,6 +6,7 @@
 @Date       :2024/4/4 18:11
 @Content    :Matplotlib 基础
 """
+import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
 import math
@@ -60,6 +61,7 @@ plt.show()
     subplots(rows,cols) 创建多个子图
 """
 fig, axlist = plt.subplots(2, 2)
+fig.subplots_adjust(wspace=0)       # 多个子图之间无间距
 print(fig)
 x = np.arange(1, 10)
 axlist[0][0].grid(True)             # axes.grid() 设置网格
@@ -103,16 +105,15 @@ ax.set_xlabel(xlabel='国家')
 ax.set_ylabel(ylabel='年份')
 plt.show()
 
+
 """
     两组label柱状图
 """
 y2 = np.array([960, 930, 70, 1700])
 fig = plt.figure(figsize=(10,9))
 ax = fig.add_axes((0.1,0.1,0.8,0.8))
-
 xlabel = np.arange(len(x))
 width = 0.4
-
 lab1 = ax.bar(x=xlabel-width/2, height=y, width=width, label='历史')
 ax.bar_label(lab1)
 lab2 = ax.bar(x=xlabel+width/2, height=y2, width=width, label='国土')
@@ -133,6 +134,26 @@ ax.barh(x, height=0.5, width=y, color=['r', 'b', 'g', 'y'])
 plt.show()
 
 """
+    层叠柱状图
+"""
+personnel = pd.DataFrame({
+    'age_interval': ['<22', '22-30', '30-35', '35-50'],
+    'php_percent': [9, 36, 28, 27],
+    'python_percent': [7, 42, 37, 14],
+    'C_percent': [3, 26, 29, 42]
+})
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_axes((0.1, 0.1, 0.8, 0.8))
+bottom = np.zeros(4)
+for column_name in personnel.columns[1:]:
+    bar1 = ax.bar(x=personnel['age_interval'], height=personnel[column_name],
+                  bottom=bottom, label=column_name)
+    ax.bar_label(bar1, label_type='center')
+    bottom += personnel[column_name]
+ax.legend(loc='best')
+plt.show()
+
+"""
     散点图/气泡图
 """
 fig = plt.figure(figsize=(10,8))
@@ -141,6 +162,98 @@ nums = 100
 x = np.random.rand(100)
 y = np.random.rand(100)
 colors = np.random.rand(100)
+print(colors)
 areas = (np.random.rand(100)*10)**2
 ax.scatter(x,y,c=colors, s=areas, alpha=0.5)
+plt.show()
+
+
+import pandas as pd
+from matplotlib import pyplot as plt
+import numpy as np
+from matplotlib.patches import ConnectionPatch
+from matplotlib import cm
+plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']   # 设定中文字体
+"""
+    饼状图
+"""
+cd_gdp = pd.DataFrame({
+    'areas': ['锦江区', '成华区', '金牛区', '青羊区', '武侯区'],
+    'gdp': [1730, 1690, 1890, 1840, 1750]
+})
+print(cd_gdp)
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_axes((0.1, 0.1, 0.9, 0.9))
+"""
+    autopct 饼图显示格式  %d%%整数百分数,  %0.2f%% 两位小数百分数
+    radius  饼图的半径
+    explode 数组,和下一个扇形之间的距离
+"""
+ax.pie(x=cd_gdp['gdp'], labels=cd_gdp['areas'], autopct='%1.2f%%', radius=0.8, explode=[0.1, 0, 0, 0, 0.1],
+       colors=['r', 'b', 'g', 'y', 'm'])
+plt.show()
+
+"""
+    嵌套图
+"""
+educational = pd.DataFrame({
+    'xx': [8000, 12000, 14000, 8000, 9000],
+    'zx': [12000, 14000, 18000, 11000, 11500],
+    'dx': [30000, 29000, 27000, 30500, 29500],
+    'yjs': [3000, 1200, 1300, 2900, 2100]
+})
+all_df = cd_gdp.merge(educational, how='inner', on=cd_gdp.index)
+print(all_df)
+"""创建画布"""
+fig, (ax1, ax2) = plt.subplots(1, 2)
+fig.subplots_adjust(wspace=0)
+"""绘制左边圆饼图"""
+left_ax = ax1.pie(x=all_df['gdp'], labels=all_df['areas'], autopct="%1.2f%%",
+                  explode=[0, 0, 0, 0, 0.1], colors=plt.cm.rainbow(np.linspace(0, 1, 5)))
+"""绘制右边柱状图"""
+all_df.set_index('areas', inplace=True)
+all_df.drop('key_0', inplace=True, axis=1)
+new_df = all_df.transpose()
+print(new_df['武侯区'][1:])
+bottom = 0
+for index,nums in new_df['武侯区'][1:].items():
+    label1 = ax2.bar(x='educational', height=nums, width=.4, bottom=bottom,
+                     label=index)
+    bottom += nums
+    ax2.bar_label(label1, label_type='center')
+ax2.legend()
+ax2.axis('off')
+ax2.set_title('区域学历占比')
+ax2.set_xlim(-0.9, 0.9)
+"""绘制连接线"""
+"""
+    patches 饼图的扇形列表
+    theta1,theta2 表示扇形的开始角度和结束角度,
+    center表示扇形中心位置坐标[x,y], 如果没有偏移量,则为零 ,如果扇形与其他扇形有距离,则中心的位置发生偏移
+"""
+theta1, theta2 = ax1.patches[-1].theta1, ax1.patches[-1].theta2
+center, r = ax1.patches[-1].center, ax1.patches[-1].r
+x = r * np.cos(np.pi / 180 * theta2) + center[0]
+y = np.sin(np.pi / 180 * theta2) + center[1]
+
+con1 = ConnectionPatch(xyB=(0, bottom),         # 连接线终点位置
+                       xyA=(x, y),              # 连接线起点位置
+                       coordsA=ax1.transData,   # 起点位置坐标系
+                       coordsB=ax2.transData,   # 终点位置坐标系
+                       axesA=ax1, axesB=ax2)    # 起始点位于的子图
+con1.set_color('b')                             # 连接线颜色
+ax2.add_artist(con1)                            # 添加连接线
+con1.set_linewidth(2)                           # 连接线宽度
+
+x = r * np.cos(np.pi / 180 * theta1) + center[0]
+y = np.sin(np.pi / 180 * theta1) + center[1]
+con2 = ConnectionPatch(xyA=(0, 0),
+                       xyB=(x, y),
+                       coordsA=ax2.transData,
+                       coordsB=ax1.transData,
+                       axesA=ax2, axesB=ax1)
+
+con2.set_color('gray')
+ax2.add_artist(con2)
+con2.set_linewidth(2)
 plt.show()
