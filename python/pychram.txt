@@ -25,3 +25,4 @@ ctrl+/              集体注释
 ctrl+shift+alt+J    选中全部相同内容
 ctrl+alt+L          自动对齐代码
 shift+F6            重命名变量
+ctrl+shift+E        运行选中代码
