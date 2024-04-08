@@ -10,6 +10,7 @@ import db
 import pandas as pd
 from wooght_tools.DateTimeMath import WDate
 from wooght_tools.echo import echo
+import numpy as np
 from matplotlib import pyplot as plt
 plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']   # 设定中文字体
 
@@ -65,14 +66,22 @@ classify_turnover.drop(labels=pd.to_datetime(['2024-04-06', '2024-04-07']), axis
 classify_turnover.fillna(0, inplace=True)
 print(classify_turnover)
 
-
 """获取营业额数据"""
 turnover_select = db.bs_data.select().filter(db.bs_data.c.date >= '2023-12-01', db.bs_data.c.store_id ==1)
 turnover_df = pd.read_sql(turnover_select, db.connect)
 turnover_df.set_index('date', inplace=True)
-turnover_df['profit_rate'] = turnover_df['gross_profit'] / turnover_df['turnover']
-all_data = pd.merge(turnover_df, classify_turnover, on=turnover_df.index, how='left')
-print(turnover_df)
+turnover_df['profit_rate'] = turnover_df['gross_profit'] / turnover_df['turnover']      # 毛利率
+all_data = pd.merge(turnover_df, classify_turnover, on=classify_turnover.index, how='left')
+all_data.set_index('key_0', inplace=True)
+print(all_data)
+
+"""计算烟占比 单词:proportion 占比"""
+all_data['gross_nums'] = orders.groupby('form_date')['goods_num'].sum()                 # 每天总销量
+all_data['smoke_ppt'] = (all_data['中烟'] + all_data['川烟']) / all_data['gross_nums']   # 香烟占比
+"""绘制占比图"""
+fig, ax = plt.subplots()
+ax.plot(all_data.index, all_data['smoke_ppt'])
+plt.show()
 
 """相关度计算"""
 classify_corr = pd.DataFrame()
@@ -106,6 +115,25 @@ ax2.axis('off')
 ax2.set_title('分类销量')
 ax3.barh(y=classify_corr_t.index.values, width=classify_corr_t['profit_rate'])
 ax3.set_title('类别销量-毛利率相关度')
+plt.show()
+
+"""获取二年营业额"""
+two_years = np.datetime64('today', format('D')) - 730
+turnover_select = db.bs_data.select().filter(db.bs_data.c.date > two_years, db.bs_data.c.store_id==1)
+turnover_df = pd.read_sql(turnover_select, db.connect)
+turnover_df.sort_values('date', inplace=True)
+
+turnover_df['mean_30'] = turnover_df['turnover'].rolling(window=30, min_periods=1).mean()   # 30日平均值
+turnover_df['month'] = turnover_df['date'].apply(lambda x:str(x.year)+str(x.month))
+turnover_month_mean = turnover_df.groupby('month')['turnover'].mean()
+turnover_df['month_mean'] = turnover_df['month'].apply(lambda x:turnover_month_mean.loc[x])
+print(turnover_df)
+print(turnover_month_mean)
+"""会走势图"""
+fig, ax= plt.subplots(figsize=(10,6))
+ax.bar(x=turnover_df['date'], height=turnover_df['turnover'])
+ax.plot(turnover_df['date'], turnover_df['mean_30'], color='r')
+ax.plot(turnover_df['date'], turnover_df['month_mean'], color='c')
 plt.show()
 
 print(WDate.run_time())
