@@ -48,7 +48,7 @@ ax.legend(labels=['sinx', 'cosx'], loc='best')
 plt.show()                            # 显示
 
 """
-    subplot(rows,cols,index)    创建子图
+    subplot(row,cols,index)    创建子图
     如果3个参数都小于10,那么subplot(3,3,3)和subplot(333)等价
 """
 # fig2 = plt.figure(figsize=(8, 10))
@@ -59,7 +59,7 @@ ax2.plot(range(10), color='g')
 plt.show()
 
 """
-    subplots(rows,cols) 创建多个子图
+    subplots(row,cols) 创建多个子图
 """
 fig, axlist = plt.subplots(2, 2)
 fig.subplots_adjust(wspace=0)       # 多个子图之间无间距
