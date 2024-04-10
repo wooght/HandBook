@@ -6,6 +6,8 @@
 @Date       :2024/3/25 19:58
 @Content    :数学公式实现
 """
+import random
+
 import numpy
 from wooght_tools.echo import echo
 
@@ -56,3 +58,20 @@ def normalization(data, method=False):
         return (data-data.mean())/data.std()
 data = numpy.random.randint(1, 15, 15).reshape(3, 5)
 echo("最值归一化:", normalization(data), "均值方差归一:", normalization(data, True))
+
+
+# def covariance(x, y);
+#     """
+#         求两个数列的协方差
+#         cov = E(x-E(x))(y-E(y))
+#     """
+#     ex = expect(x)
+#     ey = expect(y)
+#     x_ex = x-ex
+#     y_ex = y-ey
+#     result = expect(x_ex*y_ex)
+#     return result
+#
+# x = numpy.random.uniform(1,10,100)
+# y = numpy.random.uniform(1,10,100)
+# print(covariance(x, y))

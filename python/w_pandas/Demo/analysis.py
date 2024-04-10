@@ -21,9 +21,9 @@ plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']   # 设定中文字体
 """获取商品"""
 goods_select = db.goods_list.select()
 goods = db.connect.execute(goods_select)
-print(goods.rowcount)                   # 获取结果条数
+print(goods.rowcount)                                       # 获取结果条数
 goods_df = pd.DataFrame(goods)
-hy_goods = goods_df[goods_df['store_id'] == 1].copy()
+hy_goods = goods_df[goods_df['store_id'] == 1].copy()       # 条件筛选结果是应用,copy后才能赋新值
 echo('华宇商品均价:',hy_goods['price'].mean(),'库存成本:', (hy_goods['stock_nums'] * hy_goods['cost']).sum())
 hy_goods.drop_duplicates(subset=['bar_code'], keep='last', inplace=True)
 hy_goods.set_index('bar_code', inplace=True)
@@ -51,13 +51,17 @@ orders['classify'] = orders['goods_code'].apply(lambda x: hy_goods.loc[x]['class
 
 echo('用时:'+str(WDate.run_time()))
 by_classify = orders.groupby('classify')
-classify_orders = by_classify.agg({'goods_num':'sum', 'goods_money':'sum'})
+classify_orders = by_classify.agg({'goods_num':'sum', 'goods_money':'sum'})     # agg 根据groupby获取新的DataFrame
 classify_orders.sort_values('goods_num', inplace=True)
 print(classify_orders)
 
 """每个类别每天销量"""
 turnover_temp = {}
 for classify in classify_orders.index.values:
+    """
+        对所有orders中找到某一特定的类,然后进行日期分组,就得到基于日期的某类销量
+        如果某一类某一天没有销量,那么就会缺少那个日期,所以这里直接用DataFrame就会出现行数不一样的情况,就无法确定DataFrame的行数
+    """
     turnover_temp[classify] = orders[orders['classify'] == classify].groupby('form_date')['goods_num'].sum()
 classify_turnover = pd.DataFrame(turnover_temp)
 print(classify_turnover)
@@ -100,17 +104,17 @@ print(classify_corr)
 classify_corr_t = classify_corr.transpose()
 classify_corr_t = pd.merge(classify_corr_t, classify_orders['goods_num'], on=classify_corr_t.index, how='inner')
 classify_corr_t.sort_values('classify_corr', inplace=True)
-classify_corr_t.set_index('key_0', inplace=True)
+classify_corr_t.set_index('key_0', inplace=True)    # merge会把on对应的column变成key_0
 print(classify_corr_t)
 
 """相关性绘图"""
-fig, (ax, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(10,10))
+fig, (ax, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(10, 10))
 fig.subplots_adjust(wspace=0)
 ax.barh(y=classify_corr_t.index.values, width=classify_corr_t['classify_corr'])
 ax.set_title('营业额-类别销量相关度')
 plt.yticks(rotation=0, fontsize=8)
 ax2.barh(y=classify_corr_t.index.values, width=classify_corr_t['goods_num'])
-ax2.set_xlim(0,200)
+ax2.set_xlim(0, 200)
 ax2.axis('off')
 ax2.set_title('分类销量')
 ax3.barh(y=classify_corr_t.index.values, width=classify_corr_t['profit_rate'])
@@ -119,14 +123,14 @@ plt.show()
 
 """获取二年营业额"""
 two_years = np.datetime64('today', format('D')) - 730
-turnover_select = db.bs_data.select().filter(db.bs_data.c.date > two_years, db.bs_data.c.store_id==1)
+turnover_select = db.bs_data.select().filter(db.bs_data.c.date > two_years, db.bs_data.c.store_id == 1)
 turnover_df = pd.read_sql(turnover_select, db.connect)
 turnover_df.sort_values('date', inplace=True)
 
-turnover_df['mean_30'] = turnover_df['turnover'].rolling(window=30, min_periods=1).mean()   # 30日平均值
-turnover_df['month'] = turnover_df['date'].apply(lambda x:str(x.year)+str(x.month))
-turnover_month_mean = turnover_df.groupby('month')['turnover'].mean()
-turnover_df['month_mean'] = turnover_df['month'].apply(lambda x:turnover_month_mean.loc[x])
+turnover_df['mean_30'] = turnover_df['turnover'].rolling(window=30, min_periods=1).mean()       # 30日平均值
+turnover_df['month'] = turnover_df['date'].apply(lambda x:str(x.year)+str('%02d' % x.month))    # 组装年月,月不足2位0补位
+turnover_month_mean = turnover_df.groupby('month')['turnover'].mean()                           # 月平均值
+turnover_df['month_mean'] = turnover_df['month'].apply(lambda x:turnover_month_mean.loc[x])     # 广播月平均值
 print(turnover_df)
 print(turnover_month_mean)
 """会走势图"""
