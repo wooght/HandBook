@@ -60,7 +60,7 @@ echo('用时:'+str(WDate.run_time()))
 pivot_table = orders.pivot_table(values='goods_num', index=['form_date'], columns=['classify'], aggfunc='sum')
 echo('透视表获取分类每天销量:',pivot_table)
 
-"""每个类别每天销量"""
+"""分组每个类别每天销量"""
 turnover_temp = {}
 for classify in classify_orders.index.values:
     """

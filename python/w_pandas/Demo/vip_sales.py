@@ -37,6 +37,7 @@ plt.show()
 whole_vip_sale = pd.merge(store_vip_sale, vip_table, left_on='卡号', right_on='会员卡号')
 gender_trend = whole_vip_sale.pivot_table(values='消费金额', index=['商圈等级描述'], columns=['性别'], aggfunc='sum')
 gender_trend['total'] = gender_trend.sum(axis=1)
+print(gender_trend)
 gender_trend['man_percent'] = gender_trend['男'].div(gender_trend['total'])
 gender_trend['woman_percent'] = gender_trend['女'].div(gender_trend['total'])
 gender_trend[['man_percent', 'woman_percent']].plot(kind='bar', title='商圈-性别消费对比', legend=True, grid=True)
@@ -52,9 +53,17 @@ vip_pivot[['白银会员', '黄金会员']].plot(ax=ax, legend=True, ylabel='白
 vip_pivot[['钻石会员', '铂金会员']].plot(ax=ax2, kind='bar', ylabel='钻石铂金')
 ax2.legend(loc='upper left')
 plt.show()
-
 vip_pivot['total'] = vip_pivot.sum(axis=1)                           # sum(axis=1) 求列上的和,及每一行上求每一列的和
 print(vip_pivot)
 vip_pivot['黄金占比'] = vip_pivot['黄金会员'].div(vip_pivot['total'])   # df.div(df1) 返回df/df1的值,及求占比
 vip_pivot['黄金占比'].plot()
+plt.show()
+
+"""会员来源与店铺等级关系"""
+vip_table.rename(columns={'所属店铺编码':'店铺代码'}, inplace=True)
+print(vip_table)
+vip_store_table = pd.merge(vip_table, store_table, on='店铺代码')
+vip_store_pivot = vip_store_table.pivot_table(values='会员卡号', index=['商圈类别描述'], columns=['会员来源'], aggfunc='count')
+print(vip_store_pivot)
+vip_store_pivot.plot(kind='bar', grid=True, legend=True)
 plt.show()
