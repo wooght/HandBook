@@ -1,7 +1,7 @@
 # -- coding: utf-8 -
 """
 @project    :HandBook
-@file       :analysis.py
+@file       :linkmart_analysis.py
 @Author     :wooght
 @Date       :2024/4/7 19:57
 @Content    :分析实例
@@ -37,7 +37,7 @@ echo('用时:'+str(WDate.run_time()))
 
 orders.sort_values(by='form_date', inplace=True)
 
-"""订单分类"""
+"""订单分类广播"""
 hy_goods_code = hy_goods.index.values
 orders['classify'] = orders['goods_code'].apply(lambda x: hy_goods.loc[x]['classify'])
 
@@ -49,11 +49,16 @@ orders['classify'] = orders['goods_code'].apply(lambda x: hy_goods.loc[x]['class
 #     orders_classify.append(hy_goods.loc[row.goods_code]['classify'] if row.goods_code in hy_goods_code else None)
 # orders['classify'] = orders_classify
 
-echo('用时:'+str(WDate.run_time()))
+"""按分类分组"""
 by_classify = orders.groupby('classify')
 classify_orders = by_classify.agg({'goods_num':'sum', 'goods_money':'sum'})     # agg 根据groupby获取新的DataFrame
 classify_orders.sort_values('goods_num', inplace=True)
-print(classify_orders)
+echo('分类总销量:',classify_orders)
+
+"""透视表获取分类每天销量"""
+echo('用时:'+str(WDate.run_time()))
+pivot_table = orders.pivot_table(values='goods_num', index=['form_date'], columns=['classify'], aggfunc='sum')
+echo('透视表获取分类每天销量:',pivot_table)
 
 """每个类别每天销量"""
 turnover_temp = {}
@@ -64,7 +69,7 @@ for classify in classify_orders.index.values:
     """
     turnover_temp[classify] = orders[orders['classify'] == classify].groupby('form_date')['goods_num'].sum()
 classify_turnover = pd.DataFrame(turnover_temp)
-print(classify_turnover)
+echo('传统方法获取分类每天销量:',classify_turnover)
 """pandas 会自动将date,time,datetime的字符串数据转换为datetime数据,所以不能用时间字符串去匹配"""
 classify_turnover.drop(labels=pd.to_datetime(['2024-04-06', '2024-04-07']), axis=0, inplace=True)
 classify_turnover.fillna(0, inplace=True)
@@ -77,7 +82,7 @@ turnover_df.set_index('date', inplace=True)
 turnover_df['profit_rate'] = turnover_df['gross_profit'] / turnover_df['turnover']      # 毛利率
 all_data = pd.merge(turnover_df, classify_turnover, on=classify_turnover.index, how='left')
 all_data.set_index('key_0', inplace=True)
-print(all_data)
+echo('GMV及分类数据:', all_data)
 
 """计算烟占比 单词:proportion 占比"""
 all_data['gross_nums'] = orders.groupby('form_date')['goods_num'].sum()                 # 每天总销量
@@ -105,7 +110,7 @@ classify_corr_t = classify_corr.transpose()
 classify_corr_t = pd.merge(classify_corr_t, classify_orders['goods_num'], on=classify_corr_t.index, how='inner')
 classify_corr_t.sort_values('classify_corr', inplace=True)
 classify_corr_t.set_index('key_0', inplace=True)    # merge会把on对应的column变成key_0
-print(classify_corr_t)
+echo('相关性最终报表:', classify_corr_t)
 
 """相关性绘图"""
 fig, (ax, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(10, 10))
