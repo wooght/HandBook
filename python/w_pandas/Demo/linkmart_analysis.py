@@ -51,7 +51,7 @@ orders['classify'] = orders['goods_code'].apply(lambda x: hy_goods.loc[x]['class
 
 """按分类分组"""
 by_classify = orders.groupby('classify')
-classify_orders = by_classify.agg({'goods_num':'sum', 'goods_money':'sum'})     # agg 根据groupby获取新的DataFrame
+classify_orders = by_classify.agg({'goods_num':'sum', 'goods_money':'sum'})     # agg 给定字典,调用多个聚合函数
 classify_orders.sort_values('goods_num', inplace=True)
 echo('分类总销量:',classify_orders)
 
