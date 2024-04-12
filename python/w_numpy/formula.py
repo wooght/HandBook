@@ -17,7 +17,7 @@ def variance(nums_list):
     公式  Var = ∑(x-x平均值)**2 / N
     Return Nums
     """
-    average = sum(nums_list)/len(nums_list)        # 数列平均值
+    average = sum(nums_list)/len(nums_list)        # 数列平均值-算数平均数
     sgm = 0
     for i in nums_list:
         sgm += (i - average)**2
@@ -42,6 +42,24 @@ def expect(nums_list):
     return expect_nums
 arr = numpy.arange(1, 10, 2)
 print('列表的期望为:%.2f' % expect([1, 3, 5, 7, 9]))      # 4.00
+
+def weight_average(data):
+    """
+    加权平均值
+    average = ∑(w1x1+w2x2..WnXn)
+    Parameters
+    data    :[weight,nums]
+    Returns :num
+    """
+    n = data.shape[0]
+    sgm = 0
+    for i in numpy.arange(n):
+        sgm += data[i][0] * data[i][1]
+    return sgm
+weights = numpy.random.uniform(0, 0.33, 3)
+weights = numpy.append(weights, 1 - weights.sum())
+nums = numpy.linspace(1, 5, 4)
+print('加权平均值:', weight_average(numpy.hstack((weights.reshape((4, 1)), nums.reshape((4, 1))))))
 
 
 def normalization(data, method=False):
