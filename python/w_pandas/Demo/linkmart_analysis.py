@@ -40,6 +40,8 @@ orders.sort_values(by='form_date', inplace=True)
 """订单分类广播"""
 hy_goods_code = hy_goods.index.values
 orders['classify'] = orders['goods_code'].apply(lambda x: hy_goods.loc[x]['classify'])
+orders['cost'] = orders['goods_code'].apply(lambda x: hy_goods.loc[x]['cost'])
+orders['cost_percent'] = 1 - (orders['cost'] / (orders['goods_money'] / orders['goods_num'])).round(2)
 
 """判断语句耗时较多,这里1万条约多10秒"""
 # orders['classify'] = orders['goods_code'].apply(lambda x:hy_goods.loc[x]['classify'] if x in hy_goods_code else None)
@@ -51,9 +53,10 @@ orders['classify'] = orders['goods_code'].apply(lambda x: hy_goods.loc[x]['class
 
 """按分类分组"""
 by_classify = orders.groupby('classify')
-classify_orders = by_classify.agg({'goods_num':'sum', 'goods_money':'sum'})     # agg 给定字典,调用多个聚合函数
+classify_orders = by_classify.agg({'goods_num':'sum', 'goods_money':'sum', 'cost_percent':'mean'})     # agg 给定字典,调用多个聚合函数
 classify_orders.sort_values('goods_num', inplace=True)
-echo('分类总销量:',classify_orders)
+echo('分类总销量:', classify_orders)
+echo('中烟实际毛利率:', classify_orders.loc['中烟']['cost_percent'].round(4), '川烟实际毛利率',classify_orders.loc['川烟']['cost_percent'])
 
 """透视表获取分类每天销量"""
 echo('用时:'+str(WDate.run_time()))
@@ -126,6 +129,7 @@ ax3.barh(y=classify_corr_t.index.values, width=classify_corr_t['profit_rate'])
 ax3.set_title('类别销量-毛利率相关度')
 plt.show()
 
+
 """获取二年营业额"""
 two_years = np.datetime64('today', format('D')) - 730
 turnover_select = db.bs_data.select().filter(db.bs_data.c.date > two_years, db.bs_data.c.store_id == 1)
@@ -144,5 +148,11 @@ ax.bar(x=turnover_df['date'], height=turnover_df['turnover'])
 ax.plot(turnover_df['date'], turnover_df['mean_30'], color='r')
 ax.plot(turnover_df['date'], turnover_df['month_mean'], color='c')
 plt.show()
+
+"""
+    天气分析
+"""
+weather_xls = pd.read_excel('exls/weather.xlsx')
+print(weather_xls)
 
 print(WDate.run_time())

@@ -45,6 +45,13 @@ x_test = np.linspace(2,11, 10)
 y_test = np.linspace(20, 110, 10) + np.random.uniform(-12, 25, 10)
 y_predict = reg.predict(x_test.reshape((10,1)))
 
+"""
+    判断拟合效果,通常用于比较不同模型的表现
+    r2_score(实际,模型预测)
+    r2_score(实际,模型预测)   r2决定系数评分: 返回小于1的评分,越大说明越精准,接近0表示模型无意义
+        R2公式: 1-(SSR/SST)   SSR为残差平方和,及∑[(y_test - y_predict)**2]/n   y_test 实际观测值,y_predict为模型预测值
+                             SST总方差(真实值的方差)
+"""
 echo('均方差:',mean_squared_error(y_test, y_predict), 'R2决定系数:', r2_score(y_test, y_predict))
 
 fig, ax = plt.subplots()
