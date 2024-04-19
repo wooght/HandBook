@@ -142,17 +142,14 @@ turnover_month_mean = turnover_df.groupby('month')['turnover'].mean()           
 turnover_df['month_mean'] = turnover_df['month'].apply(lambda x:turnover_month_mean.loc[x])     # 广播月平均值
 print(turnover_df)
 print(turnover_month_mean)
+
+"""transform将平均值广播到对应行"""
+turnover_df['month_mean_transform'] = turnover_df.groupby('month')['turnover'].transform('mean')
+print(turnover_df)
+
 """会走势图"""
 fig, ax= plt.subplots(figsize=(10,6))
 ax.bar(x=turnover_df['date'], height=turnover_df['turnover'])
 ax.plot(turnover_df['date'], turnover_df['mean_30'], color='r')
 ax.plot(turnover_df['date'], turnover_df['month_mean'], color='c')
 plt.show()
-
-"""
-    天气分析
-"""
-weather_xls = pd.read_excel('exls/weather.xlsx')
-print(weather_xls)
-
-print(WDate.run_time())

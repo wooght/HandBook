@@ -4,7 +4,7 @@
 @file       :linear_re.py
 @Author     :wooght
 @Date       :2024/4/12 20:06
-@Content    : 线性回归
+@Content    :原生实现一元线性回归
 """
 from matplotlib import pyplot as plt
 import pandas as pd

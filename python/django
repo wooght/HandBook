@@ -18,6 +18,13 @@ M：model，模型 与T相同，与数据库交互
 V：view，视图 与C相同，接收与处理
 T：template，模板，与V相同，产生HTML
 
+安装django
+pip install django
+安装指定版本
+pip install django == 1.10.3
+卸载django
+pip uninstall django
+
 
 
 *********************************************
@@ -84,7 +91,10 @@ server {
 创建项目：
 django-admin.py startproject ProjectName
 运行项目：
-python manage.py runserver 0.0.0.0:8000 将项目运行在127.0.0.1:8000上，浏览器可直接访问这个地址
+python manage.py runserver 模型运行项目,将项目运行在127.0.0.1:8000上,
+也可以改变运行地址和端口:
+python manage.py runserver 0.0.0.0:80 将项目运行在127.0.0.1:80上，浏览器可直接访问这个地址
+
 django命令：
 django-admin.py startproject projectname  创建项目
 python manage.py runserver 0.0.0.0:8000   启动项目在端口8000

@@ -1,2 +1,158 @@
-重启Nginx
-sudo nginx -s reload
+############################################################
+windows 装nginx
+############################################################
+
+nginx.org下载 windows版本
+解压到相应文件夹
+cmd 到nginx文件夹
+start nginx     # 启动nginx
+访问127.0.0.1     # 如果无法访问,则启动失败,查看nginx 目录下的logs/error.log日志
+
+
+
+ nginx 目录:
+    conf    配置文件目录
+    html    默认站点目录
+    logs    日期目录
+    ...
+
+重启nginx
+nginx -s reload     # 如果windows提示 找不到命令 nginx，但它确实存在于当前位置 使用.\nginx 作为命令开始
+nginx -s stop       # 快速/强制停止 nginx
+nginx -s quit       # 有序退出nginx
+
+
+############################################################
+配置文件
+############################################################
+
+
+#user  nobody;
+
+# 工作进程数量    一般设置为CPU数
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+
+events {
+    # 最大连接数 一般设置为CPU*1024
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    # 客户端连接超时时间
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    # server 指一个站点,多个站点就有多个Server,
+    # 每一个请求进来需要访问哪个Server 由server_name确定
+    server {
+        # 访问端口
+        listen       80;
+        # 访问域名
+        server_name  localhost;
+
+        # 编码格式
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        # location 用于匹配同一域名下多个URI的访问规则
+        # location 后面的/表示匹配规则,如这里的/ 表示根目录
+        location / {
+            # 根目录
+            root   E:\wooght-server\LinkMart;
+            # 默认主页
+            index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+
+
+    # another virtual host using mix of IP-, name-, and port-based configuration
+    # 配置多个站点
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+
+    # HTTPS server
+    #
+    #server {
+    #    listen       443 ssl;
+    #    server_name  localhost;
+
+    #    ssl_certificate      cert.pem;
+    #    ssl_certificate_key  cert.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+}
