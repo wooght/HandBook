@@ -55,7 +55,7 @@ echo('空气质量相关度', all_data['turnover'].corr(all_data['air_score']))
 
 """最低温度回归模型"""
 reg = linear_model.LinearRegression()
-reg.fit(all_data['min_t'].to_numpy().reshape(-1, 1), all_data['turnover'].to_numpy().reshape(-1, 1))
+reg.fit(all_data['min_t'].to_numpy().reshape(-1, 1), all_data['turnover'].to_numpy().reshape(-1, 1))    # reshape(-1,1) 转置
 echo('系数', reg.coef_, '常数', reg.intercept_)
 x_test = np.linspace(1, 30, 30)
 y_predict = reg.predict(x_test.reshape(-1, 1))

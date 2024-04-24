@@ -33,6 +33,9 @@ def get_turnover(area_name, start_date, end_date):
 """
 hy_df = get_turnover('huayu', '2020-10-01', '2021-02-02')
 print(hy_df.head())
+hy_df['year'] = hy_df['date'].apply(lambda x:x.year)
+hy_df['month'] = hy_df['date'].apply(lambda x:x.month)
+print(hy_df)
 for key, values in hy_df.iterrows():
     if key.is_month_end: print(key.date(), key.time(), key.month, key.day, key.weekday())
 print("闰年" if hy_df.loc['2020-10-10'].date.is_leap_year else "平年")

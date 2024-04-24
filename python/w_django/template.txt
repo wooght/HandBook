@@ -1,0 +1,64 @@
+# -- coding: utf-8 -
+"""
+@file       :template.txt
+@Author     :wooght
+@Date       :2024/4/20 16:31
+"""
+django 采用 MVT模式 类似于MVC
+    M 模型
+    V 视图 类似于MVC中的C
+    T 模版
+
+模版目录:
+    app/templates       模版目录
+        项目创建第一个APP时,会默认在APP中创建模版目录
+        每一个APP都可以有模版目录,除第一个外,需要再settings.py中注册模版目录
+    app/templatetags    自定义模版标签
+        要采用自定义模版标签,在settings.py文件中TEMPLATES中注册模版标签
+    static
+        静态文件目录,如JS,CSS存放在此处,默认为根目录的static
+        要更改或者添加更多的静态文件目录,在settings.py中STATICFILES_DIRS中添加
+
+模版的两个过程:
+    加载HTML
+    渲染数据    render(request,template_name,context)
+
+模版主要有两个部分
+    HTML 静态部分
+    模版语音    动态插入代码(挖坑,站位)
+        {% 模版语音 %}
+        {{ 后端变量 }}
+
+模版静态部分:
+<link rel="stylesheet" href="/static/css/base.css">
+    /static/ 为settings.py中 STATIC_URL规定的url,默认会在STATICFILES_DIRS中注册的文件中去找
+{% load common_tags %}  加载自定义标签,加载后就可以直接使用自定义标签中的函数
+    {% wooght_random %} 及访问自定义标签中 wooght_random()函数
+{% include 'nav.html' %}    在模版中导入其他模版
+{% extends 'base.html' %}   继承,扩展模版
+
+模块:
+{% block main_content %}
+{% endblock %}              block 封闭的块,当一个页面继承另一个页面,要对其内容进行修改时就会用到block.
+
+模版语言:
+    变量:
+    {{ name }}  输出后端view中提供的name 变量
+    {{data.count}}  输出变量的属性
+    {{data.0}}  通过索引访问列表的元素
+    过滤:
+    {{num|floatformat:'2'}} 格式化输出 保留两位小数
+    {{date|join:'-'}}       运用python join 函数连接字符串
+    运算:
+    {% widthratio num1 num2 num3 %} 模版运算 返回 (num1/num2)*num3
+    赋值:
+    {% widthratio num1 num2 num3 as num4 %}  as 赋值,前面的结果赋值给num4,方便模版后期使用
+    条件判断:
+    {% if num1 < num2 %}
+    {% elif num2 in num4 %}
+    {% else %}
+    {% endif %}
+    循环:
+    {% for item in stores %}
+        <option value="{{item.id}}">{{item.name}}</option>
+    {% endfor %}

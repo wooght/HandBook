@@ -1,0 +1,17 @@
+# -- coding: utf-8 -
+"""
+@file       :scrapy基础.txt
+@Author     :wooght
+@Date       :2024/4/24 21:42
+"""
+构建项目demo
+目录结构:
+    demo:
+        demo:
+            spider:
+                news.py         一个爬虫实现
+            items.py            保存爬取数据的容器,定义了爬取的数据结构
+            middlewares.py      定义下载中间件,蜘蛛中间件
+            pipelines.py        Item Pipeline,数据管道,处理item定义的数据
+            settings.py         项目的全局配置
+        scrapy.cfg  项目配置文件,包括配置文件路径,部署信息

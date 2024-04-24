@@ -1,0 +1,49 @@
+#scrapy 安装及依赖的安装
+安装 scrapy 
+sudo pip install scrapy
+
+安装 selenium
+sudo pip install selenium
+
+安装 PhantomJS
+sudo apt-get install PhantomJS
+
+安装scrapy-splash 也是运行js的轻量级无界面浏览器
+sodu pip install scrapy-splash
+
+安装 wkhtmltopdf
+sudo apt-get install wkhtmltopdf
+查看版本 
+wkhtmltopdf --version
+
+安装 xvfbwrapper
+sudo pip install xvfbwrapper
+
+
+
+Windows 安装:
+pip install scrapy 
+	如提示错误error: Unable to find vcvarsall.bat
+下载Twisted
+	https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted
+然后安装twisted 下载目录下运行:
+pip install twisted...
+
+然后再安装scrapy
+
+继续安装selenium
+pip install selenium
+
+# chromedriver 安装和调试
+chrome地址输入：chrome://version/ 查看chrome版本
+
+http://chromedriver.storage.googleapis.com/index.html地址下载对应的chromedriver
+https://googlechromelabs.github.io/chrome-for-testing/#stable 最新版本
+windows安装:
+    将chromedriver 放在 chrome安装目录中, 并将系统环境变量添加chrome目录
+    将chromedriver 放在 python 安装目录中
+
+chrome://version/ 浏览器输入查看浏览器版本
+unzip chromedriver_linux64.zip  # 解压文件，然后将解压出来的文件复制进/usr/bin/下
+chromedirver 安装成功
+sudo apt-get install xvfb  # 安装无头打开浏览器插件
