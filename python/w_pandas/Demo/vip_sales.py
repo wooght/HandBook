@@ -8,7 +8,6 @@
 """
 
 import pandas as pd
-import numpy as np
 from wooght_tools.echo import echo
 from wooght_tools.DateTimeMath import WDate
 import matplotlib.pyplot as plt

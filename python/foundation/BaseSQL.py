@@ -11,7 +11,7 @@ sys.path.append('..')
 from wooght_tools.SecretCode import Wst
 from wooght_tools.echo import echo
 # 导入数据类型模块
-from sqlalchemy import Integer, String, Float
+from sqlalchemy import Integer, String, Float, select, func
 # 导入sql基本模块
 from sqlalchemy import create_engine, Table, Column, MetaData
 # 导入ORM模块
@@ -42,10 +42,11 @@ user = Table("user", metadata,
 """插入数据"""
 to_insert = user.insert().values(
     name=''.join({i: random.choice(Wst.contrast_str) for i in range(1, random.randint(4, 10))}.values()),
-    age=random.randint(10, 50), sex=1)
+    age=random.randint(10, 50), sex=2)
 result = connect.execute(to_insert)     # execute 执行任务
 print(result.inserted_primary_key)      # 获取主键key值
 print(result.rowcount)                  # 获取插入行数
+
 echo("插入多条数据")
 user_insert = user.insert()
 nums_list = [
@@ -54,6 +55,7 @@ nums_list = [
 ]
 insert_result = connect.execute(user_insert, nums_list)
 print("新增:",insert_result.rowcount)
+
 """查询数据"""
 user_select = user.select().filter(user.c.age>0,user.c.id>0).order_by('age').limit(10)
 result = connect.execute(user_select)
@@ -62,14 +64,25 @@ for item in result.fetchall():
     print(str(item.id).rjust(3), str(item.name).rjust(15), item.age)
 user_wooght = result.fetchall()
 print(len(user_wooght))             # fetchall() 是迭代器
+
+"""指定字段查询"""
+echo('指定字段查询')
+user_column_s = select(func.count(Column('age')), Column('sex')).select_from(user).group_by(user.c.sex)
+result = connect.execute(user_column_s)
+for item in result.fetchall():
+    print(item)
+
 """查询单个数据"""
+echo("查询单个数据")
 user_one_s = user.select().where(user.c.name=='wooght').order_by(user.c.id.desc())
 user_one_r = connect.execute(user_one_s)
 user_one_item = user_one_r.first()
 print(user_one_item.name)
+
 """修改数据"""
 user_update = user.update().where(user.c.id==67).values(name='puwenfeng')
 result = connect.execute(user_update)
+
 """删除数据"""
 user_delete = user.delete().where(user.c.age==32)
 result = connect.execute(user_delete)

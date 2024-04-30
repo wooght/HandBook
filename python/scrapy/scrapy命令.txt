@@ -17,6 +17,8 @@ scrapy list
 
 运行爬虫
 scrapy crawl dmoz
+# 启动爬虫,nolog模式
+scrapy crawl spider_name --nolog
 
 
 要启用一个爬虫的持久化，运行以下命令:

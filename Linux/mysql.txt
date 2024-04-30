@@ -16,6 +16,8 @@ password就是密码
 
 修改数据表字符集编码：
 	alter table tablename convert to character set utf8;
+修改字段:
+    alter table tablename change oldname newname varchar()..;
 
 导出数据库：
 mysqldump -u用户名 -p密码 数据库名 > 导出的文件名

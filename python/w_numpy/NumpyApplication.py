@@ -9,7 +9,6 @@
 
 
 import numpy as np
-import numpy.random
 
 from wooght_tools.echo import echo
 

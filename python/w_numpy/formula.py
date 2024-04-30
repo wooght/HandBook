@@ -6,7 +6,6 @@
 @Date       :2024/3/25 19:58
 @Content    :数学公式实现
 """
-import random
 
 import numpy
 from wooght_tools.echo import echo

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>新浪财经API实验</title>
+    </head>
+    <script type="text/javascript" src="sina_sfsdk.js"></script>
+    <script type="text/javascript" src="https://finance.sina.com.cn/realstock/company/sz002594/hisdata_klc2/klc_kl.js?d=2024_4_29"></script>
+    <body>
+        <script type="text/javascript">
+            // function load_script(callback){
+            //     var script = document.createElement('script')
+            //     script.type = 'text/javascript'
+            //     script.src  = 'https://finance.sina.com.cn/realstock/company/sz002594/hisdata_klc2/klc_kl.js?d=2024_4_29'
+            //     document.getElementsByTagName("head")[0].appendChild(script);
+            // }
+            document.write(KLC_K2_sz002594)
+            var test_data = ''
+            ;xh5_define("datas.k", ["utils.util"], function(e) {
+            "use strict";
+            var t = e.load
+            ,s = e.xh5_S_KLC_D
+            , r = 0 == location.protocol.indexOf("https:");
+            return new function() {
+                // var test_data = t('https://finance.sina.com.cn/realstock/company/sz002594/hisdata_klc2/klc_kl.js?d=2024_4_29')
+                test_data = s(KLC_K2_sz002594)
+                //alert("输出:"+test_data.length)
+            }
+            })
+            document.write("输出:" + test_data)
+        </script>
+    </body>
+</html>
