@@ -108,8 +108,28 @@ print(num_3)                            # 4
 
 
 """
+    动态变量名/字符串当成变量名
+"""
+from wooght_tools.echo import echo
+echo('动态变量名')
+w = 888
+class h:
+    width = 123
+    height = 321
+def abc():
+    print('abc')
+words = ['w', 'h']
+print(locals()['w'])                # locals() 寻找变量
+print(locals()[words[0]])
+print(vars()[words[1]].width)       # 将对象的属性和属性值以以字典方式返回
+print(eval('w'))                    # 将字符串转换成表达式运算
+eval('abc()')
+
+
+"""
     global 全局变量
 """
+echo('global 全局变量')
 var_1 = 12
 
 
