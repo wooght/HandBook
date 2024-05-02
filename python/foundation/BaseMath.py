@@ -119,7 +119,7 @@ print("数列方差为:%.2f" % variance_nums)             # 2.92
 def expect(nums_list):
     """
     数学期望
-    E(x) = ∑(Xi*P(xi))      及期望等于每个值*出现的概率的和
+    E(x) = ∑(Xi*A(xi))      及期望等于每个值*出现的概率的和
     Returns Nums
     """
     length = len(nums_list)

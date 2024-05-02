@@ -6,6 +6,8 @@
 @Date       :2024/3/11 10:45
 """
 import random
+
+
 class People(object):
     name = ''
     age = 0

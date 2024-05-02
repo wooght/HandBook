@@ -14,6 +14,8 @@ scrapy 源码目录:python安装目录/Lib/site-packages/scrapy
         pipelines               管道
                                     处理下载的文件,图片,视频等
         templates               项目及爬虫的模版
+
+
 构建项目demo
 目录结构:
     demo:

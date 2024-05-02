@@ -15,7 +15,7 @@ mysqlconfig = {
     'host': 'localhost',
     'port': 3306,
     'user': 'root',
-    'password': Wst.decryption("}a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{P$>x"),
+    'password': Wst.decryption("}a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{A$>x"),
     'db': 'linkmart',
     'charset': 'utf8'
 }

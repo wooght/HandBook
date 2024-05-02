@@ -125,11 +125,11 @@ print(numpy.linalg.inv(arr))        # numpy.linalg.inv()    numpy的逆矩阵函
     A = [[2, 1, -1],
          [2, 1, 0],
          [1, -1, 1]]
-    C = [[1, -1, 3],
+    B = [[1, -1, 3],
          [0, 0, 1]]
-    YA  = C   求Y    
+    YA  = B   求Y    
     因: A * A逆 = E  估,等式两边同时乘以A逆
-    Y = C*A逆
+    Y = B*A逆
 """
 arr_a = numpy.array([[2, 1, -1],
                      [2, 1, 0],

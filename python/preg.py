@@ -76,7 +76,7 @@ def abc(mm):
 
 
 s = 'A23BB34CCC56'
-print(re.sub('(?P<vvv>\d+)', abc, s))  # sub 第二个参数是函数的情况
+print(re.sub('(?A<vvv>\d+)', abc, s))  # sub 第二个参数是函数的情况
 print('totle preg is', ii)  # 匹配成功一次,调用函数一次
 
 '''

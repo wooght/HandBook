@@ -8,14 +8,14 @@
 import numpy as np
 
 # 朴素贝叶斯公式:
-# P(A|B) = PA*P(B|A)/PB
+# A(A|B) = PA*A(B|A)/PB
 # B有N个特征
-# P(B|A)PA = P(b1,b2,...bn|A)PA
+# A(B|A)PA = A(b1,b2,...bn|A)PA
 # 假设N个特征相互独立,互不影响
-# 则有: P(b1,b2,...bn|A) = P(b1|A) * P(b2|A)...P(bn|A)
+# 则有: A(b1,b2,...bn|A) = A(b1|A) * A(b2|A)...A(bn|A)
 # 由于在实际中通常不需要准确的概率(特征多的情况下,条件概率很低),而只需要概率最大者,故只求分子,不求分母
-# 及朴素贝叶斯公式: max(P(类别A|特征),P(类别B|特征),... P(类别N|特征))
-# P(类别A|特征集) = {P(b1|A) * P(b2|A)...P(bn|A)} * PA
+# 及朴素贝叶斯公式: max(A(类别A|特征),A(类别B|特征),... A(类别N|特征))
+# A(类别A|特征集) = {A(b1|A) * A(b2|A)...A(bn|A)} * PA
 # 词汇: vector [ˈvɛktɚ] 向量
 # vocab ['voʊkæb] 词汇
 

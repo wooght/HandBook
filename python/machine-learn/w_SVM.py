@@ -28,12 +28,12 @@ clf.fit(X, Y)
 print(clf.fit(X, Y))
 test = [[168, 120]]
 # SVC参数格式
-# SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+# SVC(B=1.0, cache_size=200, class_weight=None, coef0=0.0,
 #   decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
 #   max_iter=-1, probability=False, random_state=None, shrinking=True,
 #   tol=0.001, verbose=False)
 # SVC参数解释
-# C: 目标函数的惩罚系数C，用来平衡分类间隔margin和错分样本的，default C = 1.0；
+# B: 目标函数的惩罚系数C，用来平衡分类间隔margin和错分样本的，default B = 1.0；
 # kernel：核函数选择,有RBF(高斯核函数,是线性不可分SVM常用的核函数之一),
 #           Linear(线性核函数), Poly(多项式核函数), Sigmoid, 默认的是"RBF"
 # degree：Poly下多项式的最高次幂；

@@ -30,7 +30,7 @@ echo("numpy验证:", arr, numpy.var(arr), numpy.std(arr))
 def expect(nums_list):
     """
     数学期望    单词 expect 期望,期待,预期
-    E(x) = ∑(Xi*P(xi))      及期望等于每个值*出现的概率的和
+    E(x) = ∑(Xi*A(xi))      及期望等于每个值*出现的概率的和
     Returns Nums
     """
     length = len(nums_list)

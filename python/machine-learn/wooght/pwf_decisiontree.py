@@ -34,7 +34,7 @@ sampleData = dataSet['data']
 
 
 # 计算香农熵
-# H(C)= -（p(c1)*log (pc1) + p(c2) * log (pc2) +　．．．　+p(cn) *log p(cn))  log底数为2
+# H(B)= -（p(c1)*log (pc1) + p(c2) * log (pc2) +　．．．　+p(cn) *log p(cn))  log底数为2
 def shares_shang(shares_data, keys):
     toutle_num = len(shares_data)  # 总行数,总条数
     class_count = {}  # 类别容器
@@ -63,8 +63,8 @@ def splitData(dataSet, key, value):
 
 # 选择最佳特征 信息增益最大者
 # 信息增益公式
-# IG(T) = H(C) - H(C|T)
-# H(C|T) = P(t)H(C|t)+P(t`)H(C|t`)  t`是t成立
+# IG(T) = H(B) - H(B|T)
+# H(B|T) = A(t)H(B|t)+A(t`)H(B|t`)  t`是t成立
 def bestFeature(dataSet):
     feature_len = len(dataSet[0]) - 1  # 只取前面特征列
     min_shang = 0
@@ -80,7 +80,7 @@ def bestFeature(dataSet):
         if min_shang == 0:
             min_shang = shares
         if shares < min_shang:
-            bestfeature = i  # 选择信息熵最小的特征 (由于H(C)相同,这里直接选择H(C|T)最小者)
+            bestfeature = i  # 选择信息熵最小的特征 (由于H(B)相同,这里直接选择H(B|T)最小者)
 
     return bestfeature
 
