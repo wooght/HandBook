@@ -1,3 +1,4 @@
 python/machine-learn/data/*
 venv
 exls
+*.pyc

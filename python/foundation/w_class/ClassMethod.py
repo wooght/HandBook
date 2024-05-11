@@ -7,6 +7,10 @@
 @Content    :@classmethod 方法问题
 """
 
+class Big:
+    def __init__(self, name, age):
+        self.name, self.age = name, age
+
 
 class A:
     name = 'A'
@@ -26,7 +30,8 @@ class A:
 
     @classmethod
     def new_one(cls, name, age):
-        return cls(name, age)
+        if age > 40: return Big(name, age)  # 这里甚至可以返回其他的类,classmethod充当构造器,可以构造其他的类
+        else: return cls(name, age)
 
 person = A('wooght', 18)
 print(person.age)       # 18
@@ -42,6 +47,9 @@ print(A.age)            # 31
 
 person_2 = A.new_one('pwf', 36)
 print(person_2.age)     # 36
+person_3 = A.new_one('bb', 60)
+print(person_3)                             # <__main__.Big object at 0x0000016DDE2B3230>
+
 """
     classmethod 可以实现多个构造函数
 """

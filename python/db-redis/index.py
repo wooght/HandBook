@@ -10,7 +10,7 @@ import redis
 
 print('11111')
 # 连接方式
-pool = redis.ConnectionPool(host='localhost', port=6379, db=0, socket_connect_timeout=2)  # 连接池
+pool = redis.ConnectionPool(host='192.168.101.103', port=6379, db=0, socket_connect_timeout=2)  # 连接池
 r = redis.Redis(connection_pool=pool)  #连接,指定连接池
 allname = ['puwenfeng', 'wooght', 'PWF']
 print(allname)

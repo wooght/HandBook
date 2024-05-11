@@ -11,6 +11,9 @@ sudo apt-get install PhantomJS
 安装scrapy-splash 也是运行js的轻量级无界面浏览器
 sodu pip install scrapy-splash
 
+安装scrapy-proxies    scrapy 代理
+pip install scrapy-proxies
+
 安装 wkhtmltopdf
 sudo apt-get install wkhtmltopdf
 查看版本 

@@ -76,7 +76,7 @@ def abc(mm):
 
 
 s = 'A23BB34CCC56'
-print(re.sub('(?A<vvv>\d+)', abc, s))  # sub 第二个参数是函数的情况
+print(re.sub('r(A<vvv>\d+)', abc, s))  # sub 第二个参数是函数的情况
 print('totle preg is', ii)  # 匹配成功一次,调用函数一次
 
 '''
@@ -136,3 +136,31 @@ preg_str = 'http://jxjump.58.com/service?target=FCADVFdVGJSbUnkeXOrkIYXzkJxLX94M
            '.shtml|c5/nn1emJLYQkDf/M8QHAg==&fzbref=0&key=&from=1-list-5 '
 x = re.search(r'entinfo=(\d{14})\_', preg_str)
 print(x.group(1))
+
+
+ip89result = '''
+<a href="https://proxy.ip3366.net/" target="_blank" data-type="img"><img src="img/hfad.png"></a><br><script type="text/javascript" src="js/jquery.min.js"></script>
+<div id="adarea"onclick=location.href='https://proxy.ip3366.net/' style="cursor: pointer;display: none;position: fixed;right:15px;bottom:15px;width: 285px;height: 250px;background: url(/img/fkad.png) no-repeat;">
+<div id="adclose" style="cursor: pointer; position: absolute;  top: 0px;  left: 0px;  display: block;  width: 20px;  height: 20px;font-family: cursive;background: url(img/close.png) no-repeat;" title="点击关闭"> </div>
+</div>
+<script type="text/javascript">
+$(function(){
+$('#adarea').slideDown(500);
+$('#adclose').click(function(){
+$('#adarea').slideUp(500);
+});
+});
+</script>
+223.85.12.114:2222<br>182.131.17.19:80<br>112.53.184.170:9091<br>171.221.210.114:80<br>更好用的代理ip请访问：https://proxy.ip3366.net/
+'''
+ip89result = ip89result.replace('\n', '')
+print(ip89result)
+last_str = ip89result.split('</script>')
+print('all ip')
+print(last_str[2])
+iplist = last_str[2].split('<br>')
+for i in iplist:
+    print(i)
+del iplist[-1]
+for i in iplist:
+    print(i)

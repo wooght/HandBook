@@ -68,6 +68,11 @@ print(all([1, '', 3]))  # False
 print('' in [1, '', 3])  # True
 """any(list) 有一个是True,就返回True"""
 print(any(['', 2, None]))       # True
+arr = ['a', 'b', 'c']
+i = arr.index('b')
+del arr[i]
+print(i, '*' *50)
+print(arr)
 
 """ 
     浅copy 
