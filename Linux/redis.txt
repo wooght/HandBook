@@ -13,10 +13,21 @@ redis 基础信息:
 
 
 redis-cli 启动客户端访问redis
-
-
 重启redis:service redis restart
 
+---------------------------------------------------------------------
+错误:
+ValueError: not enough values to unpack (expected 3, got 0)
+
+windows 出现这样的错误,解决方法如下:
+
+安装扩展 eventlet
+    pip install eventlet
+启动的worker时候 带参数 -P eventlet
+celery -A test_celery worker -l info -P eventlet
+或者
+celery -A test_celery worker -l info -P threads
+----------------------------------------------------------------------
 
 #????redis
 redis-server
