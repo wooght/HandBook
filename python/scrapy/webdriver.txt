@@ -32,18 +32,26 @@
 启动webdriver
     driver = webdriver.Chrome(options=options)      # 启动chrome webdriver
 访问地址
+    driver.implicitly_wait(S)                       # 隐式等待加载网页最大时间
+    driver.set_page_load_timeout(S)                 # 设置超时时间    超时会抛出 TimeoutException
     result = driver.get('http://www.baidu.com')
-    driver.implicitly_wait(S)                       # 等待加载网页最大时间
+    # 显示等待元素载入
+        WebDriverWait(driver, 10).until(presence_of_element_located((By.XPATH, '/html/head/title')))
+
+    driver.page_source()                            # 获取返回网页内容
+    driver.page_source()                            # 获取返回网页内容
     # 查找元素,并点击
     driver.find_element(By.XPATH, '/html/body/div[4]/div/a[3]').click()
     handle[0] = driver.current_window_handle        # 当前窗口
     driver.switch_to.window(handle[0])              # 切换窗口
+    driver.switch_to_default_content()              # 切换会父框架 iframe情况使用
     driver.execute_script('js语句')                   # 运行JS
         # 返回状态码
         status = driver.execute_script("return {httpStatus: document.httpStatus, status: document.status};"))
-        # 等待元素载入
-        WebDriverWait(driver, 10).until(presence_of_element_located((By.XPATH, '/html/head/title')))
+
+    driver.save_screenshot('screenshot.png')        # 窗口截图
+
 
 关闭/停止webdriver
-    driver.close()
-    driver.quit()
+    driver.close()      # 关闭窗口
+    driver.quit()       # 关闭浏览器 chrome
