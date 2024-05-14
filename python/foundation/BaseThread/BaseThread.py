@@ -4,7 +4,7 @@
 @file       :BaseThread.py
 @Author     :wooght
 @Date       :2024/3/13 20:23
-@Content    :
+@Content    :线程基础
 """
 import os
 from threading import Thread
@@ -17,17 +17,20 @@ import random
     .start() 开始线程
     .join() 回收线程
 """
-totle_distance = 200
-
+# 主进程和线程比较200米跑步
+total_distance = 100
 def run(person, distance,speed):
-    while distance < totle_distance:
+    while distance < total_distance:
         step = random.random() * speed
-        distance += round(step,2)
+        distance += round(step,4)
         print(person, '跑了', round(distance,2), '米了')
         time.sleep(1)
-T = Thread(target=run, args=('puwenfeng',0,10))
-T.start()
+    print('{}线程结束'.format(person))
 
-run('wooght',0, 10)
 
-T.join()
+T = Thread(target=run, args=('puwenfeng', 2, 12))       # 开启线程
+T.start()                                               # start 线程运行
+
+run('wooght',1, 10)
+T.join()    # 结束线程
+print('主线程结束')

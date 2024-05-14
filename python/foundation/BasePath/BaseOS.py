@@ -30,5 +30,5 @@ sys.path.append(now_dir)
 if "E:\\wooght-server\\HandBook\\python\\foundation" in sys.path:
     print('添加成功')
 
-print(os.path.abspath("../"))                   # 当前目录的上一级目录
-print(os.path.dirname("../"))
+print(os.path.abspath("../../"))                   # 当前目录的上一级目录
+print(os.path.dirname("../../"))
