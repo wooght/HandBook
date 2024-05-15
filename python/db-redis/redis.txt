@@ -10,13 +10,88 @@ redis 基础信息:
         将 bind 127.0.0.1 ::1 改成 bind 0.0.0.0
     默认无密码:
         将requirepass foobared 注释,新建一行 requirepass 123456  设置密码123456
-
-
 redis-cli 启动客户端访问redis
 重启redis:service redis restart
 
+
+
+----------------------------------------------------------------------
+redis 命令
+----------------------------------------------------------------------
+service redis restart       # 重启redis
+kell redis-pid              # 停止redis
+属性
+redis-cli:shutdown          # 停止redis
+redis-cli:KEYS '*'          # 显示所有存在的key
+redis-cli:ping              # 测试连通性     连通返回 PONG
+redis-cli:dbsize            # 键总数
+redis-cli:exists key key..  # 查询键是否存在,可以多个查询 返回查询到的个数
+redis-cli:del key key..     # 删除指定的键,可以删除多个, 返回删除个数
+redis-cli:type key          # 返回键类型
+redis-cli:select 2          # 切换到2号数据库
+redis-cli:move key 2        # 将key移动到2号数据库
+redis-cli:ttl key           # 查询键过期时间 -1永不过期,-2已经过期/不存在
+redis-cli:expire key s      # 设置key过期时间s秒
+redis-cli:persist key       # 设置key永不过期
+redis-cli:rename key newkey # 修改键名
+键值-默认字符串
+redis-cli:set key value     # 设置键值
+redis-cli:get key           # 获取键值
+redis-cli:incr key          # key是数字,则递增1,返回递增后的值
+redis-cli:incrby key n      # key 是数字,递增 n,返回递增后的值
+redis-cli:decr key          # 递减
+redis-cli:decrby key n      # 递减n
+redis-cli:mset a 1 b 2      # 批量设置键值
+redis-cli:mget a b          # 批量获取键值
+redis-cli:strlen key        # 获取键值长度
+redis-cli:append key        # 追加内容(字符串末尾追加)
+redis-cli:getrange key 0 4  # 获取键值部分字符
+集合-无序不可重复
+redis-cli:sadd key var var...   # 存储集合值, 空格隔开
+redis-cli:smembers key          # 获取集合值
+redis-cli:srandmember key 3     # 随机获取3个集合值
+redis-cli:sismember key var     # 判断var是否在集合中
+redis-cli:scard key             # 获取集合元素个数
+redis-cli:srem key var var..    # 删除集合元素
+有序集合-不可重复
+redis-cli:zadd key score member..   # 存储值 zadd key 分数 成员(元素) 分数 成员(元素)...
+redis-cli:zscore key member         # 根据元素获取元素对应分数
+redis-cli:zrange key start stop     # 根据排序获取元素, 末尾加参数 Withscores 返回元素和分数
+redis-cli:zrangebyscore key sta sto # 根据分数获取元素
+redis-cli:zincrby key score member  # 指定元素分数+=score
+redis-cli:zcard key                 # 元素个数
+redis-cli:zcount key start stop     # 获取指定范围分数的元素个数
+redis-cli:zrem key member..         # 删除指定元素
+redis-cli:zrank key member          # 获取元素排名 从0开始
+列表-有序可重复
+redis-cli:lpush key value value..   # 左端插入元素
+redis-cli:rpush key valur value..   # 右端插入元素
+redis-cli:lpop key                  # 左端弹出元素(删除)  rpop 右端弹出元素
+redis-cli:llen key                  # 获取元素个数
+redis-cli:lrange key start stop     # 获取列表元素 0 -1 为全部  -2 -1 为从右端取出
+redis-cli:lindex key index          # 根据键值获取元素 键从0开始
+redis-cli:lrem key count value      # 从左端删除count个值为value的值  count为负及从右端删除count个
+redis-cli:ltrim key start stop      # 只保留 start和stop之间的内容 包括边界
+散列-hash
+redis-cli:hset key field value field value ..   # 设置值,就像数据库,可以设置多个字段
+redis-cli:hget key field                        # 获取某个散列中的某个字段值
+redis-cli:hmget key field field ..              # 获取某个散列中的多个字段值
+redis-cli:hgetall key                           # 获取某个散列的所有键值对
+redis-cli:hkeys key                             # 获取所有键
+redis-cli:hvals key                             # 获取所有值
+redis-cli:hexists key field                     # 键是否存在
+redis-cli:hlen key                              # 获取字段数量
+redis-cli:hincrby key field increment           # 递增 -就是递减
+redis-cli:hdel key field field ..               # 删除字段
+
 ---------------------------------------------------------------------
-错误:
+应用
+---------------------------------------------------------------------
+KEYS '60*'      # 返回所有以60开头的键值
+
+---------------------------------------------------------------------
+错误积累
+---------------------------------------------------------------------
 ValueError: not enough values to unpack (expected 3, got 0)
 
 windows 出现这样的错误,解决方法如下:

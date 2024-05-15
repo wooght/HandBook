@@ -1,3 +1,42 @@
+---------------------------------------------------------------------
+CURD
+---------------------------------------------------------------------
+select * from tablename where id=1 and ip=111 order by id desc limit 1,10
+select count(code) from tablename group by code
+
+update tablename set ip=123 where ip=NULL
+
+insert into table (name,age)values('haha', 22)
+
+delete from tablename where id=123
+
+---------------------------------------------------------------------
+alter 修改表
+---------------------------------------------------------------------
+修改数据表字符集编码：
+	alter table tablename convert to character set utf8;
+修改字段:
+    alter table tablename change oldname newname varchar()..;
+设置auto_increment 为0开始
+    alter table tablename auto_increment=0
+
+---------------------------------------------------------------------
+导入导出
+---------------------------------------------------------------------
+导出数据库：
+mysqldump -u用户名 -p密码 数据库名 > 导出的文件名
+导出某个表：
+mysqldump -u用户名 -p 密码 数据库名 表名> 导出的文件名
+导入整个数据库：
+mysql -uroot databasefoo < foo.sql
+或者
+source foo.sql
+
+
+---------------------------------------------------------------------
+报错积累
+---------------------------------------------------------------------
+
 错误1：django报链接错误：django.db.utils.OperationalError: (1698, "Access denied for user 'root'@'localhost'")
 错误2：只有root,或者sudo才能登录mysql5.7的情况解决方案：
 解决方法：
@@ -11,26 +50,6 @@ ERROR 1698 (28000): Access denied for user 'root'@'localhost'
 输入 sudo vim /etc/mysql/debian.cnf
 password就是密码
 然后通过mysql -udebian-sys-maint -p进入mysql
-
-
-
-修改数据表字符集编码：
-	alter table tablename convert to character set utf8;
-修改字段:
-    alter table tablename change oldname newname varchar()..;
-设置auto_increment 为0开始
-    alter table tablename auto_increment=0
-
-导出数据库：
-mysqldump -u用户名 -p密码 数据库名 > 导出的文件名
-导出某个表：
-mysqldump -u用户名 -p 密码 数据库名 表名> 导出的文件名
-导入整个数据库：
-mysql -uroot databasefoo < foo.sql
-或者
-source foo.sql
-
-
 pip install mysqlclient 报错  ...with error code 1...
 是缺少包 libmysqlclient-dev
 sudo apt-get install libmysqlclient-dev
