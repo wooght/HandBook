@@ -1,0 +1,15 @@
+# -- coding: utf-8 -
+"""
+@file       :Error.txt
+@Author     :wooght
+@Date       :2024/5/16 20:08
+@content    :错误收集
+"""
+builtins.ValueError: signal only works in main thread of the main interpreter
+    signal 信号模块只能在主线程中
+
+twisted.internet.error.ReactorAlreadyRunning
+    twisted核心已经运行,无法在同一个线程中启动第二个reactor
+
+scrapy 命令无反应
+    确保settings文件LOG_LEVEL不为CRITICAL

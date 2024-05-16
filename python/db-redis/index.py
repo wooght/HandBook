@@ -53,11 +53,12 @@ r.rpush('list_one', *[4, 5, 6])  # 在最右侧添加元素
 print(r.lindex('list_one', 3))  # 根据索引查找
 print(r.lrange('list_one', 0, -1))  # 切片是查找
 
-"""无序集合"""
+"""无序集合 member"""
 print('集合添加成功{}个'.format(r.sadd('test_ips', *['123', '321', '555'])))  # 设置集合
 print(r.smembers('test_ips'))  # 获取集合
 r.sadd('test_ips', *[111, 456, 7788])
-print([val for val in r.srandmember('test_ips', 3)])  # 随机选择
+print([val for val in r.srandmember('test_ips', 2)])  # 随机选择, 返回列表
+print(r.srandmember('test_ipss', 1))
 print('是否存在:{}'.format('存在' if r.sismember('test_ips', '123') else '不存在'))  # 判断是否存在
 print('是否存储成功:{}'.format('成功' if r.sadd('test_ips', '123') else '已经存在,不成功'))
 print('集合元素个数{}'.format(r.scard('test_ips')))
