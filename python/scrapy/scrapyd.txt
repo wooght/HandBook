@@ -4,9 +4,10 @@
 @Author     :wooght
 @Date       :2024/5/21 14:28
 """
-安装scrapyd,scrapyd-client
+安装scrapyd,scrapyd-client,scrapydweb
 pip install scrapyd
 pip install scrapyd-client
+pip install scrapydweb
 依赖:pywin32
 
 ----------------------------------------------------------------------
@@ -48,6 +49,10 @@ scrapyd配置文件:python/Lib/site-packages/scrapyd/default_scrapyd.conf
         输出:
             {"node_name": "wooght", "status": "ok", "prevstate": null}
         及停止成功
+在根目录运行:
+        scrapydweb
+            生成scrapydweb_settings_v10文件及表示scrapydweb配置成功
+        访问http://127.0.0.1:5000/即可
 
 ----------------------------------------------------------------------
 问题收集
