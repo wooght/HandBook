@@ -1,0 +1,57 @@
+# -- coding: utf-8 -
+"""
+@file       :scrapyd.txt
+@Author     :wooght
+@Date       :2024/5/21 14:28
+"""
+安装scrapyd,scrapyd-client
+pip install scrapyd
+pip install scrapyd-client
+依赖:pywin32
+
+----------------------------------------------------------------------
+scrapyd 配置
+----------------------------------------------------------------------
+scrapyd配置文件:python/Lib/site-packages/scrapyd/default_scrapyd.conf
+修改:
+    bind_address = 0.0.0.0
+
+项目文件配置:
+    项目根目录:
+        scrapy.cfg
+            [deploy]
+            url = http://localhost:6800/
+            project = shares_scrapy
+            取消url前面的注释和;符号即可
+
+运行:
+    项目根目录运行:
+        scrapyd-deploy
+        输出:
+            Packing version 1716265963
+            Deploying to project "shares_scrapy" in http://localhost:6800/addversion.json
+            Server response (200):
+            {"node_name": "wooght", "status": "ok", "project": "shares_scrapy", "version": "1716265963", "spiders": 6}
+        及部署成功, version是版本号,默认当前时间戳
+        命令:
+        scrapyd
+        运行scrapyd
+        能访问:http://127.0.0.1:6800及部署成功
+
+运行spider:
+        curl http://127.0.0.1:6800/schedule.json -d project=shares_scrapy -d spider=Historysituation
+        shell里运行命令可能会报错,CMD运行不会报错
+        输出:
+            {"node_name": "wooght", "status": "ok", "jobid": "2f2eb2e3173a11efb7dede7338709eed"}
+        及spider运行成功,jobid为spider的ID号
+        curl http://127.0.0.1:6800/cancel.json -d project=shares_scrapy -d job=eb4db70c173411efb96ede7338709eed
+        输出:
+            {"node_name": "wooght", "status": "ok", "prevstate": null}
+        及停止成功
+
+----------------------------------------------------------------------
+问题收集
+----------------------------------------------------------------------
+web端看不到运行的spider,但没有其他报错
+    项目设置 LOG_STDOUT 设置为False
+
