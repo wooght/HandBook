@@ -53,6 +53,8 @@ redis-cli:srandmember key 3     # 随机获取3个集合值
 redis-cli:sismember key var     # 判断var是否在集合中
 redis-cli:scard key             # 获取集合元素个数
 redis-cli:srem key var var..    # 删除集合元素
+redis-cli:del key               # 删除集合
+redis-cli:spop key              # 弹出一个元素
 有序集合-不可重复
 redis-cli:zadd key score member..   # 存储值 zadd key 分数 成员(元素) 分数 成员(元素)...
 redis-cli:zscore key member         # 根据元素获取元素对应分数

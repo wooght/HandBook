@@ -1,0 +1,67 @@
+# -- coding: utf-8 -
+"""
+@file       :scrapy-redis.txt
+@Author     :wooght
+@Date       :2024/5/21 10:40
+"""
+安装scrapy-redis
+pip install scrapy-redis
+
+---------------------------------------------------------------------
+scrapy-redis 实现 分布式思路
+---------------------------------------------------------------------
+三个角色
+    生产者 producter   批量生成地址  (相比传统scrapy额外多了一个spider)
+    任务队列 task queue
+    消费者 consume     spider 从任务队列中获取任务url,并执行爬取
+
+生产者
+    spider 继承 RedisSpider
+    取消:
+        allowed_domains
+        start_urls
+    添加:
+        redis_key = 'spider:start_urls'     名字可以自定义,如:market_urls
+        多个Spider执行同样的任务,redis_key要相同
+    start_requests():添加新的url到任务队列
+        不在yield新的request,因为yield是直接提交给engine,不会经过scrapy-redis
+        执行常规的request生成,包括:url,meta等,将request参数打json包
+        然后将request的json包push到 redis_key 指定的redis列表中
+
+消费者
+    Spider 基础 RedisSpider
+    取消
+        allowed_domains
+        start_urls
+    添加
+        redis_key
+    重写make_request_from_data(self,data)
+        具体方法和scrapy-redis一样
+        只是改变request的额外参数,如proxy,headers,errback等
+
+---------------------------------------------------------------------
+scrapy-redis 配置
+---------------------------------------------------------------------
+REDIS_HOST = 'REDIS地址'
+REDIS_PORT = 'REDIS端口'
+REDIS_START_URLS_BATCH_SIZE = 16 # redis每批次执行request数量
+
+# 替换调度器和去重为scrapy-redis
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"              # 调度器
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"  # scrapy-redis的去重组件
+SCHEDULER_PERSIST = True                                    # 请求URL记录不丢弃, 断点续爬
+# 默认请求队列形式(按优先级)
+# SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderQueue"    # 先进先出
+# SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"  # 堆栈模式,先进后出
+SCHEDULER_FLUSH_ON_START = True                             # 是否每次启动清空去重列表
+
+---------------------------------------------------------------------
+问题收集
+---------------------------------------------------------------------
+TypeError: ExecutionEngine.crawl() got an unexpected keyword argument 'spider'
+版本兼容问题,新scrapy crawl 不在需要传递Spider参数
+修改
+    scrapy-redis的spiders文件的schedule_next_requests()方法
+        旧:self.crawler.engine.crawl(req, spider=self)
+        新:self.crawler.engine.crawl(req)

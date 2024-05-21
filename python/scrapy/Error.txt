@@ -7,9 +7,20 @@
 """
 builtins.ValueError: signal only works in main thread of the main interpreter
     signal 信号模块只能在主线程中
+    解决办法:
+        开新进程及多进程,而不是在原来主进程中运行任务
 
 twisted.internet.error.ReactorAlreadyRunning
     twisted核心已经运行,无法在同一个线程中启动第二个reactor
+    解决办法:
+        在start函数spider时候,添加参数stop_after_crawl=True
+        process = CrawlerProcess(get_project_settings())
+        process.start(stop_after_crawl=True)
+
+twisted.internet.error.ReactorNotRestartable
+    无法重新启动twisted reactor
+    解决办法:
+        一个进程只能启动reactor一次,估完成后关闭进程,在开新的进程
 
 scrapy 命令无反应
     确保settings文件LOG_LEVEL不为CRITICAL

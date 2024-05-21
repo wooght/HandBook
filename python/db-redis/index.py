@@ -64,7 +64,7 @@ print('是否存储成功:{}'.format('成功' if r.sadd('test_ips', '123') else 
 print('集合元素个数{}'.format(r.scard('test_ips')))
 
 """删除键"""
-all_keys = r.keys('8*')
+all_keys = r.keys('0*')
 print(len(all_keys))
 for key in all_keys:
     r.delete(key)
