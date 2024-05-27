@@ -77,6 +77,6 @@ class SecretCode:
 
 Wst = SecretCode()
 if __name__ == '__main__':
-    secret_code = Wst.encryption("wooght")     # 6d$+4Mu6n85B/8j     }a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{A$>x
+    secret_code = Wst.encryption("wooght565758")     # 6d$+4Mu6n85B/8j     }a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{A$>x
     print('secret code:',secret_code)
     print("plain:",Wst.decryption(secret_code))

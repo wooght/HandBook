@@ -1,0 +1,39 @@
+# -- coding: utf-8 -
+"""
+@file       :Fiddler.txt
+@Author     :wooght
+@Date       :2024/5/24 15:36
+"""
+
+Fiddler抓包工具使用
+
+HTTPS 配置:
+    Tools->Options
+            HTTPS选项
+                Decrypt HTTPS traffic 选择:from non-browsers ..
+            其他也打上勾
+    Tools->Options
+            Connections选项
+                Allow remote computers to connect 打钩
+
+Iphone 配置:
+    浏览器浏览电脑地址加端口8888(fiddler默认端口) 如:192.168.101.101:8888
+    安装该地址下载的证书配置文件
+    VPN与设备管理:
+        找到证书配置文件(DO_NOT_TRUST_FiddlerRoot)
+    wifi设置:
+        找到连接的WiFi->HTTP代理->手动
+            服务器:Fiddler地址
+            端口:8888(默认)
+
+
+
+
+解决提示不是专用/私密连接问题:
+    重置Fiddler证书
+    Tools->Options
+                HTTPS 选项
+                Actions -> Reset All Certificates
+                        弹窗一路YES
+    重启Fiddler
+    手机删除证书,重新访问Fiddler地址安装

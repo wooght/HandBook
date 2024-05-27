@@ -4,6 +4,10 @@
 @Author     :wooght
 @Date       :2024/5/13 15:22
 """
+"""
+    chromedriver下载地址:
+    https://googlechromelabs.github.io/chrome-for-testing/
+"""
 
 要导入的包
     from selenium import webdriver

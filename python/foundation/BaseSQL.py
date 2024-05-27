@@ -22,7 +22,8 @@ host = '127.0.0.1'
 port = '3306'
 database = 'wooght_test'
 user = 'root'
-password = Wst.decryption('}a,>aN4|Y,9xODC0HUwq%.*T7<]+7}B>{A$>x')
+password = Wst.decryption('.u/fe<qzO|~TrC;13E=z2vpQI#]X_?>[_.F!,T`!B')
+print(password)
 db_uri = f'mysql+pymysql://{user}:{password}@{host}:{port}/{database}?charset=utf8'
 engine = create_engine(db_uri,echo=False)               # 创建数据库引擎
 connect = engine.connect()                              # 引擎与数据库握手连接

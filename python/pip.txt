@@ -15,7 +15,7 @@ pip3 install django==2.0.5   # å®‰è£…åˆ¶å®šç‰ˆæœ¬
 sudo python -m pip install â€“upgrade pip
 
 #å‡çº§å…¶ä»–çš„ä¹Ÿä¸€æ ·
-pip install -upgrade name
+pip install --upgrade name
 
 
 #å®‰è£…pythonå…¶ä»–ç¯å¢ƒåŠä¾èµ–
@@ -80,24 +80,24 @@ sudo apt-get install build-essential python3-dev libssl-dev libffi-dev libxml2 l
 
 <<<<<<< HEAD
 =======
-pypiwin32 	#windowsÒÀÀµÀ©Õ¹°ü
-pywin32		#windowsÒÀÀµÀ©Õ¹°ü,Êó±ê¼üÅÌÊÂ¼ş
-PyMySql		#²Ù×÷mysqlÀ©Õ¹°ü
-sqlalchemy	#Êı¾İ¿âORM²Ù×÷À©Õ¹°ü
-numpy		#¿ÆÑ§¼ÆËã/Êı×é À©Õ¹°ü
-pandas		#¿ÆÑ§¼ÆËã/¾ØÕó À©Õ¹°ü
-scipy		#¸ß¼¶¿ÆÑ§¼ÆËã¿â,»ùÓÚnumpy
-scrapy 		#scrapy ÅÀ³æ¿ò¼Ü
-scrapy-splash	#scrapyÎŞ·ì½áºÏµÄjsÒıÇæ
-twisted		#ÊÂ¼şÇı¶¯µÄÍøÂç¿ò¼Ü
-selenium	#ÎŞ½çÃæä¯ÀÀÒıÇæ
-phantomjs	#ÎŞ½çÃæä¯ÀÀÆ÷JSÒıÇæ
-beautifulsoup4	#bsÅÀ³æÀ©Õ¹
-matplotlib	#Í¼±íÀ©Õ¹°ü
-seaborn		#»ùÓÚmatplotlibµÄÍ¼±íÀ©Õ¹
-scikit-learn	#»úÆ÷Ñ§Ï°À©Õ¹°ü
-pillow		#Í¼Ïñ´¦Àí¿â
-cx_freeze	#windows´ò°üexeÀ©Õ¹°ü
-jieba		#ÖĞÎÄ·Ö´Ê¹¤¾ß°ü
-xlrd        #¶ÁÈ¡Excel
+pypiwin32 	#windowsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½
+pywin32		#windowsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+PyMySql		#ï¿½ï¿½ï¿½ï¿½mysqlï¿½ï¿½Õ¹ï¿½ï¿½
+sqlalchemy	#ï¿½ï¿½ï¿½İ¿ï¿½ORMï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½
+numpy		#ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Õ¹ï¿½ï¿½
+pandas		#ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Õ¹ï¿½ï¿½
+scipy		#ï¿½ß¼ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½numpy
+scrapy 		#scrapy ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+scrapy-splash	#scrapyï¿½Ş·ï¿½ï¿½Ïµï¿½jsï¿½ï¿½ï¿½ï¿½
+twisted		#ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+selenium	#ï¿½Ş½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+phantomjs	#ï¿½Ş½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½JSï¿½ï¿½ï¿½ï¿½
+beautifulsoup4	#bsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹
+matplotlib	#Í¼ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½
+seaborn		#ï¿½ï¿½ï¿½ï¿½matplotlibï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Õ¹
+scikit-learn	#ï¿½ï¿½ï¿½ï¿½Ñ§Ï°ï¿½ï¿½Õ¹ï¿½ï¿½
+pillow		#Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
+cx_freeze	#windowsï¿½ï¿½ï¿½exeï¿½ï¿½Õ¹ï¿½ï¿½
+jieba		#ï¿½ï¿½ï¿½Ä·Ö´Ê¹ï¿½ï¿½ß°ï¿½
+xlrd        #ï¿½ï¿½È¡Excel
 >>>>>>> wooght
