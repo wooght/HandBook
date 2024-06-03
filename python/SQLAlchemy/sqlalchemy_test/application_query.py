@@ -27,3 +27,4 @@ for item in r:
 r = s.query(Boys, Girls).join(Boys.girls, isouter=True).all()
 for item in r:
     print(item[0].name, '喜欢', item[1].name)
+

@@ -36,7 +36,14 @@ class Sclass(BaseTable):
     floor = Column(Integer, default=1)
 
     def __repr__(self):
-        return '[Class:%s,ID:%s]' % (self.name, self.id)
+        """
+        直接访问对象返回的字符串格式
+        Returns
+        -------
+
+        """
+        return '(%s,%s)' % (self.name, self.id)
+
 class Boys(BaseTable):
     __tablename__ = 'boys'
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -71,3 +78,6 @@ Session = sessionmaker(bind=engine)
 
 if __name__ == '__main__':
     BaseTable.metadata.create_all(engine)
+    s = Session()
+    for item in s.query(Sclass).all():
+        print(item)
