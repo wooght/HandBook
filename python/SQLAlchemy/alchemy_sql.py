@@ -1,7 +1,7 @@
 # -- coding: utf-8 -
 """
 @project    :HandBook
-@file       :BaseSQL.py
+@file       :alchemy_sql.py
 @Author     :wooght
 @Date       :2024/3/14 19:09
 @Content    : sqlalchemy 操作数据库 sql方式,ORM方式
@@ -121,43 +121,10 @@ connect.commit()            # 最终提交
 connect.close()
 
 """
-    ORM操作数据库
+    ORM操作数据库->见alchemy_orm
     优点:可以快速创建数据表,支持业务对象
     缺点:速度比直接执行SQL慢
 """
-echo('ORM操作')
-Base = declarative_base()           # 元数据容器,表基类
-"""定义表结构"""
-class Bank(Base):
-    __tablename__ = "Bank"
-    id = Column(Integer,primary_key=True,autoincrement=True)
-    user_id = Column(Integer)
-    moneys = Column(Float)
-
-orm_engine = create_engine(db_uri)
-Base.metadata.create_all(orm_engine)        # 无则创建表
-Session = sessionmaker(bind=orm_engine)     # 绑定数据库映射
-session = Session()                         # 建立会话
-"""插入数据"""
-new_nums = Bank(user_id=user_one_item.id, moneys=100)
-session.add(new_nums)
-# session.commit()            # 提交
-"""查询数据"""
-select_bank = session.query(Bank)
-print('银行数据如下:')
-print([row.moneys for row in select_bank])
-"""条件查询"""
-filter_select = session.query(Bank).filter(Bank.user_id==5).order_by(Bank.moneys)
-print(filter_select.first().moneys)
-print(filter_select[0].moneys)
-print([row.moneys for row in filter_select])
-"""修改数据"""
-one_bank = session.query(Bank).filter(Bank.user_id==5).first()
-one_bank.moneys = 200
-"""删除数据"""
-session.delete(one_bank)
-session.commit()
-
 """
     反射,可以利用已经存在的数据表填充SQLALchemy对象
 """
