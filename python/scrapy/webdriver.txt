@@ -30,8 +30,12 @@
         'download.default_directory': 'downfile',   # 下载目录
     }
     options.add_experimental_option('prefs', prefs)
-    proxy_str = '--proxy-server=http://{}'.format(ip)
-    options.add_argument(proxy_str)                 # 设置代理IP
+    options.add_argument('--proxy-server=http://ip:端口')  # 设置代理IP
+    self.options.add_experimental_option('detach', True)  # 保持打开状态
+    # 以下两个方法 屏蔽浏览器页头:自动化测试控制
+    options.add_experimental_option('useAutomationExtension', False)  # 停用开发者模式
+    options.add_experimental_option('excludeSwitches', ['enable-automation'])
+    options.add_argument('--disable-infobars') # 禁止提示自动化运行
 
 启动webdriver
     driver = webdriver.Chrome(options=options)      # 启动chrome webdriver
@@ -54,6 +58,14 @@
         status = driver.execute_script("return {httpStatus: document.httpStatus, status: document.status};"))
 
     driver.save_screenshot('screenshot.png')        # 窗口截图
+
+Cookie
+    driver.get_cookies()                             # 获取COOKIE
+        COOKIE格式:[
+            {'domain':'','expiry':175130000, 'httpOnly':False/True, 'name':'cookie_name', 'path':'/', 'sameSite':'Lax', 'secure':False, 'value':'cookie_value'},
+            {},...
+        ]
+    driver.add_cookie({'name':'cookie_name', 'value':'cookie_value'})   # 设置COOKIE  设置前需访问一次网页,设置后再访问一次才能设置成功
 
 
 关闭/停止webdriver

@@ -83,3 +83,9 @@ for key, value in data.items():
     print(key, value)
 
 print(int(time.time()*1000))
+
+cookie_str = 'cookiesu=641717409901065; device_id=28697ab957c58af6e1bc39514f12cacd; s=cj1chgmc9d; __utma=1.1253666201.1717411348.1717411348.1717411348.1; __utmz=1.1717411348.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_1db88642e346389874251b5a1eded6e3=1717494626,1717501036,1717501108,1717507106; remember=1; xq_a_token=0060d1c93c77fb305165e3fef50b1526a69b9c7c; xqat=0060d1c93c77fb305165e3fef50b1526a69b9c7c; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOjIxNzQxMDE0MTQsImlzcyI6InVjIiwiZXhwIjoxNzIwMDAzOTg0LCJjdG0iOjE3MTc1MDc3NzE0OTcsImNpZCI6ImQ5ZDBuNEFadXAifQ.qepJx_5jwSBY14twKU7LBWFAqeJwq4nOTDAp2WHibaGWWaYPAU-jE_qGr7kDKm09C6X1oaCmCwV0XP8_NaxKx4Q3cMn4_Jj9aIjWyYmUa7uBgk7rGnj8O5_qIyeDZuw-4CMvbtcBwT3cG1vB6LboyHmy3ZXQgI9XtcDepBtBAFzyQmlIOF3F5ITAU6QNA4Nlj1jB_gTsHoNj4zQhysAk--sdfpGyFXN6rlOo1WyVijt4Lt2ih0-mdliqw4m6W0i2ofuxBoO3TPlWEgUBUxRN4jA_VnidNl6-89MtEC9ZbaP3fF-uOM3s8gtd-XqxZ5iSjo2OLwYH-hx7QCTCJkTJjw; xq_r_token=32e36cf3345eb5a1a4a61c66c8358973cd2febf3; xq_is_login=1; u=2174101414; acw_tc=2760779017175105978745691eb5ee09bb429ec03389f855b38176fa8b4e30; snbim_minify=true; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1717510878; .thumbcache_f24b8bbe5a5934237bbc0eda20c1b6e7=0PSxoucTbw5xVEpgxRvOOsBvoeD4hnE+hu0Ty9IHzLJeOlg6O+Ejg7gp10iY5f/B5nmlfu9lM57zuPMqpkOBhg%3D%3D; is_overseas=0'
+cookie_one_str = cookie_str.split(';')
+print('cookie----->')
+for cookie in cookie_one_str:
+    print(cookie.strip())

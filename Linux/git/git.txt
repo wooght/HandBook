@@ -301,4 +301,5 @@ github tokens:  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
 git remote set-url origin https://(tokens)@github.com/(用户名)/仓库名)
 如:
 git remote set-url origin https://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@github.com/wooght/SharesAnalysis
+git remote set-url origin https://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@github.com/wooght/Dyyt_Autoorder.git
 
