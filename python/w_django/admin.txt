@@ -1,0 +1,62 @@
+# -- coding: utf-8 -
+"""
+@file       :admin.txt
+@Author     :wooght
+@Date       :2024/6/10 15:49
+"""
+Django admin 模块:
+
+==========>开启Django后台管理功能
+    [配置根urls]:
+        from django.contrib import admin
+        from django.urls import path, include
+        urlpatterns = [
+            path('admin/', admin.site.urls),    # admin 地址可以自定义
+
+    [应用中admin添加要显示的表]:
+        from django.contrib import admin
+        from api_view import models
+        from login import models as login_models
+        # 学生表,这里可以是其他所有表,如果文章表,留言表等
+        class StudentAdmin(admin.ModelAdmin):
+            list_display = ['id', 'name', 'sex', 'age', 'class_null', 'description']
+        # 自定义的用户模块
+        class UserAdmin(admin.ModelAdmin):
+            list_display = ['username', 'sex', 'age', 'last_login']
+
+        # 在admin中注册要显示的表
+        admin.site.register(models.Student, StudentAdmin)
+        admin.site.register(login_models.StudentUser, UserAdmin)
+
+==========>自定义用户模型
+    [settings 添加]:
+        AUTH_USER_MODEL = 'APP.MODELS_NAME'  注意是 MODELS_NAME  而不是models这样的文件名
+
+    [在APP目录下添加用户模型]
+        from django.db import models
+        from django.contrib.auth.models import AbstractUser
+
+        class StudentUser(AbstractUser, models.Model):
+            # nid = models.AutoField(primary_key=True)
+            class_id = models.IntegerField(default=1, verbose_name='班级ID')  # verbose_name 标签,和数据库没关系,作为后台字段说明
+            phone = models.CharField(max_length=16, default='00000000000')
+            admin_type = models.IntegerField(default=2)
+            age = models.IntegerField(default=18)
+            sex = models.BooleanField(default=0)
+
+            class Meta:
+                db_table = 'student_users'
+                verbose_name = '用户信息'   # 后台表说明
+                verbose_name_plural = verbose_name
+
+==========>项目自动后修改用户模块
+    一般情况是在第一次migrate之前,要自定义用户模块,如果之后启动,会报冲突错误,解决问题方式:
+    [1] 备份数据
+        mysqldump -uroot -p 库名 > 导出文件名.sql
+    [2] 注释掉自定义用户模块代码和settings中用户模块配置项,然后执行数据迁移回滚, 把冲突表迁移记录全部归零
+        python manage.py migrate auth zero  # auth 是Django的默认认证模块
+    [3] 回复自定义用户模块代码和配置项,执行数据迁移
+        python manage.py makemigrations
+        python manage.py migrate
+    [4] 再创建超级管理员
+        python manage.py createsuperuser
