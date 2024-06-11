@@ -19,7 +19,12 @@ Django admin 模块:
         from login import models as login_models
         # 学生表,这里可以是其他所有表,如果文章表,留言表等
         class StudentAdmin(admin.ModelAdmin):
+            # list_display 后台陈列/显示字段
             list_display = ['id', 'name', 'sex', 'age', 'class_null', 'description']
+            # list_filter 后台可以下列字段查找
+            list_filter = ['name']
+            # 在列表页直接编辑修改
+            list_editable = ['name', 'sex', 'age', 'class_null']
         # 自定义的用户模块
         class UserAdmin(admin.ModelAdmin):
             list_display = ['username', 'sex', 'age', 'last_login']

@@ -1,0 +1,134 @@
+# -- coding: utf-8 -
+"""
+@file       :api_auth.txt
+@Author     :wooght
+@Date       :2024/6/11 23:46
+"""
+"""
+    rest_framework 两种认证方式
+"""
+
+============================================
+    第一种,rest_framework.authtoken
+============================================
+[注册APP]
+    rest_framework.authtoken
+[数据迁移]
+    python manage.py migrate
+    这一步将创建authtoken_token数据表
+[添加认证模块]
+    REST_FRAMEWORK = {
+        ...
+        'rest_framework.authentication.TokenAuthentication',
+        ...
+    }
+[序列化器]
+    序列化器增加 token字段(名字可以自定义,如uuid),read_only=True
+
+[登录视图]
+    导包:
+        from django.contrib import auth
+        from rest_framework.authtoken.models import Token
+    视图主要内容:
+    class DjAuthAPIView(APIView):
+        permission_classes = []  # 空指允许所有权限, 登录之前拥有访问登录的接口的权限
+
+        def post(self, request):
+            serializer_obj = DjAuthModelSerializer(data=request.data)           # 创建序列化器
+            if serializer_obj.is_valid():                                       # 序列化器验证
+                verify = auth.authenticate(**serializer_obj.validated_data)     # 序列化器验证后的数据执行django自带的用户验证
+                if verify:
+                    auth.login(request, verify)                                 # 验证成功,执行django自带的登录,会产生session等登录状态内容,API接口一般不会用到这些
+                    # 删除原来的token
+                    old_token = Token.objects.filter(user=verify)               # 从数据库获取之前已经有的token
+                    old_token.delete()                                          # 删除旧的token
+                    # 创建新的token
+                    new_token = Token.objects.create(user=verify)               # 生成新的token
+                    # 把token加入到用户中
+                    setattr(verify, 'uuid', new_token.key)
+                    instance = DjAuthModelSerializer(instance=verify)           # 将用户信息,token进行序列化
+                    return Response(instance.data)
+                else:
+                    return Response({'error': '账号密码不正确'})
+            else:
+                return Response(serializer_obj.errors, status=400)
+[API登录]
+    POST带(username, password)访问登录视图
+        保存用户信息及token key,如保存到cookie
+            $.cookie('uuid', data['uuid'])
+[使用]
+    其他API带上token key即可获得认证
+        $.ajaxSetup({
+            beforeSend:function(xhr){
+                xhr.setRequestHeader('Authorization', 'Token '+$.cookie('uuid'))
+            }
+        })
+
+
+============================================
+    第二种,JWT:rest_framework_simplejwt
+============================================
+
+[安装]
+    pip install djangorestframework_simplejwt
+
+[配置]
+    rest_framework配置内容里加上jwt
+    REST_FRAMEWORK = {
+        ...
+        'DEFAULT_AUTHENTICATION_CLASSES': (
+            ...
+            'rest_framework_simplejwt.authentication.JWTAuthentication',
+        )
+        ...
+    }
+    # JWT 的其他可选配置
+    SIMPLE_JWT = {
+        # simple jwt 设置
+        # token有效时长(返回的 access 有效时长)
+        'ACCESS_TOKEN_LIFETIME': datetime.timedelta(seconds=300),
+        # token刷新的有效时间(返回的 refresh 有效时长)
+        'REFRESH_TOKEN_LIFETIME': datetime.timedelta(seconds=200),
+    }
+
+[注册APP]
+    INSTALLED_APPS = [
+        ...
+        'rest_framework_simplejwt',
+        ...
+    ]
+[路由]
+    根路由
+    from rest_framework_simplejwt.views import (
+        TokenObtainPairView,
+        TokenRefreshView,
+        TokenVerifyView
+    )
+
+    urlpatterns = [
+        ...
+        path('execute_login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),    # 登录API
+        path('refresh/', TokenRefreshView.as_view(), name='token_refresh'),                 # 刷新token API
+        path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),          # 验证API
+        ...
+    ]
+
+[使用]
+    post 带(username,password)到登录API
+    登录API返回两个token:
+        access
+        refresh
+
+    前端保存这两个token,如保存到cookie中
+        $.cookie('access', data['access'])
+        $.cookie('refresh', data['refresh'])
+
+    其他API带access即可:
+        $.ajaxSetup({
+            beforeSend:function(xhr){
+                xhr.setRequestHeader('Authorization', 'Bearer '+$.cookie('access'))
+            }
+        })
+
+    刷新access
+    post 带(refresh)访问refresh接口,返回新的access
