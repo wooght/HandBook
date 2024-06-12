@@ -1,0 +1,62 @@
+# -- coding: utf-8 -
+"""
+@file       :django_auth.txt
+@Author     :wooght
+@Date       :2024/6/12 16:37
+"""
+"""
+    django Auth 模块
+    django 自带的用户认证模块
+    包括:注册,登录,登录认证,注销,修改密码登
+"""
+================
+    常用方法
+================
+[authenticate()]   进行用户验证,至少两个参数 username,password 会自动给密码进行加密然后再对比 单词: authenticate /???θent?ke?t/ 证明..是真实的/进行认证
+[login()] 执行登录,登录成功后,往后其他View可以通过request.user访问用户数据
+[logout()] 执行登出,会清除登录的session数据
+
+    from django.contrib import auth
+    user_obj = auth.authenticate(username=username,password=password)
+    auth.login(request,user_obj)
+    auth.logout(request)
+
+[is_authenticated] 判断当前用户是否通过认证
+    request.user.is_authenticated   返回True/False
+
+[login_requierd]    修饰器,给视图添加登录校验,可以带参数login_url,当没有登录时,跳转值此地址
+    @login_required(login_url='/login/')
+    def home(request):
+        print(request.user.is_authenticated)    # True
+        print(request.user.username)            # 访问用户数据的方法 request.user.字段(username,email,groups,...)
+
+================
+    注册用户
+================
+[create_user]   创建新用户,必要参数:username,password,会自动对密码进行加密 而create也可以创建,但不会对密码进行加密
+    obj = User.objects.create_user(username=username,password=password)
+
+[check_password()] 验证输入的密码和当前登录的密码是否一致,默认会先加密,然后在和数据库对比
+    request.user.check_password(new_password)   # True/False
+
+[set_password()] 修改密码,要save()后才执行数据库修改
+    request.user.set_password(new_password)
+    request.user.save()
+
+
+================
+    默认用户表
+================
+默认的User包含以下常见的基本字段
+    username	必选。150个字符以内。 用户名可能包含字母数字，_，@，+ . 和-个字符。
+    first_name	可选（blank=True）。 少于等于30个字符。
+    last_name	可选（blank=True）。 少于等于30个字符。
+    email	可选（blank=True）。 邮箱地址。
+    password	必选。 密码的哈希加密串。 （Django 不保存原始密码）。 原始密码可以无限长而且可以包含任意字符。
+    groups	与Group 之间的多对多关系。对接权限功能的。
+    user_permissions	与Permission 之间的多对多关系。对接权限功能的。
+    is_staff	布尔值。 设置用户是否可以访问Admin 站点。
+    is_active	布尔值。 指示用户的账号是否激活。 它不是用来控制用户是否能够登录，而是描述一种帐号的使用状态。值为False的时候，是无法登录的。
+    is_superuser	是否是超级用户。超级用户具有所有权限。
+    last_login	用户最后一次登录的时间。
+    date_joined	账户创建的时间。 当账号创建时，默认设置为当前的date/time。
