@@ -1,0 +1,192 @@
+# -- coding: utf-8 -
+"""
+@file       :docker.txt
+@Author     :wooght
+@Date       :2024/6/13 15:46
+"""
+=============================
+    Ubuntu 安装docker
+=============================
+更新ubuntu安装包
+sudo apt update
+sudo apt upgrade
+
+安装docker
+sudo apt install docker.io
+
+配置用户组
+默认情况下，只有root用户和docker组的用户才能运行Docker命令。我们可以将当前用户添加到docker组，以避免每次使用Docker时都需要使用sudo。命令如下：
+sudo usermod -aG docker $USER
+
+运行docker
+systemctl start docker
+
+设置开机启动
+systemctl enable docker
+
+重启docker
+service docker restart
+
+验证是否安装成功
+sudo docker run hello-world
+
+第一次会拉取hello-world镜像
+如果拉取镜像超时则进行如下操作:
+[1]允许APT使用https
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+[2]阿里云镜像加速器
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://gvnxar8k.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+再进行hello-world拉取
+
+查看镜像
+sudo docker images
+
+安装Git Lab
+拉取gitlab镜像
+sudo docker pull gitlab/gitlab-ce
+
+更新curl
+sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+
+安装docker-compose
+下载docker-compose 二进制文件
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+授予执行权限
+sudo chmod +x /usr/local/bin/docker-compose
+
+配置docker-compose YAML文件
+[1]usr/local 下创建docker文件夹,然后再docker文件夹下创建gitlab_docker文件夹
+[2]在usr/local/docker/gitlab_docker文件夹下创建docker-compose.yml 内容如下:
+    version: '3.1'
+    services:
+      gitlab:
+        image: 'gitlab/gitlab-ce:latest'
+        container_name: gitlab
+        restart: always
+        environment:
+          GITLAB_OMNIBUS_CONFIG: |
+            external_url 'http://192.168.101.103:8929'
+            gitlab_rails['gitlab_shell_ssh_port'] = 2224
+        ports:
+          - '8929:8929'
+          - '2224:2224'
+        volumes:
+          - './config:/etc/gitlab'
+          - './logs:/var/log/gitlab'
+          - './data:/var/opt/gitlab'
+
+docker-compose运行容器
+sudo docker-compose up -d
+提示:
+    Network gitlab_docker_default Created
+    Container gitlab              Started
+然后等待5-10分钟
+
+访问:http://192.168.101.103:8929
+出现登录界面即可(如果类似于502的页面,在继续等待)
+
+创建登录账号:
+    初始账号是:root
+    查看root账号密码 sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+    Password: cQhXDjtyzINewrqwwq9DACmTr0WWKXhzE2A4dLeJXOc=
+    复制密码登录即可
+
+=============================
+    Windows 安装docker
+=============================
+下载地址:
+    http://mirrors.aliyun.com/docker-toolbox/windows/docker-for-windows/
+    运行安装,然后重启电脑系统
+
+    下载Linux内核更新包
+        https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+        安装更新包
+    将WSL2设置为默认版本
+        PowerShell命令:
+        wsl --set-default-version 2
+    运行docker,设置加速器
+        settings->Docker Engine
+            修改"registry-mirrors": ["https://gvnxar8k.mirror.aliyuncs.com"]
+
+    安装镜像命令:
+        docker pull [名称]:[版本]
+            如:docker pull python:3.7
+
+    运行容器命令:(会查找镜像,如果没有就安装镜像)
+        docker run [可选参数] 镜像名 [向启动容器中传入的命令] ，如果没有镜像，则会先下载镜像
+            docker run -d -p 6379:6379 --name redis redis:latest
+            # -d:会创建一个守护式容器在后台运行，这样创建容器后不会自动登录容器
+            # -p:表示端口映射，即宿主机端口:容器中端口。 比如:-p 8080:80 就是将容器中的80端口,映射到主机中的8080端口
+            # -v:表示目录映射关系，即宿主机目录:容器中目录。注意:最好做目录映射，在宿主机上做修改，然后共享到容器上
+            # –network=host：表示将主机的网络环境映射到容器中，使容器的网络与主机相同。每个 Docker 容器都有自己的网络连接空间连接到虚拟 LAN。使用此命令则会让容器和主机共享一个网络空间
+            # -i：表示以《交互模式》运行容器
+            # -t：表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即分配一个伪终端
+            # --name:给自己的容器起名称
+
+    删除镜像:
+        docker image rm 镜像名/镜像ID
+        docker rmi 镜像名称/镜像ID
+
+=============================
+    制作镜像
+=============================
+创建一个文件夹，如docker_demo
+    在创建一个文件，无后缀名dockerfile
+    创建一个docker_test.py文件，作为启动标识用，如：print(time.time())
+    执行 pip freeze > requirements.txt
+    编辑dockerfile:
+        # syntax=docker/dockerfile:1
+        # 第一行是解析器指令，始终用版本1语法的最新版本
+        # 指定基础镜像
+        FROM python:3.7-slim-buster
+        # 复制代码
+        ADD . /app
+        # 设置工作目录文件夹
+        WORKDIR /app
+        # 安装依赖
+        RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+        #当启动容器时候，执行程序
+        CMD ["python", "./docker_test.py"]
+
+执行创建镜像
+    docker build -f dockerfile -t demo_1:v0 .  (注意后面的.)
+运行刚创建的镜像
+    docker run --name test_build_docker demo_1:v0
+    看到python 的运行结果，及镜像运行正常
+保存镜像
+    decker save -o demo.tar demo_1:v0
+
+=============================
+    目录挂载
+=============================
+原因：使用docker后，修改了项目，就必须重新build和run
+
+挂载方式：
+    bind mount：直接吧宿主机目录映射到容器，适合挂载代码目录和配置文件，可挂载多个容器
+    volume：由容器创建管理，创建在宿主机，容器删除了，不会删除本机的内容。适合linux文件系统，数据库等
+    tmpfs mount: 临时存储文件，存在内存中，不可多容器共享
+
+    bind mount方式： 绝对路径 -v D:\code:/app          将宿主机D:\code 文件夹和容器 /app文件夹映射
+    volume方式：     只需要一个名字 -v db-data:/app
+
+    运行命令，执行挂载
+        docker run --name mount_test -v E:\wooght-server\docker_file\docker_demo1:/app -d demo_1:v0
+    运行成功后，修改本机E:\wooght-server\docker_file\docker_demo1 里面的内容，容器内容也修改
+
+
+==========>ubuntu 安装gitlab
+1:安装依赖
+sudo apt update
+sudo apt-get upgrade
+sudo apt-get install curl openssh-server ca-certificates postfix    (一路确认即可)
+
+2:安装GitLab
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh |sudo bash
+sudo apt-get install gitlab-ce

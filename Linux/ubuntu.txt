@@ -72,3 +72,8 @@ dpkg -s phantomjs
 #通过软连接 添加环境变量 ln -sf 目标地址 环境变量目录地址
 sudo ln -sf /usr/local/src/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
 >>>>>>> wooght
+
+问题收集:
+由于没有公钥，无法验证下列签名： NO_PUBKEY E88979FB9B30ACF2
+NO_PUBKEY 就是本机的公钥,执行以下命令来更新公钥:
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E88979FB9B30ACF2
