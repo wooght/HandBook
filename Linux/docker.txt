@@ -122,6 +122,9 @@ sudo docker-compose up -d
     ÔËÐÐÈÝÆ÷ÃüÁî:(»á²éÕÒ¾µÏñ,Èç¹ûÃ»ÓÐ¾Í°²×°¾µÏñ)
         docker run [¿ÉÑ¡²ÎÊý] ¾µÏñÃû [ÏòÆô¶¯ÈÝÆ÷ÖÐ´«ÈëµÄÃüÁî] £¬Èç¹ûÃ»ÓÐ¾µÏñ£¬Ôò»áÏÈÏÂÔØ¾µÏñ
             docker run -d -p 6379:6379 --name redis redis:latest
+                Æô¶¯redisÈÝÆ÷
+            docker run -d -p 3306(Ö÷»ú):3306(ÈÝÆ÷) -e MYSQL_ROOT_PASSWORD=123456 --name mysql1 mysql:8.0
+                Æô¶¯mysql ÈÝÆ÷,°æ±¾8.0, »·¾³±äÁ¿MYSQL_ROOT_PASSWORD Îª123456, ÈÝÆ÷Ãû³ÆÎª mysql1,¶Ë¿ÚÓ³ÉäÎª3306:3306
             # -d:»á´´½¨Ò»¸öÊØ»¤Ê½ÈÝÆ÷ÔÚºóÌ¨ÔËÐÐ£¬ÕâÑù´´½¨ÈÝÆ÷ºó²»»á×Ô¶¯µÇÂ¼ÈÝÆ÷
             # -p:±íÊ¾¶Ë¿ÚÓ³Éä£¬¼´ËÞÖ÷»ú¶Ë¿Ú:ÈÝÆ÷ÖÐ¶Ë¿Ú¡£ ±ÈÈç:-p 8080:80 ¾ÍÊÇ½«ÈÝÆ÷ÖÐµÄ80¶Ë¿Ú,Ó³Éäµ½Ö÷»úÖÐµÄ8080¶Ë¿Ú
             # -v:±íÊ¾Ä¿Â¼Ó³Éä¹ØÏµ£¬¼´ËÞÖ÷»úÄ¿Â¼:ÈÝÆ÷ÖÐÄ¿Â¼¡£×¢Òâ:×îºÃ×öÄ¿Â¼Ó³Éä£¬ÔÚËÞÖ÷»úÉÏ×öÐÞ¸Ä£¬È»ºó¹²Ïíµ½ÈÝÆ÷ÉÏ
@@ -129,6 +132,9 @@ sudo docker-compose up -d
             # -i£º±íÊ¾ÒÔ¡¶½»»¥Ä£Ê½¡·ÔËÐÐÈÝÆ÷
             # -t£º±íÊ¾ÈÝÆ÷Æô¶¯ºó»á½øÈëÆäÃüÁîÐÐ¡£¼ÓÈëÕâÁ½¸ö²ÎÊýºó£¬ÈÝÆ÷´´½¨¾ÍÄÜµÇÂ¼½øÈ¥¡£¼´·ÖÅäÒ»¸öÎ±ÖÕ¶Ë
             # --name:¸ø×Ô¼ºµÄÈÝÆ÷ÆðÃû³Æ
+
+    ½øÈëÈÝÆ÷(ÔËÐÐµÄ¾µÏñ¾ÍÊÇÈÝÆ÷)
+    docker exec -it ÈÝÆ÷Ãû³Æ /bin/bash
 
     É¾³ý¾µÏñ:
         docker image rm ¾µÏñÃû/¾µÏñID
@@ -160,6 +166,14 @@ sudo docker-compose up -d
 ÔËÐÐ¸Õ´´½¨µÄ¾µÏñ
     docker run --name test_build_docker demo_1:v0
     ¿´µ½python µÄÔËÐÐ½á¹û£¬¼°¾µÏñÔËÐÐÕý³£
+²é¿´ÕýÔÚÔËÐÐµÄÈÝÆ÷:(¾µÏñÔËÐÐÆðÀ´,¾Í½Ï×öÈÝÆ÷ÁË)
+    docker container ls         # ÂÞÁÐÔËÐÐµÄÈÝÆ÷
+    docker inspect ÈÝÆ÷Ãû³Æ/id     # ²é¿´ÈÝÆ÷ÔËÐÐÏêÏ¸ÐÅÏ¢
+    docker ps                   # ÂÞÁÐÔËÐÐµÄÈÝÆ÷
+    docker ps  -a               # ÂÞÁÐËùÓÐÈÝÆ÷,°üÀ¨Î´ÔËÐÐµÄ
+    docker stop Ãû³Æ/id           # Í£Ö¹ÈÝÆ÷
+    docker
+
 ±£´æ¾µÏñ
     decker save -o demo.tar demo_1:v0
 
@@ -181,6 +195,26 @@ sudo docker-compose up -d
     ÔËÐÐ³É¹¦ºó£¬ÐÞ¸Ä±¾»úE:\wooght-server\docker_file\docker_demo1 ÀïÃæµÄÄÚÈÝ£¬ÈÝÆ÷ÄÚÈÝÒ²ÐÞ¸Ä
 
 
+=============================
+    Dockerfile ³£ÓÃÖ¸Áî
+=============================
+FROM 			# »ù´¡¾µÏñ£¬Ò»ÇÐ´ÓÕâÀï¿ªÊ¼¹¹½¨
+MINTAINER		# ¾µÏñÊÇË­Ð´µÄ£¬ÐÕÃû+ÓÊÏä
+LABEL			# ÏÖÔÚÍÆ¼öÐ´ LABEL£¬´úÌæÉÏÃæµÄÄÇ¸ö
+RUN				# ¾µÏñ¹¹½¨µÄÊ±ºòÐèÒªÔËÐÐµÄÃüÁî
+ADD				# ²½Öè£ºÈç¹ûÒª¼ÓÒ»¸ötomcat¾µÏñ£¬¾ÍÊÇ¼ÓÕâ¸ötomcatÑ¹Ëõ°ü£¡1¡¢Ìí¼ÓÄÚÈÝ 2¡¢Ìí¼ÓÍ¬Ä¿Â¼
+WORKDIR			# ¾µÏñµÄ¹¤×÷Ä¿Â¼
+VOLUME			# ¹ÒÔØµÄÄ¿Â¼
+EXPOSE			# ±£ÁôµÄ¶Ë¿ÚÅäÖÃ
+CMD				# Ö¸¶¨Õâ¸öÈÝÆ÷Æô¶¯µÄÊ±ºòÒªÔËÐÐµÄÃüÁî£¬Ö»ÓÐ×îºóÒ»¸ö»áÉúÐ§£¬¿É±»Ìæ´ú¡£
+ENTRYPOINT		# Ö¸¶¨Õâ¸öÈÝÆ÷Æô¶¯µÄÊ±ºòÒªÔËÐÐµÄÃüÁî£¬¿ÉÒÔ×·¼ÓÃüÁî
+ONBUILD			# µ±¹¹½¨Ò»¸ö±»¼Ì³ÐµÄDockerFile Ê±£¬ÕâÊ±¾Í»áÔËÐÐONBUILDµÄÖ¸Áî£¬´¥·¢±ðµÄÖ¸Áî¡£
+COPY			# ÀàËÆADD£¬½«ÎÒÃÇµÄÎÄ¼þ¿½±´µ½¾µÏñÖÐ
+ENV				# ¹¹½¨µÄÊ±ºòÉèÖÃ»·¾³±äÁ¿
+
+CMD ¿ÉÒÔ±»Íâ²¿È¡´ú,Èçdocker run --name student_crm student_crm:v0.1 python runserver 0.0.0.0:80
+
+
 ==========>ubuntu °²×°gitlab
 1:°²×°ÒÀÀµ
 sudo apt update
@@ -190,3 +224,75 @@ sudo apt-get install curl openssh-server ca-certificates postfix    (Ò»Â·È·ÈÏ¼´¿
 2:°²×°GitLab
 curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh |sudo bash
 sudo apt-get install gitlab-ce
+
+
+=============================
+    docker ÃüÁî
+=============================
+docker version
+docker info
+docker ÃüÁî --help
+
+docker images ²é¿´±¾µØÖ÷»úÉÏµÄ¾µÏñ docker image ls Ò»ÑùµÄÐ§¹û
+    docker images [options] [repository[:tag]]
+                    -q Ö»ÏÔÊ¾¾µÏñID
+                    -a ÁÐ³ö±¾µØËùÓÐ¾µÏñ
+                    --digests   ÏÔÊ¾¾µÏñµÄÕªÒªÐÅÏ¢
+                    --no-trunc  ÏÔÊ¾ÍêÕûÐÅÏ¢
+docker search ËÑË÷¾µÏñ
+    docker search mysql -f stars=5000   ËÑË÷start ³¬¹ý5000µÄmysql
+docker pull ÏÂÔØ¾µÏñ
+    docker pull mysql:8.0   ÏÂÔØmysql8.0°æ±¾,Èç¹û²»Ö¸¶¨°æ±¾,½«ÏÂÔØ×îÐÂµÄ
+docker rmi É¾³ý¾µÏñ
+    docker rmi mysql -f     Ç¿ÖÆÉ¾³ý×îÐÂµÄmysql
+
+docker container --help     ²é¿´ÈÝÆ÷ÃüÁî°ïÖú
+docker exec -it ÈÝÆ÷Ãû/id      ½øÈëÕýÔÚÔËÐÐµÄÈÝÆ÷,ÐÂ¿ªÖÕ¶Ë
+docker attach ÈÝÆ÷Ãû/id        ½øÈëÕýÔÚÔËÐÐµÄÈÝÆ÷,Ö±½Ó½øÈëÔËÐÐÖÐµÄÖÕ¶Ë
+
+docker ps   ²é¿´ÕýÔÚÔËÐÐµÄÈÝÆ÷
+docker container list ÁÐ³öËùÓÐÔËÐÐµÄÈÝÆ÷
+exit ÈÝÆ÷Í£Ö¹ÍË³ö
+ctrl +p +Q ÈÝÆ÷²»Í£Ö¹ÍË³ö
+
+docker rm ÈÝÆ÷id  É¾³ýÈÝÆ÷
+docker rm -f $(docker ps -aq)
+
+docker start ÈÝÆ÷Ãû/id     Æô¶¯ÈÝÆ÷
+docker restart ÈÝÆ÷Ãû/id   ÖØÆôÈÝÆ÷
+docker stop ÈÝÆ÷Ãû/id      Í£Ö¹ÈÝÆ÷
+docker kill ÈÝÆ÷Ãû/id      Ç¿ÖÆÍ£Ö¹
+
+½«Ö¸¶¨ÈÝÆ÷ÄÚÈÝ¿½±´µ½Ö÷»ú
+    docker cp ÈÝÆ÷Ãû/id:Â·¾¶ Ö÷»úÂ·¾¶
+        docker cp 230abc487:/etc/nginx/nginx.conf   .   # ½«ÈÝÆ÷µÄnginxÅäÖÃÎÄ¼þ¿½±´µ½Ö÷»úµ±Ç°ÎÄ¼þ¼Ð
+    docker cp Ö÷»úÂ·¾¶  ÈÝÆ÷Ãû/id:Â·¾¶
+        docker cp test.html 230abc487:/usr/local    # ½«Ö÷»útest.html ¿½±´µ½ÈÝÆ÷µÄ/usr/localÎÄ¼þÏÂ
+
+docker save centos > /opt/centos.tar.gz     µ¼³ödockerµ½±¾µØ
+docker load< /opt/centos.tar.gz ½«±¾µØ¾µÏñµ¼Èëµ½docker¾µÏñ¿â
+docker stats    ²é¿´dockerÊ¹ÓÃÄÚ´æÇé¿ö
+
+°ÑÈÝÆ÷ÎÄ¼þ¹ÒÔØµ½Ö÷»úÎÄ¼þÉÏÃæ
+    docker run -d -p Ö÷»ú¶Ë¿Ú:ÈÝÆ÷¶Ë¿Ú -v Ö÷»úÄ¿Â¼:ÈÝÆ÷Ä¿Â¼ --name ÈÝÆ÷Ãû³Æ ÈÝÆ÷
+        docker run -d -p 8080:80 -v /data/html:/usr/nginx/html --name mynginx nginx
+
+docker volume create Êý¾Ý¾íÃû³Æ
+docker volume ls ²é¿´ËùÓÐÊý¾Ý¾í
+docker volume inspect Êý¾Ý¾íÃû³Æ     ²é¿´Êý¾Ý¾íÐÅÏ¢
+docker volume rm Êý¾Ý¾íÃû³Æ  É¾³ýÊý¾Ý¾í   Èç¹ûÒªÉ¾³ýÈÝÆ÷Ê±É¾³ýÊý¾Ý¾í,¿ÉÒÔÔÚÉ¾³ýÈÝÆ÷Ê±Ê¹ÓÃdocker rm -v ÃüÁî
+docker volume prune
+
+Ê¹ÓÃÊý¾Ý¾í½øÐÐ¹ÒÔØ
+    docker run -it -v Ö÷»úÄ¿Â¼:ÈÝÆ÷Ä¿Â¼ -p Ö÷»ú¶Ë¿Ú:ÈÝÆ÷¶Ë¿Ú --name ...
+docker inspect ÈÝÆ÷ID
+    ²é¿´ÈÝÆ÷ÐÅÏ¢,¿ÉÒÔ¿´µ½¹ÒÔØÐÅÏ¢ Èç:
+    "Mounts":[
+        "type":"bind",
+        "Source":"/data/test",
+        "Destination":"/home",
+        "Mode":"",
+        "RW":true,
+        "Propagation":"rprivate"
+    ]
+
