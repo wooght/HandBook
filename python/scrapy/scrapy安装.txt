@@ -22,6 +22,16 @@ wkhtmltopdf --version
 安装 xvfbwrapper
 sudo pip install xvfbwrapper
 
+安装chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install --fix-missing ./google-chrome-stable_current_amd64.deb
+
+安装chromedriver
+获取driver: wget https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.126/linux64/chromedriver-linux64.zip
+解压: unzip chromedriver-linux64.zip
+移动到bin目录:
+     mv chromedriver-linux64/chromedriver /usr/local/bin/
+
 
 
 Windows 安装:
@@ -41,7 +51,8 @@ pip install selenium
 chrome地址输入：chrome://version/ 查看chrome版本
 
 http://chromedriver.storage.googleapis.com/index.html地址下载对应的chromedriver
-https://googlechromelabs.github.io/chrome-for-testing/#stable 最新版本
+github 下载最新版本:
+https://googlechromelabs.github.io/chrome-for-testing/#stable
 windows安装:
     将chromedriver 放在 chrome安装目录中, 并将系统环境变量添加chrome目录
     将chromedriver 放在 python 安装目录中

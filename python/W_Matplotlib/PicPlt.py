@@ -4,7 +4,7 @@
 @file       :PicPlt.py
 @Author     :wooght
 @Date       :2024/6/6 16:18
-@Content    :matplotlib 图片
+@Content    :matplotlib 图片 点击图片获取点击坐标
 """
 import matplotlib.pyplot as plt
 import numpy as np

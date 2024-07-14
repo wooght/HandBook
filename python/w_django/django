@@ -94,6 +94,8 @@ django-admin.py startproject ProjectName
 python manage.py runserver 模型运行项目,将项目运行在127.0.0.1:8000上,
 也可以改变运行地址和端口:
 python manage.py runserver 0.0.0.0:80 将项目运行在127.0.0.1:80上，浏览器可直接访问这个地址
+将已有的表映射到本地文件:
+python manage.py inspectdb > models.py      将会生成models.py文件
 
 django命令：
 django-admin.py startproject projectname  创建项目

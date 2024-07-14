@@ -26,6 +26,7 @@ print(os.path.getsize(__file__))                 # 返回文件的字符数量
 
 """ 将当前文件目录加入到模块搜索路径中 """
 now_dir = os.path.dirname(__file__)
+print(now_dir)
 sys.path.append(now_dir)
 if "E:\\wooght-server\\HandBook\\python\\foundation" in sys.path:
     print('添加成功')

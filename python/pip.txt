@@ -70,6 +70,9 @@ Celery          #分布式任务队列
 Django-Celery   # django扩展celery
 uwsgi           # web服务器接口
 
+pip freeze > requirements.txt   # 将python 扩展包列表到requirements.txt 文档中
+pip install -r requirements.txt # 从文件列表中安装python 扩展
+pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ # 指定扩展源
 
 ##############################################################
 pip安装问题；

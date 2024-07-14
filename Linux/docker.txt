@@ -215,17 +215,6 @@ ENV				# 构建的时候设置环境变量
 CMD 可以被外部取代,如docker run --name student_crm student_crm:v0.1 python runserver 0.0.0.0:80
 
 
-==========>ubuntu 安装gitlab
-1:安装依赖
-sudo apt update
-sudo apt-get upgrade
-sudo apt-get install curl openssh-server ca-certificates postfix    (一路确认即可)
-
-2:安装GitLab
-curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh |sudo bash
-sudo apt-get install gitlab-ce
-
-
 =============================
     docker 命令
 =============================
@@ -239,6 +228,9 @@ docker images 查看本地主机上的镜像 docker image ls 一样的效果
                     -a 列出本地所有镜像
                     --digests   显示镜像的摘要信息
                     --no-trunc  显示完整信息
+重命名
+docker tag oldname:latest newname:v1
+
 docker search 搜索镜像
     docker search mysql -f stars=5000   搜索start 超过5000的mysql
 docker pull 下载镜像
@@ -246,11 +238,13 @@ docker pull 下载镜像
 docker rmi 删除镜像
     docker rmi mysql -f     强制删除最新的mysql
 
-docker container --help     查看容器命令帮助
-docker exec -it 容器名/id      进入正在运行的容器,新开终端
-docker attach 容器名/id        进入正在运行的容器,直接进入运行中的终端
+docker container --help             查看容器命令帮助
+docker exec -it 容器名/id /bin/bsh            进入正在运行的容器,新开终端
+docker attach 容器名/id              进入正在运行的容器,直接进入运行中的终端
+ctrl+P+Q 退出终端
 
 docker ps   查看正在运行的容器
+docker ps -a 查看所有容器
 docker container list 列出所有运行的容器
 exit 容器停止退出
 ctrl +p +Q 容器不停止退出
@@ -296,3 +290,32 @@ docker inspect 容器ID
         "Propagation":"rprivate"
     ]
 
+
+=============================
+    docker push
+=============================
+1. 登录阿里云Docker Registry
+$ docker login --username=woo***@126.com registry.cn-hangzhou.aliyuncs.com
+用于登录的用户名为阿里云账号全名，密码为开通服务时设置的密码。
+您可以在访问凭证页面修改凭证密码。
+
+2. 从Registry中拉取镜像
+$ docker pull registry.cn-hangzhou.aliyuncs.com/wooght/python_docker:[镜像版本号]
+
+3. 将镜像推送到Registry
+$ docker login --username=woo***@126.com registry.cn-hangzhou.aliyuncs.com
+$ docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/wooght/python_docker:[镜像版本号]
+$ docker push registry.cn-hangzhou.aliyuncs.com/wooght/python_docker:[镜像版本号]
+
+4. 选择合适的镜像仓库地址
+从ECS推送镜像时，可以选择使用镜像仓库内网地址。推送速度将得到提升并且将不会损耗您的公网流量。
+
+如果您使用的机器位于VPC网络，请使用 registry-vpc.cn-hangzhou.aliyuncs.com 作为Registry的域名登录。
+5. 示例
+使用"docker tag"命令重命名镜像，并将它通过专有网络地址推送至Registry。
+$ docker images
+REPOSITORY                                                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.aliyuncs.com/acs/agent                                    0.7-dfb6816         37bb9c63c8b2        7 days ago          37.89 MB
+$ docker tag 37bb9c63c8b2 registry-vpc.cn-hangzhou.aliyuncs.com/acs/agent:0.7-dfb6816
+使用 "docker push" 命令将该镜像推送至远程。
+$ docker push registry-vpc.cn-hangzhou.aliyuncs.com/acs/agent:0.7-dfb6816

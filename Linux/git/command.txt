@@ -1,5 +1,20 @@
-git 命令汇总
+=============================
+    SSH秘钥
+=============================
+创建ssh(前提:安装gitBash)
+    git bash 进入目录:~/.ssh
+    ssh-keygen -t rsa -C 'wooght@126.com'
+        按要求填写内容,将生成两个文件,一个是私钥, 一个是共钥(.pub)
+    cat key.pub 查看共钥
 
+SSH 连接阿里云
+    将阿里云秘钥下载,存放~/.ssh文件夹下
+    然后ssh连接阿里云:
+        ~/.ssh文件夹下命令:SSH -i 秘钥文件名称 root@IP地址
+
+=============================
+    git 命令汇总
+=============================
 git init 初始化git
 
 
@@ -58,6 +73,7 @@ git push --delete origin v1.0 删除远程v1.0标签
 reset
 git reset --HEAD^   回退到上一个版本 多少个^就回退几个版本
 git reset --hard commit_id 回退到commit_id版本
+git reset HEAD~n    删除commit记录, n表示最近几次
 
 branch
 git branch  显示本地所有分支
@@ -73,3 +89,4 @@ git merge branch-name  当前分支和branch-name分支合并
 
 checkout
 git checkout branch-name 切换到branch-name分支
+

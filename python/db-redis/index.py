@@ -10,7 +10,7 @@ import redis
 
 """连接"""
 # host 服务器地址,port端口, db数据库序号,socket_connect_timeout连接超时时间
-pool = redis.ConnectionPool(host='192.168.101.103', port=6379, db=0, socket_connect_timeout=2)
+pool = redis.ConnectionPool(host='127.0.0.1', port=6379, db=0, socket_connect_timeout=2)
 r = redis.Redis(connection_pool=pool)  # 连接,指定连接池
 
 """String操作"""

@@ -21,11 +21,11 @@ def say(x, y):
     return x + y
 
 
-# @celery.task
-# def send_email():
-#     time.sleep(5)
-#     print('in send_email')
-#     return 'ok'
+@hello_celery.task
+def send_email():
+    time.sleep(5)
+    print('in send_email')
+    return 'ok'
 
 
 if __name__ == '__main__':

@@ -27,6 +27,12 @@ sudo nano caijing  # 编辑caijing文档
 
 sudo gedit caijing # 编辑器编辑caijing文档
 
+常用命令:
+free -h     # 显示内存使用情况
+top         # 实时运行情况
+htop        # top 的增强版本
+
+
 
 #hostsDNS映射文档地址 /etc/hosts
 

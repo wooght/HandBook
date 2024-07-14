@@ -1,0 +1,97 @@
+# -- coding: utf-8 -
+"""
+@file       :celery.txt
+@Author     :wooght
+@Date       :2024/6/30 21:00
+"""
+
+celery 为python一个扩展 直接pip安装即可
+pip install celery
+
+celery 流程:
+    1:task producer     任务 生产者
+    2:task queue        任务队列
+    3:task scheduler    任务调度器
+    4:task consumer     消费者(任务执行)
+    5:result            执行结果
+
+Celery 结构由三部分组成
+消息中间件:可以是 RebbitMQ,Redis登登
+任务执行单元: Worker 提供的任务执行单元
+任务结果存储: Task result store 用来存储Worker执行的任务的结果,可以是redis登
+
+--------------------------------------------------
+celery 项目配置:(celery_object.py)
+--------------------------------------------------
+import celery
+
+backend = 'redis://192.168.101.103:6379/0'      # 存储结果:存储任务结果及状态,将worker的执行结果返回给调用方
+broker = 'redis://192.168.101.103:6379/1'       # 消息中间件:存储消息队列,负责接受任务请求,并转发值worker
+
+celery_app = celery.Celery(
+    "celery_demo",       # 名称
+    backend = backend,
+    broker = broker,
+    include = ["celery_task",]
+)
+celery_app.task_serializer = 'json'         # 消息序列化方法
+celery_app.result_serializer = 'json'       # 结果序列化方法
+celery_app.conf.timezone = 'Asia/Shanghai'  # 时区
+celery_app.conf.enable_utf = False          # 是否使用UTC格式
+
+--------------------------------------------------
+celery 任务:(celery_task)
+--------------------------------------------------
+import time
+from celery_object import celery_app
+
+@celery_app.task        # 装饰器 定义了这个方法为celery的异步worker函数
+def say(name):
+    print('说:{}'.format(name))
+    print('任务执行成功')
+
+@celery_app.task
+def do(thing):
+    print('我做了{}运动'.format(thing))
+    print('任务执行成功')
+
+--------------------------------------------------
+挂载 celery
+--------------------------------------------------
+celery -A celery_object worker -l info
+    固定格式 -A 只运行哪个文件
+    worker 指worker执行单元
+    -l 指日志级别
+    -P 指执行方式 如:threads 独立进程方式
+至此:celery两大部分就创建成功  1:worker 执行者    2:消息中间件
+
+--------------------------------------------------
+celery 生产任务:(production_result.py)
+--------------------------------------------------
+from celery_task import say, do
+if __name__ == '__main__':
+    result = say.delay('你好')            # delay() 就是延迟执行任务的意思
+    result2 = do.delay('跳起来')
+    print(result.id, result2.id)
+
+--------------------------------------------------
+celery 任务状态:(check_result.py)
+--------------------------------------------------
+from celery.result import AsyncResult
+from celery_object import celery_app
+
+async_result = AsyncResult(id="fjsldjl-dlfjsd-djflj-jdlf", app=celery_app)
+print(async_result.status)  # 状态    PENDING -> STARTED  -> SUCCESS/FAILURE
+if async_result.successful():
+    result = async_result.get() # 获取结果
+    print(result)
+    result.forget()     # 删除结果
+elif async_result.failed():
+    print('执行失败')
+elif async_result.status == 'PENDING':
+    print("任务等待中")
+elif async_result.status == 'RETRY':
+    print("任务重试中")
+elif async_result.status == 'STARTED':
+    print("任务正在执行")
+
