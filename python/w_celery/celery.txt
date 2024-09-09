@@ -64,6 +64,8 @@ celery -A celery_object worker -l info
     -l 指日志级别
     -P 指执行方式 如:threads 独立进程方式
 至此:celery两大部分就创建成功  1:worker 执行者    2:消息中间件
+celery -A celery_object worker -l info -n runspider@%h
+    指定worker的名称与host name
 
 --------------------------------------------------
 celery 生产任务:(production_result.py)
@@ -95,3 +97,21 @@ elif async_result.status == 'RETRY':
 elif async_result.status == 'STARTED':
     print("任务正在执行")
 
+--------------------------------------------------
+celery 守护进程运行
+--------------------------------------------------
+celery multi start -A celery_object worker -l info -P threads
+    multi 指守护进程的方式
+celery multi stop -A celery_object worker
+    停止守护进程
+celery multi stopwait -A celery_object worker
+    等待执行完成后停止
+sudo pkill -f worker - 9
+    杀死进程
+
+
+--------------------------------------------------
+查看队列命令
+--------------------------------------------------
+celery -A celery_object inspect active_queues
+    会列出所有挂载的celery

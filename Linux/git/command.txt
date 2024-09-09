@@ -6,6 +6,9 @@
     ssh-keygen -t rsa -C 'wooght@126.com'
         按要求填写内容,将生成两个文件,一个是私钥, 一个是共钥(.pub)
     cat key.pub 查看共钥
+    复制本地公钥,在github新建秘钥并粘贴本地秘钥
+    ssh -T git@github.com 验证是否成功
+        看到successfully即成功
 
 SSH 连接阿里云
     将阿里云秘钥下载,存放~/.ssh文件夹下
@@ -82,7 +85,8 @@ git branch -b branch_name 创建分支并切换到该分支
 git branch -a 查看本地和远端的所有分支
 git branch -vv 查看本地和远端分支的追踪关系
 git branch -d branch-name 删除分支
-
+git branch -M main 将当前分支名重命名为main github 2020后默认分支叫main
+    本地钥先add,在commit一次后才能修改名
 
 merge
 git merge branch-name  当前分支和branch-name分支合并
@@ -90,3 +94,25 @@ git merge branch-name  当前分支和branch-name分支合并
 checkout
 git checkout branch-name 切换到branch-name分支
 
+=============================
+    问题收集
+=============================
+[1]
+RSA host key for x.x.x.x has changed and you have requested strict checking.
+Host key verification failed.
+原因目标服务器重装以后，key发生变化。
+执行命令：ssh-keygen -R IP或域名，对可key进行重新添加即可
+
+[2]git merge 报错
+fatal: refusing to merge unrelated histories
+新建仓库后,关联及第一次拉取的时候会报错
+解决方法:
+    命令末尾加 --allow-unrelated-histories
+
+[3]git pull 报错:
+non-fast-forward
+冲突,版本不一致
+解决方法:
+    执行:git fetch
+    执行:git merge origin/branch
+    两步来执行拉取及手动合并

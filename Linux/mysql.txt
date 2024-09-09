@@ -35,6 +35,28 @@ source foo.sql
 
 
 ---------------------------------------------------------------------
+索引
+---------------------------------------------------------------------
+普通索引
+create index index_name on table_name(column_name)
+唯一索引
+create unique index index_name on table_name(column_name)
+主键索引
+alter table table_name add primary key (column_name)
+查看索引
+show index from table_name
+# 删除索引
+drop index index_name on table_name
+
+---------------------------------------------------------------------
+字符集操作
+---------------------------------------------------------------------
+查看数据表每列字符校对规则:
+show full columns from goods_list;
+将字符集改为 utf8mb4，校对规则改为支持 UTF-8 的规则
+ALTER TABLE your_table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+
+---------------------------------------------------------------------
 报错积累
 ---------------------------------------------------------------------
 
@@ -57,6 +79,19 @@ password就是密码
 pip install mysqlclient 报错  ...with error code 1...
 是缺少包 libmysqlclient-dev
 sudo apt-get install libmysqlclient-dev
+
+错误4:
+2006, "MySQL server has gone away (BrokenPipeError(32, \'Broken pipe\'))
+表示连接已经断开,及服务器主动断开连接
+很有可能是建立一个连接,空闲时间超过了 wait_timeout(默认28880) 的限制
+    解决一:修改程序,让使用后断开连接
+    解决二:修改mysql超时时间
+        查查超时:
+            show variables like 'wait_timeout'; 连接空闲超时时间
+            show variables link 'interactive_timeout';   交互式连接空闲超时时间
+        修改:
+            set global wait_timeout = 86400; 设置成24小时
+            set global interactive = 86400;
 
 whl 文件名也是有要求的：
 root@linkmart:/home/LinkMart# pip3 install mysqlclient-1.4.6-cp36-win-amd64.whl

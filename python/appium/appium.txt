@@ -1,0 +1,97 @@
+app 逆向工具:
+    解密: UnpackMiniApp
+    反编译: unveilr, jadx, AndroidKiller
+    抓包工具:charles
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+appium安装
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    [1]下载JDK:https://www.oracle.com/java/technologies/downloads/#jdk22-windows
+    安装JDK,然后配置环境变量:
+        新建环境变量:JAVA_HOME
+            如有必要,还需配置:
+                配置Path： ;%JAVA_HOME%/bin;%JAVA_HOME%/jre/bin; 追加进Path中
+                配置CLASSPATH .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
+        验证是否成功:
+            cmd:java -version
+                显示:
+                java version "22.0.2" 2024-07-16
+                Java(TM) SE Runtime Environment (build 22.0.2+9-70)
+                Java HotSpot(TM) 64-Bit Server VM (build 22.0.2+9-70, mixed mode, sharing)
+    [2]下载SDK:https://www.androiddevtools.cn/
+    安装SDK,然后配置环境变量:
+        单独下载SDK Tools
+            然后安装,运行,然后再根据提示安装SDK所需文件
+        新建环境变量:ANDROID_SDK_HOME, 地址就是下载SDK Tools 后安装的地址
+            配置Path:
+                %ANDROID_SDK_HOME%\platform-tools
+                %ANDROID_SDK_HOME%\tools
+
+        验证是否成功:
+            cmd: adb version
+                显示:
+                    Android Debug Bridge version 1.0.41
+                    Version 29.0.6-6198805
+                    Installed as D:\Soft\Android SDK\platform-tools\adb.exe
+    [3]下载Nodejs https://nodejs.org/en/download/package-manager
+    下载安装Node.js
+        查看环境变量path是否有nodejs,如果没有则添加
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Android shell 命令:
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# 连接终端
+adb connect 127.0.0.1:62001
+# 查看连接列表
+adb devices -l
+# 进入手机shell命令系统
+adb shell
+
+# 查看所有package
+adb shell pm list packages # 如果你只想查看第三方应用packages，可以使用-3选项：adb shell pm list packages -3
+# 查看所有activity
+adb shell dumpsys activity activities
+    得到类似:
+        ......
+        mFocusedActivity: ActivityRecord{ccc4348 u0 com.taobao.taobao/com.taobao.tao.TBMainActivity t4}
+                                                              package/activity
+        ......
+# 查看正在运行的activity:
+dumpsys activity activities | grep -i run
+    得到类似:
+        Running activities (most recent first):
+        Run #0: ActivityRecord{ccc4348 u0 com.taobao.taobao/com.taobao.tao.TBMainActivity t4}
+    Running activities (most recent first):
+        Run #0: ActivityRecord{ada4bee u0 com.android.launcher3/.launcher3.Launcher t2}
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+其他工具
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+charles 下载:https://www.charlesproxy.com/latest-release/download.do
+jadx    下载:https://github.com/skylot/jadx/releases/tag/v1.5.0
+appium-inspector    下载:https://github.com/appium/appium-inspector/releases/download/v2024.6.1/Appium-Inspector-2024.6.1-win-x64.exe
+appium-server-gui   下载:https://github.com/appium/appium-desktop/releases/download/v1.22.3-4/Appium-Server-GUI-windows-1.22.3-4.exe
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+问题收集:
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1]虚拟机操作一次就断开
+    本机SDK 与虚拟机SDK版本不同
+        adb version 查看本地版本
+            Android Debug Bridge version 1.0.41
+            Version 29.0.6-6198805
+            Installed as D:\Soft\Android SDK\platform-tools\adb.exe
+    夜神模拟器查看adb版本
+        .\nox_adb version
+            Android Debug Bridge version 1.0.36
+            Version 29.0.6-6198805
+            Installed as D:\Program Files\Nox\bin\nox_adb.exe
+    将本机Android SDK
+        D:\Soft\Android SDK\platform-tools 下的:adb, AdbWinApi, AdbWinUsbApi 三个文件拷贝到夜神bin目录下
+        并且将原来的nox_adb改名为其他,然后将拷贝过去的adb修改为now_adb
+
+[2]Appium inspector 无法Connect到Appium Server
+    在Appium inspector中的Remote Path配置为:/wd/hub
+
+[3] 代理后,APP无法联网
+    原因:APP启用了SSL
+    虚拟机安装Xposed

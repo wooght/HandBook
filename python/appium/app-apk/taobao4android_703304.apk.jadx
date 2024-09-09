@@ -1,0 +1,96 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "taobao4android_703304.apk"
+  ],
+  "treeExpansions": [
+    [
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "security.util",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "network",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "domain",
+      "network",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "impl",
+      "network",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.network.impl.e",
+      "subPath": "java",
+      "caret": 18151,
+      "view": {
+        "x": 0,
+        "y": 6974
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "anetwork.channel.aidl.adapter.ParcelableNetworkListenerWrapper",
+      "subPath": "java",
+      "caret": 3671,
+      "view": {
+        "x": 0,
+        "y": 1008
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "anetwork.channel.aidl.DefaultProgressEvent",
+      "subPath": "java",
+      "caret": 730,
+      "view": {
+        "x": 0,
+        "y": 96
+      },
+      "active": true
+    }
+  ],
+  "cacheDir": "C:\\Users\\蒲文锋\\AppData\\Local\\skylot\\jadx\\cache\\projects\\taobao4android_703304-00a668ce39656800f70fff0e358a29a1",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "jsonbyte",
+    "wireless.home.category",
+    "batchgetdetail",
+    "enablespdy",
+    "spdy",
+    "mobileDispatch",
+    "淘宝",
+    "iconsecondfloor",
+    "infinite.m.taobao.co"
+  ],
+  "pluginOptions": {}
+}

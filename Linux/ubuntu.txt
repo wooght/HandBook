@@ -9,6 +9,8 @@ sudo apt-get update
 sudo apt-get install xxx
 如:
 sudo apt-get install python-pip  #安装python pip工具
+卸载pip3
+sudo apt remove python3-pip
 
 #查看包是否按照
 dpkg -s phantomjs
@@ -18,19 +20,24 @@ dpkg -s phantomjs
 
 #查看包的位置
  dpkg -L phantomjs
+# 查看运行了那些服务
+sudo systemctl list-units --type=service --state=running
 
 #通过软连接 添加环境变量 ln -sf 目标地址 环境变量目录地址
 sudo ln -sf /usr/local/src/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
 
 #VI编辑器
 sudo nano caijing  # 编辑caijing文档
-
 sudo gedit caijing # 编辑器编辑caijing文档
+
+# 下载
+sudo wget 地址
 
 常用命令:
 free -h     # 显示内存使用情况
 top         # 实时运行情况
 htop        # top 的增强版本
+ps -ef      # 查看后台运行的进程
 
 
 

@@ -1,0 +1,27 @@
+# -- coding: utf-8 -
+"""
+@file       :key_words.txt
+@Author     :wooght
+@Date       :2024/9/7 15:18
+"""
+
+transient   /?tr?nzi?nt/    短暂的
+    不能序列化/持久化的
+        如要把一个类序列化出来传输,那么transient修饰的变量将不在其中
+
+final   /?fa?nl/    最后的
+    最后的,最终的值,一旦赋值就不能改变的值
+
+volatile    /?v?l?ta?l/     不稳定,易修改的
+    值修改立即修改主内存中的值,而不是等次进程结束再修改,通常同时几个进程要用到的值
+
+void    /v??d/  无效的
+    表示方法/函数不返回任何值
+
+
+instanceof
+    a instanceof b
+        判断a是否是b的实例
+
+implements  /??mpl?ments/   实施
+    实现接口,接口功能实施

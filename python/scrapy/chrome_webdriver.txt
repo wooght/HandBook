@@ -1,0 +1,21 @@
+# -- coding: utf-8 -
+"""
+@file       :chrome_webdriver.txt
+@Author     :wooght
+@Date       :2024/8/6 23:08
+"""
+
+理论:
+浏览器在启动时就会带上指纹特征，如果使用自动化程序启动时已经被标记
+    用selenium启动WebDriver,然后访问:https://bot.sannysoft.com/(浏览器测试工具地址)
+    WebDriver一栏会显示红色,及发现是驱动程序,很多网站会依次来进行反爬
+
+selenium 启动已经打开的chrome(非webdriver打开)
+
+一:
+    进入chrome安装目录 运行 chrome.exe --remote-debugging-port=端口(9222) --user-data-dir="用户配置文件夹"
+        chrome.exe --remote-debugging-port=9222 --user-data-dir="E:\wooght-server\amazon\chromeprofile"
+    然后配置chrome options
+        options.add_argument() 和传统配置保持不变
+        options.add_experimental_option() 不再配置
+    最后启动WebDriver.Chrome(options=options)
