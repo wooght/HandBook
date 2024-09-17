@@ -5,36 +5,14 @@
   ],
   "treeExpansions": [
     [
+      "输出",
+      "taobao4android_703304.apk"
+    ],
+    [
       "源代码",
       "taobao4android_703304.apk"
     ],
     [
-      "mtopsdk",
-      "源代码",
-      "taobao4android_703304.apk"
-    ],
-    [
-      "security.util",
-      "mtopsdk",
-      "源代码",
-      "taobao4android_703304.apk"
-    ],
-    [
-      "network",
-      "mtopsdk",
-      "源代码",
-      "taobao4android_703304.apk"
-    ],
-    [
-      "domain",
-      "network",
-      "mtopsdk",
-      "源代码",
-      "taobao4android_703304.apk"
-    ],
-    [
-      "impl",
-      "network",
       "mtopsdk",
       "源代码",
       "taobao4android_703304.apk"
@@ -47,34 +25,276 @@
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "mtopsdk.network.impl.e",
+      "tabPath": "mtopsdk.security.util.b",
       "subPath": "java",
-      "caret": 18151,
+      "caret": 696,
       "view": {
         "x": 0,
-        "y": 6974
+        "y": 0
       },
       "active": false
     },
     {
       "type": "class",
-      "tabPath": "anetwork.channel.aidl.adapter.ParcelableNetworkListenerWrapper",
+      "tabPath": "mtopsdk.ssrcore.util.c",
       "subPath": "java",
-      "caret": 3671,
+      "caret": 4210,
       "view": {
         "x": 0,
-        "y": 1008
+        "y": 919
       },
       "active": false
     },
     {
       "type": "class",
-      "tabPath": "anetwork.channel.aidl.DefaultProgressEvent",
+      "tabPath": "tb.ryw",
       "subPath": "java",
-      "caret": 730,
+      "caret": 33089,
+      "view": {
+        "x": 6,
+        "y": 10787
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.protocol.builder.impl.InnerProtocolParamBuilderImpl",
+      "subPath": "java",
+      "caret": 1738,
       "view": {
         "x": 0,
-        "y": 96
+        "y": 269
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.ryk",
+      "subPath": "java",
+      "caret": 499,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.ssrcore.SsrMtopInitTask",
+      "subPath": "java",
+      "caret": 2287,
+      "view": {
+        "x": 0,
+        "y": 77
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.global.init.InnerMtopInitTask",
+      "subPath": "java",
+      "caret": 5397,
+      "view": {
+        "x": 0,
+        "y": 821
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.taobao.tao.remotebusiness.MtopBusiness",
+      "subPath": "java",
+      "caret": 15054,
+      "view": {
+        "x": 0,
+        "y": 5139
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.rxz",
+      "subPath": "java",
+      "caret": 1294,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.ryj",
+      "subPath": "java",
+      "caret": 3075,
+      "view": {
+        "x": 0,
+        "y": 749
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.framework.domain.a",
+      "subPath": "java",
+      "caret": 987,
+      "view": {
+        "x": 0,
+        "y": 109
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.taobao.pha.core.manifest.e",
+      "subPath": "java",
+      "caret": 28004,
+      "view": {
+        "x": 0,
+        "y": 9557
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.intf.MtopBuilder",
+      "subPath": "java",
+      "caret": 30758,
+      "view": {
+        "x": 0,
+        "y": 12085
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.ryx",
+      "subPath": "java",
+      "caret": 4594,
+      "view": {
+        "x": 0,
+        "y": 1293
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.rzi",
+      "subPath": "java",
+      "caret": 811,
+      "view": {
+        "x": 0,
+        "y": 45
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.common.MtopNetworkProp",
+      "subPath": "java",
+      "caret": 1159,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.domain.MtopResponse",
+      "subPath": "java",
+      "caret": 1684,
+      "view": {
+        "x": 0,
+        "y": 624
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.util.MtopStatistics",
+      "subPath": "java",
+      "caret": 18594,
+      "view": {
+        "x": 6,
+        "y": 5808
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.rxn",
+      "subPath": "java",
+      "caret": 215,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.rxo",
+      "subPath": "java",
+      "caret": 142,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.rxw",
+      "subPath": "java",
+      "caret": 2736,
+      "view": {
+        "x": 0,
+        "y": 153
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.ryd",
+      "subPath": "java",
+      "caret": 1508,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.rya",
+      "subPath": "java",
+      "caret": 5296,
+      "view": {
+        "x": 0,
+        "y": 1440
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.alibaba.ability.impl.mtop.MtopAbility",
+      "subPath": "java",
+      "caret": 1837,
+      "view": {
+        "x": 6,
+        "y": 298
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.taobao.analysis.fulltrace.FullTraceAnalysis",
+      "subPath": "java",
+      "caret": 17484,
+      "view": {
+        "x": 0,
+        "y": 5109
       },
       "active": true
     }
@@ -82,6 +302,24 @@
   "cacheDir": "C:\\Users\\蒲文锋\\AppData\\Local\\skylot\\jadx\\cache\\projects\\taobao4android_703304-00a668ce39656800f70fff0e358a29a1",
   "enableLiveReload": false,
   "searchHistory": [
+    "class MtopListener",
+    "rya",
+    "ryd",
+    "rxw",
+    "clientTraceId",
+    "traceid",
+    "MtopResponse",
+    "trace-id",
+    "buildExtParams",
+    "mo140317a",
+    "CLIENT_TRACE_ID",
+    "x-c-traceid",
+    "sign",
+    "x-sign",
+    "getUnifiedSign",
+    "ipc$dispatch",
+    "IpChange",
+    "onDataReceived",
     "jsonbyte",
     "wireless.home.category",
     "batchgetdetail",

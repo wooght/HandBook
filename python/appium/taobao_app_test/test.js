@@ -29,6 +29,8 @@ Java.perform(function () {
     var ryw = Java.use("tb.ryw")
     var MtopConvert = Java.use('mtopsdk.mtop.util.MtopConvert')
 
+    let ALog = Java.use("anet.channel.util.ALog");
+
     // var C24701b = Java.use('mtopsdk.network.domain.C24701b')
 
     // var IpChange = Java.use('com.android.alibaba.p069ip.runtime.IpChange')
@@ -113,36 +115,106 @@ Java.perform(function () {
     //     console.log('a aVar.m', aVar.m.data)
     // }
 
-    // 参数.g为数据流(转换后的数据流)
-    StreamNetworkCallbackAdapter.buildMtopResponse.overload('mtopsdk.network.domain.b').implementation = function(bArr){
-        console.log('\r\n\r\n\r\n\r\n')
-        // console.log('buidMtopResponse bVar:', bArr)
-        // var result = this.buildMtopResponse(bArr)
-        // console.log('mtopresponse.bytedata:', result.bytedata.value)
-        // console.log('mtopresponse.mtopcontext:', this.mtopContext)
-        bArr.class.getFields().forEach(function(field){
-            console.log('field${field}', field)
-        })
-        var g_value = bArr.g.value
-        if(g_value != null){
+    /**
+     * 参数.g为数据流(转换后的数据流)
+     * Response的所有返回值
+     */
+    // StreamNetworkCallbackAdapter.buildMtopResponse.overload('mtopsdk.network.domain.b').implementation = function(bArr){
+    //     console.log('\r\n\r\n\r\n\r\n')
+    //     // console.log('buidMtopResponse bVar:', bArr)
+    //     // var result = this.buildMtopResponse(bArr)
+    //     // console.log('mtopresponse.bytedata:', result.bytedata.value)
+    //     // console.log('mtopresponse.mtopcontext:', this.mtopContext)
+    //     bArr.class.getFields().forEach(function(field){
+    //         console.log('field${field}', field)
+    //     })
+    //     var g_value = bArr.g.value
+    //     if(g_value != null){
             
             
-            console.log('bArr.a:', bArr.a.value)    // request headers
-            console.log('bArr.b:', bArr.b.value)    // 200 状态
-            console.log('bArr.c:', bArr.c.value)    // 
-            console.log('bArr.d:', bArr.d.value)    // 
+    //         console.log('\r\n\r\nbArr.a:', bArr.a.value)    // request headers
+    //         console.log('bArr.b:', bArr.b.value)    // 200 状态
+    //         console.log('bArr.c:', bArr.c.value)    // 
+    //         console.log('bArr.d:', bArr.d.value)    // 
 
-            console.log('bArr.e:', bArr.e.value)    // 
-            console.log('bArr.f:', bArr.f.value)    // 
-            // console.log('bArr.g:', bArr.g.value)    // 正常二进制
-            console.log('bArr.h:', bArr.h.value)    // tb.ryq@a7ae814
-            // console.log('bArr.i:', bArr.i.value)    // 文本内容
-            console.log('bArr.j:', bArr.j.value)    // null
-            console.log('bArr.$ipChange:', bArr.$ipChange)    // 
-        }
+    //         console.log('bArr.e:', bArr.e.value)    // 
+    //         console.log('bArr.f:', bArr.f.value)    // 
+    //         console.log('bArr.g:', bArr.g.value.length)    // 正常二进制
+    //         console.log('bArr.h:', bArr.h.value)    // tb.ryq@a7ae814
+    //         // console.log('bArr.i:', bArr.i.value)    // 文本内容
+    //         console.log('bArr.j:', bArr.j.value)    // null
+    //         console.log('bArr.$ipChange:', bArr.$ipChange)    // 
+    //     }
         
-        return this.buildMtopResponse(bArr)
-    }
+    //     return this.buildMtopResponse(bArr)
+    // }
+
+    /**
+     * 会返回headers中的值,但和request现在还没对上
+     * x-sgext,x-umt,x-mini-wua, x-sign
+     */
+    // let UserTrackUFWrapper = Java.use("com.alibaba.wireless.security.open.securityguardaccsadapter.usertrack.UserTrackUFWrapper");
+    // UserTrackUFWrapper["getUFInMainProcess"].implementation = function () {
+    //     console.log(`UserTrackUFWrapper.getUFInMainProcess is called`);
+    //     let result = this["getUFInMainProcess"]();
+    //     console.log(`UserTrackUFWrapper.getUFInMainProcess result=${result}`);
+    //     console.log('mContext:', this.mContext)
+    //     return result;
+    // };
+
+    /**
+     * category 列表请求会走这里
+     */
+    // let RequestTask = Java.use("com.taobao.tao.recommend3.gateway.request.RequestTask");
+    // RequestTask["a"].overload('java.lang.String').implementation = function (str) {
+    //     console.log(`RequestTask.m79144a is called: str=${str}`);
+    //     let result = this["a"](str);
+    //     console.log(`RequestTask.m79144a result=${result}`);
+    //     return result;
+    // };
+    // RequestTask["a"].overload('com.taobao.tao.recommend3.gateway.request.d', 'java.util.Map', 'boolean').implementation = function (interfaceC20138d, map, z) {
+    //     console.log(`RequestTask.m79138a is called: interfaceC20138d=${interfaceC20138d}, map=${map}, z=${z}`);
+    //     this["a"](interfaceC20138d, map, z);
+    // };
+    // RequestTask["$init"].implementation = function (awesomeGetRequestParams, c20135a) {
+    //     console.log(`RequestTask.$init is called:\r\n awesomeGetRequestParams=${awesomeGetRequestParams}, \r\n c20135a=${c20135a}`);
+    //     this["$init"](awesomeGetRequestParams, c20135a);
+    //     console.log('params api name::', awesomeGetRequestParams.API_NAME.value) // 请求api名称
+    //     console.log('params containerParams:', mapToString(awesomeGetRequestParams.containerParams.value)) // 
+    //     console.log('params utdid:', awesomeGetRequestParams.utdid.value) // headers 中的x-utdid 几乎固定
+    //     console.log('params userId:', awesomeGetRequestParams.userId.value) //headers 中的x-uid, form data 中的userId 几乎固定
+    //     console.log('params nick:', awesomeGetRequestParams.nick.value) // form data 中的userId 几乎固定
+    //     console.log('params previewParam:', awesomeGetRequestParams.townName) // 
+    // };
+
+    let SecurityGuardImpl = Java.use("anet.channel.security.SecurityGuardImpl");
+    SecurityGuardImpl["sign"].implementation = function (context, str, str2, str3) {
+        console.log(`SecurityGuardImpl.sign is called: context=${context}, str=${str}, str2=${str2}, str3=${str3}`);
+        let result = this["sign"](context, str, str2, str3);
+        console.log(`SecurityGuardImpl.sign result=${result}`);
+        return result;
+    };
+
+    /**
+     * 列表API调用 涉及到API的几种形式
+     */
+    // let AwesomeMtopListener = Java.use("com.taobao.tao.recommend3.gateway.request.RequestTask$AwesomeMtopListener");
+    // AwesomeMtopListener["onSuccess"].implementation = function (i, mtopResponse, baseOutDo, obj) {
+    //     console.log(`AwesomeMtopListener.onSuccess is called: i=${i}, mtopResponse=${mtopResponse}, baseOutDo=${baseOutDo}, obj=${obj}`);
+    //     this["onSuccess"](i, mtopResponse, baseOutDo, obj);
+    // };
+
+    /**
+     * 会返回一个编码 如: 315c145643a3ccdfd9691b88339c1052 
+     * request 参数为:"appReqFrom\":\"detail"时,调用此方法
+     */
+    // let C24711b = Java.use("mtopsdk.security.util.b");
+    // C24711b["b"].implementation = function (str) {
+    //     console.log(`C24711b.m99439b is called: str=${str}`);
+    //     let result = this["b"](str);
+    //     console.log(`C24711b.m99439b result=${result}`);
+    //     return result;
+    // };
 
     // var a = Java.use("mtopsdk.network.domain.b$a");
     // a["a"].overload('[B').implementation = function (bArr) {
@@ -194,23 +266,33 @@ Java.perform(function () {
     //     console.log(`------------------------: progressEvent=${progressEvent.getBytedata()}, obj=${obj}`);
     //     this["onDataReceived"](progressEvent, obj);
     // };
-    let ParcelableNetworkListenerWrapper = Java.use("anetwork.channel.aidl.adapter.ParcelableNetworkListenerWrapper");
-    ParcelableNetworkListenerWrapper["dispatchCallback"].implementation = function (b, obj) {
-        console.log(`ParcelableNetworkListenerWrapper.dispatchCallback is called: b=${b}, obj=${obj}`);
-        console.log('dispatchcallback params obj:', Object.keys(obj))
-        console.log('dispatchcallback params obj.out:', obj.out)
-        // 强制类型转换
-        var ProgressEvent = Java.use('anetwork.channel.aidl.DefaultProgressEvent')
-        try{
-            var oo = Java.cast(obj, ProgressEvent)
-            console.log('dispatchcallback params oo.mContext:', oo.out.value)
-            console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n')
-        } catch {
-            console.log('is not defaultprogressevent')
-        }
+
+    /**
+     * //分段获取字节流部分
+     */
+    // let ParcelableNetworkListenerWrapper = Java.use("anetwork.channel.aidl.adapter.ParcelableNetworkListenerWrapper");
+    // ParcelableNetworkListenerWrapper["dispatchCallback"].implementation = function (b, obj) {
+    //     console.log(`ParcelableNetworkListenerWrapper.dispatchCallback is called: b=${b}, obj=${obj}`);
+    //     // console.log('dispatchcallback params obj:', Object.keys(obj))
+    //     console.log('dispatchcallback params obj.out:', obj.out)
+    //     // 强制类型转换
+    //     var ProgressEvent = Java.use('anetwork.channel.aidl.DefaultProgressEvent')
+    //     var ALog_result = ALog.isPrintLog(1)
+    //     try{
+    //         if(b==2){
+    //             var oo = Java.cast(obj, ProgressEvent)
+    //             console.log('dispatchcallback params oo.out:', oo.out.value,'obj_info:', obj, 'handler:', this.handler)
+    //             console.log('this.mContext:', this.mContext.value,'\r\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n')
+    //             console.log('ALgo_result:', ALog_result,'^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n')
+    //         }else{
+    //             console.log('dispatchallback params b :', b)
+    //         }
+    //     } catch {
+    //         console.log('\r\nERROR ERROR ERROR\r\n')
+    //     }
         
-        this["dispatchCallback"](b, obj);
-    };
+    //     this["dispatchCallback"](b, obj);
+    // };
 
     // 详情页返回正常二进制,列表页返回加密二进制
     // let DefaultProgressEvent = Java.use("anetwork.channel.aidl.DefaultProgressEvent");
@@ -279,4 +361,11 @@ Java.perform(function () {
 });
 /**
  * api 数据处理方向:    StreamNetworkCallbackAdapter.buildMtopResponse  用的 mtopsdk.network.domain.b
+ */
+
+/**
+ * 目录,调用流程
+ * anetwork.channel.aidl.adapter.ParcelableNetworkListenerWrapper.dispatch(b, obj)
+ * --------------------------------------------------------------.dispatchCallback(b, obj)
+ * 
  */

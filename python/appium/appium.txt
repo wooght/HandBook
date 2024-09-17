@@ -68,6 +68,7 @@ dumpsys activity activities | grep -i run
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 charles 下载:https://www.charlesproxy.com/latest-release/download.do
 jadx    下载:https://github.com/skylot/jadx/releases/tag/v1.5.0
+JED     下载:https://www.pnfsoftware.com/jeb/demo
 appium-inspector    下载:https://github.com/appium/appium-inspector/releases/download/v2024.6.1/Appium-Inspector-2024.6.1-win-x64.exe
 appium-server-gui   下载:https://github.com/appium/appium-desktop/releases/download/v1.22.3-4/Appium-Server-GUI-windows-1.22.3-4.exe
 

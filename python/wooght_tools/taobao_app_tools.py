@@ -11,7 +11,7 @@ import sys
 import io
 
 # 设置标准输出的编码为希望的编码，例如GBK
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='gbk')
 import json
 import pprint
 
@@ -46,7 +46,7 @@ with open('taobao_app_response.txt', 'rb') as t:
 response_bytes = [int(b) for b in response_text]
 response_128 = [b if b < 128 else b-256 for b in response_bytes]
 print('response_bytes:')
-print(response_bytes[0:100])
+print('长度:',len(response_128),response_bytes[0:100])
 print('response_128:')
 print(response_128[0:100])
 print(bytes([101,118,101,110,116,58,32,116,114,97,105,108,101,114,10,100,97,116,97,58,32,123,34,120,45,114,101,116,99,111,100,101,34,58,34,83,85,67,67,69,83]).decode('utf-8'))
@@ -57,7 +57,7 @@ with open('taobao_app_list_response.txt',) as f:
     response_bytes = f.read()
 response_list = response_bytes.split(',')
 response_list_256 = [int(i) % 256 for i in response_list]
-print(response_list_256[0:100])
+print('长度:',len(response_list_256), response_list_256[0:100])
 print(int('dd', 16))
 response_text = bytes(response_list_256).decode('utf-8')
 print('response b2 covent utf-8:', response_text)

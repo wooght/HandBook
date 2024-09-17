@@ -1,0 +1,78 @@
+# -- coding: utf-8 -
+"""
+@file       :frida.txt
+@Author     :wooght
+@Date       :2024/9/11 20:36
+"""
+frida 命令:
+    -U：连接USB设备。
+    -F：附加最前面的应用。
+    -f：主动启动进程。
+    -l：加载script脚本文件。
+    -o：输出日志。
+    -no-pause：启动主线程运行应用。
+
+    连接设备并打开淘宝app
+    frida -U -l test.js -f com.taobao.taobao
+
+frida-ps -U     # 罗列设备进程信息-
+     PID  Name
+    ----  ------------------------------------------------
+    1050  adbd
+    1901  android.ext.services
+    ......
+    1028  zygote
+    1027  zygote64
+    3099  淘宝
+    1861  游戏中心
+    2455  设置
+
+frida-ps -Uai   # 罗列设备app及包名
+    PID  Name             Identifier
+    ----  ---------------  ---------------------------
+    3099  淘宝               com.taobao.taobao
+    1861  游戏中心             com.mumu.store
+    2455  设置               com.android.settings
+       -  Appium Settings  io.appium.settings
+       -  主题装扮             com.mumu.decorate
+       -  今日头条             com.ss.android.article.news
+
+frida-ls -U     # 罗列连接设备目录
+frida-ls -U /data/local/tmp     # 罗列某个目录
+    drwxrwx--x 2 shell shell      4096 Thu Sep 12 07:44:32 2024 .
+    drwxr-x--x 5 root  root       4096 Fri Aug 23 09:27:52 2024 ..
+    -rwxrwxrwx 1 shell shell 113380344 Wed Sep  4 07:24:21 2024 frida-server
+
+
+
+[frida API]
+
+Java.perform()      参数为函数,函数内容为修改监听Java函数运行逻辑
+Java.use            参数为字符串(类/函数名), 获得一个Java转JavaScript的对象
+                    内部类命名需要使用$连接
+
+$init               构造函数方法
+.overload()         重载函数方法
+
+主动函数调用:
+    function 函数主动调用() {
+        var MainAcitivity = Java.use('com.yemao.demo.MainActivity')
+        console.log("Java.Use.Successfully! 函数主动调用") //定位类成功！
+
+        // 静态函数主动调用
+        MainAcitivity.staticSecret();
+
+        // Error: secret: cannot call instance method without an instance
+        // MainAcitivity.secret();
+        // 动态函数主动调用
+        Java.choose('com.yemao.demo.MainActivity',{
+            onMatch: function(instance){
+                console.log('instance found',instance)
+                instance.secret()
+            },
+            onComplete: function(){
+                console.log('search Complete')
+            }
+        })
+    }
+
