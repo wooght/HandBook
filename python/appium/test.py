@@ -12,7 +12,7 @@ from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
 from appium.webdriver.common.appiumby import AppiumBy
 
-APPIUM_PORT = 4723
+APPIUM_PORT = 16384
 APPIUM_HOST = '127.0.0.1'
 
 
@@ -56,3 +56,6 @@ def test_android_click(appium_service, android_driver_factory):
     with android_driver_factory() as driver:
         el = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value='item')
         el.click()
+
+
+

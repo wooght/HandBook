@@ -89,3 +89,8 @@ cookie_one_str = cookie_str.split(';')
 print('cookie----->')
 for cookie in cookie_one_str:
     print(cookie.strip())
+
+
+a = {'a':{'b':1}, 'c':2}
+a['a']['bb']['cc'] = 3
+print(a)

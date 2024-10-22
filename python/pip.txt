@@ -11,6 +11,8 @@ pip search packageName  #搜索
 
 pip3 install django==2.0.5   # 安装制定版本
 
+pip install django -i https://pypi.tuna.tsinghua.edu.cn/simple  # 指定下载源/镜像
+
 #pip 升级
 sudo python -m pip install –upgrade pip
 

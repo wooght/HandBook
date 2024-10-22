@@ -3,7 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Linux/path.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/python/appium/taobao_app_test/http_txt/forms.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/python/appium/taobao_app_test/http_txt/forms.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/python/appium/taobao_app_test/http_txt/headers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/python/appium/taobao_app_test/http_txt/headers1.txt" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/python/appium/taobao_app_test/js/get_headers_cookie.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/python/db-redis/redis.txt" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/python/pip.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/python/wooght_tools/taobao_app_list_response.txt" charset="GBK" />

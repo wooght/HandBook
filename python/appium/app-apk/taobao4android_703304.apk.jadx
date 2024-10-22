@@ -16,6 +16,45 @@
       "mtopsdk",
       "源代码",
       "taobao4android_703304.apk"
+    ],
+    [
+      "framework.domain",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "mtop",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "domain",
+      "mtop",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "common",
+      "mtop",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "network",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
+    ],
+    [
+      "domain",
+      "network",
+      "mtopsdk",
+      "源代码",
+      "taobao4android_703304.apk"
     ]
   ],
   "codeData": {
@@ -25,133 +64,12 @@
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "mtopsdk.security.util.b",
-      "subPath": "java",
-      "caret": 696,
-      "view": {
-        "x": 0,
-        "y": 0
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "mtopsdk.ssrcore.util.c",
-      "subPath": "java",
-      "caret": 4210,
-      "view": {
-        "x": 0,
-        "y": 919
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.ryw",
-      "subPath": "java",
-      "caret": 33089,
-      "view": {
-        "x": 6,
-        "y": 10787
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "mtopsdk.mtop.protocol.builder.impl.InnerProtocolParamBuilderImpl",
-      "subPath": "java",
-      "caret": 1738,
-      "view": {
-        "x": 0,
-        "y": 269
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.ryk",
-      "subPath": "java",
-      "caret": 499,
-      "view": {
-        "x": 0,
-        "y": 0
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "mtopsdk.ssrcore.SsrMtopInitTask",
-      "subPath": "java",
-      "caret": 2287,
-      "view": {
-        "x": 0,
-        "y": 77
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "mtopsdk.mtop.global.init.InnerMtopInitTask",
-      "subPath": "java",
-      "caret": 5397,
-      "view": {
-        "x": 0,
-        "y": 821
-      },
-      "active": false
-    },
-    {
-      "type": "class",
       "tabPath": "com.taobao.tao.remotebusiness.MtopBusiness",
       "subPath": "java",
-      "caret": 15054,
+      "caret": 16176,
       "view": {
-        "x": 0,
-        "y": 5139
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.rxz",
-      "subPath": "java",
-      "caret": 1294,
-      "view": {
-        "x": 0,
-        "y": 0
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.ryj",
-      "subPath": "java",
-      "caret": 3075,
-      "view": {
-        "x": 0,
-        "y": 749
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "mtopsdk.framework.domain.a",
-      "subPath": "java",
-      "caret": 987,
-      "view": {
-        "x": 0,
-        "y": 109
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.taobao.pha.core.manifest.e",
-      "subPath": "java",
-      "caret": 28004,
-      "view": {
-        "x": 0,
-        "y": 9557
+        "x": 6,
+        "y": 5370
       },
       "active": false
     },
@@ -159,32 +77,131 @@
       "type": "class",
       "tabPath": "mtopsdk.mtop.intf.MtopBuilder",
       "subPath": "java",
-      "caret": 30758,
+      "caret": 35480,
       "view": {
         "x": 0,
-        "y": 12085
+        "y": 12015
       },
       "active": false
     },
     {
       "type": "class",
-      "tabPath": "tb.ryx",
+      "tabPath": "mtopsdk.network.impl.b",
       "subPath": "java",
-      "caret": 4594,
+      "caret": 1651,
       "view": {
         "x": 0,
-        "y": 1293
+        "y": 384
       },
       "active": false
     },
     {
       "type": "class",
-      "tabPath": "tb.rzi",
+      "tabPath": "tb.rym",
       "subPath": "java",
-      "caret": 811,
+      "caret": 788,
       "view": {
         "x": 0,
-        "y": 45
+        "y": 240
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.framework.domain.a",
+      "subPath": "java",
+      "caret": 699,
+      "view": {
+        "x": 0,
+        "y": 61
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.network.impl.a",
+      "subPath": "java",
+      "caret": 763,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.rxx",
+      "subPath": "java",
+      "caret": 1149,
+      "view": {
+        "x": 0,
+        "y": 93
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.ryj",
+      "subPath": "java",
+      "caret": 1385,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.intf.Mtop",
+      "subPath": "java",
+      "caret": 35971,
+      "view": {
+        "x": 0,
+        "y": 12315
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "anet.channel.util.HttpConstant",
+      "subPath": "java",
+      "caret": 2059,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "tb.sck",
+      "subPath": "java",
+      "caret": 10664,
+      "view": {
+        "x": 0,
+        "y": 2891
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "anetwork.channel.cookie.CookieManager",
+      "subPath": "java",
+      "caret": 7066,
+      "view": {
+        "x": 0,
+        "y": 2256
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.mtop.domain.MtopRequest",
+      "subPath": "java",
+      "caret": 242,
+      "view": {
+        "x": 0,
+        "y": 0
       },
       "active": false
     },
@@ -192,7 +209,18 @@
       "type": "class",
       "tabPath": "mtopsdk.mtop.common.MtopNetworkProp",
       "subPath": "java",
-      "caret": 1159,
+      "caret": 4687,
+      "view": {
+        "x": 0,
+        "y": 2205
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.common.util.HttpHeaderConstant",
+      "subPath": "java",
+      "caret": 1516,
       "view": {
         "x": 0,
         "y": 0
@@ -201,31 +229,9 @@
     },
     {
       "type": "class",
-      "tabPath": "mtopsdk.mtop.domain.MtopResponse",
+      "tabPath": "tb.rxy",
       "subPath": "java",
-      "caret": 1684,
-      "view": {
-        "x": 0,
-        "y": 624
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "mtopsdk.mtop.util.MtopStatistics",
-      "subPath": "java",
-      "caret": 18594,
-      "view": {
-        "x": 6,
-        "y": 5808
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.rxn",
-      "subPath": "java",
-      "caret": 215,
+      "caret": 1232,
       "view": {
         "x": 0,
         "y": 0
@@ -234,67 +240,23 @@
     },
     {
       "type": "class",
-      "tabPath": "tb.rxo",
+      "tabPath": "tb.ryl",
       "subPath": "java",
-      "caret": 142,
+      "caret": 1082,
+      "view": {
+        "x": 0,
+        "y": 144
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mtopsdk.network.domain.Request",
+      "subPath": "java",
+      "caret": 400,
       "view": {
         "x": 0,
         "y": 0
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.rxw",
-      "subPath": "java",
-      "caret": 2736,
-      "view": {
-        "x": 0,
-        "y": 153
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.ryd",
-      "subPath": "java",
-      "caret": 1508,
-      "view": {
-        "x": 0,
-        "y": 0
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "tb.rya",
-      "subPath": "java",
-      "caret": 5296,
-      "view": {
-        "x": 0,
-        "y": 1440
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.alibaba.ability.impl.mtop.MtopAbility",
-      "subPath": "java",
-      "caret": 1837,
-      "view": {
-        "x": 6,
-        "y": 298
-      },
-      "active": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.taobao.analysis.fulltrace.FullTraceAnalysis",
-      "subPath": "java",
-      "caret": 17484,
-      "view": {
-        "x": 0,
-        "y": 5109
       },
       "active": true
     }
@@ -302,6 +264,26 @@
   "cacheDir": "C:\\Users\\蒲文锋\\AppData\\Local\\skylot\\jadx\\cache\\projects\\taobao4android_703304-00a668ce39656800f70fff0e358a29a1",
   "enableLiveReload": false,
   "searchHistory": [
+    "LAUNCH_INFO_KEY",
+    "c-launch-info",
+    "setRequestHeaders",
+    "SET_COOKIE2",
+    "sgcookie",
+    "cookie2",
+    "token",
+    "rye",
+    "addheader",
+    "MtopListener",
+    "f87843q",
+    "getcookie",
+    "http",
+    "setCookie",
+    "setcookie",
+    "set cookie",
+    "requestheader",
+    "UserTrackUFWrapper",
+    "cookie",
+    "asyncRequest",
     "class MtopListener",
     "rya",
     "ryd",
@@ -311,24 +293,7 @@
     "MtopResponse",
     "trace-id",
     "buildExtParams",
-    "mo140317a",
-    "CLIENT_TRACE_ID",
-    "x-c-traceid",
-    "sign",
-    "x-sign",
-    "getUnifiedSign",
-    "ipc$dispatch",
-    "IpChange",
-    "onDataReceived",
-    "jsonbyte",
-    "wireless.home.category",
-    "batchgetdetail",
-    "enablespdy",
-    "spdy",
-    "mobileDispatch",
-    "淘宝",
-    "iconsecondfloor",
-    "infinite.m.taobao.co"
+    "mo140317a"
   ],
   "pluginOptions": {}
 }

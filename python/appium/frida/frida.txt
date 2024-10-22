@@ -14,6 +14,8 @@ frida 命令:
 
     连接设备并打开淘宝app
     frida -U -l test.js -f com.taobao.taobao
+    连接设置并绑定到 淘宝 app
+    frida -U -l .\up_sign_params.js 淘宝
 
 frida-ps -U     # 罗列设备进程信息-
      PID  Name

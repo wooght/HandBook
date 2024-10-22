@@ -3,7 +3,7 @@ app 逆向工具:
     反编译: unveilr, jadx, AndroidKiller
     抓包工具:charles
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-appium安装
+appium安装    pip install appium-python-client    # python 安装appium
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     [1]下载JDK:https://www.oracle.com/java/technologies/downloads/#jdk22-windows
     安装JDK,然后配置环境变量:

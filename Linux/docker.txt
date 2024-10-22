@@ -239,7 +239,7 @@ docker rmi 删除镜像
     docker rmi mysql -f     强制删除最新的mysql
 
 docker container --help             查看容器命令帮助
-docker exec -it 容器名/id /bin/bsh            进入正在运行的容器,新开终端
+docker exec -it 容器名/id /bin/bash            进入正在运行的容器,新开终端
 docker attach 容器名/id              进入正在运行的容器,直接进入运行中的终端
 ctrl+P+Q 退出终端
 
